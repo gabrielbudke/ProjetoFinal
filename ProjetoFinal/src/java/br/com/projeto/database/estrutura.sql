@@ -21,18 +21,26 @@ CREATE TABLE funcionarios(
 	email VARCHAR(50)
 );
 
+CREATE TABLE endereço_funcionarios(
+    id_funcionario INTEGER NOT NULL,
+    rua VARCHAR(50),
+    numero VARCHAR(5), 
+    bairro VARCHAR (50)
+    cidade VARCHAR (50)
+    FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
+);
+
 CREATE TABLE fornecedores(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	nome VARCHAR (100),
 	cnpj VARCHAR (100),
 	telefone VARCHAR (20),
 	email VARCHAR (50)
-
 );
 
 CREATE TABLE categoria(
 	id_produto INTEGER NOT NULL,
-	categoria VARCHAR(50), -- TIpo do produto
+	categoria VARCHAR(50), -- Tipo do produto
 	FOREIGN KEY (id_produto) REFERENCES produtos(id)
 
 );
