@@ -3,27 +3,37 @@ CREATE DATABASE projeto_final;
 USE projeto_final;
 
 CREATE TABLE comerciantes(
-	nome_comerciante VARCHAR(100),
-	cpf_comerciante VARCHAR(20),
-	email_comerciante VARCHAR(50),
-	telefone_comerciante VARCHAR (20)
+	login VARCHAR (30),
+	senha VARCHAR (6),	
+	nome VARCHAR(100),
+	cpf VARCHAR(20),
+	email VARCHAR(50),
+	telefone VARCHAR (20)
 );
 
 CREATE TABLE funcionarios(
-	id_funcionario INT AUTO_INCREMENT PRIMARY KEY,
-	funcao_funcionario VARCHAR(50),
-	cpf_funcionario VARCHAR (20),
-	telefone_funcionario VARCHAR(20),
-	email_funcionario VARCHAR(50)
+	id INT AUTO_INCREMENT PRIMARY KEY,
+        login VARCHAR(30),
+        senha VARCHAR(6),
+	funcao VARCHAR(50),
+	cpf VARCHAR (20),
+	telefone VARCHAR(20),
+	email VARCHAR(50)
 );
 
-
 CREATE TABLE fornecedores(
-	id_fornecedor INT AUTO_INCREMENT PRIMARY KEY,
+	id INT AUTO_INCREMENT PRIMARY KEY,
 	nome VARCHAR (100),
 	cnpj VARCHAR (100),
 	telefone VARCHAR (20),
 	email VARCHAR (50)
+
+);
+
+CREATE TABLE categoria(
+	id_produto INTEGER NOT NULL,
+	categoria VARCHAR(50), -- TIpo do produto
+	FOREIGN KEY (id_produto) REFERENCES produtos(id)
 
 );
 
@@ -35,9 +45,10 @@ CREATE TABLE produtos(
 
 CREATE TABLE estoque(
 	id_produto INTEGER NOT NULL ,	
-	tipo VARCHAR(10), -- Entrada ou Saída
+	tipo VARCHAR(7), -- Entrada ou Saída
 	quantidade INT UNSIGNED,	
 	FOREIGN KEY (id_produto) REFERENCES produtos(id)
 );
+
 
 
