@@ -1,4 +1,4 @@
 package br.com.projeto.dao;
-public class dao {
+public class FuncionarioDAO {
 
 }
