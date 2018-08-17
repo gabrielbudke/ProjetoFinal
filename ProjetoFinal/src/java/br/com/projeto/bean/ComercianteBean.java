@@ -7,8 +7,16 @@ package br.com.projeto.bean;
  */
 public class ComercianteBean {
     
-    private String login, senha, nome, cpf, email, telefone, rua, numero, bairro, cidade;
+    private String login, senha, nome, cpf, email, telefone, rua, numero, bairro, cidade, estado;
 
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+    
     public String getLogin() {
         return login;
     }
