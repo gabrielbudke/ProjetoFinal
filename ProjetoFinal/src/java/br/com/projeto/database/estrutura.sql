@@ -3,6 +3,7 @@ CREATE DATABASE projeto_final;
 USE projeto_final;
 
 CREATE TABLE comerciantes(
+        id INT AUTO_INCREMENT PRIMARY KEY,
 	login VARCHAR (30) NOT NULL,
 	senha VARCHAR (6) NOT NULL,	
 	nome VARCHAR(100) NOT NULL,
@@ -28,6 +29,7 @@ CREATE TABLE funcionarios(
 );
 
 CREATE TABLE endereço_funcionarios(
+    id INT AUTO-INCREMENT PRIMARY KEY,
     id_funcionario INTEGER NOT NULL,
     rua VARCHAR(50) NOT NULL,
     numero VARCHAR(5), 
@@ -51,6 +53,7 @@ CREATE TABLE produtos(
 );
 
 CREATE TABLE estoque(
+        id INT AUTO_INCREMENT PRIMARY KEY,
 	id_produto INTEGER NOT NULL ,	
 	tipo VARCHAR(7) NOT NULL, -- Entrada ou Saída
 	quantidade INT UNSIGNED,	
