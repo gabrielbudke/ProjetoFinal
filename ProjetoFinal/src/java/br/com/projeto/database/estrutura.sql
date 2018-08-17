@@ -42,13 +42,6 @@ CREATE TABLE fornecedores(
 	email VARCHAR (50)
 );
 
-CREATE TABLE categoria(
-	id_produto INTEGER NOT NULL,
-	categoria VARCHAR(50), -- Tipo do produto
-	FOREIGN KEY (id_produto) REFERENCES produtos(id)
-
-);
-
 CREATE TABLE produtos(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	nome VARCHAR (100),
