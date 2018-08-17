@@ -112,7 +112,7 @@ public class FuncionarioDAO {
         return false;
     }
     
-    /*public FuncionarioBean obterPeloId(int id){
+    public FuncionarioBean obterPeloId(int id){
         String sql = "SELECT * FROM funcionarios WHERE id = ?";
         try{
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
