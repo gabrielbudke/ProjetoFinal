@@ -14,7 +14,8 @@ public class ProdutoDAO {
         
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
-            
+            ps.setString(1, produto.getNome());
+            ps.setFloat(2, produto.getPreco());
         } catch (Exception e) {
         }
         
