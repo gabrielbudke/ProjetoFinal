@@ -26,7 +26,7 @@ public class ProdutoBean {
         this.nome = nome;
     }
 
-    public double getPreco() {
+    public float getPreco() {
         return preco;
     }
 
