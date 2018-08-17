@@ -17,6 +17,7 @@ public class FornecedoreDAO {
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql,
                     PreparedStatement.RETURN_GENERATED_KEYS);
+
             ps.setString(1, fornecedor.getNome());
             ps.setString(2, fornecedor.getCnpj());
             ps.setString(3, fornecedor.getTelefone());
@@ -32,6 +33,68 @@ public class FornecedoreDAO {
             Conexao.fecharConexao();
         }
         return -1;
+    }
+
+    public boolean excluir(int id) {
+
+        String sql = "DELETE FROM fornecedores WHERE id = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            return ps.executeUpdate() == 1;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return false;
+    }
+
+    public FornecedorBean obterPeloId(int id) {
+
+        String sql = "SELECT * FROM fornecedores WHERE id = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.execute();
+            ResultSet resultSet = ps.getResultSet();
+            if (resultSet.next()) {
+                FornecedorBean fornecedor = new FornecedorBean();
+                fornecedor.setId(id);
+                fornecedor.setNome(resultSet.getString("nome"));
+                fornecedor.setCnpj(resultSet.getString("cnpj"));
+                fornecedor.setEmail(resultSet.getString("email"));
+                fornecedor.setTelefone(resultSet.getString("telefone"));
+                return fornecedor;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+
+        return null;
+    }
+
+    public boolean editar(FornecedorBean fornecedor) {
+        String sql = "UPDATE fornecedor SET nome = ?, cnpj = ?, telefone = ?, email = ? WHERE id = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            int posicao = 1;
+            ps.setString(posicao++, fornecedor.getNome());
+            ps.setString(posicao++, fornecedor.getCnpj());
+            ps.setString(posicao++, fornecedor.getTelefone());
+            ps.setString(posicao++, fornecedor.getEmail());
+            ps.setInt(posicao++, fornecedor.getId());
+            return ps.executeUpdate() == 1;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+
+        return false;
+
     }
 
 }

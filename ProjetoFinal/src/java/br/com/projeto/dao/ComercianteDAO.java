@@ -14,7 +14,7 @@ public class ComercianteDAO {
     public int adicionar(ComercianteBean comerciante) {
 
         String sql = "INSERT INTO comerciantes (login, senha, nome, cpf, email, telefone, rua, bairro, cidade, estado) VALUES"
-                + "?     ?    ?        ?       ?     ?        ?      ?";
+                + "(?     ?    ?        ?       ?     ?        ?      ?)";
 
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql,
