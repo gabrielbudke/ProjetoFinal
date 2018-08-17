@@ -16,7 +16,8 @@ import java.util.List;
  */
 public class FuncionarioDAO {
     
-    /*public List<FuncionarioBean> funcionarios = new ArrayList<>();
+    public List<FuncionarioBean> obterTodos(){
+        List<FuncionarioBean> funcionarios = new ArrayList<>();
     String sql = "SELECT * FROM funcionarios";
     try{
         Statement st = Conexao.obterConexao().createStatement();
@@ -45,7 +46,9 @@ public class FuncionarioDAO {
         }finally{
             Conexao.fecharConexao();
         }
-        return funcionarios;*/
+        return funcionarios;
+        
+    }
     
     public int adicionar(FuncionarioBean funcionario){
         String sql = "INSERT INTO funcionarios (login, senha, nome, cpf, email, telefone, rua, numero, bairro, cidade, estado) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
@@ -69,6 +72,59 @@ public class FuncionarioDAO {
         }finally{
             Conexao.fecharConexao();
         }return -1;
+    }
+    
+    public boolean excluir(int id) {
+        String sql = "DELETE FROM alimentos WHERE id = ?";
+        try{
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            return ps.executeUpdate() == 1;
+            }catch (SQLException e){
+            e.printStackTrace();
+        }finally{
+            Conexao.fecharConexao();
+        }
+        return false;
+        }
+    
+    public boolean editar(FuncionarioBean funcionario) {
+        String sql = "UPDATE funcionarios SET login = ?, senha = ?, nome = ?, cpf = ?, email = ?, telefone = ?, rua = ?, numero = ?, bairro = ?, cidade = ?, estado = ? WHERE id = ?";
+        try{
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setString(1, funcionario.getLogin());
+            ps.setString(2, funcionario.getSenha());
+            ps.setString(3, funcionario.getNome());
+            ps.setString(4, funcionario.getCpf());
+            ps.setString(5, funcionario.getEmail());
+            ps.setString(6, funcionario.getTelefone());
+            ps.setString(7, funcionario.getRua());
+            ps.setString(8, funcionario.getNumero());
+            ps.setString(9, funcionario.getBairro());
+            ps.setString(10, funcionario.getCidade());
+            ps.setString(11, funcionario.getEstado());
+            return ps.executeUpdate() == 1;
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally{
+            Conexao.fecharConexao();
+        }
+        return false;
+    }
+    
+    /*public FuncionarioBean obterPeloId(int id){
+        String sql = "SELECT * FROM funcionarios WHERE id = ?";
+        try{
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.execute();
+            if(ResultSet.next()){
+                FuncionarioBean funcionario = new FuncionarioBean();
+                funcionario.setId(id);
+                funcionario.setLogin("login");
+                funcionario.set
+            }
+        }
     }
 
 }
