@@ -12,12 +12,14 @@ CREATE TABLE comerciantes(
         rua VARCHAR(50) NOT NULL,
         numero VARCHAR(5) NOT NULL,
         bairro VARCHAR(50) NOT NULL,
-        cidade VARCHAR(50) NOT NULL
+        cidade VARCHAR(50) NOT NULL,
+        estado VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE funcionarios(
 	id INT AUTO_INCREMENT PRIMARY KEY,
         login VARCHAR(30) NOT NULL,
+        nome VARCHAR (100) NOT NULL,
         senha VARCHAR(6) NOT NULL,
 	funcao VARCHAR(50) NOT NULL,
 	cpf VARCHAR (20) NOT NULL,
