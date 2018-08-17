@@ -8,7 +8,7 @@ public class ProdutoBean {
     
     private int Id;
     private String nome;
-    private double preco;
+    private float preco;
 
     public int getId() {
         return Id;
@@ -30,7 +30,7 @@ public class ProdutoBean {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(float preco) {
         this.preco = preco;
     }
     
