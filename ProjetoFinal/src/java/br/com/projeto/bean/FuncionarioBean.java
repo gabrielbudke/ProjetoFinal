@@ -2,10 +2,10 @@ package br.com.projeto.bean;
 
 public class FuncionarioBean {
 
-    int id;
-    String login, senha;
-    String nome, cpf, email, telefone;
-    String rua, numero, bairro, cidade, estado;
+    private int id;
+    private String login, senha;
+    private String nome, cpf, email, telefone;
+    private String rua, numero, bairro, cidade, estado;
 
     public int getId() {
         return id;
