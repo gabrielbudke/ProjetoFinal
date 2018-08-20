@@ -37,7 +37,7 @@ public class ProdutoDAO {
     }
   
     public int adicionar (ProdutoBean produto){
-        String sql= "INSERT INTO produtos (nome, preco) VALUES" + "(?, ?)";
+        String sql= "INSERT INTO produtos (nome, preco) VALUES (?,?)";
         
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
