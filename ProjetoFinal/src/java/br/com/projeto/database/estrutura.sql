@@ -50,10 +50,17 @@ CREATE TABLE fornecedores(
 	email VARCHAR (50)
 );
 
+CREATE TABLE categorias(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100)
+);
+
 CREATE TABLE produtos(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-	nome VARCHAR (100),
-	preco DECIMAL (3,2)
+        id_categoria INTEGER NOT NULL,
+        nome VARCHAR (100),
+	preco DECIMAL (3,2),
+        FOREIGN KEY (id_categoria) REFERENCES categorias(id)
 );
 
 CREATE TABLE estoque(
