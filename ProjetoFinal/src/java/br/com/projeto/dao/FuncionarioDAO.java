@@ -25,7 +25,7 @@ public class FuncionarioDAO {
         ResultSet resultSet = st.getResultSet();
         while(resultSet.next()){
             FuncionarioBean funcionario = new FuncionarioBean();
-            funcionario.setIdComerciante(resultSet.getInt("idComerciante"));
+            funcionario.setIdComerciante(resultSet.getInt("id_comerciante"));
             funcionario.setId(resultSet.getInt("id"));
             funcionario.setLogin(resultSet.getString("login"));
             funcionario.setSenha(resultSet.getString("senha"));
