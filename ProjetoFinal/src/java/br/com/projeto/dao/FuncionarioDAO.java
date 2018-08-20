@@ -58,6 +58,11 @@ public class FuncionarioDAO {
             ps.setString(quantidade++, funcionario.getCpf());
             ps.setString(quantidade++, funcionario.getEmail());
             ps.setString(quantidade++, funcionario.getTelefone());
+            ps.execute();
+            ResultSet resultSet = ps.getGeneratedKeys();
+            if (resultSet.next()) {
+                return resultSet.getInt(1);
+            }
         }catch (SQLException e){
             e.printStackTrace();
         }finally{
