@@ -26,6 +26,7 @@ public class ProdutoDAO {
                 produto.setId(resultSet.getInt("id"));
                 produto.setNome(resultSet.getString("nome"));
                 produto.setPreco(resultSet.getFloat("preco"));
+                produto.setIdCategoria(resultSet.getInt("id_categoria"));
                 produtos.add(produto);
             }
         } catch (Exception e) {
@@ -37,12 +38,13 @@ public class ProdutoDAO {
     }
   
     public int adicionar (ProdutoBean produto){
-        String sql= "INSERT INTO produtos (nome, preco) VALUES (?,?)";
+        String sql= "INSERT INTO produtos (nome, preco, id_categoria) VALUES (?,?,?)";
         
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, produto.getNome());
             ps.setFloat(2, produto.getPreco());
+            ps.setInt(3, produto.getIdCategoria());
             ps.execute();
             ResultSet resultSet = ps.getGeneratedKeys();
             if(resultSet.next()){
@@ -71,11 +73,12 @@ public class ProdutoDAO {
     }
     
     public boolean editar(ProdutoBean produto){
-        String sql = "UPDATE produtos SET nome = ?, preco = ? WHERE id = ?";
+        String sql = "UPDATE produtos SET nome = ?, preco = ?, id_categoria = ? WHERE id = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setString(1, produto.getNome());
             ps.setFloat(2, produto.getPreco());
+            ps.setInt(3, produto.getIdCategoria());
             return ps.executeUpdate() == 1;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -97,6 +100,7 @@ public class ProdutoDAO {
                 produto.setId(id);
                 produto.setNome(resultSet.getString("nome"));
                 produto.setPreco(resultSet.getFloat("preco"));
+                produto.setIdCategoria(resultSet.getInt("id_categoria"));
                 return produto;
             }
         } catch (SQLException e) {
