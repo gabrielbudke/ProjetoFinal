@@ -25,6 +25,7 @@ public class FuncionarioDAO {
         ResultSet resultSet = st.getResultSet();
         while(resultSet.next()){
             FuncionarioBean funcionario = new FuncionarioBean();
+            funcionario.setIdComerciante(resultSet.getInt("idComerciante"));
             funcionario.setId(resultSet.getInt("id"));
             funcionario.setLogin(resultSet.getString("login"));
             funcionario.setSenha(resultSet.getString("senha"));
@@ -79,15 +80,16 @@ public class FuncionarioDAO {
         }
     
     public boolean editar(FuncionarioBean funcionario) {
-        String sql = "UPDATE funcionarios SET login = ?, senha = ?, nome = ?, cpf = ?, email = ?, telefone = ?, rua = ?, numero = ?, bairro = ?, cidade = ?, estado = ? WHERE id = ?";
+        String sql = "UPDATE funcionarios SET id_comerciante = ?, login = ?, senha = ?, nome = ?, cpf = ?, email = ?, telefone = WHERE id = ?";
         try{
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
-            ps.setString(1, funcionario.getLogin());
-            ps.setString(2, funcionario.getSenha());
-            ps.setString(3, funcionario.getNome());
-            ps.setString(4, funcionario.getCpf());
-            ps.setString(5, funcionario.getEmail());
-            ps.setString(6, funcionario.getTelefone());
+            ps.setInt(1, funcionario.getIdComerciante());
+            ps.setString(2, funcionario.getLogin());
+            ps.setString(3, funcionario.getSenha());
+            ps.setString(4, funcionario.getNome());
+            ps.setString(5, funcionario.getCpf());
+            ps.setString(6, funcionario.getEmail());
+            ps.setString(7, funcionario.getTelefone());
             return ps.executeUpdate() == 1;
         }catch (SQLException e){
             e.printStackTrace();
@@ -98,18 +100,31 @@ public class FuncionarioDAO {
     }
     
     public FuncionarioBean obterPeloId(int id){
-        String sql = "SELECT * FROM funcionarios WHERE id = ?";
+        String sql = "SELECT id, id_comerciante, login, senha, nome, cpf, email, telefone, funcao FROM funcionarios WHERE id = ?";
         try{
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setInt(1, id);
             ps.execute();
-            if(ResultSet.next()){
+            ResultSet resultSet = ps.getResultSet();
+            if (resultSet.next()) {
                 FuncionarioBean funcionario = new FuncionarioBean();
                 funcionario.setId(id);
-                funcionario.setLogin("login");
-                funcionario.set
+                funcionario.setIdComerciante(resultSet.getInt("id_comerciante"));
+                funcionario.setLogin(resultSet.getString("login"));
+                funcionario.setSenha(resultSet.getString("senha"));
+                funcionario.setNome(resultSet.getString("nome"));
+                funcionario.setCpf(resultSet.getString("cpf"));
+                funcionario.setEmail(resultSet.getString("email"));
+                funcionario.setTelefone(resultSet.getString("telefone"));
+                funcionario.setFuncao(resultSet.getString("funcao"));
+                return funcionario;
             }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally{
+            Conexao.fecharConexao();
         }
+        return null;
     }
 
 }
