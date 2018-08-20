@@ -6,8 +6,26 @@ package br.com.projeto.bean;
  */
 public class EstoqueBean {
     
+    private int idProduto;
+    private ProdutoBean produto;
     private int Id, quantidade;
     private String tipo;
+
+    public int getIdProduto() {
+        return idProduto;
+    }
+
+    public void setIdProduto(int idProduto) {
+        this.idProduto = idProduto;
+    }
+
+    public ProdutoBean getProduto() {
+        return produto;
+    }
+
+    public void setProduto(ProdutoBean produto) {
+        this.produto = produto;
+    }
 
     public int getId() {
         return Id;
