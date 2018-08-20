@@ -3,6 +3,8 @@ package br.com.projeto.bean;
 public class FuncionarioBean {
 
     private int id;
+    private int idComerciante;
+    private ComercianteBean comerciante;
     private String login, senha;
     private String nome, cpf, email, telefone;
     private String rua, numero, bairro, cidade, estado;

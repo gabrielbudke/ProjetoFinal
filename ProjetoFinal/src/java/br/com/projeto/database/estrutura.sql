@@ -19,18 +19,22 @@ CREATE TABLE comerciantes(
 
 CREATE TABLE funcionarios(
 	id INT AUTO_INCREMENT PRIMARY KEY,
+        id_comerciante INTEGER NOT NULL,
         login VARCHAR(30) NOT NULL,
         nome VARCHAR (100) NOT NULL,
         senha VARCHAR(6) NOT NULL,
 	funcao VARCHAR(50) NOT NULL,
 	cpf VARCHAR (20) NOT NULL,
 	telefone VARCHAR(20) NOT NULL,
-	email VARCHAR(50) NOT NULL
+	email VARCHAR(50) NOT NULL,
+        FOREIGN KEY (id_comerciante) REFERENCES comerciantes(id)
 );
 
 CREATE TABLE endereço_funcionarios(
-    id INT AUTO-INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     id_funcionario INTEGER NOT NULL,
+    cep VARCHAR(10),
+    estados VARCHAR(2),
     rua VARCHAR(50) NOT NULL,
     numero VARCHAR(5), 
     bairro VARCHAR (50) NOT NULL,
@@ -54,7 +58,7 @@ CREATE TABLE produtos(
 
 CREATE TABLE estoque(
         id INT AUTO_INCREMENT PRIMARY KEY,
-	id_produto INTEGER NOT NULL ,	
+	id_produto INTEGER NOT NULL,	
 	tipo VARCHAR(7) NOT NULL, -- Entrada ou Saída
 	quantidade INT UNSIGNED,	
 	FOREIGN KEY (id_produto) REFERENCES produtos(id)
