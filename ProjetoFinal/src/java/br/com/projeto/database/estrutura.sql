@@ -34,7 +34,7 @@ CREATE TABLE endereço_funcionarios(
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_funcionario INTEGER NOT NULL,
     cep VARCHAR(10),
-    estados VARCHAR(2),
+    estado VARCHAR(2),
     rua VARCHAR(50) NOT NULL,
     numero VARCHAR(5), 
     bairro VARCHAR (50) NOT NULL,
