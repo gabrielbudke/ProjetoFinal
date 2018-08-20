@@ -7,6 +7,7 @@ package br.com.projeto.bean;
 public class ProdutoBean {
     
     private int Id;
+    private int idCategoria;
     private String nome;
     private float preco;
 
