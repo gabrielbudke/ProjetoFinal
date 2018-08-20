@@ -50,8 +50,17 @@ public class EstoqueDAO {
     public boolean editar(EstoqueBean estoque){
         String sql = "UPDATE estoque SET id_produto = ?, tipo = ?, quantidade = ? WHERE id = ?";
         try {
-            PreparedStatement ps
-        } catch (Exception e) {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, estoque.getIdProduto());
+            ps.setString(2, estoque.getTipo());
+            ps.setInt(3, estoque.getQuantidade());
+            return ps.executeUpdate() == 1;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally{
+            Conexao.fecharConexao();
         }
+        return false;
     }
+    
 }
