@@ -47,4 +47,11 @@ public class EstoqueDAO {
         return false;
     }
     
+    public boolean editar(EstoqueBean estoque){
+        String sql = "UPDATE estoque SET id_produto = ?, tipo = ?, quantidade = ? WHERE id = ?";
+        try {
+            PreparedStatement ps
+        } catch (Exception e) {
+        }
+    }
 }
