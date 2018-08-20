@@ -63,4 +63,27 @@ public class EstoqueDAO {
         return false;
     }
     
+    public EstoqueBean obterPeloId(int id){
+        String sql = "SELECT * FROM estoque WHERE id = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.execute();
+            ResultSet resultSet = ps.getResultSet();
+            if (resultSet.next()) {
+                EstoqueBean estoque = new EstoqueBean();
+                estoque.setId(id);
+                estoque.setIdProduto(resultSet.getInt("idProduto"));
+                estoque.setTipo(resultSet.getString("tipo"));
+                estoque.setQuantidade(resultSet.getInt("quantidade"));
+                return estoque;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally{
+            Conexao.fecharConexao();
+        }
+        return null;
+    }
+    
 }
