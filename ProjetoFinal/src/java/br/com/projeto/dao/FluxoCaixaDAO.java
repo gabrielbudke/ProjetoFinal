@@ -30,7 +30,29 @@ public class FluxoCaixaDAO {
             Conexao.fecharConexao();
         }
         return -1;
-        
+    }
+    
+    public boolean excluir(int id){
+        String sql = "DELETE FROM fluxoCaixa WHERE id = ?"; //  <- Fazer os ID na estrutura SQL
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setDouble(1, id);
+            return ps.executeUpdate() == 1;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally{
+            Conexao.fecharConexao();
+        }
+        return false;
+    }
+    
+    public boolean editar(FluxoCaixaBean fluxoCaixa){
+        String sql = "UPDATE fluxoCaixa SET totalRecebido = ?, totalSaida = ?, saldoInicial = ?, saldoFinal = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            
+        } catch (Exception e) {
+        }
     }
     
 }
