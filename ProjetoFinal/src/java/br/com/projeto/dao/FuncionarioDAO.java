@@ -85,7 +85,7 @@ public class FuncionarioDAO {
         }
     
     public boolean editar(FuncionarioBean funcionario) {
-        String sql = "UPDATE funcionarios SET id_comerciante = ?, login = ?, senha = ?, nome = ?, cpf = ?, email = ?, telefone = WHERE id = ?";
+        String sql = "UPDATE funcionarios SET id_comerciante = ?, login = ?, senha = ?, nome = ?, cpf = ?, email = ?, telefone = ? WHERE id = ?";
         try{
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setInt(1, funcionario.getIdComerciante());

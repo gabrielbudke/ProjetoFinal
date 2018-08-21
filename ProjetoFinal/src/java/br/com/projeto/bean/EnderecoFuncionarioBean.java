@@ -82,5 +82,9 @@ public class EnderecoFuncionarioBean {
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
+
+    public void add(EnderecoFuncionarioBean enderecoFuncionario) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
