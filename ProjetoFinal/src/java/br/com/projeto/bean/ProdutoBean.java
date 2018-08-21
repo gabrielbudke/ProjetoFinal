@@ -6,10 +6,11 @@ package br.com.projeto.bean;
  */
 public class ProdutoBean {
     
-    private int Id;
+    private int id;
     private int idCategoria;
     private CategoriaBean categoria;
     private String nome;
+    private float preco;
 
     public int getIdCategoria() {
         return idCategoria;
@@ -26,14 +27,13 @@ public class ProdutoBean {
     public void setCategoria(CategoriaBean categoria) {
         this.categoria = categoria;
     }
-    private float preco;
 
     public int getId() {
-        return Id;
+        return id;
     }
 
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
