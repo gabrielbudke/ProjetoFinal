@@ -31,7 +31,7 @@ public class CadastroComerciante extends HttpServlet {
         out.println("<label for='email'><i class=''></i> E-mail</label>");
         out.println("<input type='text' id='email' name='email' placeholder='E-mail'>");
         out.println("<label for='telefone'><i class=''></i> Telefone</label>");
-        out.println("<input type='number' id='telefone' name='telefone' placeholder='Telefone'>");
+        out.println("<input type='text' id='telefone' name='telefone' placeholder='(47)3333-3333'>");
         out.println("<label for='rua'><i class=''></i> Rua</label>");
         out.println("<input type='text' id='rua' name='rua' placeholder='Rua'>");
         out.println("<label for='num'><i class=''></i> Numero</label>");
