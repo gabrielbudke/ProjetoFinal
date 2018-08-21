@@ -10,6 +10,7 @@ public class ProdutoBean {
     private int idCategoria;
     private CategoriaBean categoria;
     private String nome;
+    private float preco;
 
     public int getIdCategoria() {
         return idCategoria;
@@ -26,7 +27,6 @@ public class ProdutoBean {
     public void setCategoria(CategoriaBean categoria) {
         this.categoria = categoria;
     }
-    private float preco;
 
     public int getId() {
         return id;
