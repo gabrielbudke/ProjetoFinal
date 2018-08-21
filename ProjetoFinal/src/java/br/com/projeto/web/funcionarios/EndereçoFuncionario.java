@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns ="cadastro/funcionário1")
+@WebServlet(urlPatterns ="/cadastro/funcionário1")
 public class EndereçoFuncionario extends HttpServlet {
 
     @Override
