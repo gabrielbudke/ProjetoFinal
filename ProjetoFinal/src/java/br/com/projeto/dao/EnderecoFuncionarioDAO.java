@@ -116,6 +116,23 @@ public class EnderecoFuncionarioDAO {
      
      public boolean editar(EnderecoFuncionarioBean enderecoFuncionario){
          String sql = "UPDATE endereço_funcionarios SET idFuncionario = ?, cep = ?, estado = ?, rua = ?, numero = ?, bairro = ?, cidade = ? WHERE id = ?";
+         try{
+             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+             ps.setInt(1, enderecoFuncionario.getIdFuncionario());
+             ps.setString(2, enderecoFuncionario.getCep());
+             ps.setString(3, enderecoFuncionario.getEstado());
+             ps.setString(2, enderecoFuncionario.getRua());
+             ps.setString(2, enderecoFuncionario.getNumero());
+             ps.setString(2, enderecoFuncionario.getBairro());
+             ps.setString(2, enderecoFuncionario.getCidade());
+             return ps.executeUpdate() == 1;
+
+         }catch (SQLException e){
+             e.printStackTrace();
+         }finally{
+             Conexao.fecharConexao();
+         }
+         return false;
      }
             
     
