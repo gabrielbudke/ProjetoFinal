@@ -63,6 +63,15 @@ CREATE TABLE produtos(
         FOREIGN KEY (id_categoria) REFERENCES categorias(id)
 );
 
+CREATE TABLE produtos_saida(
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        nome VARCHAR(100),
+        quantidade INT UNSIGNED,
+        total FLOAT
+);
+
+
+
 CREATE TABLE estoque(
         id INT AUTO_INCREMENT PRIMARY KEY,
 	id_produto INTEGER NOT NULL,	
