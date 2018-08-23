@@ -40,6 +40,9 @@
             <th>Total</th>
         </thead>
         <tbody>
+            
+            
+            <% for (ProdutoSaidaBean) %>
             <tr>
                 <td>asddsd</td>
                 <td>asdfsd</td>

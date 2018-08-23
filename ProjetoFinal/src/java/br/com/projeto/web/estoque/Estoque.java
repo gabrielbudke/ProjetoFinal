@@ -1,4 +1,4 @@
-package br.com.projeto.web.entrada;
+package br.com.projeto.web.estoque;
 
 import java.io.IOException;
 import java.io.PrintWriter;

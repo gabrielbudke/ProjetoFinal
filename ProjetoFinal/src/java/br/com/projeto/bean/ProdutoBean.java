@@ -60,5 +60,6 @@ public class ProdutoBean {
     public void setPreco(float preco) {
         this.preco = preco;
     }
+ 
     
 }
