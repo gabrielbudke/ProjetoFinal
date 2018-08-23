@@ -23,21 +23,21 @@
     <div class="form-group">
         <!--Campo para usuário lançar a quantidade de produtos vendidos -->
         <label for='campo-quantidade'>Quantidade</label>
-        <input class="form-control border-primary" type='number' min='0'  id='campo-quantidade' name='quantidade'>
+        <input class="form-control border-primary" type='number' id='campo-quantidade' name='quantidade'>
 
         
     </div>
-    <input class="btn btn-success float-right" type='submit' value='Novo'>
+    <input class="btn btn-success float-right" type='submit' value='Adicionar'>
 </form>	
 <div>
     <!-- Tabela de saida do produto -->
     <table class="table table-striped">
         <thead>
-        <th>Categoria</th>
-        <th>Produto</th>
-        <th>Quantidade</th>
-        <th>Valor Un.</th>
-        <th>Total</th>
+            <th>Categoria</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Valor Un.</th>
+            <th>Total</th>
         </thead>
         <tbody>
             <tr>
@@ -50,6 +50,10 @@
         </tbody>
     </table>
 </div> 
+<div>
+    <a class="btn btn-sucess float-right" href="#">Finalizar</>
+</div>   
+
 <%@include file="../master/rodape.jsp" %>
 
 
