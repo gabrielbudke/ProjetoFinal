@@ -7,13 +7,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
 
-<div class='form-group'>
+<div>
     <table table striped>
         <thead>
-            <th>Categoria</th>    
-            <th>Produto</th>    
-            <th>ValorUn.</th>    
-            <th>Quantidade</th>    
+            <th scope="col">Categoria</th>    
+            <th scope="col">Produto</th>    
+            <th scope="col">ValorUn.</th>    
+            <th scope="col">Quantidade</th>
         </thead>
         <tbody>
             <tr>
