@@ -46,44 +46,13 @@ public class FluxoCaixaDAO {
         return false;
     }
     
-    public boolean editar(FluxoCaixaBean fluxoCaixa){
+ /*   public boolean editar(FluxoCaixaBean fluxoCaixa){
         String sql = "UPDATE fluxoCaixa SET totalRecebido = ?, totalSaida = ?, saldoInicial = ?, saldoFinal = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
-            ps.setDouble(1, fluxoCaixa.getTotalRecebido());
-            ps.setDouble(2, fluxoCaixa.getTotalSaida());
-            ps.setDouble(3, fluxoCaixa.getSaldoInicial());
-            ps.setDouble(4, fluxoCaixa.getSaldoFinal());
-            return ps.executeUpdate() == 1;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally{
-            Conexao.fecharConexao();
+            
+        } catch (Exception e) {
         }
-        return false;
-    }
-    
-    public FluxoCaixaBean obterPeloId(int id){
-        String sql = "SELECT * FROM fluxoCaixa WHERE id = ?";
-        try {
-            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
-            ps.setInt(1, id);
-            ps.execute();
-            ResultSet resultSet = ps.getResultSet();
-            if (resultSet.next()) {
-                FluxoCaixaBean fluxoCaixa = new FluxoCaixaBean();
-                fluxoCaixa.setTotalRecebido(resultSet.getDouble("totalRecebido"));
-                fluxoCaixa.setTotalSaida(resultSet.getDouble("totalSaida"));
-                fluxoCaixa.setSaldoInicial(resultSet.getDouble("saldoInicial"));
-                fluxoCaixa.setSaldoFinal(resultSet.getDouble("saldoFinal"));
-                return fluxoCaixa;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally{
-            Conexao.fecharConexao();
-        }
-        return null;
-    }
+    }*/
     
 }

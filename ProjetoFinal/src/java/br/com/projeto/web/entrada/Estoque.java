@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns="/estoque/cadastro")
+@WebServlet(urlPatterns="/estoque")
 public class Estoque extends HttpServlet {
     
     private PrintWriter out;
