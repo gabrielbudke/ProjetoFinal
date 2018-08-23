@@ -1,15 +1,44 @@
 package br.com.projeto.dao;
 
 import br.com.projeto.bean.EstoqueBean;
+import br.com.projeto.bean.FuncionarioBean;
 import br.com.projeto.database.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Logan Michel
  */
 public class EstoqueDAO {
+    
+    public List<EstoqueBean> obterTodos(){
+        List<EstoqueBean> estoque = new ArrayList<>();
+    String sql = "SELECT * FROM estoque";
+    try{
+        Statement st = Conexao.obterConexao().createStatement();
+        st.execute(sql);
+        ResultSet resultSet = st.getResultSet();
+        while(resultSet.next()){
+            EstoqueBean estoques = new EstoqueBean();
+            estoques.setIdProduto(resultSet.getInt("idProduto"));
+            estoques.setTipo(resultSet.getString("tipo"));
+            estoques.setQuantidade(resultSet.getInt("quantidade"));
+            estoques.add(estoque);
+            
+        }
+        
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally{
+            Conexao.fecharConexao();
+        }
+        return estoque;
+        
+    }
     
     public int adicionar(EstoqueBean estoque){
         String sql = "INSERT INTO estoque (id_produto, tipo, quantidade) VALUES(?,?,?)";
