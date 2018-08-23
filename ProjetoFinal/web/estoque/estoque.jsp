@@ -4,30 +4,38 @@
     Author     : Alunos
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="br.com.projeto.dao.EstoqueDAO"%>
+<%@page import="br.com.projeto.bean.EstoqueBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
 
+<% List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
+
 <div>
-    <table table striped>
+    <table class="table">
         <thead>
-            <th scope="col">Categoria</th>    
-            <th scope="col">Produto</th>    
-            <th scope="col">ValorUn.</th>    
-            <th scope="col">Quantidade</th>
+            <th>Categoria</th>    
+            <th>Produto</th>    
+            <th>ValorUn.</th>    
+            <th>Quantidade</th>
+            <th>Acao</th>
         </thead>
         <tbody>
+            
+            
+            <% for(EstoqueBean estoque: estoques){ %>
             <tr>
+                <td><%=estoque.getTipo() %></td>
+                <td><%=estoque.getProduto() %></td>
                 <td>Push</td>
+                <td><%=estoque.getQuantidade() %></td>
                 <td>Push</td>
-                <td>Push</td>
-                <td>Push</td>   
             </tr>
-            <tr>
-                <td>Pull</td>
-                <td>Pull</td>
-                <td>Pull</td>
-                <td>Pull</td>  
-            </tr>
+            <% } %>
+            
+            
+            
         </tbody>
     </table>
 </div>
