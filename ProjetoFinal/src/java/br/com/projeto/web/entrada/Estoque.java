@@ -16,31 +16,36 @@ public class Estoque extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         out = resp.getWriter();
-        out.println("!DOCTYPE html>");
-        out.println("html>");
-        out.println("head>");
-        out.println("title>Estoque Alimentos</title>");
-        out.println("/head>");
-        out.println("body>");
-        out.println("div>");
-        out.println("table>");
-        out.println("thead>");
-        out.println("th>Categoria</th>");
-        out.println("th>Produto</th>");
-        out.println("th>Valor(Un.)</th>");
-        out.println("th>Quantidade</th>");
-        out.println("/thead>");
-        out.println("tbody>");
-        out.println("tr></tr>");
-        out.println("tr></tr>");
-        out.println("tr></tr>");
-        out.println("tr></tr>");
-        out.println("tr></tr>");
-        out.println("/tbody>");
-        out.println("/table>");
-        out.println("/div>");
-        out.println("/body>");
-        out.println("/html>");
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Estoque Alimentos</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<div>");
+        out.println("<table>");
+        out.println("<thead>");
+        out.println("</thead>");
+        out.println("<tbody>");
+        out.println("<tr>");
+        out.println("<td>");
+        out.println("Categoria");
+        out.println("</td>");
+        out.println("<td>");
+        out.println("Produto");
+        out.println("</td>");
+        out.println("<td>");
+        out.println("Valor(Un.)");
+        out.println("</td>");
+        out.println("<td>");
+        out.println("Quantidade");
+        out.println("</td>");
+        out.println("</tr>");
+        out.println("</tbody>");
+        out.println("</table>");
+        out.println("</div>");
+        out.println("</body>");
+        out.println("</html>");
 
         
         
