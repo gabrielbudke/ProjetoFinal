@@ -1,4 +1,4 @@
-package br.com.projeto.web;
+package br.com.projeto.web.comerciante;
 
 import java.io.IOException;
 import java.io.PrintWriter;

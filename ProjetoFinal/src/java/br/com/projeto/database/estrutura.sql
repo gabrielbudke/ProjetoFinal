@@ -70,8 +70,6 @@ CREATE TABLE produtos_saida(
         total FLOAT
 );
 
-
-
 CREATE TABLE estoque(
         id INT AUTO_INCREMENT PRIMARY KEY,
 	id_produto INTEGER NOT NULL,	
