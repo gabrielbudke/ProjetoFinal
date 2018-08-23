@@ -46,13 +46,13 @@ public class FluxoCaixaDAO {
         return false;
     }
     
-    public boolean editar(FluxoCaixaBean fluxoCaixa){
+ /*   public boolean editar(FluxoCaixaBean fluxoCaixa){
         String sql = "UPDATE fluxoCaixa SET totalRecebido = ?, totalSaida = ?, saldoInicial = ?, saldoFinal = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             
         } catch (Exception e) {
         }
-    }
+    }*/
     
 }
