@@ -11,13 +11,16 @@ import javax.servlet.http.HttpServletResponse;
  * @author Gabriel Budke
  */
 @WebServlet(urlPatterns = "/produtos/saida")
-public class SaidaProduto extends HttpServlet {
+public class ProdutoSaida extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         req.getRequestDispatcher("/produtos/saida.jsp").include(req, resp);
 
+        
+        
+        
     }
 
 }

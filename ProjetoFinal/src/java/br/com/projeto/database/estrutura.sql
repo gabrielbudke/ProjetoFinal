@@ -68,26 +68,14 @@ CREATE TABLE estoque(
 	id_produto INTEGER NOT NULL,	
 	tipo VARCHAR(7) NOT NULL, -- Entrada ou Saída
 	quantidade INT UNSIGNED,	
-<<<<<<< HEAD
-	FOREIGN KEY (id_produto) REFERENCES produtos(id)
-);
-=======
 	FOREIGN KEY (id_produto) REFERENCES produtos(id));
->>>>>>> 095a1007b6a0f64e65d8b7bbbf4680afae4f7735
 
 CREATE TABLE fluxo_caixa(
         id INT AUTO_INCREMENT PRIMARY KEY,
-<<<<<<< HEAD
-        totalRecebido DECIMAL(4,2),
-        totalSaida DECIMAL (4,2),
-        saldoInicial DECIMAL(4,2),
-        saldoFinal DECIMAL(4,2)
-=======
         total_recebido DECIMAL(4,2),
         total_saida DECIMAL (4,2),
         saldo_inicial DECIMAL(4,2),
         saldo_final DECIMAL(4,2)
->>>>>>> 095a1007b6a0f64e65d8b7bbbf4680afae4f7735
 
 
 );
