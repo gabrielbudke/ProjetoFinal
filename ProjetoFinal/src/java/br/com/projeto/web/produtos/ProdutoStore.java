@@ -1,4 +1,4 @@
-package br.com.projeto.web.entrada;
+package br.com.projeto.web.produtos;
 
 import br.com.projeto.bean.CategoriaBean;
 import br.com.projeto.bean.ProdutoBean;
