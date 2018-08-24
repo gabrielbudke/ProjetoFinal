@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Logan Michel
  */
 
-@WebServlet("/categorias")
+@WebServlet(urlPatterns = "/categorias")
 public class CategoriaIndex extends HttpServlet{
 
     @Override
