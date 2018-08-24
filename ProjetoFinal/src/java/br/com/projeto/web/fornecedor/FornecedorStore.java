@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
  *
  * @author Gabriel Budke
  */
-@WebServlet(urlPatterns="/fornecedores/store")
+@WebServlet(urlPatterns="/fornecedor/store")
 public class FornecedorStore extends HttpServlet{
     
     
