@@ -17,7 +17,7 @@ public class EstoqueDAO {
     
     public List<EstoqueBean> obterTodos(){
         List<EstoqueBean> estoque = new ArrayList<>();
-    String sql = "SELECT * FROM estoque";
+    String sql = "SELECT idProduto, tipo, quantidade";
     try{
         Statement st = Conexao.obterConexao().createStatement();
         st.execute(sql);
@@ -27,7 +27,7 @@ public class EstoqueDAO {
             estoques.setIdProduto(resultSet.getInt("idProduto"));
             estoques.setTipo(resultSet.getString("tipo"));
             estoques.setQuantidade(resultSet.getInt("quantidade"));
-            estoques.add(estoque);
+            estoque.add(estoques);
             
         }
         
