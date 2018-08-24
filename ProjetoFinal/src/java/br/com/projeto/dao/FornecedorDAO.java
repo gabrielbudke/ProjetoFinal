@@ -9,7 +9,7 @@ import java.sql.SQLException;
 /**
  * @author Gabriel Budke
  */
-public class FornecedoreDAO {
+public class FornecedorDAO {
 
     public int adicionar(FornecedorBean fornecedor) {
         String sql = "INSERT INTO fornecedores(nome, cnpj, telefone, email) VALUES (?,?,?,?)";
@@ -23,7 +23,7 @@ public class FornecedoreDAO {
             ps.setString(3, fornecedor.getTelefone());
             ps.setString(4, fornecedor.getEmail());
             ps.execute();
-            ResultSet resultSet = ps.getResultSet();
+            ResultSet resultSet = ps.getGeneratedKeys();
             if (resultSet.next()) {
                 return resultSet.getInt(1);
             }
