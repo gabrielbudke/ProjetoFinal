@@ -7,7 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>>
 
-<form action="/ProjetoFinal/funcionarios/store" method="post">
+<form action="/ProjetoFinal/funcionarios/store" method="POST">
 <label for='nome'><i class=''></i> Nome</label>
          <input type='text' id='nome' name='nome' placeholder='Nome'>
         
