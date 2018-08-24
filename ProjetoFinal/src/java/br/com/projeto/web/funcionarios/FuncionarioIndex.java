@@ -9,6 +9,6 @@ package br.com.projeto.web.funcionarios;
  *
  * @author Alunos
  */
-public class FornecedoresIndex {
+public class FuncionarioIndex {
     
 }
