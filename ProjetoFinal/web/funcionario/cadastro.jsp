@@ -7,16 +7,63 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>>
 
-
-out.println("<label for='nome'><i class=''></i> Nome</label>");
-         out.println("<input type='text' id='nome' name='nome' placeholder='Nome'>");
-         out.println("<label for='snome'><i class='fa fa-envelope'></i> Sobrenome</label>");
-         out.println("<input type='text' id='snome' name='sobrenome' placeholder='Sobrenome'>");
-         out.println("<label for='cpf'><i class='fa fa-address-card-o'></i> CPF</label>");
-         out.println("<input type='text' id='cpf' name='cpf' placeholder='CPF'>");
-         out.println("<label for='email'><i class=''></i> E-mail</label>");
-         out.println("<input type='text' id='email' name='email' placeholder='E-mail'>");
-         out.println("<label for='telefone'><i class=''></i> Telefone</label>");
-         out.println("<input type='number' id='telefone' name='telefone' placeholder='Telefone'>");
-         out.println("<label for='function'><i class=''></i> Função</label>");
-         out.println("<input type='text' id='function' name='funcao' placeholder='Função'>");
+<form action="/ProjetoFinal/funcionarios/store" method="post">
+<label for='nome'><i class=''></i> Nome</label>
+         <input type='text' id='nome' name='nome' placeholder='Nome'>
+        
+         <div class = "form-group">
+         <label for='snome'><i class='fa fa-envelope'></i> Sobrenome</label>
+         <input type='text' id='snome' name='sobrenome' placeholder='Sobrenome'>
+         </div>
+         
+         <div class = "form-group">
+         <label for='cpf'><i class='fa fa-address-card-o'></i> CPF</label>
+         <input type='text' id='cpf' name='cpf' placeholder='CPF'>
+         </div>
+         
+         <div class = "form-group">
+         <label for='email'><i class=''></i> E-mail</label>
+         <input type='text' id='email' name='email' placeholder='E-mail'>
+         </div>
+         
+         <div class = "form-group">
+         <label for='telefone'><i class=''></i> Telefone</label>
+         <input type='number' id='telefone' name='telefone' placeholder='Telefone'>
+         </div>
+         
+         <div class = "form-group">
+         <label for='function'><i class=''></i> Função</label>
+         <input type='text' id='function' name='funcao' placeholder='Função'>
+         </div>
+         
+        <div>
+        <label for='cep'><i class=''></i> CEP</label>
+        <input type='text' id='cep' name='cep' placeholder='CEP'>
+        </div>
+         
+        <div>
+        <label for='estado'><i class='fa fa-envelope'></i> Estado</label>
+        <input type='text' id='estado' name='estado' placeholder='Estado'>
+        </div>
+         
+        <div>
+        <label for='rua'><i class='fa fa-address-card-o'></i> Rua</label>
+        <input type='text' id='rua' name='rua' placeholder='Rua'>
+        </div>
+         
+        <div>
+        <label for='bairro'><i class=''></i> Bairro</label>
+        <input type='text' id='bairro' name='bairro' placeholder='Bairro'>
+        </div>
+         
+        <div>
+        <label for='numero'><i class=''></i> Numero</label>
+        <input type='number' id='numero' name='numero' placeholder='Numero'>
+        </div>
+         
+        <div
+        <label for='cidade'><i class=''></i> Cidade</label>
+        <input type='text' id='cidade' name='cidade' placeholder='Cidade'>
+        </div> 
+</form>
+<%@include file="../master/rodape.jsp" %>

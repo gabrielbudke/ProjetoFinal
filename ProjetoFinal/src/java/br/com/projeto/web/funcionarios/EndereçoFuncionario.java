@@ -21,18 +21,7 @@ public class EndereçoFuncionario extends HttpServlet {
         out.println("<title><h3>Funcionário - Endereço</h3></title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<label for='cep'><i class=''></i> CEP</label>");
-        out.println("<input type='text' id='cep' name='cep' placeholder='CEP'>");
-        out.println("<label for='estado'><i class='fa fa-envelope'></i> Estado</label>");
-        out.println("<input type='text' id='estado' name='estado' placeholder='Estado'>");
-        out.println("<label for='rua'><i class='fa fa-address-card-o'></i> Rua</label>");
-        out.println("<input type='text' id='rua' name='rua' placeholder='Rua'>");
-        out.println("<label for='bairro'><i class=''></i> Bairro</label>");
-        out.println("<input type='text' id='bairro' name='bairro' placeholder='Bairro'>");
-        out.println("<label for='numero'><i class=''></i> Numero</label>");
-        out.println("<input type='number' id='numero' name='numero' placeholder='Numero'>");
-        out.println("<label for='cidade'><i class=''></i> Cidade</label>");
-        out.println("<input type='text' id='cidade' name='cidade' placeholder='Cidade'>");
+        
         out.println("</div>");
         out.println("</body>");
         out.println("</html>");
