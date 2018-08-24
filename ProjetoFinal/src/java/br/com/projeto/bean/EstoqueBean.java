@@ -1,5 +1,7 @@
 package br.com.projeto.bean;
 
+import java.util.List;
+
 /**
  *
  * @author Patrick
@@ -49,6 +51,10 @@ public class EstoqueBean {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public void add(List<EstoqueBean> estoque) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

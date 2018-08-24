@@ -22,19 +22,19 @@
             <th>Acao</th>
         </thead>
         <tbody>
-            
-            
+        <>
+        <!-- Precisa ser feito tabela de estoque
             <% for(EstoqueBean estoque: estoques){ %>
             <tr>
                 <td><%=estoque.getTipo() %></td>
                 <td><%=estoque.getProduto() %></td>
-                <td>Push</td>
                 <td><%=estoque.getQuantidade() %></td>
-                <td>Push</td>
+                <td>
+                <a href=></a>
+                </td>
             </tr>
             <% } %>
-            
-            
+        -->
             
         </tbody>
     </table>
