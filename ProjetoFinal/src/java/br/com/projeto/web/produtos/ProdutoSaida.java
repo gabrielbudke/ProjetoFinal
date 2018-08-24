@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author Gabriel Budke
  */
-@WebServlet(urlPatterns = "/produtos/saida")
+@WebServlet(urlPatterns="/produtos/saida")
 public class ProdutoSaida extends HttpServlet {
 
     @Override
