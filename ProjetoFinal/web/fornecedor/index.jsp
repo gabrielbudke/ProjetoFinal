@@ -4,14 +4,28 @@
     Author     : Alunos
 --%>
 
+<%@page import="br.com.projeto.dao.FornecedorDAO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="br.com.projeto.bean.FornecedorBean"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<%@include file="../master/master.jsp" %>>	
+<% List<FornecedorBean> fornecedores = new FornecedorDAO().obterTodos(id) <>();%>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%for(int i = 0; i < fornecedores)%>
+        <tr>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<%@include file="../master/rodape.jsp" %>>
