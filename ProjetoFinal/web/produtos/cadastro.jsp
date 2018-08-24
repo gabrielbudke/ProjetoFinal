@@ -30,7 +30,7 @@
         <input type='text' id = 'campo-quantidade' name = 'quantidade' placeholder= 'Quantidade'>
     </div>
     
-    <input class = "btn btn-success" type="submit" value="Novo">
+    <input class = "btn btn-success" type="submit" value="Adicionar">
     
 </form>
     
