@@ -18,7 +18,7 @@
         <a class="nav-link" href="/ProjetoFinal/estoque">Estoque</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ProjetoFinal/fornecedores">Fornecedores</a>
+        <a class="nav-link" href="/ProjetoFinal/fornecedor">Fornecedores</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" href="/ProjetoFinal/funcionario/cadastro">Funcionarios</a>

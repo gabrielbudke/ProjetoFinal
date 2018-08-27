@@ -11,15 +11,6 @@ public class ProdutoBean {
     private CategoriaBean categoria;
     private String nome;
     private float preco;
-    private int quantidade;
-
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
 
     public int getIdCategoria() {
         return idCategoria;
