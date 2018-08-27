@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>E-Stock</title>
-        <link rel="stylesheet" href="../recursos/css/bootstrap.css">
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     </head>
     <body>
         <%@include file="cabecalho.jsp" %>

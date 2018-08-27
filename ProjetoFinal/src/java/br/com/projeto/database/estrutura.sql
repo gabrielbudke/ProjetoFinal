@@ -66,7 +66,7 @@ CREATE TABLE produtos(
 	id INT AUTO_INCREMENT PRIMARY KEY,
         id_categoria INTEGER NOT NULL,
         nome VARCHAR (100),
-	preco DECIMAL (3,2),
+	preco DECIMAL (8,2),
         FOREIGN KEY (id_categoria) REFERENCES categorias(id)
 );
 
