@@ -10,7 +10,7 @@ public class EstoqueBean {
     
     private int idProduto;
     private ProdutoBean produto;
-    private int Id, quantidade;
+    private int id, quantidade;
     private String tipo;
 
     public int getIdProduto() {
@@ -30,11 +30,11 @@ public class EstoqueBean {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int Id) {
-        this.Id = Id;
+        this.id = Id;
     }
 
     public int getQuantidade() {

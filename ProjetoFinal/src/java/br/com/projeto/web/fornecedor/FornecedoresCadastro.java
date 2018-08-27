@@ -8,11 +8,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+<<<<<<< HEAD
 @WebServlet(urlPatterns = "/fornecedores/cadastro")
+=======
+@WebServlet(urlPatterns = "/fornecedor/cadastro")
+>>>>>>> 37733d5914e858812381847339ae95e4a8b14d4b
 public class FornecedoresCadastro extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+<<<<<<< HEAD
         PrintWriter out = resp.getWriter();
         out.println("<!DOCTYPE html>");
         out.println("<!DOCTYPE html>");
@@ -67,6 +72,11 @@ public class FornecedoresCadastro extends HttpServlet {
 
         out.println("</body>");
         out.println("</html>");
+=======
+
+        req.getRequestDispatcher("/fornecedor/cadastro.jsp").include(req, resp);
+
+>>>>>>> 37733d5914e858812381847339ae95e4a8b14d4b
     }
 
 }

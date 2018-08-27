@@ -1,7 +1,8 @@
 <%-- 
-    Document   : estoque
-    Created on : 23/08/2018, 08:29:20
-    Author     : Alunos
+/**
+* @author Patrick Otavio do Nacimento(patricknascimento198@gmail.com)
+* @date 2018-08-24
+*/
 --%>
 
 <%@page import="java.util.List"%>

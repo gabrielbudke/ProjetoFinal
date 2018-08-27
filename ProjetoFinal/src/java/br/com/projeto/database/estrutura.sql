@@ -55,6 +55,13 @@ CREATE TABLE categorias(
     nome VARCHAR(100)
 );
 
+INSERT INTO categorias (nome) VALUES
+('Elêtronicos'),
+('Acessórios'),
+('Eletrodomésticos'),
+('Alimentos e Bebidas'),
+('Vestuários');
+
 CREATE TABLE produtos(
 	id INT AUTO_INCREMENT PRIMARY KEY,
         id_categoria INTEGER NOT NULL,

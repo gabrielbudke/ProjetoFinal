@@ -1,4 +1,8 @@
 package br.com.projeto.bean;
+/**
+* @author Patrick Otavio do Nacimento(patricknascimento198@gmail.com)
+* @date 2018-08-21
+*/
 
 public class FuncionarioBean {
 

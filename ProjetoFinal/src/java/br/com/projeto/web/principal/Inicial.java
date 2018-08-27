@@ -16,12 +16,12 @@ public class Inicial extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         
-        out.println("<a href='#' data-toggle='modal' data-target='#login-modal'>Login</a>");
+       
         out.println("<div class='modal fade' id='login-modal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' style='display: out.println(none;'>");
         out.println("<div class='modal-dialog'>");
         out.println("<div class='loginmodal-container'>");
         out.println("<h1>Login to Your Account</h1><br>");
-        out.println("<form>");
+        out.println("<form action ='/Inicial' method ='post'>");
         out.println("<input type='text' name='user' placeholder='Username'>");
         out.println("<input type='password' name='pass' placeholder='Password'>");
         out.println("<input type='submit' name='login' class='login loginmodal-submit' value='Login'>");

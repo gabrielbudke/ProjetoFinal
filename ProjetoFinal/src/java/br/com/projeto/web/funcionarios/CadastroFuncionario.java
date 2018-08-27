@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns ="/cadastro/funcionario")
+@WebServlet(urlPatterns ="/funcionario/cadastro")
 public class CadastroFuncionario extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        
-        req.getRequestDispatcher("/fucionario/cadastro.jsp").include(req, resp);
+        req.getRequestDispatcher("/funcionario/cadastro.jsp").include(req, resp);
     }
     
 
