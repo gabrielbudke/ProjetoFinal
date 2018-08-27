@@ -18,7 +18,9 @@
 <table>
     <thead>
         <tr>
+            <th>#</th>
             <th>Nome</th>
+            <th>CNPJ</th>
             <th>Telefone</th>
             <th>E-mail</th>
             <th>Ação</th>
@@ -27,9 +29,11 @@
     <tbody>
         <%for(FornecedorBean fornecedor : fornecedores){%>
         <tr>
-            <td> <%fornecedor.getNome();%> </td>
-            <td> <%fornecedor.getTelefone();%></td>
-            <td> <%fornecedor.getEmail();%></td>
+            <td> <%=fornecedor.getId()%></td>
+            <td> <%=fornecedor.getNome()%> </td>
+            <td> <%=fornecedor.getCnpj()%> </td>
+            <td> <%=fornecedor.getTelefone()%></td>
+            <td> <%=fornecedor.getEmail()%></td>
             <td> </td>
         </tr>
         <%}%>
