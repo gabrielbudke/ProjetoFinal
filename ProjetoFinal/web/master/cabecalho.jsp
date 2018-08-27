@@ -18,7 +18,7 @@
         <a class="nav-link" href="/ProjetoFinal/produtos">Produtos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/ProjetoFinal/fornecedores">Fornecedores</a>
+        <a class="nav-link" href="/ProjetoFinal/fornecedor">Fornecedores</a>
       </li>
     </ul>
   </div>
