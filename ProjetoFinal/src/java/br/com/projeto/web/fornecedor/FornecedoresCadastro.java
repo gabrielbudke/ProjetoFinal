@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(urlPatterns = "/fornecedores/cadastro")
+@WebServlet(urlPatterns = "/fornecedor/cadastro")
 
 
 public class FornecedoresCadastro extends HttpServlet {
