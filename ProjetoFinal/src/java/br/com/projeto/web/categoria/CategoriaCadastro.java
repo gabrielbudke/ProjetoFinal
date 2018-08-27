@@ -6,6 +6,8 @@ import javax.servlet.annotation.WebServlet;
  * @author Logan Michel
  */
 
-@WebServlet(urlPatterns = "/Categoria")
+@WebServlet(urlPatterns = "/categoria/cadastrar")
 public class CategoriaCadastro {
+    
+    
 }
