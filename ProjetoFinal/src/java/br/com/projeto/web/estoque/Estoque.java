@@ -11,12 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns="/estoque")
 public class Estoque extends HttpServlet {
     
-    private PrintWriter out;
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     
-      req.getRequestDispatcher("/estoque/estoque.jsp").include(req, resp);        
+      req.getRequestDispatcher("/estoque/estoque.jsp").include(req, resp);
         
     }
     
