@@ -60,8 +60,7 @@ INSERT INTO categorias (nome) VALUES
 ('Acessórios'),
 ('Eletrodomésticos'),
 ('Alimentos e Bebidas'),
-('Vestuários'),
-('+ NOVO');
+('Vestuários');
 
 CREATE TABLE produtos(
 	id INT AUTO_INCREMENT PRIMARY KEY,

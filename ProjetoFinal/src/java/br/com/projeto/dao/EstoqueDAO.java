@@ -1,7 +1,6 @@
 package br.com.projeto.dao;
 
 import br.com.projeto.bean.EstoqueBean;
-import br.com.projeto.bean.FuncionarioBean;
 import br.com.projeto.database.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,7 +16,7 @@ public class EstoqueDAO {
     
     public List<EstoqueBean> obterTodos(){
         List<EstoqueBean> estoque = new ArrayList<>();
-    String sql = "SELECT idProduto, tipo, quantidade";
+    String sql = "SELECT idProduto, tipo, quantidade FROM estoque";
     try{
         Statement st = Conexao.obterConexao().createStatement();
         st.execute(sql);
