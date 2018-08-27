@@ -8,6 +8,15 @@ package br.com.projeto.bean;
 public class ComercianteBean {
     
     private String login, senha, nome, cpf, email, telefone, rua, numero, bairro, cidade, estado;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getEstado() {
         return estado;
