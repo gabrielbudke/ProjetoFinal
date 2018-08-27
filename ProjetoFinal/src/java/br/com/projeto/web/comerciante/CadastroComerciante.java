@@ -15,7 +15,7 @@ public class CadastroComerciante extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
         PrintWriter out = resp.getWriter();
-        out.println("<!DOCTYPE html>");
+        
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head>");
