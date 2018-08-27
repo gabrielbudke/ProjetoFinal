@@ -24,20 +24,13 @@ public class ProdutoStore extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
         ProdutoBean produto = new ProdutoBean();
-        EstoqueBean estoque = new EstoqueBean();
-	
-	estoque.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
-	estoque.setIdProduto(produto.getId()); // Definindo o id do produto no estoque	
-	estoque.setId(new EstoqueDAO().adicionar(estoque));// acessando o DAO do Estoque para adicionar no banco
-	
 	//Inserindo dados no ProdutoBean
         produto.setNome(req.getParameter("nome"));
         produto.setPreco(Float.parseFloat(req.getParameter("preco")));
-	produto.setIdCategoria(new CategoriaBean().getId());
-       
+	produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));
         
         produto.setId(new ProdutoDAO().adicionar(produto));
-        resp.sendRedirect("/produtos/cadastro");
+        resp.sendRedirect("/produtos");
         
         
     }

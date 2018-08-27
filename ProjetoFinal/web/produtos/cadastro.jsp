@@ -36,11 +36,6 @@
         <input type='text' id='campo-preco' name='preco' placeholder='Preco'>
     </div>
 
-    <div class = "form-group">
-        <label for='campo-quantidade'><i class='fa fa-address-card-o'></i> Quantidade</label>
-        <input type='text' id = 'campo-quantidade' name = 'quantidade' placeholder= 'Quantidade'>
-    </div>
-
     <input class = "btn btn-success" type="submit" value="Adicionar">
 
 </form>
