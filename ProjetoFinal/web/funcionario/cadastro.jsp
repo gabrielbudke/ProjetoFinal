@@ -1,7 +1,8 @@
 <%-- 
-    Document   : cadastro
-    Created on : 24/08/2018, 07:47:28
-    Author     : Alunos
+/**
+* @author Patrick Otavio do Nacimento(patricknascimento198@gmail.com)
+* @date 2018-08-24
+*/
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -61,7 +62,7 @@
 
     <div>
         <label for='numero'><i class=''></i> Numero</label>
-        <input type='number' id='numero' name='numero' placeholder='Numero'>
+        <input type='text' id='numero' name='numero' placeholder='Numero'>
     </div>
 
     <div>
