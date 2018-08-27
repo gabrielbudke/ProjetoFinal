@@ -11,8 +11,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
 
-<% List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
-
 <div>
     <table class="table">
         <thead>
@@ -23,21 +21,15 @@
             <th>Acao</th>
         </thead>
         <tbody>
-        <>
-        <!-- Precisa ser feito tabela de estoque
-            <% for(EstoqueBean estoque: estoques){ %>
-            <tr>
-                <td><%=estoque.getTipo() %></td>
-                <td><%=estoque.getProduto() %></td>
-                <td><%=estoque.getQuantidade() %></td>
-                <td>
-                <a href=></a>
-                </td>
-            </tr>
-            <% } %>
-        -->
-            
+	    <tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	    </tr>
         </tbody>
     </table>
 </div>
+
 <%@include file="../master/rodape.jsp" %>
