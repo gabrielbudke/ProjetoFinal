@@ -14,6 +14,10 @@
 
 <%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos();%>
 <form action="/ProjetoFinal/produtos/store" method="POST">
+    <div class="nav-item">
+	<a href="/ProjetoFinal/categoria/cadastro">Nova Categoria</a>
+    </div>
+    
     <div class = "form-group">
         <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
         <select type='text' class="form-control" id='campo-categoria' name='categoria'>
@@ -36,9 +40,6 @@
         <input type='text' id='campo-preco' name='preco' placeholder='Preco'>
     </div>
 	    
-    <div class="nav-item">
-	 <a href="/ProjetoFinal/categoria/cadastro">Nova Categoria</a>
-    </div>
 
     <input class = "btn btn-success" type="submit" value="Adicionar">
 

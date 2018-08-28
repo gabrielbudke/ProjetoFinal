@@ -90,9 +90,15 @@ CREATE TABLE fluxo_caixa(
         total_saida DECIMAL (4,2),
         saldo_inicial DECIMAL(4,2),
         saldo_final DECIMAL(4,2)
+);
+
+CREATE TABLE recuperar_senha(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_comerciante INTEGER NOT NULL,
+    pergunta VARCHAR(200)
+    FOREIGN KEY (id_comerciante) REFERENCES comerciantes(id);
+
 
 
 );
-
-
 

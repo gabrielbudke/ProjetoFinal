@@ -21,13 +21,16 @@
             <th>Acao</th>
         </thead>
         <tbody>
+            
+            <% for(EstoqueBean estoque : (List<EstoqueBean>)request.getAttribute("estoques")){%>
 	    <tr>
 		<td></td>
+		<td><%%></td>
 		<td></td>
-		<td></td>
-		<td></td>
+		<td> <%=estoque.getQuantidade()%> </td>
 		<td></td>
 	    </tr>
+            <%}%>
         </tbody>
     </table>
 </div>

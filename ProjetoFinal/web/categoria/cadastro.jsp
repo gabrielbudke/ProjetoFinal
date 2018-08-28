@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
-<form action="/ProjetoFinal/categoria/cadastro" method="post">
+<form action="/ProjetoFinal/categoria/store" method="post">
     
     <div class="form-group">
 	<label for='campo-categoria'><i class=''></i> Categoria</label>
