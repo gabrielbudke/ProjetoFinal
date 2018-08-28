@@ -4,7 +4,7 @@ import br.com.projeto.bean.ComercianteBean;
 import br.com.projeto.database.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.SQLException;  
 
 /**
  * @author Gabriel Budke
