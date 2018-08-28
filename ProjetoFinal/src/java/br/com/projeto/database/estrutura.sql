@@ -96,8 +96,8 @@ CREATE TABLE fluxo_caixa(
 CREATE TABLE recuperar_senha(
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_comerciante INTEGER NOT NULL,
-    pergunta VARCHAR(200)
-    FOREIGN KEY (id_comerciante) REFERENCES comerciantes(id);
+    pergunta VARCHAR(200),
+    FOREIGN KEY (id_comerciante) REFERENCES comerciantes(id)
 
 
 
