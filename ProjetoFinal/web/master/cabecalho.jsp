@@ -24,7 +24,7 @@
           <a class="nav-link" href="/ProjetoFinal/funcionario">Funcionarios</a>
       </li>
       <li class="nav-item">
-	  <a class="nav-link" href="/ProjetoFinal/produtos/cadastro">Produtos</a>
+	  <a class="nav-link" href="/ProjetoFinal/produtos/">Produtos</a>
       </li>
      
     </ul>
