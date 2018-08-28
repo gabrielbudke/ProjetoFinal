@@ -3,7 +3,10 @@ package br.com.projeto.bean;
 
 public class FluxoCaixaBean {
 
-    private double totalRecebido,totalSaida, saldoInicial, saldoFinal;
+    private double totalRecebido,
+                    totalSaida, 
+                    saldoInicial, 
+                    saldoFinal;
 
     public double getTotalRecebido() {
         return totalRecebido;

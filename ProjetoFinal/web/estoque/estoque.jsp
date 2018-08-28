@@ -25,11 +25,12 @@
             
             <% for(EstoqueBean estoque : estoques) {%>
 	    <tr>
-		<td><%%></td>
-		<td><%%></td>
-		<td><%%></td>
-		<td><%%></td>
-		<td><%%></td>
+		<td><% //entrada ou saida %></td>
+		<td><% //produto %></td>
+		<td><% //valor un %></td>
+		<td><% // quantidade %></td>
+		<td><% // valor total %></td>
+		<td><% // açao %></td>
 	    </tr>
             <%}%>
         </tbody>
