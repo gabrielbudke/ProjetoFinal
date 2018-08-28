@@ -1,30 +1,24 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
-        <title>Login to Your Account</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="/ProjetoFinal/login/loginCSS.css" />
     </head>
     <body>
-        <div><a href='#' data-toggle='modal' data-target='#login-modal'>Login</a> 
-        <div class='modal fade' id='login-modal' tabindex='-1' role='dialog' aria-hidden='true'>
-        <div class='modal-dialog'>
-        <div class='loginmodal-container'>
-        <form>
-        <input type='text' name='user' placeholder='Username'>
-        <input type='password' name='pass' placeholder='Password'>
-        <input type='submit' name='login' class='login loginmodal-submit' value='Login'>
-        </form>	
-        <div class='login-help'>
-        <a href='#'>Register</a> - <a href='#'>Forgot Password</a>
-        </div>
-        </div>
-        </div>
-        </div></div>
+       <div class="login">
+	<h1>Login</h1>
+    <form method="post">
+    	<input type="text" name="u" placeholder="Usuário" required="required" />
+        <input type="password" name="p" placeholder="Senha" required="required" />
+        <div class="forgot" id = "register">
+        <a href="reset.html">Esqueceu a senha?</a>
+        
+        <a href="reset.html" id = "register">Não possui um cadastro?</a> 
+        </div> 
+        <button type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
+    </form>
+</div>
     </body>
 </html>

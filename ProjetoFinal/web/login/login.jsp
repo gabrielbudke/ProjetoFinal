@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Login</title>
         <link rel="stylesheet" type="text/css" href="/ProjetoFinal/login/loginCss.css" />
     </head>
     <body>
@@ -21,7 +21,7 @@
         <div class="forgot" id = "register">
         <a href="reset.html">Esqueceu a senha?</a>
         
-        <a href="reset.html" id = "register">   Não está cadastrado?</a>
+        <a href="reset.html" id = "register">Não possui um cadastro?</a>
         </div> 
         <button type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
     </form>
