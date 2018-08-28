@@ -9,12 +9,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp"%>
 
+
+<a href="/ProjetoFinal/produtos/cadastro">Novo Produto</a>
 <table class="table">
     <thead>
         <tr>
             <th>#</th>
-            <th>Nome</th>
             <th>Categoria</th>
+            <th>Nome</th>
+            <th>Preço</th>
             <th>Ação</th>
         </tr>
     </thead>
@@ -22,8 +25,9 @@
         <%for (ProdutoBean produto : ((List<ProdutoBean>) request.getAttribute("produtos"))) {%>
         <tr>
             <td> <%=produto.getId()%></td>
-            <td> <%=produto.getNome()%> </td>
             <td> <%=produto.getCategoria().getNome()%> </td>
+            <td> <%=produto.getNome()%> </td>
+            <td> <%=produto.getPreco()%> </td>    
             <td> 
             </td>
         </tr>

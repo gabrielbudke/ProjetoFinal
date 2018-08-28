@@ -1,4 +1,4 @@
-<%-- 
+<%--
 /**
 * @author Patrick Otavio do Nacimento(patricknascimento198@gmail.com)
 * @date 2018-08-24
@@ -13,7 +13,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
 <%List<ProdutoBean> produtos = new ProdutoDAO().obterTodos(); %>
-<a href="/ProjetoFinal/produto/cadastro">Novo Produto</a>
+
 <div>
     <table class="table">
         <thead>
