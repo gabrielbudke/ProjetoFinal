@@ -7,8 +7,16 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
+<!DOCTYPE html>
+
 <form action="/ProjetoFinal/comerciante/store" method="post">
-        <div class="form-group">
+    
+    
+        
+          
+        
+        <div class = "register Scroll">
+            <div class="form-group">
             <label for='campo-login' ><i class=''></i> Login</label>
             <input type='text' id='campo-login' name='login' placeholder='Login'>
         </div>
@@ -57,7 +65,12 @@
             <input type='text' id='campo-estado' name='estado' placeholder='Estado'>
         </div>
             <input type="submit" value="Cadastrar">
+        </div>
+       
+          
 </form>
+    </div>
 
+    
 <%@include file="../master/rodape.jsp" %>
 

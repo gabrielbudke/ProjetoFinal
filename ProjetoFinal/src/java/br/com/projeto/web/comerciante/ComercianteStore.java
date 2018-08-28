@@ -37,7 +37,7 @@ public class ComercianteStore extends HttpServlet{
     comerciante.setTelefone(req.getParameter("telefone"));
     
     comerciante.setId(new ComercianteDAO().adicionar(comerciante));
-    resp.sendRedirect("/ProjetoFinal/login");
+    resp.sendRedirect("/ProjetoFinal");
     
     }
     
