@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  *
  * @author Gabriel
+ * @author Patrick
+ * @date 2018-08-27
  */
 @WebServlet(urlPatterns="/comerciante/store")
 public class ComercianteStore extends HttpServlet{

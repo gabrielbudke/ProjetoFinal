@@ -31,7 +31,6 @@ public class ComercianteDAO {
             ps.setString(posicao++, comerciante.getCidade());
             ps.setString(posicao++, comerciante.getEstado());
             ps.setString(posicao++, comerciante.getNumero());
-            
             ps.execute();
             ResultSet resultSet = ps.getGeneratedKeys();
             if (resultSet.next()) {
