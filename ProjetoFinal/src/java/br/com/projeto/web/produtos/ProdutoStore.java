@@ -32,7 +32,7 @@ public class ProdutoStore extends HttpServlet{
             
         resp.sendRedirect("/ProjetoFinal/produtos/cadastro");
         
-        
+     
     }
     
     
