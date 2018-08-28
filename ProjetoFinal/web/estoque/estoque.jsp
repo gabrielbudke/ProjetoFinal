@@ -10,11 +10,12 @@
 <%@page import="br.com.projeto.bean.EstoqueBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
-
+<%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
+<a href="/ProjetoFinal/produto/cadastro">Novo Produto</a>
 <div>
     <table class="table">
         <thead>
-            <th>Categoria</th>    
+            <th>Tipo</th>    
             <th>Produto</th>    
             <th>ValorUn.</th>    
             <th>Quantidade</th>
@@ -22,13 +23,13 @@
         </thead>
         <tbody>
             
-            <% for(EstoqueBean estoque : (List<EstoqueBean>)request.getAttribute("estoques")){%>
+            <% for(EstoqueBean estoque : estoques) {%>
 	    <tr>
-		<td></td>
 		<td><%%></td>
-		<td></td>
-		<td> <%=estoque.getQuantidade()%> </td>
-		<td></td>
+		<td><%%></td>
+		<td><%%></td>
+		<td><%%></td>
+		<td><%%></td>
 	    </tr>
             <%}%>
         </tbody>
