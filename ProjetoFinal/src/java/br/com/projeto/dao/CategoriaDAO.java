@@ -46,7 +46,7 @@ public class CategoriaDAO {
                     PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, categoria.getNome());
             ps.execute();
-            ResultSet resultSet = ps.getResultSet();
+            ResultSet resultSet = ps.getGeneratedKeys();
             if (resultSet.next()) {
                 return resultSet.getInt(1);
             }
