@@ -17,44 +17,44 @@
             <input type='text' id='campo-senha' name='senha' placeholder='Senha'>
         </div>
         <div class="form-group">
-            <label for='nome'><i class=''></i> Nome</label>
-            <input type='text' id='nome' name='nome' placeholder='Nome'>
+            <label for='campo-nome'><i class=''></i> Nome</label>
+            <input type='text' id='campo-nome' name='nome' placeholder='Nome'>
         </div>
         <div class="form-group">
-            <label for='snome'><i class='fa fa-envelope'></i> Sobrenome</label>
-            <input type='text' id='snome' name='sobrenome' placeholder='Sobrenome'>
+            <label for='campo-sobrenome'><i class='fa fa-envelope'></i> Sobrenome</label>
+            <input type='text' id='campo-sobrenome' name='sobrenome' placeholder='Sobrenome'>
         </div>
         <div class="form-group">
-            <label for='cpf'><i class='fa fa-address-card-o'></i> CPF</label>
-            <input type='text' id='cpf' name='cpf' placeholder='CPF'>
+            <label for='campo-cpf'><i class='fa fa-address-card-o'></i> CPF</label>
+            <input type='text' id='campo-cpf' name='cpf' placeholder='CPF'>
         </div>
         <div class="form-group">
-            <label for='email'><i class=''></i> E-mail</label>
-            <input type='text' id='email' name='email' placeholder='E-mail'>
+            <label for='campo-email'><i class=''></i> E-mail</label>
+            <input type='text' id='campo-email' name='email' placeholder='E-mail'>
         </div>
         <div class="form-group">
-            <label for='telefone'><i class=''></i> Telefone</label>
-            <input type='text' id='telefone' name='telefone' placeholder='(47)3333-3333'>
+            <label for='campo-telefone'><i class=''></i> Telefone</label>
+            <input type='text' id='campo-telefone' name='telefone' placeholder='(47)3333-3333'>
         </div>
         <div class="form-group">
-            <label for='rua'><i class=''></i> Rua</label>
-            <input type='text' id='rua' name='rua' placeholder='Rua'>
+            <label for='campo-rua'><i class=''></i> Rua</label>
+            <input type='text' id='campo-rua' name='rua' placeholder='Rua'>
         </div>
         <div class="form-group">
-            <label for='num'><i class=''></i> Numero</label>
-            <input type='tel' id='num' name='numero' placeholder='numero'>
+            <label for='campo-numero'><i class=''></i> Numero</label>
+            <input type='tel' id='campo-numero' name='numero' placeholder='numero'>
         </div>
         <div class="form-group">
-            <label for='bairro'><i class=''></i> Bairro</label>
-            <input type='text' id='bairro' name='bairro' placeholder='Bairro'>
+            <label for='campo-bairro'><i class=''></i> Bairro</label>
+            <input type='text' id='campo-bairro' name='bairro' placeholder='Bairro'>
         </div>
         <div class="form-group">
-            <label for='city'><i class=''></i> Cidade</label>
-            <input type='text' id='city' name='cidade' placeholder='Cidade'>
+            <label for='campo-cidade'><i class=''></i> Cidade</label>
+            <input type='text' id='campo-cidade' name='cidade' placeholder='Cidade'>
         </div>
         <div class="form-group">
-            <label for='state'>Estado</label>
-            <input type='text' id='state' name='state' placeholder='Estado'>
+            <label for='campo-estado'>Estado</label>
+            <input type='text' id='campo-estado' name='estado' placeholder='Estado'>
         </div>
             <input type="submit" value="Cadastrar">
 </form>
