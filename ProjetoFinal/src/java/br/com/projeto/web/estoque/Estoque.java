@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 public class Estoque extends HttpServlet {
     
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+            throws ServletException, IOException {
     
       req.getRequestDispatcher("/estoque/estoque.jsp").include(req, resp);
         

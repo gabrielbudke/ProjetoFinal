@@ -34,7 +34,10 @@
             <td> <%=fornecedor.getCnpj()%> </td>
             <td> <%=fornecedor.getTelefone()%></td>
             <td> <%=fornecedor.getEmail()%></td>
-            <td> </td>
+            <td> 
+                <a href="/ProjetoFinal/fornecedor/editar">Editar</a>
+                <a href="/ProjetoFinal/fornecedor/excluir">Excluir</a>
+            </td>
         </tr>
         <%}%>
     </tbody>
