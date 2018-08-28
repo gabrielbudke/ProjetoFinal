@@ -15,7 +15,10 @@
         
           
         
-        <div class = "register Scroll">
+        
+        
+            <div class = "register Scroll">
+            
             <div class="form-group">
             <label for='campo-login' ><i class=''></i> Login</label>
             <input type='text' id='campo-login' name='login' placeholder='Login'>
@@ -49,7 +52,7 @@
             <input type='text' id='campo-rua' name='rua' placeholder='Rua'>
         </div>
         <div class="form-group">
-            <label for='campo-numero'><i class=''></i> Numero</label>
+            <label for='campo-numero'><i class=''></i> Número</label>
             <input type='tel' id='campo-numero' name='numero' placeholder='numero'>
         </div>
         <div class="form-group">
@@ -64,12 +67,18 @@
             <label for='campo-estado'>Estado</label>
             <input type='text' id='campo-estado' name='estado' placeholder='Estado'>
         </div>
-            <input type="submit" value="Cadastrar">
-        </div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Cadastrar</button>
+            </div>
+            </div>
+        
+        
+
        
           
-</form>
-    </div>
+
+    
+    
+    
 
     
 <%@include file="../master/rodape.jsp" %>
