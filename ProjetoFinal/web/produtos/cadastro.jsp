@@ -35,6 +35,10 @@
         <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
         <input type='text' id='campo-preco' name='preco' placeholder='Preco'>
     </div>
+	    
+    <div class="nav-item">
+	 <a href="/ProjetoFinal/categoria/cadastro">Nova Categoria</a>
+    </div>
 
     <input class = "btn btn-success" type="submit" value="Adicionar">
 
