@@ -16,13 +16,13 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alunos
  */
-@WebServlet(urlPatterns = "/funcionario")
+@WebServlet("/funcionario")
 public class FuncionarioIndex extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        req.getRequestDispatcher("/funcionario/index.jsp").include(req, resp);
+        req.getRequestDispatcher("funcionario/index.jsp").include(req, resp);
     }
     
     
