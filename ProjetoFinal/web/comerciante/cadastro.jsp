@@ -9,6 +9,14 @@
 <%@include file="../master/master.jsp" %>
 <form action="/ProjetoFinal/comerciante/store" method="post">
         <div class="form-group">
+            <label for='campo-login' ><i class=''></i> Login</label>
+            <input type='text' id='campo-login' name='login' placeholder='Login'>
+        </div>
+        <div class="form-group">
+            <label for='campo-senha' ><i class=''></i> Senha</label>
+            <input type='text' id='campo-senha' name='senha' placeholder='Senha'>
+        </div>
+        <div class="form-group">
             <label for='nome'><i class=''></i> Nome</label>
             <input type='text' id='nome' name='nome' placeholder='Nome'>
         </div>

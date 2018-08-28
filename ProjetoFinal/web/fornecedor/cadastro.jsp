@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : cadastro
     Created on : 23/08/2018, 11:26:21
     Author     : Alunos
@@ -7,6 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
 <form action="/ProjetoFinal/fornecedor/store" method="post">
+    
     <div class="form-group">
         <label for='campo-nome'><i class=''></i> Nome</label>
         <input type='text' id='campo-nome' name='nome' placeholder='Nome'>
