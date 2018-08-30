@@ -7,12 +7,12 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
-<!DOCTYPE html>
+
 
 <form action="/ProjetoFinal/comerciante/store" method="post">
     
-    
-        
+        <link rel='stylesheet' type='text/css' href='/ProjetoFinal/bootstrap/css/bootstrap.css'>
+        <script src='/ProjetoFinal/js/cadastroComerciante.js'></script>
           
         
         <div class = "register Scroll">
@@ -24,9 +24,9 @@
             <label for='campo-senha' ><i class=''></i> Senha</label>
             <input type='text' id='campo-senha' name='senha' placeholder='Senha'>
         </div>
-        <div class="form-group">
-            <label for='campo-nome'><i class=''></i> Nome</label>
-            <input type='text' id='campo-nome' name='nome' placeholder='Nome'>
+        <div id='div-campo-nome' class='form-group'>
+            <label for='campo-nome'>Nome <span class='text-danger font-weight-bold'></span></label>
+            <input class='form-control' type='text' id='campo-nome' name='nome' required='required' onfocusout='validarCampoNome()'>
         </div>
         <div class="form-group">
             <label for='campo-sobrenome'><i class='fa fa-envelope'></i> Sobrenome</label>
