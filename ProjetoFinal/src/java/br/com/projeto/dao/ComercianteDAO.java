@@ -13,8 +13,8 @@ public class ComercianteDAO {
 
     public int adicionar(ComercianteBean comerciante) {
 
-        String sql = "INSERT INTO comerciantes (login, senha, nome, cpf, email, telefone, rua, bairro, cidade, estado, numero) VALUES"
-                + "(?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO comerciantes (login, senha, nome, cpf, email, telefone, cep, rua, bairro, cidade, estado, numero) VALUES"
+                + "(?,?,?,?,?,?,?,?,?,?,?,?)";
 
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql,
@@ -26,6 +26,7 @@ public class ComercianteDAO {
             ps.setString(posicao++, comerciante.getCpf());
             ps.setString(posicao++, comerciante.getEmail());
             ps.setString(posicao++, comerciante.getTelefone());
+            ps.setString(posicao++, comerciante.getCep());
             ps.setString(posicao++, comerciante.getRua());
             ps.setString(posicao++, comerciante.getBairro());
             ps.setString(posicao++, comerciante.getCidade());
