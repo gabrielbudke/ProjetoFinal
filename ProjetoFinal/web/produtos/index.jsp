@@ -18,6 +18,7 @@
             <th>Categoria</th>
             <th>Nome</th>
             <th>Preço</th>
+            <th>Quantidade</th>
             <th>Ação</th>
         </tr>
     </thead>
@@ -28,8 +29,7 @@
             <td> <%=produto.getCategoria().getNome()%> </td>
             <td> <%=produto.getNome()%> </td>
             <td> <%=produto.getPreco()%> </td>    
-            <td> 
-            </td>
+            <td> <%=produto.getQuantidade()%></td>
         </tr>
         <%}%>
     </tbody>

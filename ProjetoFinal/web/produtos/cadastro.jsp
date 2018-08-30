@@ -32,17 +32,17 @@
 
     <div class = "form-group">
         <label for='campo-nome'><i class='fa fa-address-card-o'></i> Nome</label>
-        <input type='text' id='campo-nome' name='nome' placeholder='Nome'>
+        <input type='text' id='campo-nome' name='nome' placeholder='Nome' required='required' onfocusout='validarCampoNome()'>
     </div>
 
     <div>
 	<label for="campo-quantidade"><i class='fa fa-address-card-o'></i>Quantidade</label>
-	<input type='text' id='campo-quantidade' name='quantidade' placeholder='Quantidade'>
+        <input type='text' id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required' onfocusout='validarCampoQuantidade()'>
     </div>
 
     <div class = "form-group">
         <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
-        <input type='text' id='campo-preco' name='preco' placeholder='Preco'>
+        <input type='text' id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
     </div>
 
     <input class = "btn btn-success" type="submit" value="Adicionar">
