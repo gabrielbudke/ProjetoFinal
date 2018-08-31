@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alunos
  */
-@WebServlet("/produtos/")
+@WebServlet("/produtos")
 public class ProdutoIndex extends HttpServlet{
 
     @Override
@@ -29,7 +29,7 @@ public class ProdutoIndex extends HttpServlet{
         List<ProdutoBean> produtos = new ProdutoDAO().obterTodos();
         req.setAttribute("produtos", produtos);
         resp.setContentType("text/html;charset=UTF-8");
-        req.getRequestDispatcher("/produtos/index.jsp").include(req, resp);
+        req.getRequestDispatcher("/jsp/produtos/index.jsp").include(req, resp);
     
     }
     

@@ -6,21 +6,31 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="../master/master.jsp" %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>E-Stock</title>
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="../jsp/comerciante/cadastroComercianteCSS.css">
+        
+    </head>
+    <body>
+        <div class="container-fluid">
+
 <form action="/comerciante/store" method="post">
     
 
-        <link rel='stylesheet' type='text/css' href='/jsp/comerciante/cadastroComercianteCSS.css'>
+        
 
 
 
-        <div class = "register Scroll">
 
-        <link rel='stylesheet' type='text/css' href='/cadastroComercianteCSS.css'>
-
+        
         <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script src='/js/cadastroComerciante.js'></script>
           
+        
         
         
            <div class = "register Scroll">
@@ -34,13 +44,13 @@
             <label for='campo-senha'>Senha <span class='text-danger font-weight-bold'></span></label>
             <input class='form-control' type='text' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()'>
         </div>
-        <div id='div-campo-nome' class='form-group'>
+        <div id='div-campo-nome' class='form-group '>
             <label for='campo-nome'>Nome <span class='text-danger font-weight-bold'></span></label>
-            <input class='form-control' type='text' id='campo-nome' name='nome' required='required' onfocusout='validarCampoNome()'>
+            <input class='form-control' type='text' id='campo-nome' name='nome' required='required' onfocusout='validarCampoNome()' placeholder = 'Nome'>
         </div>
         <div id='div-campo-cpf' class='form-group'>
             <label for='campo-cpf'>Cpf <span class='text-danger font-weight-bold'></span></label>
-            <input class='form-control' type='text' id='campo-cpf' name='cpf' required='required' onfocusout='validarCampoCpf()'>
+            <input class='form-control' type='text' id='campo-cpf' name='cpf' required='required' onfocusout='validarCampoCpf()' placeholder ='CPF'>
         </div>
         <div class="form-group">
             <label for='campo-email'><i class=''></i> E-mail</label>
