@@ -16,7 +16,7 @@ public class CategoriaCadastro extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	req.getRequestDispatcher("jsp/categoria/cadastro.jsp").include(req, resp);
+	req.getRequestDispatcher("/jsp/categoria/cadastro.jsp").include(req, resp);
     }
     
     

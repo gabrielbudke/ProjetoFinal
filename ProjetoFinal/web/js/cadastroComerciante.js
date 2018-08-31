@@ -1,5 +1,5 @@
 function validarCadastro() {
-    if (validarCampoNome() == false || validarCampoCpf() == false) {
+    if (validarCampoNome() == false || validarCampoCpf() == false || validarCampoSenha() == false) {
         event.preventDefault();
     }
 }
@@ -30,6 +30,29 @@ function validarCampoNome() {
     } else {
         apagarClasse("campo-nome", "border-danger");
         adicionarClasse("campo-nome", "border-success");
+        return true;
+    }
+}
+
+function validarCampoSenha(){
+    var senha = document.getElementById("campo-senha").value;
+    var quantidadeCaracteres = senha.length;
+    
+    
+    apagarElementoSeExiste("span-campo-senha-menor-6");
+    apagarElementoSeExiste("span-campo-senha-maior-6");
+    
+    if (quantidadeCaracteres < 6) {
+        gerarSpan("span-campo-senha-menor-6",
+                  "Senha deve conter no minimo 6 caracteres",
+                  "div-campo-senha");
+                  
+        apagarClasse("campo-senha", "border-success");
+        adicionarClasse("campo-senha", "border-danger");
+        return false;
+    }else if (quantidadeCaracteres > 6) {
+        apagarClasse("campo-senha", "border-danger");
+        adicionarClasse("campo-senha", "border-success");
         return true;
     }
 }
@@ -96,7 +119,7 @@ $(function () {
         processarCep();
     });
     function processarCep() {
-               alert('asdasd');
+           
         $cep = $("#cep").val();
         $.ajax({
             url: "https://viacep.com.br/ws/" + $cep + "/json/",
