@@ -35,11 +35,11 @@
         </div>
         <div id='div-campo-nome' class='form-group '>
             <label for='campo-nome'>Nome <span class='text-danger font-weight-bold'></span></label>
-            <input class='form-control' type='text' id='campo-nome' name='nome' required='required' onfocusout='validarCampoNome()' placeholder = 'Nome'>
+            <input  type='text' id='campo-nome' name='nome' required='required' onfocusout='validarCampoNome()' placeholder = 'Nome'>
         </div>
         <div id='div-campo-cpf' class='form-group'>
-            <label for='campo-cpf'>Cpf <span class='text-danger font-weight-bold'></span></label>
-            <input class='form-control' type='text' id='campo-cpf' name='cpf' required='required' onfocusout='validarCampoCpf()' placeholder ='CPF'>
+            <label for='campo-cpf'>CPF  <span class='text-danger font-weight-bold'></span></label>
+            <input  type='text' id='campo-cpf' name='cpf' required='required' onfocusout='validarCampoCpf()' placeholder ='CPF'>
         </div>
         <div class="form-group">
             <label for='campo-email'><i class=''></i> E-mail</label>
