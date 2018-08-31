@@ -45,7 +45,7 @@
         <input type='text' id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
     </div>
 
-    <input class = "btn btn-success" type="submit" value="Adicionar">
+    <input type="submit" value="Adicionar">
 
 </form>
 

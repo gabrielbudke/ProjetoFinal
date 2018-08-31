@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alunos
  */
-@WebServlet("/produtos/")
+@WebServlet("/produtos")
 public class ProdutoIndex extends HttpServlet{
 
     @Override
