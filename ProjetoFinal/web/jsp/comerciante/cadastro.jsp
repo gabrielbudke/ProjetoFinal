@@ -50,13 +50,8 @@
             <input type='text' id='logradouro' name='rua' placeholder='Rua'>
         </div>
         <div class="form-group">
-
             <label for='campo-numero'><i class=''></i> Número</label>
             <input type='tel' id='campo-numero' name='numero' placeholder='numero'>
-
-            <label for='campo-numero'><i class=''></i> Numero</label>
-            <input type='tel' id='numero' name='numero' placeholder='numero'>
-
         </div>
         <div class="form-group">
             <label for='campo-bairro'><i class=''></i> Bairro</label>
