@@ -28,7 +28,7 @@ public class FornecedorStore extends HttpServlet{
         int codigo = new FornecedorDAO().adicionar(fornecedor);
         
         if(codigo > 0){
-            resp.sendRedirect("/ProjetoFinal/fornecedor/cadastro");
+            resp.sendRedirect("/fornecedor/cadastro");
             
         }
     

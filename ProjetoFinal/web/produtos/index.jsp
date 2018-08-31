@@ -10,7 +10,7 @@
 <%@include file="../master/master.jsp"%>
 
 
-<a href="/ProjetoFinal/produtos/cadastro">Novo Produto</a>
+<a href="/produtos/cadastro">Novo Produto</a>
 <table class="table">
     <thead>
         <tr>
