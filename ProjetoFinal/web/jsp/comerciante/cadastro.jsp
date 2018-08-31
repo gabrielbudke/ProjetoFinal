@@ -7,16 +7,16 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
-
-
 <form action="/comerciante/store" method="post">
     
         <link rel='stylesheet' type='text/css' href='/bootstrap/css/bootstrap.css'>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script src='/js/cadastroComerciante.js'></script>
           
         
-        <div class = "register Scroll">
+        
+           <div class = "register Scroll">
+            
             <div class="form-group">
             <label for='campo-login' ><i class=''></i> Login</label>
             <input type='text' id='campo-login' name='login' placeholder='Login'>
@@ -50,8 +50,13 @@
             <input type='text' id='logradouro' name='rua' placeholder='Rua'>
         </div>
         <div class="form-group">
+
+            <label for='campo-numero'><i class=''></i> Número</label>
+            <input type='tel' id='campo-numero' name='numero' placeholder='numero'>
+
             <label for='campo-numero'><i class=''></i> Numero</label>
             <input type='tel' id='numero' name='numero' placeholder='numero'>
+
         </div>
         <div class="form-group">
             <label for='campo-bairro'><i class=''></i> Bairro</label>
@@ -69,10 +74,26 @@
             <label for='campo-estado'>Estado</label>
             <input type='text' id='campo-estado' name='estado' placeholder='Estado'>
         </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Cadastrar</button>
+            </div>
+            </div>
+        
+        
+
+       
+          
+
+    
+    
+    
+
             <input type="submit" value="Cadastrar">
         </div>
         
 </form>
+
+<<<<<<< HEAD:ProjetoFinal/web/comerciante/cadastro.jsp
 
 <script type="text/javascript">
         $("#cep").focusout(function(){
@@ -104,5 +125,7 @@
         });
 </script>
     
+=======
+>>>>>>> 21b55f1b5d54e40ab39bd5172b6094d8c698032c:ProjetoFinal/web/jsp/comerciante/cadastro.jsp
 <%@include file="../master/rodape.jsp" %>
 

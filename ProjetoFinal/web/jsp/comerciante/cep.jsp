@@ -21,10 +21,6 @@
 		<input id="cep" type="text" required/>
 		<label for="logradouro">Logradouro</label>
 		<input id="logradouro" type="text" required/>
-		<label for="numero">Número</label>
-		<input id="numero" type="text" />
-		<label for="complemento">Complemento</label>
-		<input id="complemento" type="text"/>
 		<label for="bairro">Bairro</label>
 		<input id="bairro" type="text" required/>
 		<label for="uf">Estado</label>
