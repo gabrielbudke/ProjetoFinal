@@ -50,13 +50,8 @@
             <input type='text' id='logradouro' name='rua' placeholder='Rua'>
         </div>
         <div class="form-group">
-
             <label for='campo-numero'><i class=''></i> Número</label>
             <input type='tel' id='campo-numero' name='numero' placeholder='numero'>
-
-            <label for='campo-numero'><i class=''></i> Numero</label>
-            <input type='tel' id='numero' name='numero' placeholder='numero'>
-
         </div>
         <div class="form-group">
             <label for='campo-bairro'><i class=''></i> Bairro</label>
@@ -77,22 +72,12 @@
 
             <button type="submit" class="btn btn-primary btn-block btn-large">Cadastrar</button>
             </div>
-            </div>
-        
-        
-
-       
-          
-
-    
-    
-    
-
             <input type="submit" value="Cadastrar">
         </div>
         
 </form>
 
+<<<<<<< HEAD
 <script type="text/javascript">
         $("#cep").focusout(function(){
                 //Início do Comando AJAX
@@ -125,5 +110,7 @@
     
 
 
+=======
+>>>>>>> 538d1e1ed7227305d1dcb34fa585e199600c79db
 <%@include file="../master/rodape.jsp" %>
 

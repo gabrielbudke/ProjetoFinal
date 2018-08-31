@@ -3,6 +3,7 @@ function validarCadastro() {
         event.preventDefault();
     }
 }
+
 function validarCampoNome() {
     var nome = document.getElementById("campo-nome").value;
     var quantidadeCaracteres = nome.length;
@@ -32,6 +33,7 @@ function validarCampoNome() {
         return true;
     }
 }
+
 function validarCampoCpf() {
     var cpf = document.getElementById("campo-cpf").value;
     var quantidadeCaracteres = cpf.length;
@@ -61,6 +63,7 @@ function validarCampoCpf() {
         return true;
     }
 }
+
 function apagarClasse(id, classeCor) {
     document.getElementById(id).classList.remove(classeCor);
 
@@ -86,3 +89,24 @@ function gerarSpan(id, texto, idPai) {
     document.getElementById(idPai).appendChild(span);
 }
 
+
+$(function () {
+    
+    $("#cep").on("focusout", function () {
+        processarCep();
+    });
+    function processarCep() {
+        $cep = $("#cep").val();
+        $.ajax({
+            url: "https://viacep.com.br/ws/" + $cep + "/json/",
+            method: "get",
+            success: function (data) {
+                $("#logradouro").val(data.logradouro);
+                $("#cidade").val(data.localidade);
+                $("#bairro").val(data.bairro);
+                $("#estado").val(data.uf);
+                $("#numero").focus();
+            }
+        });
+    }
+});

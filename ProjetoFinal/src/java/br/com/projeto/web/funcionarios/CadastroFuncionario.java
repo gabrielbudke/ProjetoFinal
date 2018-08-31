@@ -14,7 +14,7 @@ public class CadastroFuncionario extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        
-        req.getRequestDispatcher("/funcionario/cadastro.jsp").include(req, resp);
+        req.getRequestDispatcher("jsp/funcionario/cadastro.jsp").include(req, resp);
     }
     
 
