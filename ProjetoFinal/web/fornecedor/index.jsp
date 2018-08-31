@@ -14,7 +14,7 @@
 <%@include file="../master/master.jsp" %>
 <% List<FornecedorBean> fornecedores = new FornecedorDAO().obterTodos(); %>
 
-<a href="/ProjetoFinal/fornecedor/cadastro">Novo Fornecedor</a>
+<a href="/fornecedor/cadastro">Novo Fornecedor</a>
 <table>
     <thead>
         <tr>
@@ -35,8 +35,8 @@
             <td> <%=fornecedor.getTelefone()%></td>
             <td> <%=fornecedor.getEmail()%></td>
             <td> 
-                <a href="/ProjetoFinal/fornecedor/editar">Editar</a>
-                <a href="/ProjetoFinal/fornecedor/excluir">Excluir</a>
+                <a href="/fornecedor/editar">Editar</a>
+                <a href="/fornecedor/excluir">Excluir</a>
             </td>
         </tr>
         <%}%>

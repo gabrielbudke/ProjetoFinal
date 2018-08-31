@@ -9,11 +9,11 @@
 <%@include file="../master/master.jsp" %>
 
 
-<form action="/ProjetoFinal/comerciante/store" method="post">
+<form action="/comerciante/store" method="post">
     
-        <link rel='stylesheet' type='text/css' href='/ProjetoFinal/bootstrap/css/bootstrap.css'>
+        <link rel='stylesheet' type='text/css' href='/bootstrap/css/bootstrap.css'>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src='/ProjetoFinal/js/cadastroComerciante.js'></script>
+        <script src='/js/cadastroComerciante.js'></script>
           
         
         <div class = "register Scroll">
