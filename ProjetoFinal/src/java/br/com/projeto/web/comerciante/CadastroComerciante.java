@@ -14,7 +14,7 @@ public class CadastroComerciante extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        req.getRequestDispatcher("/comerciante/cadastro.jsp").include(req, resp);
+        req.getRequestDispatcher("jsp/comerciante/cadastro.jsp").include(req, resp);
         
     }
                 }

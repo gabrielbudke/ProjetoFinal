@@ -18,7 +18,7 @@ public class FornecedorIndex extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
         resp.setContentType("text/html;charset=UTF-8");
-        req.getRequestDispatcher("fornecedor/index.jsp").include(req, resp);
+        req.getRequestDispatcher("jsp/fornecedor/index.jsp").include(req, resp);
     }
 
 }

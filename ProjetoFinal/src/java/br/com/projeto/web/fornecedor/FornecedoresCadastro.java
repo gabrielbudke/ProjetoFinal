@@ -18,7 +18,7 @@ public class FornecedoresCadastro extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
    
-        req.getRequestDispatcher("/fornecedor/cadastro.jsp").include(req, resp);
+        req.getRequestDispatcher("jsp/fornecedor/cadastro.jsp").include(req, resp);
 
 
     }
