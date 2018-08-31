@@ -89,13 +89,14 @@ function gerarSpan(id, texto, idPai) {
     document.getElementById(idPai).appendChild(span);
 }
 
-
 $(function () {
     
     $("#cep").on("focusout", function () {
+
         processarCep();
     });
     function processarCep() {
+               alert('asdasd');
         $cep = $("#cep").val();
         $.ajax({
             url: "https://viacep.com.br/ws/" + $cep + "/json/",
@@ -104,8 +105,8 @@ $(function () {
                 $("#logradouro").val(data.logradouro);
                 $("#cidade").val(data.localidade);
                 $("#bairro").val(data.bairro);
-                $("#estado").val(data.uf);
-                $("#numero").focus();
+                $("#campo-estado").val(data.uf);
+                
             }
         });
     }
