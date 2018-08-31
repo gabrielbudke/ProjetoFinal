@@ -9,15 +9,11 @@
 <%@include file="../master/master.jsp" %>
 <form action="/comerciante/store" method="post">
     
-        <link rel='stylesheet' type='text/css' href='/bootstrap/css/bootstrap.css'>
-        <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
-        <script src='/js/cadastroComerciante.js'></script>
-          
-        
-        
-           <div class = "register Scroll">
+
+
+        <div class = "register Scroll">
             
-            <div class="form-group">
+        <div class="form-group">
             <label for='campo-login' ><i class=''></i> Login</label>
             <input type='text' id='campo-login' name='login' placeholder='Login'>
         </div>
@@ -43,7 +39,7 @@
         </div>
         <div class="form-group">
             <label for='campo-cep'><i class=''></i> Cep</label>
-            <input type='text' id='cep' name='cep' placeholder='cep'>
+            <input type='text' id='cep' name='cep' placeholder='cep' required='required' >
         </div>
         <div class="form-group">
             <label for='logradouro'><i class=''></i> Rua</label>
@@ -57,10 +53,6 @@
             <label for='campo-bairro'><i class=''></i> Bairro</label>
             <input type='text' id='bairro' name='bairro' placeholder='Bairro'>
         </div>
-        <div>
-            <label for="bairro">Bairro</label>
-            <input id="bairro" type="text" required/>
-        </div>    
         <div class="form-group">
             <label for='campo-cidade'><i class=''></i> Cidade</label>
             <input type='text' id='cidade' name='cidade' placeholder='Cidade'>
