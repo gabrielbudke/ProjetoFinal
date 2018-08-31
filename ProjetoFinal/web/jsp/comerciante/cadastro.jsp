@@ -9,7 +9,7 @@
 <%@include file="../master/master.jsp" %>
 <form action="/comerciante/store" method="post">
     
-        <link rel='stylesheet' type='text/css' href='/comerciante/cadastroComercianteCSS.css'>
+        <link rel='stylesheet' type='text/css' href='/cadastroComercianteCSS.css'>
         <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script src='/js/cadastroComerciante.js'></script>
           
