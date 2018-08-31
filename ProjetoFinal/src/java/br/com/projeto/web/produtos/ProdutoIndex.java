@@ -28,6 +28,7 @@ public class ProdutoIndex extends HttpServlet{
 
         List<ProdutoBean> produtos = new ProdutoDAO().obterTodos();
         req.setAttribute("produtos", produtos);
+        resp.setContentType("text/html;charset=UTF-8");
         req.getRequestDispatcher("/produtos/index.jsp").include(req, resp);
     
     }

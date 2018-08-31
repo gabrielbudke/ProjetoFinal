@@ -15,6 +15,8 @@ public class ProdutosCadastro extends HttpServlet {
     
         req.getRequestDispatcher("/produtos/cadastro.jsp").include(req, resp);
         
+        resp.setContentType("text/html;charset=UTF-8");
+        
     }
     
 }
