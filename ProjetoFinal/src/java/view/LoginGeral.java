@@ -10,12 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns="/login")
 public class LoginGeral extends HttpServlet {
     
-    private PrintWriter out;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     
-      req.getRequestDispatcher("/login/login.jsp").include(req, resp);        
+      req.getRequestDispatcher("jsp/login/login.jsp").include(req, resp);        
         
     }
     

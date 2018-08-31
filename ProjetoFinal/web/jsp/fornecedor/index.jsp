@@ -14,7 +14,7 @@
 <%@include file="../master/master.jsp" %>
 <% List<FornecedorBean> fornecedores = new FornecedorDAO().obterTodos(); %>
 
-<a href="/fornecedor/cadastro">Novo Fornecedor</a>
+<a href="fornecedor/cadastro">Novo Fornecedor</a>
 <table>
     <thead>
         <tr>
