@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="/loginCss.css" />
+        <link rel="stylesheet" type="text/css" href="../jsp/login/loginCSS.css" />
     </head>
     <body>
        <div class="login">
