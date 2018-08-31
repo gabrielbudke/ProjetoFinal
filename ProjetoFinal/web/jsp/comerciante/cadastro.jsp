@@ -9,9 +9,19 @@
 <%@include file="../master/master.jsp" %>
 <form action="/comerciante/store" method="post">
     
+<<<<<<< HEAD
 
 
         <div class = "register Scroll">
+=======
+        <link rel='stylesheet' type='text/css' href='/cadastroComercianteCSS.css'>
+        <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+        <script src='/js/cadastroComerciante.js'></script>
+          
+        
+        
+           <div class = "register Scroll">
+>>>>>>> a0c5539d78b1a52608384cfc4e80ce4284d97f96
             
         <div class="form-group">
             <label for='campo-login' ><i class=''></i> Login</label>
@@ -68,6 +78,9 @@
         </div>
         
 </form>
+    
+
+
 
 <%@include file="../master/rodape.jsp" %>
 
