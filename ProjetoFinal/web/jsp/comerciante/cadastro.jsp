@@ -30,9 +30,9 @@
             <label for='campo-login' ><i class=''></i> Login</label>
             <input type='text' id='campo-login' name='login' placeholder='Login'>
         </div>
-        <div class="form-group">
-            <label for='campo-senha' ><i class=''></i> Senha</label>
-            <input type='text' id='campo-senha' name='senha' placeholder='Senha'>
+        <div id='div-campo-senha' class='form-group'>
+            <label for='campo-senha'>Senha <span class='text-danger font-weight-bold'></span></label>
+            <input class='form-control' type='text' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()'>
         </div>
         <div id='div-campo-nome' class='form-group'>
             <label for='campo-nome'>Nome <span class='text-danger font-weight-bold'></span></label>
