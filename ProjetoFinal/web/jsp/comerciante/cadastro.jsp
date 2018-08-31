@@ -10,7 +10,7 @@
 <form action="/comerciante/store" method="post">
     
         <link rel='stylesheet' type='text/css' href='/bootstrap/css/bootstrap.css'>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script src='/js/cadastroComerciante.js'></script>
           
         
@@ -93,6 +93,7 @@
         
 </form>
 
+<<<<<<< HEAD:ProjetoFinal/web/comerciante/cadastro.jsp
 
 <script type="text/javascript">
         $("#cep").focusout(function(){
@@ -124,5 +125,7 @@
         });
 </script>
     
+=======
+>>>>>>> 21b55f1b5d54e40ab39bd5172b6094d8c698032c:ProjetoFinal/web/jsp/comerciante/cadastro.jsp
 <%@include file="../master/rodape.jsp" %>
 
