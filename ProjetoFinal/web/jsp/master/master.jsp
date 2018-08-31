@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>E-Stock</title>
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="../comerciante/cadastroComercianteCSS.css">
+        <link rel="stylesheet" href="../jsp/comerciante/cadastroComercianteCSS.css">
         
     </head>
     <body>
