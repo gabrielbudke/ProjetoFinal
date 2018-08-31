@@ -23,7 +23,7 @@ public class CategoriaStore extends HttpServlet{
 	categoria.setNome(req.getParameter("categoria"));
 	categoria.setId(new CategoriaDAO().adicionar(categoria));
 	
-	resp.sendRedirect("/ProjetoFinal/produtos/cadastro");
+	resp.sendRedirect("/produtos/cadastro");
 	
     }
     

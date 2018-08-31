@@ -13,7 +13,7 @@
 <%@include file="../master/master.jsp" %>
 <% List<FuncionarioBean> funcionarios = new FuncionarioDAO().obterTodos(); %>
 
-<a href="/ProjetoFinal/funcionario/cadastro">Novo Funcionario</a>
+<a href="/funcionario/cadastro">Novo Funcionario</a>
 <table>
     <thead>
         <tr>

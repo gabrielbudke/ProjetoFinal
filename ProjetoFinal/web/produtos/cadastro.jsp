@@ -13,33 +13,37 @@
 <%@include file = "../master/master.jsp"%>
 
 <%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos();%>
-<form action="/ProjetoFinal/produtos/store" method="POST">
+<form action="/produtos/store" method="POST">
     <div class="nav-item">
-	<a href="/ProjetoFinal/categoria/cadastro">Nova Categoria</a>
+	<a href="/categoria/cadastro">Nova Categoria</a>
     </div>
-    
+
     <div class = "form-group">
         <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
         <select type='text' class="form-control" id='campo-categoria' name='categoria'>
             <option selected = 'selected' disabled='disable'></option>
-           
-	    <% for (CategoriaBean categoria : categorias){%>
-                <option value=<%=categoria.getId()%>><%=categoria.getNome()%></option>
+
+	    <% for (CategoriaBean categoria : categorias) {%>
+	    <option value=<%=categoria.getId()%>><%=categoria.getNome()%></option>
             <% }%>
-	    
+
         </select>
     </div>
 
     <div class = "form-group">
         <label for='campo-nome'><i class='fa fa-address-card-o'></i> Nome</label>
-        <input type='text' id='campo-nome' name='nome' placeholder='Nome'>
+        <input type='text' id='campo-nome' name='nome' placeholder='Nome' required='required' onfocusout='validarCampoNome()'>
+    </div>
+
+    <div>
+	<label for="campo-quantidade"><i class='fa fa-address-card-o'></i>Quantidade</label>
+        <input type='text' id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required' onfocusout='validarCampoQuantidade()'>
     </div>
 
     <div class = "form-group">
         <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
-        <input type='text' id='campo-preco' name='preco' placeholder='Preco'>
+        <input type='text' id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
     </div>
-	    
 
     <input class = "btn btn-success" type="submit" value="Adicionar">
 

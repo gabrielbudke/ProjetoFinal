@@ -32,6 +32,7 @@ public class ComercianteStore extends HttpServlet{
     comerciante.setBairro(req.getParameter("bairro"));
     comerciante.setCidade(req.getParameter("cidade"));
     comerciante.setEstado(req.getParameter("estado"));
+    comerciante.setCep(req.getParameter("cep"));
     comerciante.setRua(req.getParameter("rua"));
     comerciante.setNumero(req.getParameter("numero"));
     comerciante.setTelefone(req.getParameter("telefone"));

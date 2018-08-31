@@ -1,17 +1,19 @@
-<%-- 
+<%--
 /**
 * @author Patrick Otavio do Nacimento(patricknascimento198@gmail.com)
 * @date 2018-08-24
 */
 --%>
 
+<%@page import="br.com.projeto.dao.ProdutoDAO"%>
+<%@page import="br.com.projeto.bean.ProdutoBean"%>
 <%@page import="java.util.List"%>
 <%@page import="br.com.projeto.dao.EstoqueDAO"%>
 <%@page import="br.com.projeto.bean.EstoqueBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
-<%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
-<a href="/ProjetoFinal/produto/cadastro">Novo Produto</a>
+<%List<ProdutoBean> produtos = new ProdutoDAO().obterTodos(); %>
+
 <div>
     <table class="table">
         <thead>
@@ -23,13 +25,14 @@
         </thead>
         <tbody>
             
-            <% for(EstoqueBean estoque : estoques) {%>
+            <% for(ProdutoBean produto : produtos) {%>
 	    <tr>
-		<td><%%></td>
-		<td><%%></td>
-		<td><%%></td>
-		<td><%%></td>
-		<td><%%></td>
+		<td><% //entrada ou saida %></td>
+		<td><% //produto %></td>
+		<td><% //valor un %></td>
+		<td><% // quantidade %></td>
+		<td><% // valor total %></td>
+		<td><% // açao %></td>
 	    </tr>
             <%}%>
         </tbody>

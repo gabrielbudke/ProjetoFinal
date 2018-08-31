@@ -8,7 +8,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
 
-<form action="/ProjetoFinal/funcionarios/store" method="POST">
+<form action="/funcionarios/store" method="POST">
 
     <div class = "form-group">
         <label for='nome'><i class=''></i> Nome</label>

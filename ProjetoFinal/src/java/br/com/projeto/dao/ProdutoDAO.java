@@ -1,5 +1,6 @@
 package br.com.projeto.dao;
 
+import br.com.projeto.bean.CategoriaBean;
 import br.com.projeto.bean.ProdutoBean;
 import br.com.projeto.database.Conexao;
 import java.sql.PreparedStatement;
@@ -16,17 +17,24 @@ public class ProdutoDAO {
     
     public List<ProdutoBean> obterTodos(){
         List<ProdutoBean> produtos = new ArrayList<>();
-        String sql = "SELECT * FROM produtos";
+        String sql = "SELECT * FROM produtos p JOIN categorias ct ON (ct.id = p.id_categoria)";
         try {
             Statement st = Conexao.obterConexao().createStatement();
             st.execute(sql);
             ResultSet resultSet = st.getResultSet();
             while (resultSet.next()) {
                 ProdutoBean produto = new ProdutoBean();
-                produto.setId(resultSet.getInt("id"));
-                produto.setNome(resultSet.getString("nome"));
-                produto.setPreco(resultSet.getFloat("preco"));
-                produto.setIdCategoria(resultSet.getInt("id_categoria"));
+                produto.setId(resultSet.getInt("p.id"));
+                produto.setNome(resultSet.getString("p.nome"));
+                produto.setPreco(resultSet.getFloat("p.preco"));
+                produto.setIdCategoria(resultSet.getInt("p.id_categoria"));
+                
+                CategoriaBean categoria = new CategoriaBean();
+                categoria.setId(produto.getIdCategoria());
+                categoria.setNome(resultSet.getString("ct.nome"));
+                
+                produto.setCategoria(categoria);
+                
                 produtos.add(produto);
             }
         } catch (Exception e) {

@@ -7,7 +7,15 @@ package br.com.projeto.bean;
  */
 public class ComercianteBean {
     
-    private String login, senha, nome, cpf, email, telefone, rua, numero, bairro, cidade, estado;
+    private String login, senha, nome, cpf, email, telefone, cep, rua, numero, bairro, cidade, estado;
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
 
     private int id;
 

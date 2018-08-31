@@ -28,11 +28,12 @@ public class ProdutoStore extends HttpServlet{
         produto.setNome(req.getParameter("nome"));
         produto.setPreco(Float.parseFloat(req.getParameter("preco")));
 	produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));
-        
+        produto.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
         produto.setId(new ProdutoDAO().adicionar(produto));
-        resp.sendRedirect("/ProjetoFinal/produtos/cadastro");
+            
+        resp.sendRedirect("/produtos");
         
-        
+     
     }
     
     
