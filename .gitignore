@@ -10,3 +10,7 @@ ProjetoFinal/src/java/br/com/projeto/web/estoque/Estoque.java
 ProjetoFinal/nbproject/ant-deploy.xml
 ProjetoFinal/nbproject/ant-deploy.xml
 ProjetoFinal/nbproject/project.properties
+*.properties
+*.xml
+*.xml
+*.properties

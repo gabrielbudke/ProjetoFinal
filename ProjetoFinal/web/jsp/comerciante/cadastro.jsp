@@ -10,17 +10,16 @@
 <form action="/comerciante/store" method="post">
     
 
-        <link rel='stylesheet' type='text/css' href='/jsp/comerciante/cadastroComercianteCSS.css'>
+        
 
 
 
-        <div class = "register Scroll">
 
-        <link rel='stylesheet' type='text/css' href='/cadastroComercianteCSS.css'>
-
+        
         <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script src='/js/cadastroComerciante.js'></script>
           
+        
         
         
            <div class = "register Scroll">
@@ -34,13 +33,13 @@
             <label for='campo-senha' ><i class=''></i> Senha</label>
             <input type='text' id='campo-senha' name='senha' placeholder='Senha'>
         </div>
-        <div id='div-campo-nome' class='form-group'>
+        <div id='div-campo-nome' class='form-group '>
             <label for='campo-nome'>Nome <span class='text-danger font-weight-bold'></span></label>
-            <input class='form-control' type='text' id='campo-nome' name='nome' required='required' onfocusout='validarCampoNome()'>
+            <input class='form-control' type='text' id='campo-nome' name='nome' required='required' onfocusout='validarCampoNome()' placeholder = 'Nome'>
         </div>
         <div id='div-campo-cpf' class='form-group'>
             <label for='campo-cpf'>Cpf <span class='text-danger font-weight-bold'></span></label>
-            <input class='form-control' type='text' id='campo-cpf' name='cpf' required='required' onfocusout='validarCampoCpf()'>
+            <input class='form-control' type='text' id='campo-cpf' name='cpf' required='required' onfocusout='validarCampoCpf()' placeholder ='CPF'>
         </div>
         <div class="form-group">
             <label for='campo-email'><i class=''></i> E-mail</label>
