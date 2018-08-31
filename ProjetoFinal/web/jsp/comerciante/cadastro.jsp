@@ -6,7 +6,18 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="../master/master.jsp" %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>E-Stock</title>
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="../jsp/comerciante/cadastroComercianteCSS.css">
+        
+    </head>
+    <body>
+        <div class="container-fluid">
+
 <form action="/comerciante/store" method="post">
     
 
