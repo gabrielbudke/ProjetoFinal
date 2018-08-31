@@ -9,7 +9,7 @@
 <%@include file="../master/master.jsp" %>
 <form action="/comerciante/store" method="post">
     
-        <link rel='stylesheet' type='text/css' href='/cadastroComercianteCSS.css'>
+        <link rel='stylesheet' type='text/css' href='/jsp/comerciante/cadastroComercianteCSS.css'>
         <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script src='/js/cadastroComerciante.js'></script>
           
@@ -57,10 +57,7 @@
             <label for='campo-bairro'><i class=''></i> Bairro</label>
             <input type='text' id='bairro' name='bairro' placeholder='Bairro'>
         </div>
-        <div>
-            <label for="bairro">Bairro</label>
-            <input id="bairro" type="text" required/>
-        </div>    
+        
         <div class="form-group">
             <label for='campo-cidade'><i class=''></i> Cidade</label>
             <input type='text' id='cidade' name='cidade' placeholder='Cidade'>
@@ -72,8 +69,7 @@
 
             <button type="submit" class="btn btn-primary btn-block btn-large">Cadastrar</button>
             </div>
-            <input type="submit" value="Cadastrar">
-        </div>
+            
         
 </form>
     
