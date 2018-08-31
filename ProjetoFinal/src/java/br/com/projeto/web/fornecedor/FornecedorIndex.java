@@ -11,14 +11,14 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alunos
  */
-@WebServlet(urlPatterns= "/fornecedor")
-public class FornecedorIndex extends HttpServlet{
+@WebServlet(urlPatterns = "/fornecedor")
+public class FornecedorIndex extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        
+        resp.setContentType("text/html;charset=UTF-8");
         req.getRequestDispatcher("fornecedor/index.jsp").include(req, resp);
     }
-    
-    
+
 }

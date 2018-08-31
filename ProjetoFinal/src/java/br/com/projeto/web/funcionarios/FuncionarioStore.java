@@ -40,7 +40,7 @@ public class FuncionarioStore extends HttpServlet{
         
         endereco.setId(new EnderecoFuncionarioDAO().adicionar(endereco));
         funcionario.setId(new FuncionarioDAO().adicionar(funcionario));
-        resp.sendRedirect("/ProjetoFinal/funcionario/cadastro");
+        resp.sendRedirect("/funcionario/cadastro");
         
     }
     

@@ -13,9 +13,9 @@
 <%@include file = "../master/master.jsp"%>
 
 <%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos();%>
-<form action="/ProjetoFinal/produtos/store" method="POST">
+<form action="/produtos/store" method="POST">
     <div class="nav-item">
-	<a href="/ProjetoFinal/categoria/cadastro">Nova Categoria</a>
+	<a href="/categoria/cadastro">Nova Categoria</a>
     </div>
 
     <div class = "form-group">
