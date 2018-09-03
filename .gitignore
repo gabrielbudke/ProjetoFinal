@@ -15,3 +15,5 @@ ProjetoFinal/nbproject/project.properties
 *.xml
 *.properties
 *.properties
+ProjetoFinal/web/jsp/comerciante/cadastroComercianteCSS.css
+*.properties

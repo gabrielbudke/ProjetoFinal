@@ -6,19 +6,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>E-Stock</title>
-        <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="../jsp/comerciante/cadastroComercianteCSS.css">
-        
-    </head>
-    <body>
-        <div class="container-fluid">
-
-<form action="/comerciante/store" method="post">
+<%@include file="../master/master.jsp" %>
     
 
         
@@ -42,7 +30,7 @@
         </div>
         <div id='div-campo-senha' class='form-group'>
             <label for='campo-senha'>Senha <span class='text-danger font-weight-bold'></span></label>
-            <input class='form-control' type='text' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()'>
+            <input type='text' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()' placeholder='Senha'>
         </div>
         <div id='div-campo-nome' class='form-group '>
             <label for='campo-nome'>Nome <span class='text-danger font-weight-bold'></span></label>
