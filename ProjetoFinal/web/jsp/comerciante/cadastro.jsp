@@ -15,12 +15,18 @@
     <head>
         <link rel="stylesheet" href="../jsp/comerciante/cadastroComercianteCSS.css">
 <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
         <script src='/js/cadastroComerciante.js'></script>
-        <meta charset="UTF-8">
+        
     </head>
 
 
+
     <body>       
+        <form action="/comerciante/store" method="post">
         <div class="cadastro">
             <h1>Cadastro</h1>
         </div>
@@ -53,28 +59,28 @@
             </div>
             <div class="form-group">
                 <label for='campo-cep'><i class=''></i> CEP</label>
-                <input type='text' id='cep' name='cep' placeholder='CEP' required='required' >
+                <input type='text' id='cep' name='cep' placeholder='CEP' required='required'  >
             </div>
             <div class="form-group">
                 <label for='logradouro'><i class=''></i> Rua</label>
-                <input type='text' id='logradouro' name='rua' placeholder='Rua'>
+                <input type='text' id='logradouro' name='rua' placeholder='Rua'  >
             </div>
             <div class="form-group">
                 <label for='campo-numero'><i class=''></i> Número</label>
                 <input type='tel' id='campo-numero' name='numero' required='required' onfocusout='validarCampoNumero()'placeholder='Número'>
             </div>
             <div class="form-group">
-                <label for='campo-bairro'><i class=''></i> Bairro</label>
-                <input type='text' id='bairro' name='bairro' placeholder='Bairro'>
-            </div>
+            <label for='campo-bairro'><i class=''></i> Bairro</label>
+             <input type='text' id='bairro' name='bairro' placeholder='Bairro'>
+         </div>
 
             <div class="form-group">
                 <label for='campo-cidade'><i class=''></i> Cidade</label>
-                <input type='text' id='cidade' name='cidade' placeholder='Cidade'>
+                <input type='text' id='cidade' name='cidade' placeholder='Cidade' onfocusout='processarCep()' >
             </div>
             <div class="form-group">
                 <label for='campo-estado'>Estado</label>
-                <input type='text' id='campo-estado' name='estado' placeholder='Estado'>
+                <input type='text' id='campo-estado' name='estado' placeholder='Estado' onfocusout='processarCep()' >
             </div>
 
             <button type="submit" class="btn btn-primary btn-block btn-large">Cadastrar</button>
