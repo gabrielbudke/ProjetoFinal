@@ -2,14 +2,17 @@
  produtos-cadastro
  */
 function validarFormulario() {
-    if (validarCampoCategoria() == false || validarCampoNome() == false || validarCampoQuantidade() == false
+    if (validarCampoCategoria() == null || validarCampoNome() == false || validarCampoQuantidade() == false
             || validarCampoPreco() == false) {
         event.preventDefault();
     }
 }
 function validarCampoCategoria() {
+    var categoria = document.getElementById("campo-categoria").value;
     
-    }
+
+}
+    
 
 function validarCampoNome() {
     var nome = document.getElementById("campo-nome").value;
