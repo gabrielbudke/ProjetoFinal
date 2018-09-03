@@ -24,7 +24,7 @@
           <a class="nav-link" href="/funcionario">Funcionarios</a>
       </li>
       <li class="nav-item">
-	  <a class="nav-link" href="/produtos/">Produtos</a>
+	  <a class="nav-link" href="/produtos">Produtos</a>
       </li>
      
     </ul>
