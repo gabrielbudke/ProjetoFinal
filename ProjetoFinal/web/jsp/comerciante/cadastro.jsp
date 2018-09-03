@@ -19,11 +19,8 @@
         </div>
         <div id='div-campo-senha' class='form-group'>
             <label for='campo-senha'>Senha <span class='text-danger font-weight-bold'></span></label>
-<<<<<<< HEAD
             <input class='form-control' type='password' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()'>
-=======
             <input type='text' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()' placeholder='Senha'>
->>>>>>> 50aa4971ba313bce55bc205a57d7946bde7de549
         </div>
         <div id='div-campo-nome' class='form-group '>
             <label for='campo-nome'>Nome <span class='text-danger font-weight-bold'></span></label>
