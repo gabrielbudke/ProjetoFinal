@@ -1,4 +1,9 @@
-package br.com.projeto.web.categoria;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package br.com.projeto.web.inicial;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,17 +13,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author Logan Michel
+ *
+ * @author Gabriel
  */
-
-@WebServlet(urlPatterns = "/categoria/cadastro")
-public class CategoriaCadastro extends HttpServlet{
+@WebServlet("/home")
+public class Inicio extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	req.getRequestDispatcher("/jsp/categoria/cadastro.jsp").include(req, resp);
+
+        req.getRequestDispatcher("/jsp/inicio/inicial.jsp").include(req, resp);
+
+
     }
-    
     
     
     
