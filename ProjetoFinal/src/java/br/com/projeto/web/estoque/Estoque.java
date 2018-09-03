@@ -14,7 +14,7 @@ public class Estoque extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
             throws ServletException, IOException {
     
-      req.getRequestDispatcher("/estoque/estoque.jsp").include(req, resp);
+      req.getRequestDispatcher("/jsp/estoque/estoque.jsp").include(req, resp);
         
     }
     

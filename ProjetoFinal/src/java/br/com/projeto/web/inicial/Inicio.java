@@ -23,6 +23,7 @@ public class Inicio extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         req.getRequestDispatcher("/jsp/inicio/inicial.jsp").include(req, resp);
+        
 
 
     }
