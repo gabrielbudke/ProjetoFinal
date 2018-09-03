@@ -19,47 +19,6 @@
         <meta charset="UTF-8">
     </head>
 
-<<<<<<< HEAD
-        <div class="form-group">
-            <label for='campo-login' ><i class=''></i> Login</label>
-            <input type='text' id='campo-login' name='login' placeholder='Login' required='required' onfocusout='validarCampoNome()'>
-        </div>
-        <div id='div-campo-senha' class='form-group'>
-            <label for='campo-senha'>Senha <span class='text-danger font-weight-bold'></span></label>
-            <input class='form-control' type='password' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()'>
-            <input type='text' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()' placeholder='Senha'>
-        </div>
-        <div id='div-campo-nome' class='form-group '>
-            <label for='campo-nome'>Nome <span class='text-danger font-weight-bold'></span></label>
-            <input  type='text' id='campo-nome' name='nome' required='required' onfocusout='validarCampoNome()' placeholder = 'Nome'>
-        </div>
-        <div id='div-campo-cpf' class='form-group'>
-            <label for='campo-cpf'>CPF  <span class='text-danger font-weight-bold'></span></label>
-            <input  type='text' id='campo-cpf' name='cpf' required='required' onfocusout='validarCampoCpf()' placeholder ='CPF'>
-        </div>
-        <div class="form-group">
-            <label for='campo-email'><i class=''></i> E-mail</label>
-            <input type='text' id='campo-email' name='email' placeholder='E-mail' required='required' onfocusout='validarCampoEmail()'>
-        </div>
-        <div class="form-group">
-            <label for='campo-telefone'><i class=''></i> Telefone</label>
-            <input type='text' id='campo-telefone' name='telefone' placeholder='(47)3333-3333' required='required' onfocusout='validarCampoTelefone()'>
-        </div>
-        <div class="form-group">
-            <label for='campo-cep'><i class=''></i> Cep</label>
-            <input type='text' id='cep' name='cep' placeholder='Cep' required='required' >
-        </div>
-        <div class="form-group">
-            <label for='logradouro'><i class=''></i> Rua</label>
-            <input type='text' id='logradouro' name='rua' placeholder='Rua'>
-        </div>
-        <div class="form-group">
-            <label for='campo-bairro'><i class=''></i> Bairro</label>
-            <input type='text' id='bairro' name='bairro' placeholder='Bairro'>
-        </div>
-=======
->>>>>>> b09ff082c246cdcb2c703fcdeebb157388ce772d
-
 
     <body>       
         <div class="cadastro">
