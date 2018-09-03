@@ -10,7 +10,7 @@
     
     <div class="form-group">
 	<label for='campo-categoria'><i class=''></i> Categoria</label>
-	<input type='text' id='campo-categoria' name="categoria">
+	<input type='text' id='campo-categoria' name="categoria" required='required' onfocusout='validarCapoCategoria()'>
     </div>
 	
     <input type="submit" value="Adicionar">
