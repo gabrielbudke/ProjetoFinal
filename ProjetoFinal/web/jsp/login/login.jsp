@@ -27,6 +27,9 @@
         <a href="reset.html" id = "register">Não possui um cadastro?</a>
         </div> 
         <button type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
+        
+        
+    
     </form>
 </div>
     </body>
