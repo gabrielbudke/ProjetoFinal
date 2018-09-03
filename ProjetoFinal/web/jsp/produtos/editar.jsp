@@ -4,12 +4,14 @@
     Author     : Logan Michel
 --%>
 
+
 <%@page import="br.com.projeto.dao.ProdutoDAO"%>
 <%@page import="br.com.projeto.bean.ProdutoBean"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp"%>
-
+<%%>
+    <% ProdutoBean produto = new ProdutoDAO().obterPeloId(id);%>
 
 <form action="/produtos/update" method="post">
     <input type="hidden" name="id" value="">
