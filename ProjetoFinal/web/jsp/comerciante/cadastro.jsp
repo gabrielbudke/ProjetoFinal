@@ -8,6 +8,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+
 <!DOCTYPE html>
 
 <html>
@@ -18,11 +19,18 @@
     </head>
 
 
+
     <body>       
         <div class="cadastro">
             <h1>Cadastro</h1>
         </div>
+
         <div class = "register Scroll">
+
+        <div class="form-group">
+            <label for='campo-numero'><i class=''></i> Número</label>
+            <input type='tel' id='campo-numero' name='numero' placeholder='Numero' required='required' onfocusout='validarCampoNumero()'>
+        </div>
 
 
             <div class="form-group">

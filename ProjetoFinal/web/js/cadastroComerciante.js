@@ -1,5 +1,5 @@
 function validarCadastro() {
-    if (validarCampoNome() == false || validarCampoCpf() == false || validarCampoSenha() == false) {
+    if (validarCampoNome() == false || validarCampoCpf() == false || validarCampoSenha() == false || validarCampoLogin() == false || validarCampoEmail() == false || validarCampoTelefone() == false || validarCampoNumero() == false) {
         event.preventDefault();
     }
 }
@@ -85,6 +85,22 @@ function validarCampoCpf() {
         adicionarClasse("campo-cpf", "border-success");
         return true;
     }
+}
+
+function validarCampoLogin() {
+    var login = document.getElementById("campo-login").value;
+}
+
+function validarCampoEmail() {
+    var email = document.getElementById("campo-email").value;
+}
+
+function validarCampoTelefone() {
+    var telefoone = document.getElementById("campo-telefone").value;
+}
+
+function validarCampoNumero() {
+    var numero = document.getElementById("campo-numero").value;
 }
 
 function apagarClasse(id, classeCor) {
