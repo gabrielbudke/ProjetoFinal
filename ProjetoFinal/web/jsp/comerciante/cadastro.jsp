@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="../jsp/comerciante/cadastroComercianteCSS.css">
 <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script src='/js/cadastroComerciante.js'></script>
+        <meta charset="UTF-8">
     </head>
 
 
@@ -26,12 +27,6 @@
         </div>
 
         <div class = "register Scroll">
-
-        <div class="form-group">
-            <label for='campo-numero'><i class=''></i> Número</label>
-            <input type='tel' id='campo-numero' name='numero' placeholder='Numero' required='required' onfocusout='validarCampoNumero()'>
-        </div>
-
 
             <div class="form-group">
                 <label for='campo-login' ><i class=''></i> Login</label>
@@ -51,11 +46,11 @@
             </div>
             <div class="form-group">
                 <label for='campo-email'><i class=''></i> E-mail</label>
-                <input type='text' id='campo-email' name='email' placeholder='E-mail'>
+                <input type='text' id='campo-email' name='email'required='required' onfocusout='validarCampoEmail()' placeholder='E-mail'>
             </div>
             <div class="form-group">
                 <label for='campo-telefone'><i class=''></i> Telefone</label>
-                <input type='text' id='campo-telefone' name='telefone' placeholder='(47)3333-3333'>
+                <input type='text' id='campo-telefone' name='telefone'required='required' onfocusout='validarCampoTelefone()' placeholder='(47)3333-3333'>
             </div>
             <div class="form-group">
                 <label for='campo-cep'><i class=''></i> CEP</label>
@@ -67,7 +62,7 @@
             </div>
             <div class="form-group">
                 <label for='campo-numero'><i class=''></i> Número</label>
-                <input type='tel' id='campo-numero' name='numero' placeholder='numero'>
+                <input type='tel' id='campo-numero' name='numero' required='required' onfocusout='validarCampoNumero()'placeholder='Número'>
             </div>
             <div class="form-group">
                 <label for='campo-bairro'><i class=''></i> Bairro</label>
