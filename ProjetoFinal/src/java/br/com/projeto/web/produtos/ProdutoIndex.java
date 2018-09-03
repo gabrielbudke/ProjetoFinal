@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Alunos
+ * @author Gabriel
  */
 @WebServlet("/produtos")
 public class ProdutoIndex extends HttpServlet{
