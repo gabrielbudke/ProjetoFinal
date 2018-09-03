@@ -72,8 +72,15 @@ body {
   background-image: -webkit-linear-gradient(bottom, #30cfd0 0%, #330867 100%);
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);   
 }
-
-
+.cadastro { 
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	margin: -150px 0 0 -150px;
+	width:300px;
+	height:300px;
+}
+.cadastro h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
 
 .register { 
 	position: absolute;
