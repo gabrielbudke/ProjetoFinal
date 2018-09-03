@@ -1,8 +1,6 @@
 package br.com.projeto.web.funcionarios;
 
-import br.com.projeto.bean.EnderecoFuncionarioBean;
 import br.com.projeto.bean.FuncionarioBean;
-import br.com.projeto.dao.EnderecoFuncionarioDAO;
 import br.com.projeto.dao.FuncionarioDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -22,24 +20,22 @@ public class FuncionarioStore extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
         FuncionarioBean funcionario = new FuncionarioBean();
-        EnderecoFuncionarioBean endereco = new EnderecoFuncionarioBean();
         
         funcionario.setNome(req.getParameter("nome"));
         funcionario.setFuncao(req.getParameter("funcao"));
+        funcionario.setEmail(req.getParameter("email"));
         funcionario.setCpf(req.getParameter("cpf"));
         funcionario.setTelefone(req.getParameter("telefone"));
-        endereco.setCep(req.getParameter("cep"));
-        endereco.setEstado(req.getParameter("estado"));
-        endereco.setRua(req.getParameter("rua"));
-        endereco.setBairro(req.getParameter("bairro"));
-        endereco.setNumero(req.getParameter("numero"));
-        endereco.setCidade(req.getParameter("cidade"));
+        funcionario.setCep(req.getParameter("cep"));
+        funcionario.setEstado(req.getParameter("estado"));
+        funcionario.setRua(req.getParameter("rua"));
+        funcionario.setBairro(req.getParameter("bairro"));
+        funcionario.setNumero(req.getParameter("numero"));
+        funcionario.setCidade(req.getParameter("cidade"));
         
-        endereco.setIdFuncionario(funcionario.getId());
+        funcionario.setId(new FuncionarioDAO().adicionar(funcionario));
 
         
-        endereco.setId(new EnderecoFuncionarioDAO().adicionar(endereco));
-        funcionario.setId(new FuncionarioDAO().adicionar(funcionario));
         resp.sendRedirect("/funcionario/cadastro");
         
     }

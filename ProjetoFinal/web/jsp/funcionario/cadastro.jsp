@@ -16,11 +16,6 @@
     </div>
 
     <div class = "form-group">
-        <label for='snome'><i class='fa fa-envelope'></i> Sobrenome</label>
-        <input type='text' id='snome' name='sobrenome' placeholder='Sobrenome'>
-    </div>
-
-    <div class = "form-group">
         <label for='cpf'><i class='fa fa-address-card-o'></i> CPF</label>
         <input type='text' id='cpf' name='cpf' placeholder='CPF'>
     </div>
@@ -36,7 +31,7 @@
     </div>
 
     <div class = "form-group">
-        <label for='function'><i class=''></i> Função</label>
+        <label for='funcao'><i class=''></i> Função</label>
         <input type='text' id='function' name='funcao' placeholder='Função'>
     </div>
 

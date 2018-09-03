@@ -19,12 +19,6 @@
         <meta charset="UTF-8">
     </head>
 
-<<<<<<< HEAD
-
-      
-
-=======
->>>>>>> a4e42dbcd65daafa29e1c88f5d894afeda517777
 
     <body>       
         <div class="cadastro">
