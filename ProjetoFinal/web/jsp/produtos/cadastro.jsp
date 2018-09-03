@@ -20,7 +20,7 @@
 
     <div class = "form-group">
         <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
-        <select type='text' class="form-control" id='campo-categoria' name='categoria'>
+        <select type='text' class="form-control" id='campo-categoria' name='categoria' required='required' onfocusout='validarCapoCategoria()'>
             <option selected = 'selected' disabled='disable'></option>
 
 	    <% for (CategoriaBean categoria : categorias) {%>
@@ -37,12 +37,12 @@
 
     <div>
 	<label for="campo-quantidade"><i class='fa fa-address-card-o'></i>Quantidade</label>
-        <input type='text' id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required' onfocusout='validarCampoQuantidade()'>
+        <input type='number' min='0' id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required' onfocusout='validarCampoQuantidade()'>
     </div>
 
     <div class = "form-group">
         <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
-        <input type='text' id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
+        <input type='number' min='0' id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
     </div>
 
     <input type="submit" value="Adicionar">
