@@ -20,29 +20,18 @@
 
 <form action="/comerciante/store" method="post">
     
-
-        
-
-
-
-
-        
         <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
         <script src='/js/cadastroComerciante.js'></script>
           
-        
-        
-        
            <div class = "register Scroll">
 
-            
         <div class="form-group">
             <label for='campo-login' ><i class=''></i> Login</label>
-            <input type='text' id='campo-login' name='login' placeholder='Login'>
+            <input type='text' id='campo-login' name='login' placeholder='Login' required='required' onfocusout='validarCampoNome()'>
         </div>
         <div id='div-campo-senha' class='form-group'>
             <label for='campo-senha'>Senha <span class='text-danger font-weight-bold'></span></label>
-            <input class='form-control' type='text' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()'>
+            <input class='form-control' type='password' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()'>
         </div>
         <div id='div-campo-nome' class='form-group '>
             <label for='campo-nome'>Nome <span class='text-danger font-weight-bold'></span></label>
@@ -54,23 +43,19 @@
         </div>
         <div class="form-group">
             <label for='campo-email'><i class=''></i> E-mail</label>
-            <input type='text' id='campo-email' name='email' placeholder='E-mail'>
+            <input type='text' id='campo-email' name='email' placeholder='E-mail' required='required' onfocusout='validarCampoEmail()'>
         </div>
         <div class="form-group">
             <label for='campo-telefone'><i class=''></i> Telefone</label>
-            <input type='text' id='campo-telefone' name='telefone' placeholder='(47)3333-3333'>
+            <input type='text' id='campo-telefone' name='telefone' placeholder='(47)3333-3333' required='required' onfocusout='validarCampoTelefone()'>
         </div>
         <div class="form-group">
             <label for='campo-cep'><i class=''></i> Cep</label>
-            <input type='text' id='cep' name='cep' placeholder='cep' required='required' >
+            <input type='text' id='cep' name='cep' placeholder='Cep' required='required' >
         </div>
         <div class="form-group">
             <label for='logradouro'><i class=''></i> Rua</label>
             <input type='text' id='logradouro' name='rua' placeholder='Rua'>
-        </div>
-        <div class="form-group">
-            <label for='campo-numero'><i class=''></i> Número</label>
-            <input type='tel' id='campo-numero' name='numero' placeholder='numero'>
         </div>
         <div class="form-group">
             <label for='campo-bairro'><i class=''></i> Bairro</label>
@@ -84,6 +69,10 @@
         <div class="form-group">
             <label for='campo-estado'>Estado</label>
             <input type='text' id='campo-estado' name='estado' placeholder='Estado'>
+        </div>
+        <div class="form-group">
+            <label for='campo-numero'><i class=''></i> Número</label>
+            <input type='tel' id='campo-numero' name='numero' placeholder='Numero' required='required' onfocusout='validarCampoNumero()'>
         </div>
 
             <button type="submit" class="btn btn-primary btn-block btn-large">Cadastrar</button>
