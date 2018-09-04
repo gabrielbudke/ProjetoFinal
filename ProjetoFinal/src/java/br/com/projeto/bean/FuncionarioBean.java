@@ -1,17 +1,16 @@
 package br.com.projeto.bean;
+
 /**
-* @author Patrick Otavio do Nacimento(patricknascimento198@gmail.com)
-* @date 2018-08-21
-*/
+ * @author Patrick Otavio do Nacimento(patricknascimento198@gmail.com)
+ * @date 2018-08-21
+ */
 
 public class FuncionarioBean {
 
     private int id;
-    private int idComerciante;
-    private ComercianteBean comerciante;
     private String login, senha;
     private String nome, cpf, email, telefone, funcao;
-    private String cep, estado, rua, numero, bairro, cidade; 
+    private String cep, estado, rua, numero, bairro, cidade;
 
     public String getCep() {
         return cep;
@@ -69,22 +68,6 @@ public class FuncionarioBean {
         this.id = id;
     }
 
-    public int getIdComerciante() {
-        return idComerciante;
-    }
-
-    public void setIdComerciante(int idComerciante) {
-        this.idComerciante = idComerciante;
-    }
-
-    public ComercianteBean getComerciante() {
-        return comerciante;
-    }
-
-    public void setComerciante(ComercianteBean comerciante) {
-        this.comerciante = comerciante;
-    }
-
     public String getLogin() {
         return login;
     }
@@ -140,6 +123,5 @@ public class FuncionarioBean {
     public void setFuncao(String funcao) {
         this.funcao = funcao;
     }
-    
 
 }

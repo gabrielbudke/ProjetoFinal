@@ -1,0 +1,24 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="jsp/login/loginCSS.css" />
+    </head>
+    <body>
+        <div class="login">
+            <h1>Login</h1>
+            <form method="post" action="/usuario/login">
+                <input type="text" name="login" placeholder="Usuário" required="required" />
+                <input type="password" name="senha" placeholder="Senha" required="required" />
+                <div class="forgot" id = "register">
+                    <a href="reset.html">Esqueceu a senha?</a>
+
+                    <a href="/usuario/cadastro" id = "register">Não possui um cadastro?</a> 
+                </div> 
+                <button type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
+            </form>
+        </div>
+    </body>
+</html>

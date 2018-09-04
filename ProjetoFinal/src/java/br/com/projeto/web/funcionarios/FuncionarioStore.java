@@ -1,8 +1,6 @@
 package br.com.projeto.web.funcionarios;
 
-import br.com.projeto.bean.ComercianteBean;
 import br.com.projeto.bean.FuncionarioBean;
-import br.com.projeto.dao.ComercianteDAO;
 import br.com.projeto.dao.FuncionarioDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -20,7 +18,6 @@ public class FuncionarioStore extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //ComercianteBean comerciante = new ComercianteDAO().obterPeloId();
         FuncionarioBean funcionario = new FuncionarioBean();
         
         funcionario.setNome(req.getParameter("nome"));

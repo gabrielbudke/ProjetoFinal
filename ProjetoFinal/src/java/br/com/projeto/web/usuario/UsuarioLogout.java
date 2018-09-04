@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.projeto.web.inicial;
+package br.com.projeto.web.usuario;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,20 +15,16 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Gabriel
+ * @author Alunos
  */
-@WebServlet("/home")
-public class Inicio extends HttpServlet{
+@WebServlet(name = "UsuarioLogout", urlPatterns = {"/usuario/logout"})
+public class UsuarioLogout extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        req.getRequestDispatcher("/jsp/inicio/inicial.jsp").include(req, resp);
-        
-
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.getSession().removeAttribute("funcionario");
+        response.sendRedirect("/");
     }
-    
-    
-    
+
 }

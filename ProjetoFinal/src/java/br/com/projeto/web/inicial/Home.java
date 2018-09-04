@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.projeto.web.comerciante;
+package br.com.projeto.web.inicial;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -14,19 +14,19 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Alunos
+ * @author Gabriel
  */
-@WebServlet("/perfil")
-public class ComercianteIndex extends HttpServlet{
+@WebServlet("/home")
+public class Home extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if (req.getSession().getAttribute("funcionario") == null) {
+            resp.sendRedirect("/");
+        }
 
-    req.getRequestDispatcher("/jsp/comerciante/perfil.jsp").include(req, resp);
-    
-    
+        req.getRequestDispatcher("/jsp/inicio/inicial.jsp").include(req, resp);
+
     }
-    
-    
-           
+
 }
