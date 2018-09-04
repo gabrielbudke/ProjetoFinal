@@ -11,6 +11,41 @@ import java.sql.SQLException;
  */
 public class ComercianteDAO {
 
+    public ComercianteBean obterPeloId(int id){
+        String sql = "SELECT * FROM comerciantes WHERE id = ?;";
+        
+        try{
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.execute();
+            ResultSet resultSet = ps.getResultSet();
+            if(resultSet.next()){
+                ComercianteBean comerciante = new ComercianteBean();
+                comerciante.setId(id);
+                comerciante.setNome(resultSet.getString("nome"));
+                comerciante.setCpf(resultSet.getString("cpf"));
+                comerciante.setEmail(resultSet.getString("email"));
+                comerciante.setCep(resultSet.getString("cep"));
+                comerciante.setRua(resultSet.getString("rua"));
+                comerciante.setBairro(resultSet.getString("bairro"));
+                comerciante.setCidade(resultSet.getString("cidade"));
+                comerciante.setEstado(resultSet.getString("estado"));
+                comerciante.setTelefone(resultSet.getString("telefone"));
+                return comerciante;
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }finally{
+            Conexao.fecharConexao();
+        }
+        return null;
+        
+    }
+    
+    
+    
+    
+    
     public int adicionar(ComercianteBean comerciante) {
 
         String sql = "INSERT INTO comerciantes (login, senha, nome, cpf, email, telefone, cep, rua, bairro, cidade, estado, numero) VALUES"
