@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.projeto.web.comerciante;
+package br.com.projeto.web.usuario;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,17 +17,14 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alunos
  */
-@WebServlet("/perfil")
-public class ComercianteIndex extends HttpServlet{
+@WebServlet(name = "UsuarioLogout", urlPatterns = {"/usuario/logout"})
+public class UsuarioLogout extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-    req.getRequestDispatcher("/jsp/comerciante/perfil.jsp").include(req, resp);
-    
-    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.getSession().removeAttribute("funcionario");
+        response.sendRedirect("/");
     }
-    
-    
-           
+
 }

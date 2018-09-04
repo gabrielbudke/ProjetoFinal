@@ -17,14 +17,12 @@ import javax.servlet.http.HttpServletResponse;
  * @author Alunos
  */
 @WebServlet(urlPatterns = "/funcionario")
-public class FuncionarioIndex extends HttpServlet{
+public class FuncionarioIndex extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
+        resp.setContentType("text/html;charset=UTF-8");
         req.getRequestDispatcher("jsp/funcionario/index.jsp").include(req, resp);
     }
-    
-    
-    
+
 }

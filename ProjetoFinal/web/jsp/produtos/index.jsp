@@ -9,7 +9,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp"%>
 
-
+<%%>
 <a href="/produtos/cadastro">Novo Produto</a>
 <table class="table">
     <thead>
