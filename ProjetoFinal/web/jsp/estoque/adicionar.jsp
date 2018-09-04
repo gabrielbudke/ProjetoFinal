@@ -9,8 +9,11 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
+
 <%List<ProdutoBean> produtos = new ProdutoDAO().obterTodos(); %>
-<div>
+
+<form action="/estoque/store" method="post">
+<div class="form-group">
     <label for="campo-entrada-saida">Entrada / Saída</label>
     <select id="campo-entrada-saida" name="tipo">
         <option value="entrada">Entrada</option>
@@ -20,12 +23,15 @@
 <div>
     <label for="campo-nome">Selecionar produto:</label>
     <select id="campo-nome" name="produto">
-        <% for(ProdutoBean produto:produtos){%>
-        <option value=<%produto.getNome();%>></option>
+      
+        <% for(ProdutoBean produto : produtos){%>
+        <option value=<%=produto.getId()%><%=produto.getNome()%>></option>
         <%}%>
+ 
     </select>
 </div>
-
+    <input type='submit' value='Adicionar' >
+</form>
 
 
 <%@include file="../master/rodape.jsp" %>

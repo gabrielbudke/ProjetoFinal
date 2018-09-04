@@ -30,7 +30,9 @@
             <td> <%=produto.getNome()%> </td>
             <td> <%=produto.getPreco()%> </td>    
             <td> <%=produto.getQuantidade()%></td>
-            <td> <a href="/jsp/produtos/editar.jsp">Editar</a></td>
+            <td> 
+                <a href="/produtos/editar?id=<%=produto.getId()%>">Editar</a>
+            </td>
         </tr>
         <%}%>
     </tbody>

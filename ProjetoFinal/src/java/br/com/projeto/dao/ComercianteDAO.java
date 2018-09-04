@@ -43,9 +43,7 @@ public class ComercianteDAO {
     }
     
     
-    
-    
-    
+
     public int adicionar(ComercianteBean comerciante) {
 
         String sql = "INSERT INTO comerciantes (login, senha, nome, cpf, email, telefone, cep, rua, bairro, cidade, estado, numero) VALUES"
