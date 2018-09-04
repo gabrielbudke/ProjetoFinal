@@ -16,7 +16,7 @@
     </div>
 
     <div class = "form-group">
-        <label for='cpf'><i class='fa fa-address-card-o'></i> CPF</label>
+        <label for='cpf'><i class=''></i> CPF</label>
         <input type='text' id='cpf' name='cpf' placeholder='CPF'>
     </div>
 
@@ -40,14 +40,14 @@
         <input type='text' id='cep' name='cep' placeholder='CEP'>
     </div>
 
-    <div>
-        <label for='estado'><i class='fa fa-envelope'></i> Estado</label>
-        <input type='text' id='estado' name='estado' placeholder='Estado'>
-    </div>
+        <div>
+      <label for='campo-estado'>Estado</label>
+      <input type='text' id='campo-estado' name='estado' placeholder='Estado' onfocusout='processarCep()' >
+            </div>
 
     <div>
-        <label for='rua'><i class='fa fa-address-card-o'></i> Rua</label>
-        <input type='text' id='rua' name='rua' placeholder='Rua'>
+        <label for='logradouro'><i class=''></i> Rua</label>
+        <input type='text' id='logradouro' name='rua' placeholder='Rua'  >
     </div>
 
     <div>
@@ -56,14 +56,14 @@
     </div>
 
     <div>
-        <label for='numero'><i class=''></i> Numero</label>
-        <input type='text' id='numero' name='numero' placeholder='Numero'>
-    </div>
-
-    <div>
         <label for='cidade'><i class=''></i> Cidade</label>
         <input type='text' id='cidade' name='cidade' placeholder='Cidade'>
     </div> 
+    
+    <div>
+        <label for='numero'><i class=''></i> Numero</label>
+        <input type='text' id='numero' name='numero' placeholder='Numero'>
+    </div>
 
     <input class='btn btn-sucess' type='submit' value='Cadastrar'>
     

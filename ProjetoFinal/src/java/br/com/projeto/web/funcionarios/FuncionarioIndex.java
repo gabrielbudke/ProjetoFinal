@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alunos
  */
-@WebServlet("/funcionario")
+@WebServlet(urlPatterns = "/funcionario")
 public class FuncionarioIndex extends HttpServlet{
 
     @Override

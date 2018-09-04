@@ -21,16 +21,16 @@ CREATE TABLE funcionarios(
 	id INT AUTO_INCREMENT PRIMARY KEY,
         id_comerciante INTEGER NOT NULL,
         nome VARCHAR (100) NOT NULL,
-        funcao VARCHAR(50) NOT NULL,
 		cpf VARCHAR (20) NOT NULL,
-		telefone VARCHAR(20) NOT NULL,
 		email VARCHAR(50),
+		telefone VARCHAR(20) NOT NULL,
+        funcao VARCHAR(50) NOT NULL,
 		cep VARCHAR(20) NOT NULL,
-		rua VARCHAR(50) NOT NULL,
-        numero VARCHAR(5) NOT NULL,
-        bairro VARCHAR(50) NOT NULL,
-        cidade VARCHAR(50) NOT NULL,
         estado VARCHAR(20) NOT NULL,
+		rua VARCHAR(50) NOT NULL,
+       bairro VARCHAR(50) NOT NULL,
+       cidade VARCHAR(50) NOT NULL,
+       numero VARCHAR(5) NOT NULL,
     FOREIGN KEY (id_comerciante) REFERENCES comerciantes(id)
 );
 
