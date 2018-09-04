@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Alunos
  */
 @WebServlet("/estoque/adicionar")
-public class EstoqueAdd extends HttpServlet{
+public class EstoqueAdicionar extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

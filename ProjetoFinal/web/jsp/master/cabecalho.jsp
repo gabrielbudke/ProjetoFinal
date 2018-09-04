@@ -7,7 +7,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <img class="navbar-brand"  src="../../imagens/e-Stock.png">
+  <img class="navbar-brand"  src="../../imagens/e-Stock.png" usemap='#workmap'>
+  <map name='workmap'>
+      <area shape="rect" coords="10,20,200,100" href="/home">
+  </map>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -32,13 +35,14 @@
       </li>
 
       <li class="nav-item">
-	  <a class="nav-link" href="/perfil">Perfil</a>
-      </li>
-      <li class="nav-item">
 	  <a class="nav-link" href="/">Fale Conosco</a>
       </li>
       <li class="nav-item">
 	  <a class="nav-link" href="/">Sobre</a>
+      </li>
+      
+      <li class="nav-item">
+	  <a class="nav-link" href="/perfil">Perfil</a>
       </li>
      
 
