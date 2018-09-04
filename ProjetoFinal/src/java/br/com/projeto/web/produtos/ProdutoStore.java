@@ -30,7 +30,8 @@ public class ProdutoStore extends HttpServlet{
 	produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));
         produto.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
         produto.setId(new ProdutoDAO().adicionar(produto));
-            
+        
+        
         resp.sendRedirect("/produtos");
         
      
