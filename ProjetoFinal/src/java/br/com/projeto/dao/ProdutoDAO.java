@@ -87,6 +87,7 @@ public class ProdutoDAO {
             ps.setString(1, produto.getNome());
             ps.setFloat(2, produto.getPreco());
             ps.setInt(3, produto.getIdCategoria());
+            ps.setInt(4, produto.getId());
             return ps.executeUpdate() == 1;
         } catch (SQLException e) {
             e.printStackTrace();

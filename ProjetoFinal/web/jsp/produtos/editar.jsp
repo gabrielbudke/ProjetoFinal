@@ -35,10 +35,10 @@
         <label for="campo-nome">Nome</label>
         <input type="text" id="campo-nome" name="nome" value="<%= produto.getNome() %>">
     </div>
-    <div>
+    <%--<div>
         <label for="campo-quantidade">Quantidade</label>
         <input type="number" id="campo-quantidade" name="quantidade" value="<%= produto.getQuantidade() %>">
-    </div>
+    </div>--%>
     <div>
         <label for="campo-preco">Preço</label>
         <input type="number" id="campo-preco" name="preco" value="<%= produto.getPreco() %>">
