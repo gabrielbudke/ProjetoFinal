@@ -26,7 +26,9 @@
       <li class="nav-item">
 	  <a class="nav-link" href="/produtos">Produtos</a>
       </li>
-     
+           <li class="nav-item">
+	  <a class="nav-link" href="/usuario/logout">Sair</a>
+      </li>
     </ul>
   </div>
 </nav>

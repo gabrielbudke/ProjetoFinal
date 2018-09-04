@@ -2,36 +2,27 @@ DROP DATABASE IF EXISTS projeto_final;
 CREATE DATABASE projeto_final;
 USE projeto_final;
 
-CREATE TABLE comerciantes(
-        id INT AUTO_INCREMENT PRIMARY KEY,
-	login VARCHAR (30) NOT NULL,
-	senha VARCHAR (6) NOT NULL,	
-	nome VARCHAR(100) NOT NULL,
-	cpf VARCHAR(20) NOT NULL,
-	email VARCHAR(50),
-	telefone VARCHAR(20) NOT NULL,
-        rua VARCHAR(50) NOT NULL,
-        numero VARCHAR(5) NOT NULL,
-        bairro VARCHAR(50) NOT NULL,
-        cidade VARCHAR(50) NOT NULL,
-        estado VARCHAR(20) NOT NULL
-);
 
 CREATE TABLE funcionarios(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-        id_comerciante INTEGER NOT NULL,
-        nome VARCHAR (100) NOT NULL,
-		cpf VARCHAR (20) NOT NULL,
-		email VARCHAR(50),
-		telefone VARCHAR(20) NOT NULL,
-        funcao VARCHAR(50) NOT NULL,
-		cep VARCHAR(20) NOT NULL,
-        estado VARCHAR(20) NOT NULL,
-		rua VARCHAR(50) NOT NULL,
-       bairro VARCHAR(50) NOT NULL,
-       cidade VARCHAR(50) NOT NULL,
-       numero VARCHAR(5) NOT NULL,
-    FOREIGN KEY (id_comerciante) REFERENCES comerciantes(id)
+	id_funcionario INTEGER,
+
+	login VARCHAR (30) NOT NULL,
+	senha VARCHAR (6) NOT NULL,	
+	nome VARCHAR(100) NOT NULL,
+	cpf VARCHAR(20) /* NOT NULL */,
+	email VARCHAR(50),
+	telefone VARCHAR(20) /* NOT NULL */,
+	rua VARCHAR(50) /* NOT NULL */,
+	numero VARCHAR(5) /* NOT NULL */,
+	bairro VARCHAR(50) /* NOT NULL */,
+	cidade VARCHAR(50) /* NOT NULL */,
+	estado VARCHAR(20) /* NOT NULL */,
+	funcao VARCHAR(50) /*NOT NULL*/,
+	cep VARCHAR(20) /*NOT NULL*/,
+
+	tipo VARCHAR(100) DEFAULT 'Colaborador',
+	FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
 );
 
 CREATE TABLE fornecedores(
@@ -62,6 +53,9 @@ CREATE TABLE produtos(
         FOREIGN KEY (id_categoria) REFERENCES categorias(id)
 );
 
+INSERT INTO produtos (id_categoria, nome, preco) VALUES 
+(1, 'Xbox', 1800);
+
 CREATE TABLE produtos_saida(
         id INT AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(100),
@@ -83,7 +77,7 @@ CREATE TABLE fluxo_caixa(
         saldo_inicial DECIMAL(4,2),
         saldo_final DECIMAL(4,2)
 );
-
+/*
 CREATE TABLE recuperar_senha(
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_comerciante INTEGER NOT NULL,
@@ -94,3 +88,6 @@ CREATE TABLE recuperar_senha(
 
 );
 
+*/
+INSERT INTO funcionarios (nome, login, senha) VALUES
+('Kaio', 'kaio_henrique', '123');
