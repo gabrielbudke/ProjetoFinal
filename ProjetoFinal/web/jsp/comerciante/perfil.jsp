@@ -8,7 +8,7 @@
 <%@include file="../master/master.jsp" %>
 
 
-<h1>Ola Mundo</h1>
+<h1>Ola mundo</h1>
 
 
 <%@include file="../master/rodape.jsp" %>

@@ -27,13 +27,14 @@
 	  <a class="nav-link" href="/produtos">Produtos</a>
       </li>
       <li class="nav-item">
-	  <a class="nav-link" href="/perfil">Perfil</a>
-      </li>
-      <li class="nav-item">
 	  <a class="nav-link" href="/">Fale Conosco</a>
       </li>
       <li class="nav-item">
 	  <a class="nav-link" href="/">Sobre</a>
+      </li>
+      
+      <li class="nav-item">
+	  <a class="nav-link" href="/perfil">Perfil</a>
       </li>
      
     </ul>
