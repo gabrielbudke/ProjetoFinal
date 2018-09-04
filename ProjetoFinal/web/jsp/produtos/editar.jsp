@@ -5,38 +5,47 @@
 --%>
 
 
+<%@page import="br.com.projeto.dao.CategoriaDAO"%>
+<%@page import="java.util.List"%>
+<%@page import="br.com.projeto.bean.CategoriaBean"%>
 <%@page import="br.com.projeto.dao.ProdutoDAO"%>
 <%@page import="br.com.projeto.bean.ProdutoBean"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp"%>
-<%%>
-    <% ProdutoBean produto = new ProdutoDAO().obterPeloId(id);%>
+<% 
+    int id = Integer.parseInt(request.getParameter("id"));
+    ProdutoBean produto = new ProdutoDAO().obterPeloId(id);%>
+    
+<%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos();%>
 
 <form action="/produtos/update" method="post">
-    <input type="hidden" name="id" value="">
+    <input type="hidden" name="id" value="<%= produto.getId() %>">
     <div>
         <label for="campo-categoria">Categoria</label>
-        <input type="select" id="campo-categoria" name="categoria" value="">
+        <select type="text" class="form-control" id="campo-categoria" name="categoria" required="required" >
+            
+            <% for (CategoriaBean categoria : categorias) {%>
+            <option value=<%= produto.getIdCategoria()%>><%=categoria.getNome()%></option>
+            <%}%>
+            
+        </select>
     </div>
     <div>
         <label for="campo-nome">Nome</label>
-        <input type="text" id="campo-nome" name="nome" value="">
+        <input type="text" id="campo-nome" name="nome" value="<%= produto.getNome() %>">
     </div>
     <div>
         <label for="campo-quantidade">Quantidade</label>
-        <input type="number" id="campo-quantidade" name="quantidade" value="">
+        <input type="number" id="campo-quantidade" name="quantidade" value="<%= produto.getQuantidade() %>">
     </div>
     <div>
         <label for="campo-preco">Preço</label>
-        <input type="number" id="campo-preco" name="preco" value="">
+        <input type="number" id="campo-preco" name="preco" value="<%= produto.getPreco() %>">
     </div>
     
     <input type="submit" value="Alterar">
+    
 </form>
-
-
-
-
 
 <%@include file="../master/rodape.jsp"%>
