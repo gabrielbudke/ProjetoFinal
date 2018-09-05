@@ -33,7 +33,7 @@
     </div>
     <div>
         <label for="campo-nome">Nome</label>
-        <input type="text" id="campo-nome" name="nome" value="<%= produto.getNome() %>">
+        <input type="text" class="form-control" id="campo-nome" name="nome" value="<%= produto.getNome() %>">
     </div>
     <%--<div>
         <label for="campo-quantidade">Quantidade</label>
@@ -41,11 +41,12 @@
     </div>--%>
     <div>
         <label for="campo-preco">Preço</label>
-        <input type="number" id="campo-preco" name="preco" value="<%= produto.getPreco() %>">
+        <input type="number" class="form-control" id="campo-preco" name="preco" value="<%= produto.getPreco() %>">
     </div>
     
-    <input type="submit" value="Alterar">
-    
+    <div>
+    <input class="btn btn-success"  type="submit" value="Alterar">
+    </div>
 </form>
 
 <%@include file="../master/rodape.jsp"%>

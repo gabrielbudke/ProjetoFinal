@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div>
         <a class="navbar-brand" href="/home">
@@ -30,20 +31,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="/produtos">Produtos</a>
             </li>
-
-
-            <li class="nav-item">
-                <a class="nav-link" href="/">Fale Conosco</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/">Sobre</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="/perfil">Perfil</a>
-            </li>
         </ul>
 
-        <a class="btn btn-danger" href="/usuario/logout">Sair <i class="fas fa-sign-out-alt"></i> </a>
+        <a class="btn btn-danger" href="/usuario/logout">Sair <i class="fas fa-sign-out-alt"></i></a>
     </div>
 </nav>

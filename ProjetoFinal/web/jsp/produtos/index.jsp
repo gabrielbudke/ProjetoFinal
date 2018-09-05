@@ -10,16 +10,20 @@
 <%@include file="../master/master.jsp"%>
 
 <%%>
-<a href="/produtos/cadastro">Novo Produto</a>
-<table class="table">
-    <thead>
+<div class="botao-novo-produto">
+    <a class="btn btn-success float-right" href="/produtos/cadastro">Novo Produto <i class="fas fa-plus-square"></i></a>
+</div>
+
+<div style="margin:">
+    <table class="table table-hover table-bordered">
+    <thead class="thead-light">
         <tr>
             <th>#</th>
             <th>Categoria</th>
             <th>Nome</th>
             <th>Preço</th>
             <th>Quantidade</th>
-            <th>Ação</th>
+            <th> <i class="fas fa-cogs"></i></th>
         </tr>
     </thead>
     <tbody>
@@ -31,13 +35,13 @@
             <td> <%=produto.getPreco()%> </td>    
             <td> <%=produto.getQuantidade()%></td>
             <td> 
-                <a href="/produtos/editar?id=<%=produto.getId()%>">Editar</a>
+                <a class="btn btn-info"  href="/produtos/editar?id=<%=produto.getId()%>"><i class="fas fa-edit"></i> Editar</a>
             </td>
         </tr>
         <%}%>
     </tbody>
 </table>
-
+</div>
 
 
 

@@ -13,21 +13,22 @@
 
 <%@include file="../master/master.jsp" %>
 <% List<FornecedorBean> fornecedores = new FornecedorDAO().obterTodos(); %>
-
-<a href="fornecedor/cadastro">Novo Fornecedor</a>
-<table>
-    <thead>
+<div>
+    <a class="btn btn-success float-right" href="fornecedor/cadastro">Novo Fornecedor <i class="fas fa-plus-square"></i></a>
+</div>
+<table class="table table-hover table-bordered">
+    <thead class="thead-light">
         <tr>
             <th>#</th>
             <th>Nome</th>
             <th>CNPJ</th>
             <th>Telefone</th>
             <th>E-mail</th>
-            <th>Ação</th>
+            <th> <i class="fas fa-cogs"></i></th>
         </tr>
     </thead>
     <tbody>
-        <%for(FornecedorBean fornecedor : fornecedores){%>
+        <%for (FornecedorBean fornecedor : fornecedores) {%>
         <tr>
             <td> <%=fornecedor.getId()%></td>
             <td> <%=fornecedor.getNome()%> </td>
@@ -35,7 +36,7 @@
             <td> <%=fornecedor.getTelefone()%></td>
             <td> <%=fornecedor.getEmail()%></td>
             <td> 
-                <a href="/fornecedor/editar">Editar</a>
+                <a class="btn btn-info" href="/fornecedor/editar">Editar <i class="fas fa-edit"></i></a>
                 <a href="/fornecedor/excluir">Excluir</a>
             </td>
         </tr>
