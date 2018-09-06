@@ -11,10 +11,11 @@
 
 <%%>
 <div class="botao-novo-produto">
+    <input type="button" id="exportar" value="Exportar Tabela">
     <a class="btn btn-success float-right" href="/produtos/cadastro">Novo Produto <i class="fas fa-plus-square"></i></a>
 </div>
 
-<div style="margin:">
+<div id="tabela">
     <table class="table table-hover table-bordered">
     <thead class="thead-light">
         <tr>
@@ -40,7 +41,7 @@
         </tr>
         <%}%>
     </tbody>
-</table>
+    </table>
 </div>
 
 
