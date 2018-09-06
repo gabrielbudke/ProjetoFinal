@@ -29,9 +29,9 @@ public class ProdutoStore extends HttpServlet{
 	produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));
         produto.setId(new ProdutoDAO().adicionar(produto));
         
-        EstoqueBean estoque = new EstoqueBean();
+        /*EstoqueBean estoque = new EstoqueBean();
         estoque.setIdProduto(Integer.parseInt(req.getParameter("")));
-        estoque.setId(new EstoqueDAO().adicionar(estoque));
+        estoque.setId(new EstoqueDAO().adicionar(estoque));*/
         
         
         
