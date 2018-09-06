@@ -18,22 +18,22 @@
     <table class="table table-hover table-bordered">
     <thead class="thead-light">
         <tr>
-            <th>#</th>
+            <%--<th>#</th>--%>
             <th>Categoria</th>
             <th>Nome</th>
             <th>Preço</th>
-            <th>Quantidade</th>
+            <%--<th>Quantidade</th>--%>
             <th> <i class="fas fa-cogs"></i></th>
         </tr>
     </thead>
     <tbody>
         <%for (ProdutoBean produto : ((List<ProdutoBean>) request.getAttribute("produtos"))) {%>
         <tr>
-            <td> <%=produto.getId()%></td>
+            <%--<td> <%=produto.getId()%></td>--%>
             <td> <%=produto.getCategoria().getNome()%> </td>
             <td> <%=produto.getNome()%> </td>
             <td> <%=produto.getPreco()%> </td>    
-            <td> <%=produto.getQuantidade()%></td>
+            <%--<td> <%=produto.getQuantidade()%></td>--%>
             <td> 
                 <a class="btn btn-info"  href="/produtos/editar?id=<%=produto.getId()%>"><i class="fas fa-edit"></i> Editar</a>
             </td>
