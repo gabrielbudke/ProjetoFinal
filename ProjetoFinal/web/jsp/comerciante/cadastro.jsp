@@ -23,10 +23,7 @@
         
     </head>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 815abb49c5204692c138a3abcc2fe527ca21d9e3
 
     <body>       
         <form action="/comerciante/store" method="post">
