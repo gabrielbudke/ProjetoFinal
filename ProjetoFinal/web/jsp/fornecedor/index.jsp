@@ -36,7 +36,7 @@
             <td> <%=fornecedor.getTelefone()%></td>
             <td> <%=fornecedor.getEmail()%></td>
             <td> 
-                <a class="btn btn-info" href="/fornecedor/editar">Editar <i class="fas fa-edit"></i></a>
+                <a class="btn btn-info" href="/fornecedor/editar?id=<%=fornecedor.getId()%>">Editar <i class="fas fa-edit"></i></a>
                 <a href="/fornecedor/excluir">Excluir</a>
             </td>
         </tr>
