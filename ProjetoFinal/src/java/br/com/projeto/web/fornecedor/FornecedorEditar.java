@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Patrick
  */
-@WebServlet("fornecedor/editar")
+@WebServlet("/fornecedor/editar")
 public class FornecedorEditar extends HttpServlet{
 
     @Override
