@@ -40,7 +40,6 @@ public class FuncionarioStore extends HttpServlet{
         resp.sendRedirect("/funcionario");
         
     }
-    
-    
-    
 }
+    
+    
