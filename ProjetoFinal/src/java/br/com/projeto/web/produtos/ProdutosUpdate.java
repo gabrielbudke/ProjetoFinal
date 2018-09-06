@@ -25,7 +25,7 @@ public class ProdutosUpdate extends HttpServlet{
         boolean alterou = new ProdutoDAO().editar(produto);
     
         
-    //resp.sendRedirect("/produtos");
+    resp.sendRedirect("/produtos");
     
     }
     

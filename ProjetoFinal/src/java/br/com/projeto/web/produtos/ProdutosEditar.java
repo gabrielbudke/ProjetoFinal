@@ -17,7 +17,9 @@ public class ProdutosEditar extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;metacharset=UTF-8");
         req.getRequestDispatcher("/jsp/produtos/editar.jsp").include(req, resp);
+        
     }
+    
     
     
     
