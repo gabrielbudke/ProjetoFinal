@@ -18,6 +18,7 @@ public class ProdutosUpdate extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProdutoBean produto = new ProdutoBean();
+        produto.setId(Integer.parseInt(req.getParameter("id")));
         produto.setNome(req.getParameter("nome"));
         produto.setPreco(Float.parseFloat(req.getParameter("preco")));
         produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));
