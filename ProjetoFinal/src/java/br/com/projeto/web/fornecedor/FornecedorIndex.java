@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alunos
  */
-@WebServlet(urlPatterns = "/fornecedor")
+@WebServlet("/fornecedor")
 public class FornecedorIndex extends HttpServlet {
 
     @Override

@@ -105,7 +105,7 @@ public class FornecedorDAO {
     }
 
     public boolean editar(FornecedorBean fornecedor) {
-        String sql = "UPDATE fornecedor SET nome = ?, cnpj = ?, telefone = ?, email = ? WHERE id = ?";
+        String sql = "UPDATE fornecedores SET nome = ?, cnpj = ?, telefone = ?, email = ? WHERE id = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             int posicao = 1;
