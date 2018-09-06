@@ -18,8 +18,10 @@ public class FuncionarioStore extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        FuncionarioBean funcionario = new FuncionarioBean();
         
+        FuncionarioBean funcionario = new FuncionarioBean();
+        funcionario.setLogin(req.getParameter("login"));
+        funcionario.setSenha(req.getParameter("senha"));
         funcionario.setNome(req.getParameter("nome"));
         funcionario.setFuncao(req.getParameter("funcao"));
         funcionario.setEmail(req.getParameter("email"));
@@ -35,10 +37,9 @@ public class FuncionarioStore extends HttpServlet{
         funcionario.setId(new FuncionarioDAO().adicionar(funcionario));
         
         
-        resp.sendRedirect("/funcionario/cadastro");
+        resp.sendRedirect("/funcionario");
         
     }
-    
-    
-    
 }
+    
+    

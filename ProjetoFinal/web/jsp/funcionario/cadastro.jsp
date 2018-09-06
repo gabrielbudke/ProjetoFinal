@@ -10,6 +10,16 @@
 
 <form action="/funcionarios/store" method="POST">
 
+    <div>
+        <label>Novo Login</label>
+        <input type="text" id="login" name="login">
+    </div>
+
+     <div>
+        <label>Novo Senha</label>
+        <input type="text" id="login" name="senha">
+    </div>
+
     <div class = "form-group">
         <label for='nome'><i class=''></i> Nome</label>
         <input type='text' id='nome' name='nome' placeholder='Nome'>
@@ -40,10 +50,10 @@
         <input type='text' id='cep' name='cep' placeholder='CEP'>
     </div>
 
-        <div>
-      <label for='campo-estado'>Estado</label>
-      <input type='text' id='campo-estado' name='estado' placeholder='Estado' onfocusout='processarCep()' >
-            </div>
+    <div>
+        <label for='campo-estado'>Estado</label>
+        <input type='text' id='campo-estado' name='estado' placeholder='Estado' onfocusout='processarCep()' >
+    </div>
 
     <div>
         <label for='logradouro'><i class=''></i> Rua</label>
@@ -59,15 +69,14 @@
         <label for='cidade'><i class=''></i> Cidade</label>
         <input type='text' id='cidade' name='cidade' placeholder='Cidade'>
     </div> 
-    
+
     <div>
         <label for='numero'><i class=''></i> Numero</label>
         <input type='text' id='numero' name='numero' placeholder='Numero'>
     </div>
 
     <input class='btn btn-sucess' type='submit' value='Cadastrar'>
-    
+
 </form>
 
 <%@include file="../master/rodape.jsp" %>
-
