@@ -13,25 +13,24 @@
 <%@include file="../master/master.jsp" %>
 <% List<FuncionarioBean> funcionarios = new FuncionarioDAO().obterTodos(); %>
 
-<a href="/funcionario/cadastro">Novo Funcionario</a>
-<table>
-    <thead>
+<a href="/funcionario/cadastro" class="btn btn-success float-right">Novo Funcionario</a>
+<table class="table table-hover">
+    <thead class="thead-light">
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Funcionario</th>
             <th scope="col">Função</th>
             <th scope="col">Telefone</th>
-            <th scope="col">Ação</th>
+            <th scope="col"> <i class="fas fa-cogs"></i></th>
         </tr>
     </thead>
     <tbody>
         <%for(FuncionarioBean funcionario : funcionarios){%>
         <tr>
-            <th scope="row">1</th>
-            <td><%funcionario.getId();%></td>
-            <td><%funcionario.getNome();%></td>
-            <td><%funcionario.getFuncao();%></td>
-            <td><%funcionario.getTelefone();%></td>
+            <td><%= funcionario.getId() %></td>
+            <td><%= funcionario.getNome() %></td>
+            <td><%= funcionario.getFuncao() %></td>
+            <td><%= funcionario.getTelefone() %></td>
             <td></td>
         </tr>
         <%}%>

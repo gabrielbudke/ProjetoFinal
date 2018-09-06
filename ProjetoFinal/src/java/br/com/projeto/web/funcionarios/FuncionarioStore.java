@@ -18,7 +18,6 @@ public class FuncionarioStore extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
         FuncionarioBean funcionario = new FuncionarioBean();
         
         funcionario.setNome(req.getParameter("nome"));
@@ -34,7 +33,7 @@ public class FuncionarioStore extends HttpServlet{
         funcionario.setCidade(req.getParameter("cidade"));
         
         funcionario.setId(new FuncionarioDAO().adicionar(funcionario));
-
+        
         
         resp.sendRedirect("/funcionario/cadastro");
         

@@ -17,17 +17,16 @@ import javax.servlet.http.HttpServletResponse;
  * @author Gabriel
  */
 @WebServlet("/home")
-public class Inicio extends HttpServlet{
+public class Home extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if (req.getSession().getAttribute("funcionario") == null) {
+            resp.sendRedirect("/");
+        }
 
         req.getRequestDispatcher("/jsp/inicio/inicial.jsp").include(req, resp);
-        
-
 
     }
-    
-    
-    
+
 }

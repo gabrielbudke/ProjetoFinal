@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.projeto.web.funcionarios;
+package br.com.projeto.web.estoque;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -16,13 +16,21 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alunos
  */
-@WebServlet(urlPatterns = "/funcionario")
-public class FuncionarioIndex extends HttpServlet {
+@WebServlet("/estoque/adicionar")
+public class EstoqueAdicionar extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=UTF-8");
-        req.getRequestDispatcher("jsp/funcionario/index.jsp").include(req, resp);
-    }
+        
+        
+        resp.setContentType("text/html;metacharset=utf-8");
+        req.getRequestDispatcher("/jsp/estoque/adicionar.jsp").include(req, resp);
+        
 
+
+    }
+    
+    
+    
+    
 }

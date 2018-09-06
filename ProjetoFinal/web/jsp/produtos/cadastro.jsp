@@ -35,14 +35,14 @@
         <input type='text' id='campo-nome' name='nome' placeholder='Nome' required='required' onfocusout='validarCampoNome()'>
     </div>
 
-    <div>
+    <%--<div>
 	<label for="campo-quantidade"><i class='fa fa-address-card-o'></i>Quantidade</label>
         <input type='number' min='0' id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required' onfocusout='validarCampoQuantidade()'>
-    </div>
+    </div>--%>
 
     <div class = "form-group">
         <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
-        <input type='number' min='0' id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
+        <input type='text' min='0' id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
     </div>
 
     <input type="submit" value="Adicionar">

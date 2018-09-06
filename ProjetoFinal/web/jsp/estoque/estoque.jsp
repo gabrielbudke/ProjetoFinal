@@ -14,6 +14,7 @@
 <%@include file="../master/master.jsp" %>
 <%List<ProdutoBean> produtos = new ProdutoDAO().obterTodos(); %>
 
+<a href="/estoque/adicionar">Add</a>
 <div>
     <table class="table">
         <thead>
