@@ -72,9 +72,6 @@ CREATE TABLE estoque(
 	quantidade INT UNSIGNED,	
 	FOREIGN KEY (id_produto) REFERENCES produtos(id));
 
-INSERT INTO estoque (id_produto, tipo, quantidade) VALUES
-(1, 'Entrada', 5);
-
 CREATE TABLE fluxo_caixa(
         id INT AUTO_INCREMENT PRIMARY KEY,
         total_recebido DECIMAL(4,2),

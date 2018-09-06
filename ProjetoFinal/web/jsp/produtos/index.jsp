@@ -37,13 +37,13 @@
             <%--<td> <%=produto.getQuantidade()%></td>--%>
             <td> 
                 <a class="btn btn-info"  href="/produtos/editar?id=<%=produto.getId()%>"><i class="fas fa-edit"></i> Editar</a>
+                <a class="btn btn-danger" href="/produtos/excluir?id=<%=produto.getId()%>"><i class="fas fa-trash-alt"></i> Excluir</a>
             </td>
         </tr>
         <%}%>
     </tbody>
     </table>
 </div>
-
 
 
 
