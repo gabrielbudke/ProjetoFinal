@@ -13,15 +13,15 @@
 <%@include file="../master/master.jsp" %>
 <% List<FuncionarioBean> funcionarios = new FuncionarioDAO().obterTodos(); %>
 
-<a href="/funcionario/cadastro" class="btn btn-primary">Novo Funcionario</a>
-<table class="table table-striped">
-    <thead>
+<a href="/funcionario/cadastro" class="btn btn-success float-right">Novo Funcionario</a>
+<table class="table table-hover">
+    <thead class="thead-light">
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Funcionario</th>
             <th scope="col">Função</th>
             <th scope="col">Telefone</th>
-            <th scope="col">Ação</th>
+            <th scope="col"> <i class="fas fa-cogs"></i></th>
         </tr>
     </thead>
     <tbody>
