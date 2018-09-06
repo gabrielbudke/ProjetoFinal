@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.projeto.web.fornecedor;
+package br.com.projeto.web.usuario;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,19 +15,18 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Patrick
+ * @author Alunos
  */
-@WebServlet("fornecedor/editar")
-public class FornecedorEditar extends HttpServlet{
+@WebServlet(name = "UsuarioCadastro", urlPatterns = {"/Cadastro"})
+public class UsuarioCadastro extends HttpServlet {
 
+    
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;metacharset=UTF-8");
-        req.getRequestDispatcher("/jsp/fornecedor/editar.jsp").include(req, resp);
+        req.getRequestDispatcher("/jsp/cadastro/UsuarioCadastro.jsp").include(req, resp);
+        
     }
-    
-    
-    
-    
-    
-}
+    }
+
+ 
