@@ -42,7 +42,7 @@
 
     <div class = "form-group">
         <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
-        <input type='text' min='0' id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
+        <input type='number' min='0' id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
     </div>
 
     <input type="submit" value="Adicionar">
