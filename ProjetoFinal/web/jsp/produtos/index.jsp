@@ -32,7 +32,7 @@
             <%--<td> <%=produto.getId()%></td>--%>
             <td> <%=produto.getCategoria().getNome()%> </td>
             <td> <%=produto.getNome()%> </td>
-            <td> <%=produto.getPreco()%> </td>    
+            <td> <%=produto.getPreco()%> </td>     
             <%--<td> <%=produto.getQuantidade()%></td>--%>
             <td> 
                 <a class="btn btn-info"  href="/produtos/editar?id=<%=produto.getId()%>"><i class="fas fa-edit"></i> Editar</a>
