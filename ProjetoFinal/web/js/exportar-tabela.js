@@ -11,6 +11,7 @@ $("#exportar").click(function (e) {
         fileext: ".xls",
         filename: "Lista de Produtos", //do not include extension,
         exclude_links: true
+            
     });
 
 });
