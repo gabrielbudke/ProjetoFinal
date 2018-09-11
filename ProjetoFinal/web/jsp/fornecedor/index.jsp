@@ -36,7 +36,7 @@
             <td> <%=fornecedor.getEmail()%></td>
             <td> 
                 <a class="btn btn-info" href="/fornecedor/editar?id=<%=fornecedor.getId()%>"><i class="fas fa-edit"></i>Editar</a>
-                <a href="/fornecedor/excluir">Excluir</a>
+                <a class="btn btn-danger" href="/fornecedor/excluir?id=<%=fornecedor.getId()%>"><i class="fas fa-trash-alt"></i> Excluir</a>
             </td>
         </tr>
         <%}%>

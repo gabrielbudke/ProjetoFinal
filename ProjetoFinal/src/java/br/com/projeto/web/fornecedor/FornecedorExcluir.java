@@ -6,6 +6,7 @@
 package br.com.projeto.web.fornecedor;
 
 import br.com.projeto.bean.FornecedorBean;
+import br.com.projeto.dao.FornecedorDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,10 +23,16 @@ public class FornecedorExcluir extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        FornecedorBean fornecedor = new FornecedorBean();
-        fornecedor.setId(Integer.parseInt(req.getParameter("id")));
-        fornecedor.setNome(req.getParameter("nome"));
-        fornecedor.setCnpj(req.getParameter("cnpj"));
+        
+         int id = Integer.parseInt(req.getParameter("id"));
+        boolean apagou = new FornecedorDAO().excluir(id);
+
+        if (apagou) {
+            resp.sendRedirect("/fornecedor");
+        } else {
+            resp.getWriter().print("Não foi Possível Deletar!");
+        }
+        
     }
     
     
