@@ -23,6 +23,7 @@
 <div>
     <label for="campo-nome">Selecionar produto:</label>
     <select id="campo-nome" name="produto">
+        
         <option selected = 'selected' disabled='disable'></option>
 
         <% for(ProdutoBean produto : produtos){%>
