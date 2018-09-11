@@ -10,10 +10,10 @@
     
     <div class="form-group">
 	<label for='campo-categoria'><i class=''></i> Categoria</label>
-	<input type='text' id='campo-categoria' name="categoria" required='required' onfocusout='validarCapoCategoria()'>
+	<input class='form-control' type='text' id='campo-categoria' name="categoria" required='required' onfocusout='validarCapoCategoria()'>
     </div>
 	
-    <input type="submit" value="Adicionar">
+    <input class='btn btn-success' type="submit" value="Adicionar">
     
 </form>
 <%@include file="../master/rodape.jsp" %>

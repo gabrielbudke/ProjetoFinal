@@ -4,6 +4,7 @@
     Author     : Patrick Nacimento
 --%>
 
+<%@page import="java.util.List"%>
 <%@page import="br.com.projeto.dao.FornecedorDAO"%>
 <%@page import="br.com.projeto.bean.FornecedorBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,6 +12,8 @@
 <% 
     int id = Integer.parseInt(request.getParameter("id"));
     FornecedorBean fornecedor = new FornecedorDAO().obterPeloId(id);%>
+    
+    <%List<FornecedorBean> fornecedores = new FornecedorDAO().obterTodos();%>
     
     <form action="/fornecedor/update" method="post">
         <input type="hidden" name="id" value="<%= fornecedor.getId() %>">

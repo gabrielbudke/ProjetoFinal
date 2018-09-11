@@ -14,13 +14,11 @@
 
 <%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos();%>
 <form action="/produtos/store" method="POST">
-    <div class="nav-item">
-	<a href="/categoria/cadastro">Nova Categoria</a>
-    </div>
+ 
 
     <div class = "form-group">
         <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
-        <select type='text' class="form-control" id='campo-categoria' name='categoria' required='required' onfocusout='validarCapoCategoria()'>
+        <select class="form-control" type='text' id='campo-categoria' name='categoria' required='required' onfocusout='validarCapoCategoria()'>
             <option selected = 'selected' disabled='disable'></option>
 
 	    <% for (CategoriaBean categoria : categorias) {%>
@@ -28,11 +26,14 @@
             <% }%>
 
         </select>
+	<div>
+            <a class="btn btn-success"  href="/categoria/cadastro"><i class="fas fa-plus-square"></i> Nova Categoria</a>
     </div>
+        </div>
 
     <div class = "form-group">
         <label for='campo-nome'><i class='fa fa-address-card-o'></i> Nome</label>
-        <input type='text' id='campo-nome' name='nome' placeholder='Nome' required='required' onfocusout='validarCampoNome()'>
+        <input type='text' class="form-control" id='campo-nome' name='nome' placeholder='Nome' required='required' onfocusout='validarCampoNome()'>
     </div>
 
     <%--<div>
@@ -42,10 +43,10 @@
 
     <div class = "form-group">
         <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
-        <input type='number' min='0' id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
+        <input type='text' min='0' class="form-control" id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
     </div>
 
-    <input type="submit" value="Adicionar">
+    <input class="btn btn-success" type="submit" value="Adicionar">
 
 </form>
 
