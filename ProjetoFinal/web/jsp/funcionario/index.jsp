@@ -31,7 +31,10 @@
             <td><%= funcionario.getNome() %></td>
             <td><%= funcionario.getFuncao() %></td>
             <td><%= funcionario.getTelefone() %></td>
-            <td></td>
+            <td>
+                <a class="btn btn-info" href="/funcionario/editar?id=<%=funcionario.getId()%>"><i class="fas fa-edit"></i>Editar</a>
+                <a class="btn btn-danger" href="/funcionario/excluir?id=<%=funcionario.getId()%>"><i class="fas fa-trash-alt"></i> Excluir</a>
+            </td>
         </tr>
         <%}%>
     </tbody>
