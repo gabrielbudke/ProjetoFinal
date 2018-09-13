@@ -46,7 +46,7 @@
     </div>--%>
     <div>
         <label for="campo-preco">Preço</label>
-        <input type="number" class="form-control" id="campo-preco" name="preco" value="<%= produto.getPreco()%>">
+        <input type="text" class="form-control" id="campo-preco" name="preco" value="<%= produto.getPreco()%>">
     </div>
 
     <div>

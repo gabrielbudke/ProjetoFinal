@@ -1,0 +1,3 @@
+$(function(){
+   $("#produtos-index").DataTable();
+});

@@ -12,7 +12,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file = "../master/master.jsp"%>
 
-<%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos();%>
 <form action="/produtos/store" method="POST">
  
 
@@ -20,11 +19,6 @@
         <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
         <select class="form-control" type='text' id='campo-categoria' name='categoria' required='required' onfocusout='validarCapoCategoria()'>
             <option selected = 'selected' disabled='disable'></option>
-
-	    <% for (CategoriaBean categoria : categorias) {%>
-	    <option value=<%=categoria.getId()%>><%=categoria.getNome()%></option>
-            <% }%>
-
         </select>
 	<div>
             <a class="btn btn-success"  href="/categoria/cadastro"><i class="fas fa-plus-square"></i> Nova Categoria</a>

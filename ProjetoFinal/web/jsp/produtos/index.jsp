@@ -14,7 +14,7 @@
     <a class="btn btn-success float-right" href="/produtos/cadastro">Novo Produto <i class="fas fa-plus-square"></i></a>
 </div>
 <div id="tabela">
-    <table class="table table-hover table-bordered">
+    <table class="table table-hover table-bordered" id="produtos-index">
         <thead class="thead-light">
             <tr>
                 <%--<th>#</th>--%>
