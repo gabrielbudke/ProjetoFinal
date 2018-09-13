@@ -59,7 +59,20 @@ CREATE TABLE produtos(
 INSERT INTO produtos (id_categoria, nome, preco) VALUES 
 (1, 'Xbox', 1800),
 (2, 'Pulseira', 4.50),
-(1, 'PS4', 4000);
+(1, 'PS4', 4000),
+(1, 'TV', 5000),
+(1, 'Geladeira', 1800),
+(1, 'Pia', 800),
+(1, 'Sorvete', 12),
+(1, 'Apple Watch', 12000),
+(1, 'Monitor', 800),
+(1, 'Rádio', 1000),
+(1, 'Necessidade Básica', 5000),
+(1, 'Mouse', 300),
+(1, 'Teclado', 750);
+
+
+;
 
 CREATE TABLE produtos_saida(
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -94,5 +107,22 @@ CREATE TABLE recuperar_senha(
 );
 
 */
-INSERT INTO funcionarios (nome, login, senha) VALUES
+INSERT INTO funcionarios (nome, login, senha, telefone) VALUES
+('Kaio', 'kaio_henrique', '123', '(83) 3542-2574'),
+('Paulo tejada', 'paulo_tejada', '123', '(83) 98810-8944'),
+('Patrick Lejinho', 'patrick_lejinho', '123', '(43) 2847-4595'),
+('Lucas Tomando', 'lucas_tomando', '123', '(43) 98680-5360'),
+('João Paulo', 'joao_paulo', '123', '(84) 3507-3289'),
+('Isadora das Costas Largas', 'isadora', '123', '(84) 98104-9974'),
+('Jorge Tijolinho', 'jorge_tijolinho', '123'),
+('Kaio', 'kaio_henrique', '123'),
+('Kaio', 'kaio_henrique', '123'),
+('Kaio', 'kaio_henrique', '123'),
+('Kaio', 'kaio_henrique', '123'),
+('Kaio', 'kaio_henrique', '123'),
+('Kaio', 'kaio_henrique', '123'),
+('Kaio', 'kaio_henrique', '123'),
+('Kaio', 'kaio_henrique', '123'),
+('Kaio', 'kaio_henrique', '123'),
+('Kaio', 'kaio_henrique', '123'),
 ('Kaio', 'kaio_henrique', '123');

@@ -11,10 +11,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%@include file="../master/master.jsp" %>
-<% List<FuncionarioBean> funcionarios = new FuncionarioDAO().obterTodos(); %>
 
 <a href="/funcionario/cadastro" class="btn btn-success float-right">Novo Funcionario</a>
-<table class="table table-hover">
+<table class="table table-hover" id="funcionario-index">
     <thead class="thead-light">
         <tr>
             <th scope="col">Id</th>
@@ -25,15 +24,6 @@
         </tr>
     </thead>
     <tbody>
-        <%for(FuncionarioBean funcionario : funcionarios){%>
-        <tr>
-            <td><%= funcionario.getId() %></td>
-            <td><%= funcionario.getNome() %></td>
-            <td><%= funcionario.getFuncao() %></td>
-            <td><%= funcionario.getTelefone() %></td>
-            <td></td>
-        </tr>
-        <%}%>
     </tbody>
 </table>
 

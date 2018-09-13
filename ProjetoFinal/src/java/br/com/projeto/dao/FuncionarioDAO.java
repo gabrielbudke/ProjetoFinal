@@ -7,7 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -168,6 +171,31 @@ public class FuncionarioDAO {
             Conexao.fecharConexao();
         }
         return null;
+    }
+
+    public List<HashMap<String, Object>> obterTodosParaDataTable() {
+        List<HashMap<String, Object>> funcionarios = new ArrayList<>();
+        String sql = "SELECT * FROM funcionarios";
+        try {
+            Statement statement = Conexao.obterConexao().createStatement();
+            statement.execute(sql);
+            ResultSet resultSet = statement.getResultSet();
+            while (resultSet.next()) {
+                HashMap<String, Object> funcionario = new HashMap<>();
+                funcionario.put("nome", resultSet.getString("nome"));
+                funcionario.put("id", resultSet.getInt("id"));
+                funcionario.put("funcao", resultSet.getString("nome"));
+                funcionario.put("telefone", resultSet.getString("telefone"));
+                funcionarios.add(funcionario);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(FuncionarioDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return funcionarios;
+
     }
 
 }
