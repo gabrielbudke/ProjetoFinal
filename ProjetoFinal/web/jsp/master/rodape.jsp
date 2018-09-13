@@ -10,9 +10,14 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
 
 <script src="/js/jquery.table2excel.min.js"></script>
+<script src="/libs/select2/select2.min.js"></script>
+<script src="/libs/datatable/jquery.dataTables.min.js"></script>
 
 <script src='/js/cadastro.js'></script>
 <script src="/js/exportar-tabela.js"></script>
+<script src="/js/produtos-index.js"></script>
+<script src="/js/funcionarios-index.js"></script>
+
     
 </body>
 </html>
