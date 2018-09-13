@@ -5,7 +5,7 @@ USE projeto_final;
 
 CREATE TABLE funcionarios(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-	id_funcionario INTEGER NOT NULL,
+	id_funcionario INTEGER,
 
 	login VARCHAR (30),
 	senha VARCHAR (6),	
