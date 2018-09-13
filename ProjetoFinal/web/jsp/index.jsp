@@ -12,12 +12,12 @@
             <form method="post" action="/usuario/login">
                 <input type="text" name="login" placeholder="Usuário" required="required" />
                 <input type="password" name="senha" placeholder="Senha" required="required" />
+                <button type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
                 <div class="forgot" id = "register">
                     <a href="reset.html">Esqueceu a senha?</a>
 
                     <a href="/Cadastro" id = "register">Não possui um cadastro?</a> 
                 </div> 
-                <button type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
             </form>
         </div>
     </body>

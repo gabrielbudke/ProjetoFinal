@@ -34,7 +34,25 @@
                 <a class="nav-link" href="/produtos">Produtos</a>
             </li>
         </ul>
-
-        <a class="btn btn-danger" href="/usuario/logout">Sair <i class="fas fa-sign-out-alt"></i></a>
-    </div>
-</nav>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <div class="nav-profile-img">
+                <img src="../../imagens/person-f1lat.png" alt="image">
+                <span class="availability-status online"></span>             
+              </div>
+              <div class="nav-profile-text">
+                <p class="mb-1 text-black">User</p>
+              </div>
+            </a>
+            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="#">
+                <i class="mdi mdi-cached mr-2 text-success"></i>
+                Conta
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/usuario/logout">
+                <i class="mdi mdi-logout mr-2 text-primary"></i>
+                Sair
+              </a>
+                </nav>
