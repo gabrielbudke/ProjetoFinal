@@ -23,6 +23,4 @@ function validarCampoQuantidade() {
 function validarCampoPreco() {
     var preco = document.getElementById("campo-preco").value;
     
-}
-
-
+    }
