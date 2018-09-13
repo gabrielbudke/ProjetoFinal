@@ -12,9 +12,9 @@
 <%@page import="br.com.projeto.bean.EstoqueBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
-<%List<ProdutoBean> produtos = new ProdutoDAO().obterTodos(); %>
+<%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
 
-<a href="/estoque/adicionar">Add</a>
+<a class="btn btn-success float-right" href="/estoque/adicionar">Adicionar</a>
 <div>
     <table class="table">
         <thead>
@@ -22,15 +22,16 @@
             <th>Produto</th>    
             <th>ValorUn.</th>    
             <th>Quantidade</th>
+            <th>Valor Total</th>
             <th>Acao</th>
         </thead>
         <tbody>
             
-            <% for(ProdutoBean produto : produtos) {%>
+            <% for(EstoqueBean estoque : estoques) {%>
 	    <tr>
-		<td><% //entrada ou saida %></td>
-		<td><% //produto %></td>
-		<td><% //valor un %></td>
+		<td><%%></td>
+		<td><%%></td>
+		<td><%%></td>
 		<td><% // quantidade %></td>
 		<td><% // valor total %></td>
 		<td><% // açao %></td>
