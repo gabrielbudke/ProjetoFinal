@@ -5,21 +5,21 @@ USE projeto_final;
 
 CREATE TABLE funcionarios(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-	id_funcionario INTEGER,
+	id_funcionario INTEGER NOT NULL,
 
-	login VARCHAR (30) NOT NULL,
-	senha VARCHAR (6) NOT NULL,	
-	nome VARCHAR(100) NOT NULL,
-	cpf VARCHAR(20)  NOT NULL,
+	login VARCHAR (30),
+	senha VARCHAR (6),	
+	nome VARCHAR(100),
+	cpf VARCHAR(20),
 	email VARCHAR(50),
-	telefone VARCHAR(20) NOT NULL,
-	rua VARCHAR(50)  NOT NULL,
-	numero VARCHAR(5) NOT NULL,
-	bairro VARCHAR(50) NOT NULL,
-	cidade VARCHAR(50) NOT NULL,
-	estado VARCHAR(20) NOT NULL,
-	funcao VARCHAR(50) NOT NULL,
-	cep VARCHAR(20) NOT NULL,
+	telefone VARCHAR(20),
+	rua VARCHAR(50),
+	numero VARCHAR(5) ,
+	bairro VARCHAR(50) ,
+	cidade VARCHAR(50) ,
+	estado VARCHAR(20) ,
+	funcao VARCHAR(50) ,
+	cep VARCHAR(20) ,
 
 	tipo VARCHAR(100) DEFAULT 'Colaborador',
 	FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
@@ -27,9 +27,9 @@ CREATE TABLE funcionarios(
 
 CREATE TABLE fornecedores(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-	nome VARCHAR (100) NOT NULL,
-	cnpj VARCHAR (100) NOT NULL,
-	telefone VARCHAR (20) NOT NULL,
+	nome VARCHAR (100) ,
+	cnpj VARCHAR (100) ,
+	telefone VARCHAR (20) ,
 	email VARCHAR (50)
 );
 
@@ -71,7 +71,7 @@ CREATE TABLE produtos_saida(
 CREATE TABLE estoque(
         id INT AUTO_INCREMENT PRIMARY KEY,
 	id_produto INTEGER NOT NULL,	
-	tipo VARCHAR(7) NOT NULL, -- Entrada ou Saída
+	tipo VARCHAR(7), -- Entrada ou Saída
 	quantidade INT UNSIGNED,	
 	FOREIGN KEY (id_produto) REFERENCES produtos(id));
 
