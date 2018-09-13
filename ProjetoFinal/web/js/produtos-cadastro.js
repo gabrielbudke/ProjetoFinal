@@ -1,6 +1,6 @@
 /* 
- produtos-cadastro
- */
+produtos-cadastro
+*/
 function validarFormulario() {
     if (validarCampoCategoria() == null || validarCampoNome() == false || validarCampoQuantidade() == false
             || validarCampoPreco() == false) {
@@ -9,8 +9,6 @@ function validarFormulario() {
 }
 function validarCampoCategoria() {
     var categoria = document.getElementById("campo-categoria").value;
-    
-
 }
     
 
@@ -24,5 +22,7 @@ function validarCampoQuantidade() {
 
 function validarCampoPreco() {
     var preco = document.getElementById("campo-preco").value;
+    
 }
+
 
