@@ -25,7 +25,18 @@ public class ProdutoStore extends HttpServlet{
         ProdutoBean produto = new ProdutoBean();
 	//Inserindo dados no ProdutoBean
         produto.setNome(req.getParameter("nome"));
-        produto.setPreco(Float.parseFloat(req.getParameter("preco")));
+       
+        try{
+                    
+            float preco = Float.parseFloat(req.getParameter("preco"));
+            produto.setPreco(preco);
+        }catch(NumberFormatException e){
+            System.out.print("Vcilao");
+        }
+       
+        
+       
+        
 	produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));
         produto.setId(new ProdutoDAO().adicionar(produto));
         
