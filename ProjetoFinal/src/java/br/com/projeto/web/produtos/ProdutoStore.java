@@ -30,16 +30,12 @@ public class ProdutoStore extends HttpServlet {
 
             float preco = Float.parseFloat(req.getParameter("preco"));
             produto.setPreco(preco);
-<<<<<<< HEAD
-        } catch (NumberFormatException e) {
-            //resp.getWriter().print("alert(Somente Numero)");
-            resp.sendRedirect("/produtos");
-=======
+
             int quantidade = Integer.parseInt(req.getParameter("quantidade"));
             produto.setQuantidade(quantidade);
         }catch(NumberFormatException e){
             System.out.print("Vcilao");
->>>>>>> 13814d50d61c371e3ebfcd3c99d2e0d3da17ace9
+
         }
 
         produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));

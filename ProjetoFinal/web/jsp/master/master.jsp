@@ -12,6 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>E-Stock</title>
         <link rel="stylesheet" href="../jsp/comerciante/cadastroComercianteCSS.css">
+        <link rel="stylesheet" href="../componentes/perfilUsuario/perfilUsuarioCSS.css">
 
         <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">

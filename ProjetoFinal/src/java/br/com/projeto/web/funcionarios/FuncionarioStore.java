@@ -38,7 +38,7 @@ public class FuncionarioStore extends HttpServlet{
         
         
         resp.sendRedirect("/funcionario");
-        
+        resp.setContentType("text/html;metacharset=UTF-8");
     }
 }
     

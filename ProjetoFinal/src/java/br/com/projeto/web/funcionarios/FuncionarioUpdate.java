@@ -34,7 +34,7 @@ public class FuncionarioUpdate extends HttpServlet{
         funcionario.setNumero(req.getParameter("numero"));
         
         boolean alterou = new FuncionarioDAO().editar(funcionario);
-        
+        resp.setContentType("text/html;metacharset=UTF-8");
         resp.sendRedirect("/funcionario");
     }
     
