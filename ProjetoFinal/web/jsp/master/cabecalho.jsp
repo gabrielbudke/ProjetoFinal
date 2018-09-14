@@ -33,6 +33,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/produtos">Produtos</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/vendas">Vendas</a>
+            </li>
         </ul>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item nav-profile dropdown">
