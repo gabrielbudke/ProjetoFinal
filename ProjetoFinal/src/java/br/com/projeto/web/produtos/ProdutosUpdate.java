@@ -21,6 +21,7 @@ public class ProdutosUpdate extends HttpServlet{
         produto.setId(Integer.parseInt(req.getParameter("id")));
         produto.setNome(req.getParameter("nome"));
         produto.setPreco(Float.parseFloat(req.getParameter("preco")));
+        produto.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
         produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));
         
         boolean alterou = new ProdutoDAO().editar(produto);
