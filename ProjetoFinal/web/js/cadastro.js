@@ -1,4 +1,4 @@
-/*function validarCadastro() {
+function validarCadastro() {
     if (validarCampoNome() == false || validarCampoCpf() == false || validarCampoSenha() == false || validarCampoLogin() == false || validarCampoEmail() == false || validarCampoTelefone() == false || validarCampoNumero() == false) {
         event.preventDefault();
     }
@@ -16,11 +16,11 @@ function validarCampoNome() {
         gerarSpan("span-campo-nome-menor-3",
                 "Nome deve conter no mínimo 3 caracteres",
                 "div-campo-nome");
-                
+
         apagarClasse("campo-nome", "border-success");
         adicionarClasse("campo-nome", "border-danger");
         return false;
-        
+
     } else if (quantidadeCaracteres > 100) {
         gerarSpan(
                 "span-campo-nome-maior-100", "Nome deve conter no máximo 100 caracteres", "div-campo-nome");
@@ -34,23 +34,23 @@ function validarCampoNome() {
     }
 }
 
-function validarCampoSenha(){
+function validarCampoSenha() {
     var senha = document.getElementById("campo-senha").value;
     var quantidadeCaracteres = senha.length;
-    
-    
+
+
     apagarElementoSeExiste("span-campo-senha-menor-6");
     apagarElementoSeExiste("span-campo-senha-maior-6");
-    
+
     if (quantidadeCaracteres < 6) {
         gerarSpan("span-campo-senha-menor-6",
-                  "Senha deve conter no minimo 6 caracteres",
-                  "div-campo-senha");
-                  
+                "Senha deve conter no minimo 6 caracteres",
+                "div-campo-senha");
+
         apagarClasse("campo-senha", "border-success");
         adicionarClasse("campo-senha", "border-danger");
         return false;
-    }else if (quantidadeCaracteres > 6) {
+    } else if (quantidadeCaracteres > 6) {
         apagarClasse("campo-senha", "border-danger");
         adicionarClasse("campo-senha", "border-success");
         return true;
@@ -69,11 +69,11 @@ function validarCampoCpf() {
         gerarSpan("span-campo-cpf-menor-11",
                 "CPF deve conter 11 caracteres",
                 "div-campo-cpf");
-                
+
         apagarClasse("campo-cpf", "border-success");
         adicionarClasse("campo-cpf", "border-danger");
         return false;
-        
+
     } else if (quantidadeCaracteres > 11) {
         gerarSpan(
                 "span-campo-cpf-maior-11", "CPF deve conter 11 caracteres", "div-campo-cpf");
@@ -119,7 +119,7 @@ function apagarElementoSeExiste(id) {
 }
 
 function gerarSpan(id, texto, idPai) {
-	
+
     var span = document.createElement("span");
     span.id = id;
     span.textContent = texto;
@@ -129,13 +129,13 @@ function gerarSpan(id, texto, idPai) {
 }
 
 $(function () {
-    
+
     $("#cep").on("focusout", function () {
 
         processarCep();
     });
     function processarCep() {
-           
+
         $cep = $("#cep").val();
         $.ajax({
             url: "https://viacep.com.br/ws/" + $cep + "/json/",
@@ -145,14 +145,14 @@ $(function () {
                 $("#cidade").val(data.localidade);
                 $("#bairro").val(data.bairro);
                 $("#campo-estado").val(data.uf);
-                
+
             }
         });
     }
 });
-*/
 
-$(function(){
+
+$(function () {
     $("#campo-categoria").select2({
         ajax: {
             url: "/categoria/obtertodosparaselect2",
