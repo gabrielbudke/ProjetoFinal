@@ -12,7 +12,7 @@
 
 <%@include file="../master/master.jsp" %>
 
-<a href="/funcionario/cadastro" class="btn btn-success float-right">Novo Funcionario</a>
+
 <table class="table table-hover dataTable" id="funcionario-index">
     <thead class="thead-light">
         <tr>
@@ -24,6 +24,7 @@
         </tr>
     </thead>
     <tbody>
+    <a href="/funcionario/cadastro" class="btn btn-success float-right">Novo Funcionario</a>
     </tbody>
 </table>
 

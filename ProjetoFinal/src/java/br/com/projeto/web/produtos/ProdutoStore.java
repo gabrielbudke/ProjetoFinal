@@ -17,40 +17,39 @@ import javax.servlet.http.HttpServletResponse;
  * @author Logan Michel
  */
 @WebServlet(urlPatterns = "/produtos/store")
-public class ProdutoStore extends HttpServlet{
-    
+public class ProdutoStore extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProdutoBean produto = new ProdutoBean();
-	//Inserindo dados no ProdutoBean
+        //Inserindo dados no ProdutoBean
         produto.setNome(req.getParameter("nome"));
-       
-        try{
-                    
+        //produto.setPreco(Float.parseFloat(req.getParameter("preco")));
+
+        try {
+
             float preco = Float.parseFloat(req.getParameter("preco"));
             produto.setPreco(preco);
+<<<<<<< HEAD
+        } catch (NumberFormatException e) {
+            //resp.getWriter().print("alert(Somente Numero)");
+            resp.sendRedirect("/produtos");
+=======
+            int quantidade = Integer.parseInt(req.getParameter("quantidade"));
+            produto.setQuantidade(quantidade);
         }catch(NumberFormatException e){
             System.out.print("Vcilao");
+>>>>>>> 13814d50d61c371e3ebfcd3c99d2e0d3da17ace9
         }
-       
-        
-       
-        
-	produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));
+
+        produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));
         produto.setId(new ProdutoDAO().adicionar(produto));
-        
-        /*EstoqueBean estoque = new EstoqueBean();
+
+        /*
+        EstoqueBean estoque = new EstoqueBean();
         estoque.setIdProduto(Integer.parseInt(req.getParameter("")));
-        estoque.setId(new EstoqueDAO().adicionar(estoque));*/
-        
-        
-        
-        
-        resp.sendRedirect("/produtos");
-        
-     
+        estoque.setId(new EstoqueDAO().adicionar(estoque));
+         */
     }
-    
-    
+
 }

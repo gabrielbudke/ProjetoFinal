@@ -30,16 +30,16 @@
         <input type='text' class="form-control" id='campo-nome' name='nome' placeholder='Nome' required='required' onfocusout='validarCampoNome()'>
     </div>
 
-    <%--<div>
-	<label for="campo-quantidade"><i class='fa fa-address-card-o'></i>Quantidade</label>
-        <input type='number' min='0' id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required' onfocusout='validarCampoQuantidade()'>
-    </div>--%>
+    <div class ="form-group">
+        <label for='campo-quantidade'><i class='fa fa-address-card-o'><i/> Quantidade</label>
+        <input type='text' class="form-control" id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required'> 
+    </div>
 
     <div class = "form-group">
         <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
         <input type='text' min='0' class="form-control" id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
     </div>
-
+    
     <input class="btn btn-success" type="submit" value="Adicionar">
 
 </form>

@@ -1,5 +1,7 @@
 function validarCadastro() {
-    if (validarCampoNome() == false || validarCampoCpf() == false || validarCampoSenha() == false || validarCampoLogin() == false || validarCampoEmail() == false || validarCampoTelefone() == false || validarCampoNumero() == false) {
+    if (validarCampoNome() == false || validarCampoCpf() == false || validarCampoSenha() == false
+            || validarCampoLogin() == false || validarCampoEmail() == false || validarCampoTelefone() == false
+            || validarCampoNumero() == false) {
         event.preventDefault();
     }
 }
