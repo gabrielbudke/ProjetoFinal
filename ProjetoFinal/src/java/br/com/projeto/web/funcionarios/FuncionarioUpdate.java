@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Alunos
+ * @author Patrick
  */
 @WebServlet("/funcionario/update")
 public class FuncionarioUpdate extends HttpServlet{
