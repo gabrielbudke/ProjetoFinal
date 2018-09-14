@@ -84,7 +84,7 @@ public class FuncionarioDAO {
     }
 
     public boolean excluir(int id) {
-        String sql = "DELETE FROM alimentos WHERE id = ?";
+        String sql = "DELETE FROM funcionarios WHERE id = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setInt(1, id);
@@ -113,6 +113,7 @@ public class FuncionarioDAO {
             ps.setString(atual++, funcionario.getNumero());
             ps.setString(atual++, funcionario.getBairro());
             ps.setString(atual++, funcionario.getCidade());
+            ps.setInt(atual++, funcionario.getId());
             return ps.executeUpdate() == 1;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -184,7 +185,7 @@ public class FuncionarioDAO {
                 HashMap<String, Object> funcionario = new HashMap<>();
                 funcionario.put("nome", resultSet.getString("nome"));
                 funcionario.put("id", resultSet.getInt("id"));
-                funcionario.put("funcao", resultSet.getString("nome"));
+                funcionario.put("funcao", resultSet.getString("funcao"));
                 funcionario.put("telefone", resultSet.getString("telefone"));
                 funcionarios.add(funcionario);
             }
