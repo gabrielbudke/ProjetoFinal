@@ -1,5 +1,7 @@
 package br.com.projeto.bean;
 
+import java.util.List;
+
 /**
  *
  * @author Patrick
@@ -8,7 +10,7 @@ public class EstoqueBean {
     
     private int idProduto;
     private ProdutoBean produto;
-    private int Id, quantidade;
+    private int id, quantidade;
     private String tipo;
 
     public int getIdProduto() {
@@ -28,11 +30,11 @@ public class EstoqueBean {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int Id) {
-        this.Id = Id;
+        this.id = Id;
     }
 
     public int getQuantidade() {
@@ -49,6 +51,10 @@ public class EstoqueBean {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public void add(List<EstoqueBean> estoque) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

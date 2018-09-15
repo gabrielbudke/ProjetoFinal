@@ -1,12 +1,64 @@
 package br.com.projeto.bean;
 
+/**
+ * @author Patrick Otavio do Nacimento(patricknascimento198@gmail.com)
+ * @date 2018-08-21
+ */
+
 public class FuncionarioBean {
 
     private int id;
-    private int idComerciante;
-    private ComercianteBean comerciante;
     private String login, senha;
     private String nome, cpf, email, telefone, funcao;
+    private String cep, estado, rua, numero, bairro, cidade;
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
 
     public int getId() {
         return id;
@@ -14,22 +66,6 @@ public class FuncionarioBean {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getIdComerciante() {
-        return idComerciante;
-    }
-
-    public void setIdComerciante(int idComerciante) {
-        this.idComerciante = idComerciante;
-    }
-
-    public ComercianteBean getComerciante() {
-        return comerciante;
-    }
-
-    public void setComerciante(ComercianteBean comerciante) {
-        this.comerciante = comerciante;
     }
 
     public String getLogin() {
@@ -87,6 +123,5 @@ public class FuncionarioBean {
     public void setFuncao(String funcao) {
         this.funcao = funcao;
     }
-    
 
 }
