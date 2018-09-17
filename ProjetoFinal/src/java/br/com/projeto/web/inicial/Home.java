@@ -21,10 +21,11 @@ public class Home extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         if (req.getSession().getAttribute("funcionario") == null) {
             resp.sendRedirect("/");
         }
-
+        resp.setContentType("text/html;metacharset=UTF-8");
         req.getRequestDispatcher("/jsp/inicio/inicial.jsp").include(req, resp);
 
     }

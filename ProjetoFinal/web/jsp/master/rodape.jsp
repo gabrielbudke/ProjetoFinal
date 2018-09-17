@@ -16,7 +16,7 @@
 <script src='/js/cadastro.js'></script>
 <script src="/js/exportar-tabela.js"></script>
 <script src="/js/produtos-index.js"></script>
-<script src="/js/funcionarios-index.js"></script>
+<script charset="UTF-8" src="/js/funcionarios-index.js"></script>
 <script src="/libs/datatable/dataTable.bootstrap4.min.js"></script>
     
 </body>

@@ -10,7 +10,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div>
         <a class="navbar-brand" href="/home">
-            <img src="../../imagens/e-Stock.png" alt="">
+            <img src="../../componentes/imagens/e-Stock.png" alt="">
         </a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,9 @@
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
               <div class="nav-profile-img">
-                <img src="../../imagens/person-f1lat.png" alt="image">
+                  <div class = "usuario-imagem">
+                  <img src="../../componentes/perfilUsuario/person-flat.png" alt="image">
+                  </div>
                 <span class="availability-status online"></span>             
               </div>
               <div class="nav-profile-text">
