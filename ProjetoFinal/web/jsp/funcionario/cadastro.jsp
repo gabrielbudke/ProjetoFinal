@@ -11,43 +11,43 @@
 <form action="/funcionarios/store" method="POST">
 
     <div>
-        <label>Novo Login</label>
-        <input type="text" id="login" name="login">
+        <label for='campo-login'>Novo Login</label>
+        <input type="text" id="campo-login" name='login'>
     </div>
 
      <div>
-        <label>Novo Senha</label>
-        <input type="text" id="login" name="senha">
+         <label for="campo-senha">Novo Senha</label>
+        <input type="text" id="campo-login" name="senha">
     </div>
 
     <div class = "form-group">
-        <label for='nome'><i class=''></i> Nome</label>
-        <input type='text' id='nome' name='nome' placeholder='Nome'>
+        <label for='campo-nome'><i class=''></i> Nome</label>
+        <input type='text' id='campo-nome' name='nome' placeholder='Nome'>
     </div>
 
     <div class = "form-group">
-        <label for='cpf'><i class=''></i> CPF</label>
-        <input type='text' id='cpf' name='cpf' placeholder='CPF'>
+        <label for='campo-cpf'><i class=''></i> CPF</label>
+        <input type='text' id='campo-cpf' name='cpf' placeholder='CPF'>
     </div>
 
     <div class = "form-group">
-        <label for='email'><i class=''></i> E-mail</label>
-        <input type='text' id='email' name='email' placeholder='E-mail'>
+        <label for='campo-email'><i class=''></i> E-mail</label>
+        <input type='text' id='campo-email' name='email' placeholder='E-mail'>
     </div>
 
     <div class = "form-group">
-        <label for='telefone'><i class=''></i> Telefone</label>
-        <input type='text' id='telefone' name='telefone' placeholder='Telefone'>
+        <label for='campo-telefone'><i class=''></i> Telefone</label>
+        <input type='text' id='campo-telefone' name='telefone' placeholder='Telefone'>
     </div>
 
     <div class = "form-group">
-        <label for='funcao'><i class=''></i> Função</label>
-        <input type='text' id='function' name='funcao' placeholder='Função'>
+        <label for='campo-funcao'><i class=''></i> Função</label>
+        <input type='text' id='campo-function' name='funcao' placeholder='Função'>
     </div>
 
     <div>
-        <label for='cep'><i class=''></i> CEP</label>
-        <input type='text' id='cep' name='cep' placeholder='CEP'>
+        <label for='campo-cep'><i class=''></i> CEP</label>
+        <input type='text' id='campo-cep' name='cep' placeholder='CEP'>
     </div>
 
     <div>
@@ -56,23 +56,23 @@
     </div>
 
     <div>
-        <label for='logradouro'><i class=''></i> Rua</label>
-        <input type='text' id='logradouro' name='rua' placeholder='Rua'  >
+        <label for='campo-logradouro'><i class=''></i> Rua</label>
+        <input type='text' id='campo-logradouro' name='rua' placeholder='Rua'  >
     </div>
 
     <div>
-        <label for='bairro'><i class=''></i> Bairro</label>
-        <input type='text' id='bairro' name='bairro' placeholder='Bairro'>
+        <label for='campo-bairro'><i class=''></i> Bairro</label>
+        <input type='text' id='campo-bairro' name='bairro' placeholder='Bairro'>
     </div>
 
     <div>
-        <label for='cidade'><i class=''></i> Cidade</label>
-        <input type='text' id='cidade' name='cidade' placeholder='Cidade'>
+        <label for='campo-cidade'><i class=''></i> Cidade</label>
+        <input type='text' id='campo-cidade' name='cidade' placeholder='Cidade'>
     </div> 
 
     <div>
-        <label for='numero'><i class=''></i> Numero</label>
-        <input type='text' id='numero' name='numero' placeholder='Numero'>
+        <label for='campo-numero'><i class=''></i> Numero</label>
+        <input type='text' id='campo-numero' name='numero' placeholder='Numero'>
     </div>
 
     <input class='btn btn-sucess' type='submit' value='Cadastrar'>
