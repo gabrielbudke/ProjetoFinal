@@ -29,12 +29,12 @@
             
             <% for(EstoqueBean estoque : estoques) {%>
 	    <tr>
-		<td><%%></td>
-		<td><%%></td>
-		<td><%%></td>
-		<td><% // quantidade %></td>
-		<td><% // valor total %></td>
-		<td><% // açao %></td>
+		<td> <%=estoque.getTipo()%> </td>
+		<td> <%=estoque.getProduto().getNome()%> </td>
+		<td> <%=estoque.getProduto().getPreco() %> </td>
+		<td> <%=estoque.getQuantidade()%> </td>
+		<td> <% // valor total %> </td>
+		<td> <% // açao %> </td>
 	    </tr>
             <%}%>
         </tbody>

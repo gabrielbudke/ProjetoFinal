@@ -38,7 +38,7 @@
             </div>
             <div id='div-campo-senha' class='form-group'>
                 <label for='campo-senha'>Senha <span class='text-danger font-weight-bold'></span></label>
-                <input type='text' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()' placeholder='Senha'>
+                <input type='password' id='campo-senha' name='senha' required='required' onfocusout='validarCampoSenha()' placeholder='Senha'>
             </div>
             <div id='div-campo-nome' class='form-group '>
                 <label for='campo-nome'>Nome <span class='text-danger font-weight-bold'></span></label>

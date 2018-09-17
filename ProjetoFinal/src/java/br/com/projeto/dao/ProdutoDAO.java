@@ -27,6 +27,7 @@ public class ProdutoDAO {
                 produto.setId(resultSet.getInt("p.id"));
                 produto.setNome(resultSet.getString("p.nome"));
                 produto.setPreco(resultSet.getFloat("p.preco"));
+                produto.setQuantidade(resultSet.getInt("p.quantidade"));
                 produto.setIdCategoria(resultSet.getInt("p.id_categoria"));
                 
                 CategoriaBean categoria = new CategoriaBean();
@@ -46,7 +47,7 @@ public class ProdutoDAO {
     }
   
     public int adicionar (ProdutoBean produto){
-        String sql= "INSERT INTO produtos (nome, preco, id_categoria) VALUES (?,?,?)";
+        String sql= "INSERT INTO produtos (nome, preco, quantidade id_categoria) VALUES (?,?,?,?)";
         
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
@@ -81,13 +82,14 @@ public class ProdutoDAO {
     }
     
     public boolean editar(ProdutoBean produto){
-        String sql = "UPDATE produtos SET nome = ?, preco = ?, id_categoria = ? WHERE id = ?";
+        String sql = "UPDATE produtos SET nome = ?, preco = ?, categoria = ?, id_categoria = ? WHERE id = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setString(1, produto.getNome());
             ps.setFloat(2, produto.getPreco());
-            ps.setInt(3, produto.getIdCategoria());
-            ps.setInt(4, produto.getId());
+            ps.setInt(3, produto.getQuantidade());
+            ps.setInt(4, produto.getIdCategoria());
+            ps.setInt(5, produto.getId());
             return ps.executeUpdate() == 1;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -109,6 +111,7 @@ public class ProdutoDAO {
                 produto.setId(id);
                 produto.setNome(resultSet.getString("nome"));
                 produto.setPreco(resultSet.getFloat("preco"));
+                produto.setQuantidade(resultSet.getInt("quantidade"));
                 produto.setIdCategoria(resultSet.getInt("id_categoria"));
                 return produto;
             }
