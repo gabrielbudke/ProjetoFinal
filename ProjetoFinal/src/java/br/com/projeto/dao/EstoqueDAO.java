@@ -16,7 +16,8 @@ public class EstoqueDAO {
     
     public List<EstoqueBean> obterTodos(){
         List<EstoqueBean> estoque = new ArrayList<>();
-    String sql = "SELECT idProduto, tipo, quantidade FROM estoque";
+    //Budke arrumar o que falta
+    String sql = "SELECT * FROM estoque e JOIN produtos p ON(p.id = e.id_produtos)";
     try{
         Statement st = Conexao.obterConexao().createStatement();
         st.execute(sql);
