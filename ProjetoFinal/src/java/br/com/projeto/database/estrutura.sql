@@ -107,6 +107,10 @@ CREATE TABLE recuperar_senha(
 );
 
 */
-INSERT INTO funcionarios (nome, funcao, telefone) VALUES
-('Patrick', 'Estudante', '(83) 3542-2574'
-);
+INSERT INTO funcionarios (nome,login, senha, telefone) VALUES
+('Patrick', 'patrick', '123', '(83) 3542-2574'),
+('Patrick Lejinho', 'patrick_lejinho', '123', '(43) 2847-4595'),
+('Lucas Tomando', 'lucas_tomando', '123', '(43) 98680-5360'),
+('João Paulo', 'joao_paulo', '123', '(84) 3507-3289'),
+('Isadora das Costas Largas', 'isadora', '123', '(84) 98104-9974'),
+('Jorge Tijolinho', 'jorge_tijolinho', '123', '(84) 98104-9974');
