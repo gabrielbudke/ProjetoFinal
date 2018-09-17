@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 28/08/2018, 10:48:54
-    Author     : Alunos
+    Author     : Patrick Nacimento
 --%>
 
 <%@page import="java.util.List"%>
