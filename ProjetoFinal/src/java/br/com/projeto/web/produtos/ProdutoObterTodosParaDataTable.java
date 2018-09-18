@@ -5,10 +5,10 @@
  */
 package br.com.projeto.web.produtos;
 
-import br.com.projeto.bean.CategoriaBean;
-import br.com.projeto.bean.ProdutoBean;
 import br.com.projeto.dao.ProdutoDAO;
+import com.google.gson.Gson;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,19 +18,22 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Gabriel
+ * @author Gabriel Budke (gabrielbudke@gmail.com)
  */
-@WebServlet("/produtos")
-public class ProdutoIndex extends HttpServlet{
+
+@WebServlet(name="ProdutoObterTodosParaDatatable", urlPatterns = {"/produtos/obterparadatatable"})
+public class ProdutoObterTodosParaDataTable extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HashMap<String, Object> resultado = new HashMap<>();
+        List<HashMap<String,Object>> registros = new ProdutoDAO().obterTodosParaDataTable();
+        resultado.put("data", registros);
+        resp.setContentType("text/hmtl;charset=UTF-8");
+        resp.getWriter().print(new Gson().toJson(resultado));
 
-       /*List<ProdutoBean> produtos = new ProdutoDAO().obterTodos();
-        req.setAttribute("produtos", produtos);*/
-        resp.setContentType("text/html;charset=UTF-8");
-        req.getRequestDispatcher("/jsp/produtos/index.jsp").include(req, resp);
-    
+
+
     }
     
     
