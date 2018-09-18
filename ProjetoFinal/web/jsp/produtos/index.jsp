@@ -24,6 +24,7 @@
                 <th>Categoria</th>
                 <th>Nome</th>
                 <th>Preço</th>
+                <th>Quantidade</th>
                     <%--<th>Quantidade</th>--%>
                 <th> <i class="fas fa-cogs"></i></th>
             </tr>
@@ -35,7 +36,7 @@
                 <td> <%=produto.getCategoria().getNome()%> </td>
                 <td> <%=produto.getNome()%> </td>
                 <td> <%=produto.getPreco()%> </td>     
-                <%--<td> <%=produto.getQuantidade()%></td>--%>
+                <td> <%=produto.getQuantidade()%></td>
                 <td> 
                     <a class="btn btn-info"  href="/produtos/editar?id=<%=produto.getId()%>"><i class="fas fa-edit"></i> Editar</a>
                     <a class="btn btn-danger" href="/produtos/excluir?id=<%=produto.getId()%>"><i class="fas fa-trash-alt"></i> Excluir</a>
