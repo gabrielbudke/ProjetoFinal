@@ -1,7 +1,7 @@
 function validarCadastro() {
-    if (validarCampologin() == false || validarCampoSenha() == false || validarCampoNome() == false
+    if (validarCampoLogin() == false || validarCampoSenha() == false || validarCampoNome() == false
             || validarCampoCpf() == false || validarCampoEmail() == false || validarCampoTelefone() == false
-            || validarCampoFuncao() == false || validarCampoCEP == false || validarCampoEstado() == false
+            || validarCampoFuncao() == false || validarCampoCep == false || validarCampoEstado() == false
             || validarCampoRua() == false || validarCampoBairro() == false || validarCampoCidade() == false
             || validarCampoNumero() == false) {
         event.preventDefault();
@@ -9,16 +9,16 @@ function validarCadastro() {
 }
 
 function apagarClasse(id, classeCor) {
-    document.getElementBy(id).classList.remove(classeCor);
+    document.getElementById(id).classList.remove(classeCor);
 }
 
 function adicionarClasse(id, classeCor) {
-    document.getElementBy(id).classList.add(classeCor);
+    document.getElementById(id).classList.add(classeCor);
 }
 
 function apagarElementoSeExiste(id) {
     if (document.contains(document.getElementBy(id))) {
-        document.getElementBy(id).remove();
+        document.getElementById(id).remove();
     }
 }
 
@@ -29,15 +29,15 @@ function gerarSpan(id, texto) {
     span.textContent = texto;
     span.classList.add("text-danger");
     span.classList.add("font-weight-bold");
-    document.getElementBy(id).appendChild(span);
+    document.getElementById(id).appendChild(span);
 }
 
-function validarCampologin() {
-    var login = document.getElementBy("campo-login").value();
+function validarCampoLogin() {
+    var login = document.getElementById("campo-login").value();
 }
 
 function validarCampoSenha() {
-    var senha = document.getElementBy("campo-senha").value;
+    var senha = document.getElementById("campo-senha").value;
     var quantidadeCaracteres = senha.length;
 
     apagarElementoSeExiste("span-campo-senha-menor-6");
@@ -90,7 +90,7 @@ function validarCampoNome() {
 }
 
 function validarCampoCpf() {
-    var cpf = document.getElementBy("campo-senha").value;
+    var cpf = document.getElementById("campo-senha").value;
     var quantidadeCaracteres = cpf.length;
 
     apagarElementoSeExiste("span-campo-cpf-maior-11");
@@ -115,4 +115,40 @@ function validarCampoCpf() {
 
 }
 
+function validarCampoEmail(){
+    var email = document.getElementById("campo-email").value();
+}
 
+function validarCampoTelefone(){
+    var telefone = document.getElementById("campo-telefone").value;
+}
+
+function validarCampoNumero(){
+    var numero = document.getElementById("campo-numero").value;
+}
+
+function validarCampoFuncao(){
+    var funcao = document.getElementById("campo-funcao").value;
+}
+
+$(function (){
+    
+    $("#cep").on("focusout", function (){
+        
+        processarCep();
+    });
+    function processarCep(){
+        
+        $cep= $("#cep").val();
+        $.ajax({
+            url: "https://viacep.com.br/ws/" + $cep + "/json/",
+            method: "get",
+            sucess: function (data) {
+                $("#logradoura").val(data.logradouro);
+                $("#cidade").val(data.localidade);
+                $("#bairro").val(data.bairro);
+                $("#campo-estado").val(data.uf);
+            }
+        });
+    }
+});

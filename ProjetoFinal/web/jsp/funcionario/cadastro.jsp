@@ -12,12 +12,10 @@
 
     <div>
         <label for='campo-login'>Novo Login</label>
-        <input type="text" id="campo-login" name='login'>
-    </div>
+        <input type="text" id="campo-login" name='login' placeholder="Login" required="required" onfocusout="validadarCampoLogin">
 
-     <div>
-         <label for="campo-senha">Novo Senha</label>
-        <input type="text" id="campo-login" name="senha">
+        <label for="campo-senha">Novo Senha</label>
+        <input type="text" id="campo-login" name="senha" placeholder="Senha" required="required" onfocusout="validarCampoSenha">
     </div>
 
     <div class = "form-group">
@@ -42,7 +40,7 @@
 
     <div class = "form-group">
         <label for='campo-funcao'><i class=''></i> Função</label>
-        <input type='text' id='campo-function' name='funcao' placeholder='Função'>
+        <input type='text' id='campo-funcao' name='funcao' placeholder='Função'>
     </div>
 
     <div>
