@@ -20,9 +20,9 @@
         <select class="form-control" type='text' id='campo-categoria' name='categoria' required='required' onfocusout='validarCapoCategoria()'>
             <option selected = 'selected' disabled='disable'></option>
         </select>
+    </div>
 	<div>
             <a class="btn btn-success"  href="/categoria/cadastro"><i class="fas fa-plus-square"></i> Nova Categoria</a>
-    </div>
         </div>
 
     <div class = "form-group">
