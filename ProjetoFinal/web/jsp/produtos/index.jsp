@@ -29,19 +29,7 @@
             </tr>
         </thead>
         <tbody>
-            <%for (ProdutoBean produto : ((List<ProdutoBean>) request.getAttribute("produtos"))) {%>
-            <tr>
-                <%--<td> <%=produto.getId()%></td>--%>
-                <td> <%=produto.getCategoria().getNome()%> </td>
-                <td> <%=produto.getNome()%> </td>
-                <td> <%=produto.getPreco()%> </td>     
-                <%--<td> <%=produto.getQuantidade()%></td>--%>
-                <td> 
-                    <a class="btn btn-info"  href="/produtos/editar?id=<%=produto.getId()%>"><i class="fas fa-edit"></i> Editar</a>
-                    <a class="btn btn-danger" href="/produtos/excluir?id=<%=produto.getId()%>"><i class="fas fa-trash-alt"></i> Excluir</a>
-                </td>
-            </tr>
-            <%}%>
+            
         </tbody>
     </table>
 </div>
