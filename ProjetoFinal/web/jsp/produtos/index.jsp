@@ -13,9 +13,7 @@
 <div class="botao-novo-produto">
     <a class="btn btn-success float-right" href="/produtos/cadastro">Novo Produto <i class="fas fa-plus-square"></i></a>
 </div>
-<div class="botao-estatistica">
-    <a class="btn btn-success float-light" href="/produtos/estatisticas">Estatistica <i class="fas fa-plus-square"></i></a>
-</div>
+
 <div id="tabela">
     <table class="table table-hover table-bordered" id="produtos-index">
         <thead class="thead-light">
@@ -49,7 +47,6 @@
 <div class="form form-group">
     <input class="btn btn-outline-success float-right" type="button" id="exportar" value="Exportar Tabela">
 </div>
-
 
 
 <%@include file="../master/rodape.jsp"%>
