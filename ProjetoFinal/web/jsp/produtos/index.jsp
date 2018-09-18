@@ -24,12 +24,12 @@
                 <th>Categoria</th>
                 <th>Nome</th>
                 <th>Preço</th>
+                <th>Quantidade</th>
                     <%--<th>Quantidade</th>--%>
                 <th> <i class="fas fa-cogs"></i></th>
             </tr>
         </thead>
         <tbody>
-            
         </tbody>
     </table>
 </div>
