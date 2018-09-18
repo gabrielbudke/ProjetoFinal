@@ -104,6 +104,7 @@ CREATE TABLE recuperar_senha(
     FOREIGN KEY (id_comerciante) REFERENCES comerciantes(id)
 );
 */
+<<<<<<< HEAD
 
 INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
 ('Patrick', 'patrick', '123', '(83) 3542-2574', 'pedreiro'),
@@ -112,3 +113,12 @@ INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
 ('João Paulo', 'joao_paulo', '123', '(84) 3507-3289', 'motorista'),
 ('Isadora das Costas Largas', 'isadora', '123', '(84) 98104-9974', 'advogada'),
 ('Jorge Tijolinho', 'jorge_tijolinho', '123', '(84) 98104-9974', 'refém');
+=======
+INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
+('Patrick', 'patrick', '123', '(83) 3542-2574', 'Batata'),
+('Patrick Lejinho', 'patrick_lejinho', '123', '(43) 2847-4595', 'Batata'),
+('Lucas Tomando', 'lucas_tomando', '123', '(43) 98680-5360', 'Batata'),
+('João Paulo', 'joao_paulo', '123', '(84) 3507-3289', 'Batata'),
+('Isadora das Costas Largas', 'isadora', '123', '(84) 98104-9974', 'Batata'),
+('Jorge Tijolinho', 'jorge_tijolinho', '123', '(84) 98104-9974', 'Batata');
+>>>>>>> d4680c98cef63ae7e7a9187e3c37ee28e9a926af
