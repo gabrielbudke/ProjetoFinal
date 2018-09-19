@@ -9,9 +9,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
 
+<%--Lib Exportar tabela --%>
 <script src="/js/jquery.table2excel.min.js"></script>
-<script src="/libs/select2/select2.min.js"></script>
+
+<%-- Lib DataTable --%>
 <script src="/libs/datatable/jquery.dataTables.min.js"></script>
+<script src="/libs/select2/select2.min.js"></script>
 
 <script src='/js/cadastro.js'></script>
 <script src="/js/exportar-tabela.js"></script>

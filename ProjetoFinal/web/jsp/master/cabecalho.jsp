@@ -28,7 +28,7 @@
                 <a class="nav-link" href="/fornecedor">Fornecedores</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/funcionario">Funcionarios</a>
+                <a class="nav-link" href="/funcionarios">Funcionarios</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/produtos">Produtos</a>
