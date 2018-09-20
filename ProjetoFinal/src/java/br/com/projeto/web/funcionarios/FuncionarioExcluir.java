@@ -22,7 +22,7 @@ public class FuncionarioExcluir extends HttpServlet{
         boolean apagou = new FuncionarioDAO().excluir(id);
 
         if (apagou) {
-            resp.sendRedirect("/funcionario");
+            resp.sendRedirect("/funcionarios");
         } else {
             resp.getWriter().print("Não foi Possível Deletar!");
         }
