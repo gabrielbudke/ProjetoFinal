@@ -32,7 +32,7 @@
 		<td> <%=estoque.getProduto().getNome() %> </td>
 		<td> <%=estoque.getProduto().getPreco() %> </td>
 		<td> <%=estoque.getQuantidade() %> </td>
-		<td> <%=estoque.getProduto().getPreco() * estoque.getQuantidade() %> </td>
+		<td> <%=estoque.valorTotal()%> </td>
 	    </tr>
             <%}%>
         </tbody>
