@@ -15,8 +15,8 @@
 <%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
 
 <div>
-    <table class="table">
-        <thead>
+    <table class="table table-hover table-bordered">
+        <thead class="table-light">
             <th>Tipo</th>    
             <th>Produto</th>    
             <th>ValorUn.</th>    
