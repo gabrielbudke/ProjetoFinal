@@ -139,7 +139,6 @@ public class ProdutoDAO {
                 produto.put("id_categoria", resultSet.getString("ct.nome"));
                 produto.put("nome", resultSet.getString("nome"));
                 produto.put("preco", resultSet.getFloat("preco"));
-                produto.put("quantidade", resultSet.getFloat("quantidade"));
                 produtos.add(produto);
             }
         } catch (SQLException e) {

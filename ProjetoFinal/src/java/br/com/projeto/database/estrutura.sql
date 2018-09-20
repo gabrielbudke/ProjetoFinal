@@ -52,25 +52,24 @@ CREATE TABLE produtos(
 	id INT AUTO_INCREMENT PRIMARY KEY,
         id_categoria INTEGER NOT NULL,
         nome VARCHAR (100),
-        quantidade INT UNSIGNED,
 	preco DECIMAL (8,2),
         FOREIGN KEY (id_categoria) REFERENCES categorias(id)
 );
 
-INSERT INTO produtos (id_categoria, nome, preco, quantidade) VALUES 
-(1, 'Xbox', 1800, 5),
-(2, 'Pulseira', 4.50, 6),
-(1, 'PS4', 4000, 7),
-(1, 'TV', 5000, 2),
-(1, 'Geladeira', 1800, 4),
-(1, 'Pia', 800, 5),
-(1, 'Sorvete', 12, 6),
-(1, 'Apple Watch', 12000, 7),
-(1, 'Monitor', 800, 8),
-(1, 'Rádio', 1000, 9),
-(1, 'Necessidade Básica', 5000, 5),
-(1, 'Mouse', 300, 7),
-(1, 'Teclado', 750, 2);
+INSERT INTO produtos (id_categoria, nome, preco) VALUES 
+(1, 'Xbox', 1800),
+(2, 'Pulseira', 4.50),
+(1, 'PS4', 4000),
+(1, 'TV', 5000),
+(1, 'Geladeira', 1800),
+(1, 'Pia', 800),
+(1, 'Sorvete', 12),
+(1, 'Apple Watch', 12000),
+(1, 'Monitor', 800),
+(1, 'Rádio', 1000),
+(1, 'Necessidade Básica', 5000),
+(1, 'Mouse', 300),
+(1, 'Teclado', 750);
 
 
 ;
