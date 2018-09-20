@@ -14,7 +14,6 @@
 <%@include file="../master/master.jsp" %>
 <%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
 
-<a class="btn btn-success float-right" href="/estoque/adicionar">Adicionar</a>
 <div>
     <table class="table">
         <thead>
