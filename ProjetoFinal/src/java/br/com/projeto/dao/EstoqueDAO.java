@@ -17,8 +17,7 @@ public class EstoqueDAO {
     
     public List<EstoqueBean> obterTodos(){
         List<EstoqueBean> estoques = new ArrayList<>();
-    
-    String sql = "SELECT * FROM estoque e JOIN produtos p ON(p.id = e.id_produtos)";
+    String sql = "SELECT * FROM estoque e JOIN produtos p ON(p.id = e.id_produto)";
     try{
         Statement st = Conexao.obterConexao().createStatement();
         st.execute(sql);
@@ -26,13 +25,17 @@ public class EstoqueDAO {
         while(resultSet.next()){
             EstoqueBean estoque = new EstoqueBean();
             estoque.setId(resultSet.getInt("e.id"));
-            estoque.setIdProduto(resultSet.getInt("e.id_produtos"));
+            estoque.setIdProduto(resultSet.getInt("e.id_produto"));
+            estoque.setQuantidade(resultSet.getInt("e.quantidade"));
+            estoque.setTipo(resultSet.getString("e.tipo"));
             
             ProdutoBean produto = new ProdutoBean();
             produto.setId(estoque.getIdProduto());
             produto.setNome(resultSet.getString("p.nome"));
             produto.setPreco(resultSet.getFloat("p.preco"));
-            produto.setQuantidade(resultSet.getInt("p.quantidade"));
+            
+            estoque.setProduto(produto);
+            
             
             estoques.add(estoque);
             
