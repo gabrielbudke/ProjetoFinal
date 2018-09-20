@@ -30,7 +30,6 @@ public class ProdutoDAO {
                 produto.setId(resultSet.getInt("p.id"));
                 produto.setNome(resultSet.getString("p.nome"));
                 produto.setPreco(resultSet.getFloat("p.preco"));
-                produto.setQuantidade(resultSet.getInt("p.quantidade"));
                 produto.setIdCategoria(resultSet.getInt("p.id_categoria"));
 
                 CategoriaBean categoria = new CategoriaBean();

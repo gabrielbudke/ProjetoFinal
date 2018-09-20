@@ -23,7 +23,6 @@
             <th>ValorUn.</th>    
             <th>Quantidade</th>
             <th>Valor Total</th>
-            <th>Acao</th>
         </thead>
         <tbody>
             
@@ -33,8 +32,7 @@
 		<td> <%=estoque.getProduto().getNome() %> </td>
 		<td> <%=estoque.getProduto().getPreco() %> </td>
 		<td> <%=estoque.getQuantidade() %> </td>
-		<td> <% // valor total %> </td>
-		<td> <% // açao %> </td>
+		<td> <%=estoque.getProduto().getPreco() * estoque.getQuantidade() %> </td>
 	    </tr>
             <%}%>
         </tbody>

@@ -85,11 +85,11 @@ CREATE TABLE estoque(
 );
 
 INSERT INTO estoque (id_produto, tipo, quantidade) VALUES
-(1, 'entrada', 4),
-(2, 'entrada', 5),
-(1, 'entrada', 100),
-(1, 'saida', 10),
-(4, 'entrada', 30);
+(1, 'Entrada', 4),
+(2, 'Entrada', 5),
+(1, 'Entrada', 100),
+(1, 'Saida', 10),
+(4, 'Entrada', 30);
 
 CREATE TABLE fluxo_caixa(
         id INT AUTO_INCREMENT PRIMARY KEY,
