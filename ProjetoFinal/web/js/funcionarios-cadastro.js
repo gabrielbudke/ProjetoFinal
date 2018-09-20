@@ -1,3 +1,5 @@
+/*
+
 function validarCadastro() {
     if (validarCampoLogin() == false || validarCampoSenha() == false || validarCampoNome() == false
 	    || validarCampoCpf() == false || validarCampoEmail() == false || validarCampoTelefone() == false
@@ -170,3 +172,4 @@ $(function () {
 	});
     }
 });
+*/
