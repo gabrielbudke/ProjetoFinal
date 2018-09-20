@@ -5,7 +5,6 @@ $(function () {
             {"data": "id_categoria"},
             {"data": "nome"},
             {"data": "preco"},
-            {"data": "quantidade"},
             {
                 "data": null,
                 "render": function (data) {

@@ -18,12 +18,9 @@
     <table class="table table-hover table-bordered" id="produtos-index">
         <thead class="thead-light">
             <tr>
-                <%--<th>#</th>--%>
                 <th>Categoria</th>
                 <th>Nome</th>
                 <th>Preço</th>
-                <th>Quantidade</th>
-                    <%--<th>Quantidade</th>--%>
                 <th> <i class="fas fa-cogs"></i></th>
             </tr>
         </thead>

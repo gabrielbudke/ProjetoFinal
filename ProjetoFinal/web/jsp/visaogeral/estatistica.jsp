@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,10 +28,10 @@
 		var chartgraph = new Chart(ctx,{
 			type:'bar',
 			data: {
-				labels: ["Alimentos", "Vestuário", "Eletrônicos", "Acessórios", "Carros" ],
+				labels: ["Alimentos", "Vestuário", "Eletrônicos", "Acessórios", "Carros", "Outros" ],
 				datasets: [{
 					label: "Vendidos",
-					data : [4,7,15,11,3],
+					data : [4,7,15,11,3,9],
 					borderWidth: 6,
 					borderColor: 'black',
 					backgroundColor:'#edf900'
@@ -58,5 +59,6 @@
 
 </body>
 </html>
+
 
 

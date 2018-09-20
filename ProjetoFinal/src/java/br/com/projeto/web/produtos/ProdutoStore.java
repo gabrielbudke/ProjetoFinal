@@ -21,6 +21,7 @@ public class ProdutoStore extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
         ProdutoBean produto = new ProdutoBean();
         //Inserindo dados no ProdutoBean
         produto.setNome(req.getParameter("nome"));
@@ -33,19 +34,20 @@ public class ProdutoStore extends HttpServlet {
 
             
         }catch(NumberFormatException e){
-            System.out.print("Vcilao");
+            System.out.print("Vacilao");
 
         }
-        int quantidade = Integer.parseInt(req.getParameter("quantidade"));
-            produto.setQuantidade(quantidade);
+     
         produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));
         produto.setId(new ProdutoDAO().adicionar(produto));
 
-        /*
+        //-------------------------------------------------------------------
         EstoqueBean estoque = new EstoqueBean();
-        estoque.setIdProduto(Integer.parseInt(req.getParameter("")));
+        estoque.setIdProduto(Integer.parseInt(req.getParameter("nome")));
+        estoque.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
+        estoque.setTipo(req.getParameter("tipo"));
         estoque.setId(new EstoqueDAO().adicionar(estoque));
-         */
+         
     }
 
 }

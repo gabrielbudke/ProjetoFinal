@@ -14,7 +14,10 @@
 
 <form action="/produtos/store" method="POST">
  
-
+    <div class='form-group'>
+        <input class='form-control' type="text" name="tipo" value="Entrada" readonly>
+    </div>
+    
     <div class = "form-group">
         <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
         <select class="form-control" type='text' id='campo-categoria' name='categoria' required='required' onfocusout='validarCapoCategoria()'>
@@ -31,7 +34,7 @@
     </div>
 
     <div class ="form-group">
-        <label for='campo-quantidade'><i class='fa fa-address-card-o'><i/> Quantidade</label>
+        <label for='campo-quantidade'><i class='fa fa-address-card-o'></i> Quantidade</label>
         <input type='text' class="form-control" id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required'> 
     </div>
 

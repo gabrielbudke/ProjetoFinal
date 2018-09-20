@@ -14,27 +14,24 @@
 <%@include file="../master/master.jsp" %>
 <%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
 
-<a class="btn btn-success float-right" href="/estoque/adicionar">Adicionar</a>
 <div>
-    <table class="table">
-        <thead>
+    <table class="table table-hover table-bordered">
+        <thead class="thead-light">
             <th>Tipo</th>    
             <th>Produto</th>    
             <th>ValorUn.</th>    
             <th>Quantidade</th>
             <th>Valor Total</th>
-            <th>Acao</th>
         </thead>
         <tbody>
             
             <% for(EstoqueBean estoque : estoques) {%>
 	    <tr>
 		<td> <%=estoque.getTipo()%> </td>
-		<td> <%=estoque.getProduto().getNome()%> </td>
+		<td> <%=estoque.getProduto().getNome() %> </td>
 		<td> <%=estoque.getProduto().getPreco() %> </td>
-		<td> <%=estoque.getQuantidade()%> </td>
-		<td> <% // valor total %> </td>
-		<td> <% // açao %> </td>
+		<td> <%=estoque.getQuantidade() %> </td>
+		<td> <%=estoque.valorTotal()%> </td>
 	    </tr>
             <%}%>
         </tbody>

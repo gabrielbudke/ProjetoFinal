@@ -20,7 +20,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/visao">Visão Geral</a>
+                <a class="nav-link" href="/visaogeral">Visão Geral</a>
             <li class="nav-item">
                 <a class="nav-link" href="/estoque">Estoque</a>
             </li>
