@@ -8,18 +8,18 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
 
-<form action="/funcionarios/store" method="POST">
+<form id="validacao-form-func" action="/funcionarios/store" method="POST">
 
     <div>
         <label for='campo-login'>Novo Login</label>
         <input type="text" id="campo-login" name='login' placeholder="Login" required="required" onfocusout="validadarCampoLogin">
 
         <label for="campo-senha">Novo Senha</label>
-        <input type="text" id="campo-login" name="senha" placeholder="Senha" required="required" onfocusout="validarCampoSenha">
+        <input type="text" id="campo-senha" name="senha" placeholder="Senha" required="required" onfocusout="validarCampoSenha">
     </div>
 
     <div class = "form-group">
-        <label for='campo-nome'><i class=''></i> Nome</label>
+        <label for='campo-nome'><i class=''></i> Nome Completo</label>
         <input type='text' id='campo-nome' name='nome' placeholder='Nome'>
     </div>
 
@@ -74,7 +74,7 @@
     </div>
 
     <input class='btn btn-sucess' type='submit' value='Cadastrar'>
-
+   
 </form>
 
 <%@include file="../master/rodape.jsp" %>

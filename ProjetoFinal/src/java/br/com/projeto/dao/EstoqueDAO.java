@@ -1,6 +1,7 @@
 package br.com.projeto.dao;
 
 import br.com.projeto.bean.EstoqueBean;
+import br.com.projeto.bean.ProdutoBean;
 import br.com.projeto.database.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,19 +16,25 @@ import java.util.List;
 public class EstoqueDAO {
     
     public List<EstoqueBean> obterTodos(){
-        List<EstoqueBean> estoque = new ArrayList<>();
-    //Budke arrumar o que falta
+        List<EstoqueBean> estoques = new ArrayList<>();
+    
     String sql = "SELECT * FROM estoque e JOIN produtos p ON(p.id = e.id_produtos)";
     try{
         Statement st = Conexao.obterConexao().createStatement();
         st.execute(sql);
         ResultSet resultSet = st.getResultSet();
         while(resultSet.next()){
-            EstoqueBean estoques = new EstoqueBean();
-            estoques.setIdProduto(resultSet.getInt("idProduto"));
-            estoques.setTipo(resultSet.getString("tipo"));
-            estoques.setQuantidade(resultSet.getInt("quantidade"));
-            estoque.add(estoques);
+            EstoqueBean estoque = new EstoqueBean();
+            estoque.setId(resultSet.getInt("e.id"));
+            estoque.setIdProduto(resultSet.getInt("e.id_produtos"));
+            
+            ProdutoBean produto = new ProdutoBean();
+            produto.setId(estoque.getIdProduto());
+            produto.setNome(resultSet.getString("p.nome"));
+            produto.setPreco(resultSet.getFloat("p.preco"));
+            produto.setQuantidade(resultSet.getInt("p.quantidade"));
+            
+            estoques.add(estoque);
             
         }
         
@@ -36,7 +43,7 @@ public class EstoqueDAO {
         }finally{
             Conexao.fecharConexao();
         }
-        return estoque;
+        return estoques;
         
     }
     

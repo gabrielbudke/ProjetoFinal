@@ -20,7 +20,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/home">Visão Geral</a>
+                <a class="nav-link" href="/visao">Visão Geral</a>
             <li class="nav-item">
                 <a class="nav-link" href="/estoque">Estoque</a>
             </li>
@@ -28,7 +28,7 @@
                 <a class="nav-link" href="/fornecedor">Fornecedores</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/funcionario">Funcionarios</a>
+                <a class="nav-link" href="/funcionarios">Funcionarios</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/produtos">Produtos</a>
