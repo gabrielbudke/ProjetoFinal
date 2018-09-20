@@ -43,7 +43,7 @@ public class ProdutoStore extends HttpServlet {
 
         //-------------------------------------------------------------------
         EstoqueBean estoque = new EstoqueBean();
-        estoque.setIdProduto(produto.getId());
+        estoque.setIdProduto(Integer.parseInt(req.getParameter("nome")));
         estoque.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
         estoque.setTipo(req.getParameter("tipo"));
         estoque.setId(new EstoqueDAO().adicionar(estoque));
