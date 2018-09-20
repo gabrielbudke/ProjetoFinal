@@ -16,7 +16,7 @@
 
 <div>
     <table class="table table-hover table-bordered">
-        <thead class="table-light">
+        <thead class="thead-light">
             <th>Tipo</th>    
             <th>Produto</th>    
             <th>ValorUn.</th>    
