@@ -31,13 +31,13 @@ public class ProdutoStore extends HttpServlet {
             float preco = Float.parseFloat(req.getParameter("preco"));
             produto.setPreco(preco);
 
-            int quantidade = Integer.parseInt(req.getParameter("quantidade"));
-            produto.setQuantidade(quantidade);
+            
         }catch(NumberFormatException e){
             System.out.print("Vcilao");
 
         }
-
+        int quantidade = Integer.parseInt(req.getParameter("quantidade"));
+            produto.setQuantidade(quantidade);
         produto.setIdCategoria(Integer.parseInt(req.getParameter("categoria")));
         produto.setId(new ProdutoDAO().adicionar(produto));
 
