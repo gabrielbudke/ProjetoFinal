@@ -31,7 +31,7 @@
     </div>
 
     <div class ="form-group">
-        <label for='campo-quantidade'><i class='fa fa-address-card-o'><i/> Quantidade</label>
+        <label for='campo-quantidade'><i class='fa fa-address-card-o'></i> Quantidade</label>
         <input type='text' class="form-control" id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required'> 
     </div>
 
