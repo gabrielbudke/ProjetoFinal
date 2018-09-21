@@ -10,8 +10,9 @@
 <%@include file="../master/master.jsp"%>
 
 <%%>
-<div class="botao-novo-produto">
+<div class="btn-group btn-group-toggle botao-novo-produto" style="float: right;" data-toggle="buttons">
     <a class="btn btn-success float-right" href="/produtos/cadastro">Novo Produto <i class="fas fa-plus-square"></i></a>
+    <input class="btn btn-secondary float-right" type="button" id="exportar" value="Exportar">
 </div>
 
 <div id="tabela">
@@ -30,7 +31,6 @@
 </div>
         
 <div class="form form-group">
-    <input class="btn btn-outline-success float-right" type="button" id="exportar" value="Exportar Tabela">
 </div>
 
 
