@@ -29,6 +29,7 @@
 <script src="/js/jquery.validate.min.js"></script>
 <%--JS Validação dos Campos--%>
 <script src="/js/validacao-funcionario.js"></script>
+<script src="/js/validacao-funcionario-home.js"></script>
 <script src="/libs/mask/jquery.mask.js"></script>
 
  <%--Biblioteca de validação--%>

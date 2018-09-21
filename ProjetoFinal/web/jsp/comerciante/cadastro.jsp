@@ -26,7 +26,7 @@
 
 
     <body>       
-        <form action="/comerciante/store" method="post">
+        <form id="validacao-form-func-home" action="/comerciante/store" method="post">
         <div class="cadastro">
             <h1>Cadastro</h1>
         </div>
