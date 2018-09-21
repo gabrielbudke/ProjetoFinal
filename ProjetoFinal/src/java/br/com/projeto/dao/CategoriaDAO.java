@@ -121,7 +121,27 @@ public class CategoriaDAO {
 
     }
 
-    
-    
-}
+    public HashMap<String, Object> obterVisao() {
+        List<Object> categoriaNomes = new ArrayList<>();
+        List<Object> categoriaQuantidades = new ArrayList<>();
+        String sql = "SELECT ct.nome as 'categoria', COUNT(pr.id_categoria) as 'quantidade' FROM produtos pr\n"
+                + "\nJOIN categorias ct ON(ct.id = pr.id_categoria)\n"
+                + "\nGROUP BY pr.id_categoria";
+        try {
+            Statement st = Conexao.obterConexao().createStatement();
+            st.execute(sql);
+            ResultSet resultSet = st.getResultSet();
+            while (resultSet.next()) {
+                categoriaNomes.add(resultSet.getString("categoria"));
+                categoriaQuantidades.add(resultSet.getInt("quantidade"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        HashMap<String, Object> categorias = new HashMap<>();
+        categorias.put("categorias", categoriaNomes);
+        categorias.put("quantidades", categoriaQuantidades);
+        return categorias;
+    }
 
+}
