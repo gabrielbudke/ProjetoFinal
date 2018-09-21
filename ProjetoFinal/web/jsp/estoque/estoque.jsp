@@ -12,7 +12,12 @@
 <%@page import="br.com.projeto.bean.EstoqueBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
+
 <%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
+
+<div class="botao-registrar-venda">
+    <a class="btn btn-success float-right" href="/vendas/novaVenda">Registrar Venda <i class="fas fa-plus-square"></i></a>
+</div>
 
 <div>
     <table class="table table-hover table-bordered" id="estoque-index">
