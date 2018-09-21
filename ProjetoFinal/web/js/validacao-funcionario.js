@@ -21,45 +21,31 @@ $("#validacao-form-func").validate({
             maxlength: 100
         },
         cpf: {
-            required: true,
-            minlength: 11,
-            maxlength: 11
+            required: true
         },
         email: {
             required: true
         },
         telefone: {
-            required: true,
-            minlength: 11,
-            maxlength: 11
+            required: true
         },
         funcao: {
             required: true
         },
         cep: {
-            required: true,
-            minlength: 8,
-            maxlength: 8
+            required: true
         },
         estado: {
-            required: true,
-            minlength: 2,
-            maxlength: 2
+            required: true
         },
         rua: {
-            required: true,
-            minlength: 1,
-            maxlength: 30
+            required: true
         },
         bairro: {
-            required: true,
-            minlength: 3,
-            maxlength: 50
+            required: true
         },
         cidade: {
-            required: true,
-            minlength: 5,
-            maxlength: 30
+            required: true
         },
         numero: {
             required: true,
@@ -86,45 +72,31 @@ $("#validacao-form-func").validate({
             maxlength: "Nome deve conter no maximo {0} caracteres"
         },
         cpf: {
-            required: "Campo Obrigatorio",
-            minlength: "CPF deve conter no minimo {0} caracteres",
-            maxlength: "CPF deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatorio"
         },
         email: {
             required: "Campo Obrigatorio"
         },
         telefone: {
-            required: "Campo Obrigatorio",
-            minlength: "Telefone deve conter no minimo {0} caracteres",
-            maxlength: "Telefone deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatorio"
         },
         funcao: {
             required: "Campo Obrigatorio"
         },
         cep: {
-            required: "Campo Obrigatorio",
-            minlength: "CEP deve conter no minimo {0} caracteres",
-            maxlength: "CEP deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatorio"
         },
         estado: {
-            required: "Campo Obrigatorio",
-            minlength: "Estado deve conter no minimo {0} caracteres",
-            maxlength: "Estado deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatorio"
         },
         rua: {
-            required: "Campo Obrigatorio",
-            minlength: "Rua deve conter no minimo {0} caracteres",
-            maxlength: "Rua deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatorio"
         },
         bairro: {
-            required: "Campo Obrigatorio",
-            minlength: "Bairro deve conter no minimo {0} caracteres",
-            maxlength: "Bairro deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatorio"
         },
         cidade: {
-            required: "Campo Obrigatorio",
-            minlength: "Cidade deve conter no minimo {0} caracteres",
-            maxlength: "Cidade deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatorio"
         },
         numero: {
             required: "Campo Obrigatorio",
@@ -143,12 +115,33 @@ $("#validacao-form-func").on('submit', function (e) {
     }
 });
 
-$("#validacao-form-func").validate({
-    rules: {
-        field: {
-            required: true,
-            number: true
-        }
-    }
 
+$(function () {
+
+    $("#campo-cep").on("focusout", function () {
+
+        processarCep();
+    });
+    function processarCep() {
+
+        $cep = $("#campo-cep").val();
+        $.ajax({
+            url: "https://viacep.com.br/ws/" + $cep + "/json/",
+            method: "get",
+            success: function (data) {
+                $("#campo-logradouro").val(data.logradouro);
+                $("#campo-bairro").val(data.bairro);
+                $("#campo-cidade").val(data.localidade);
+                $("#campo-estado").val(data.uf);
+            }
+        });
+    }
+});
+
+$(function () {
+    $("#campo-cpf").mask("999.999.999-99");
+
+    $("#campo-telefone").mask("55-(99)9999-99999");
+    
+    $("#campo-cep").mask("99999-999");
 });

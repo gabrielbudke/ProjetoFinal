@@ -25,12 +25,12 @@
 
     <div class = "form-group">
         <label for='campo-cpf'><i class=''></i> CPF</label>
-        <input type='text' class="form-control" id='campo-cpf' name='cpf' placeholder='CPF'>
+        <input type='text' class="form-control" id='campo-cpf' name='cpf' placeholder="CPF">
     </div>
 
     <div class = "form-group">
         <label for='campo-email'><i class=''></i> E-mail</label>
-        <input type='text' class="form-control" id='campo-email' name='email' placeholder='E-mail'>
+        <input type='email' class="form-control" id='campo-email' name='email' placeholder='E-mail'>
     </div>
 
     <div class = "form-group">
