@@ -121,30 +121,6 @@ public class CategoriaDAO {
 
     }
 
-    public List<HashMap<String, Object>> obterTodosParaGrafico(){
-       List<HashMap<String, Object>> categorias = new ArrayList<>();
-        String sql = "SELECT * FROM categorias";
-        try {
-            Statement statement = Conexao.obterConexao().createStatement();
-            statement.execute(sql);
-            ResultSet resultSet = statement.getResultSet();
-            while (resultSet.next()) {
-                HashMap<String, Object> categoria = new HashMap<>();
-                categoria.put("nome", resultSet.getString("nome"));
-                categoria.put("id", resultSet.getInt("id"));
-                categorias.add(categoria);
-            }
-
-        } catch (SQLException ex) {
-            Logger.getLogger(CategoriaDAO.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            Conexao.fecharConexao();
-        }
-        return categorias;
-
-    
-    }
-    
     
     
 }
