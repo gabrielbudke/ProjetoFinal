@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Patrick
  */
-@WebServlet("/visao")
+@WebServlet("/visaogeral")
 public class visao extends HttpServlet{
 
     @Override
