@@ -31,8 +31,8 @@ public class EstoqueDAO {
                 estoque.put("id", resultSet.getInt("e.id"));
                 estoque.put("id_produto", resultSet.getInt("p.nome"));
                 estoque.put("quantidade", resultSet.getInt("e.quantidade"));
-               
-                //Falta concluir o HashMap para DataTable do estoque
+                estoque.put("tipo", resultSet.getInt("e.tipo"));
+                estoques.add(estoque);
             }
         } catch (SQLException e) {
             Logger.getLogger(EstoqueDAO.class.getName()).log(Level.SEVERE, null, e);

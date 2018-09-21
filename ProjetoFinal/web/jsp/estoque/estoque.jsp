@@ -16,8 +16,7 @@
 
 <div>
     <table class="table table-hover table-bordered" id="estoque-index">
-        <thead class="thead-light">
-            <th>Tipo</th>    
+        <thead class="thead-light">  
             <th>Produto</th>    
             <th>ValorUn.</th>    
             <th>Quantidade</th>
@@ -27,7 +26,6 @@
             
             <% for(EstoqueBean estoque : estoques) {%>
 	    <tr>
-		<td> <%=estoque.getTipo()%> </td>
 		<td> <%=estoque.getProduto().getNome() %> </td>
 		<td> <%=estoque.getProduto().getPreco() %> </td>
 		<td> <%=estoque.getQuantidade() %> </td>
