@@ -87,7 +87,6 @@ INSERT INTO estoque (id_produto, tipo, quantidade) VALUES
 (1, 'Entrada', 4),
 (2, 'Entrada', 5),
 (1, 'Entrada', 100),
-(1, 'Saida', 10),
 (4, 'Entrada', 30);
 
 CREATE TABLE fluxo_caixa(
