@@ -13,6 +13,7 @@
 <%@include file = "../master/master.jsp"%>
 
 <form action="/produtos/store" method="POST">
+<%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos(); %>
  
     <div class='form-group'>
         <input class='form-control' type="text" name="tipo" value="Entrada" readonly>
@@ -20,8 +21,11 @@
     
     <div class = "form-group">
         <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
-        <select class="form-control" type='text' id='campo-categoria' name='categoria' required='required' onfocusout='validarCapoCategoria()'>
-            <option selected = 'selected' disabled='disable'></option>
+        <select >
+            <option selected="selected" disabled="disabled"></option>
+            <% for (CategoriaBean categoria: categorias ){ %>
+            <option value=<%=categoria.getId()%>><%=categoria.getNome()%></option>
+            <% } %>
         </select>
     </div>
 	<div>
