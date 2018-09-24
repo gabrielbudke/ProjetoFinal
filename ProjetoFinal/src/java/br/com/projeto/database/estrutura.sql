@@ -120,3 +120,10 @@ INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
 ('João Paulo', 'joao_paulo', '123', '(84) 3507-3289', 'Batata'),
 ('Isadora das Costas Largas', 'isadora', '123', '(84) 98104-9974', 'Batata'),
 ('Jorge Tijolinho', 'jorge_tijolinho', '123', '(84) 98104-9974', 'Batata');
+
+
+
+INSERT INTO produtos (id_categoria, nome, preco) VALUES 
+
+(3, 'Pulseira', 4.50),
+(4, 'Pulseira', 4.50);
