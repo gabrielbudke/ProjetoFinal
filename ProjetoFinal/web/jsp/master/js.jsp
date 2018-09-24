@@ -59,5 +59,5 @@
 <script src="/js/jquery.validate.min.js"></script>
 <%--JS Valida??o dos Campos--%>
 <script src="/js/validacao-funcionario.js"></script>
-<script src="/js/validacao-funcionario-home.js"></script>
+<script src="/js/validacao-novo-fornecedor.js"></script>
 <script src="/libs/mask/jquery.mask.js"></script>
