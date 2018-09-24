@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
-<form action="/fornecedor/store" method="post">
+<form id="validacao-fornecedor-form-func" action="/fornecedor/store" method="post">
     
     <div class="form-group">
         <label for='campo-nome'><i class=''></i> Nome</label>

@@ -1,4 +1,4 @@
-$("#validacao-form-func").validate({
+$("#validacao-nao-possui-cadastro-form-func").validate({
 
     errorClass: "text-danger border-danger",
     errorElementClass: "text-danger border-danger",
@@ -30,7 +30,9 @@ $("#validacao-form-func").validate({
             required: true
         },
         funcao: {
-            required: true
+            required: true,
+            minlength: 3,
+            maxlength: 100
         },
         cep: {
             required: true
@@ -51,20 +53,18 @@ $("#validacao-form-func").validate({
             required: true,
             minlength: 1,
             maxlength: 20
-
         }
-
     },
     messages: {
         login: {
             required: "Campo Obrigatorio",
-            minlength: "login deve conter no minimo {0} caracteres",
-            maxlength: "login deve conter no maximo {0} caracteres"
+            minlength: "Login deve conter no minimo {0} caracteres",
+            maxlength: "Login deve conter no maximo {0} caracteres"
         },
         senha: {
             required: "Campo Obrigatorio",
-            minlength: "senha deve conter no minimo {0} caracteres",
-            maxlength: "senha deve conter no maximo {0} caracteres"
+            minlength: "Senha deve conter no minimo {0} caracteres",
+            maxlength: "Senha deve conter no maximo {0} caracteres"
         },
         nome: {
             required: "Campo Obrigatorio",
@@ -81,7 +81,9 @@ $("#validacao-form-func").validate({
             required: "Campo Obrigatorio"
         },
         funcao: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatorio",
+            minlength: "Função deve conter no minimo {0} caracteres",
+            maxlength: "Função deve conter no maximo {0} caracteres"
         },
         cep: {
             required: "Campo Obrigatorio"
@@ -121,7 +123,7 @@ $(function () {
             method: "get",
             success: function (data) {
                 $("#campo-logradouro").val(data.logradouro);
-                $("#campo-bairro").val(data.bairro);
+                $("#campo-bairro").val(data.barirro);
                 $("#campo-cidade").val(data.localidade);
                 $("#campo-estado").val(data.uf);
             }
@@ -132,7 +134,7 @@ $(function () {
 $(function () {
     $("#campo-cpf").mask("999.999.999-99");
 
-    $("#campo-telefone").mask("(99)9999-99999");
-    
+    $("#campo-telefone").mask("(99)9999-9999");
+
     $("#campo-cep").mask("99999-999");
 });
