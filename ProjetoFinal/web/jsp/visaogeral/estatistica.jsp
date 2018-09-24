@@ -33,7 +33,7 @@
                             data: {
                                 labels: data.categorias,
                                 datasets: [{
-                                        label: "Vendidos",
+                                        label: "Mais Vendidos",
                                         data: data.quantidades,
                                         borderWidth: 6,
                                         borderColor: 'black',

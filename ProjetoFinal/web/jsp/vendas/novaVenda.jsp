@@ -4,36 +4,32 @@
     Author     : Alunos
 --%>
 
-<%@page import="br.com.projeto.dao.EstoqueDAO"%>
-<%@page import="br.com.projeto.bean.EstoqueBean"%>
+<%@page import="br.com.projeto.dao.ProdutoDAO"%>
+<%@page import="br.com.projeto.bean.ProdutoBean"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp" %>
-
-<%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
+<form action="/estoque/concluirVenda" method="POST">
+<%List<ProdutoBean> produtos = new ProdutoDAO().obterTodos(); %>
 
 <div>
-    <table class="table table-hover table-bordered" id="estoque-index">
-        <thead class="thead-light">  
-            <th>Produto</th>    
-            <th>ValorUn.</th>    
-            <th>Quantidade</th>
-            <th>Valor Total</th>
         </thead>
         <tbody>
-            
-            <% for(EstoqueBean estoque : estoques) {%>
-	    <tr>
-		<td> vendido </td>
-		<td> vendido </td>
-		<td> vendido </td>
-		<td> vendido </td>
-	    </tr>
-            <%}%>
+            <select >
+            <option selected="selected" disabled="disabled"></option>
+            <% for (ProdutoBean produto: produtos ){ %>
+            <option value=<%=produto.getId()%>><%=produto.getNome()%></option>
+            <% } %>
+        </select>
+        <div class ="form-group">
+        <label for='campo-quantidade'><i class='fa fa-address-card-o'></i> Quantidade</label>
+        <input type='number' class="form-control" id='campo-quantidade' name='quantidade' min=0 placeholder='Quantidade' required='required'> 
+        </div>
+        
+        <input class="btn btn-success" type="submit" value="Concluir Venda">
         </tbody>
-    </table>
 </div>
-
+</form>
 <%@include file="../master/rodape.jsp" %> 
 
 
