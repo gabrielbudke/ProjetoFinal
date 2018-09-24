@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+<%@include file="/jsp/master/master.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -65,5 +65,5 @@
     </body>
 </html>
 
-
+<%@include file="/jsp/master/rodape.jsp" %>
 
