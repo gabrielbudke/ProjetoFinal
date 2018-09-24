@@ -20,7 +20,7 @@
             <th scope="col">Funcionario</th>
             <th scope="col">Função</th>
             <th scope="col">Telefone</th>
-            <th scope="col"><i class="fas fa-cogs"></i></th>
+            <th scope="col"><i class="fa fa-cogs"></i></th>
         </tr>
     </thead>
     <tbody>

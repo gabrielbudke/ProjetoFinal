@@ -16,7 +16,7 @@
 <%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
 
 <div class="botao-registrar-venda">
-    <a class="btn btn-success float-right" href="/estoque/concluirVendas">Registrar Venda <i class="fas fa-plus-square"></i></a>
+    <a class="btn btn-success float-right" href="/estoque/concluirVendas">Registrar Venda <i class="fa fa-plus-square"></i></a>
 </div>
 
 <div>
