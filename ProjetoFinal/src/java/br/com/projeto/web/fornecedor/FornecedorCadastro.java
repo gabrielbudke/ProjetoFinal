@@ -21,7 +21,7 @@ public class FornecedorCadastro extends HttpServlet {
         resp.setContentType("text/html;metacharset=UTF-8");
         req.getRequestDispatcher("../jsp/fornecedor/cadastro.jsp").include(req, resp);
 
-
+        resp.sendRedirect("/fornecedor");
     }
 
 }
