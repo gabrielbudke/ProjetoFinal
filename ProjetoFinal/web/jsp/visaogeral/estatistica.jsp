@@ -8,13 +8,19 @@
 <%@include file="/jsp/master/master.jsp" %>
 <!DOCTYPE html>
 <html>
+ 
     <head>
         <meta charset="UTF-8">
-        <title>Chart Js - Graphics</title>
+        <title>E-Stock</title>
+        
         <script src="/js/jquery.min.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
     </head>
+ 
     <body>
+
         <div style="float: left;">
             <!-- Start Canvas -> Desenhar elementos gráficos -->
             <canvas class="myChart" style="width: 200; height: 400px;"> </canvas>
@@ -22,6 +28,7 @@
         </div>
 
         <script>
+            
             $(function () {
                 var ctx = document.getElementsByClassName("myChart");
                 $.ajax({
