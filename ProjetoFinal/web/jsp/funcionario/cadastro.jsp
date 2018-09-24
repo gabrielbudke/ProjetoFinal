@@ -15,12 +15,12 @@
         <input type="text" class="form-control" id="campo-login" name='login' placeholder="Login" onfocusout="validadarCampoLogin">
     </div>
     <div class="form-group">
-        <label for="campo-senha">Novo Senha</label>
+        <label for="campo-senha">Nova Senha</label>
         <input type="password" class="form-control" id="campo-senha" name="senha" placeholder="Senha" required="required" onfocusout="validarCampoSenha">
     </div>
     <div class="form-group">
         <label for='campo-nome'><i class=''></i> Nome Completo</label>
-        <input type='text' class="form-control" id='campo-nome' name='nome' placeholder='Nome'>
+        <input type='text' class="form-control" id='campo-nome' name='nome' placeholder='Nome Completo'>
     </div>
 
     <div class = "form-group">
