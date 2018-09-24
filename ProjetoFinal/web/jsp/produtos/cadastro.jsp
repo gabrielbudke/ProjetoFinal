@@ -12,7 +12,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file = "../master/master.jsp"%>
 
-<form action="/produtos/store" method="POST">
+<form id="validacao-novo-produto-form-func" action="/produtos/store" method="POST">
 <%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos(); %>
  
     <div class='form-group'>
@@ -21,7 +21,7 @@
     
     <div class = "form-group">
         <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
-        <select >
+        <select name="categoria">
             <option selected="selected" disabled="disabled"></option>
             <% for (CategoriaBean categoria: categorias ){ %>
             <option value=<%=categoria.getId()%>><%=categoria.getNome()%></option>
