@@ -24,6 +24,7 @@ public class Home extends HttpServlet {
 
         if (req.getSession().getAttribute("funcionario") == null) {
             resp.sendRedirect("/");
+            return;
         }
         resp.setContentType("text/html;metacharset=UTF-8");
         req.getRequestDispatcher("/jsp/inicio/inicial.jsp").include(req, resp);

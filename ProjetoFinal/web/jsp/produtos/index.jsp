@@ -11,7 +11,7 @@
 
 <%%>
 <div class="btn-group btn-group-toggle botao-novo-produto" style="float: right;" data-toggle="buttons">
-    <a class="btn btn-success float-right" href="/produtos/cadastro">Novo Produto <i class="fas fa-plus-square"></i></a>
+    <a class="btn btn-success float-right" href="/produtos/cadastro">Novo Produto <i class="fa fa-plus-square"></i></a>
     <input class="btn btn-secondary float-right" type="button" id="exportar" value="Exportar">
 </div>
 
@@ -22,7 +22,7 @@
                 <th>Categoria</th>
                 <th>Nome</th>
                 <th>Preço</th>
-                <th> <i class="fas fa-cogs"></i></th>
+                <th> <i class="fa fa-cogs"></i></th>
             </tr>
         </thead>
         <tbody>

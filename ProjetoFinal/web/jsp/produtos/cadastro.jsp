@@ -29,7 +29,7 @@
         </select>
     </div>
 	<div>
-            <a class="btn btn-success"  href="/categoria/cadastro"><i class="fas fa-plus-square"></i> Nova Categoria</a>
+            <a class="btn btn-success"  href="/categoria/cadastro"><i class="fa fa-plus-square"></i> Nova Categoria</a>
         </div>
 
     <div class = "form-group">

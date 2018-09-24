@@ -6,22 +6,24 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>E-Stock</title>
-        <link rel="stylesheet" href="../jsp/comerciante/cadastroComercianteCSS.css">
-        <link rel="stylesheet" href="../componentes/perfilUsuario/perfilUsuarioCSS.css">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <link rel="stylesheet" href="/libs/select2/select2.min.css">
-        <link rel="stylesheet" href="/libs/datatable/jquery.dataTables.min.css">
-        <link rel="stylesheet" href="../../libs/datatable/dataTables.bootstrap4.min.css">
-        <link rel="stylesheet" href="../../libs/datatable/bootstrap.css">
+        <title>Gentelella Alela! | </title>
 
+        <%@include file="/jsp/master/css.jsp" %>
     </head>
-    <body>
-        <%@include file="cabecalho.jsp" %>
-        <div class="container-fluid">
+
+    <body class="nav-md">
+        <div class="container body">
+            <div class="main_container">
+                <%@include file="/jsp/master/navbar.jsp" %>
+
+                <!-- page content -->
+                <div class="right_col" role="main">
