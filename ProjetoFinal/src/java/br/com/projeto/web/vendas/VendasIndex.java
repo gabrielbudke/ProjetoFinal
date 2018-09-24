@@ -9,17 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author patrick
+ * @author Patrick
  */
-@WebServlet("/estoque/concluirVendas")
-public class vendasConcluirVenda extends HttpServlet{
+@WebServlet("/vendas")
+public class VendasIndex extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        req.getRequestDispatcher("/jsp/vendas/novaVenda.jsp").include(req, resp);
-        
         resp.setContentType("text/html;charset=UTF-8");
+        req.getRequestDispatcher("/jsp/vendas/index.jsp").include(req, resp);
     }
     
     
