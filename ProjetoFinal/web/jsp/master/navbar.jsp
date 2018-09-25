@@ -40,7 +40,7 @@
                         
                     </li>
                     
-                    <li><a href = "/fornecedor"><i class="fas fa-shipping-fast"></i> &nbsp Fornecedor <span class="fa fa-chevron-down"></span></a>
+                    <li><a href = "/fornecedor"><i class="fas fa-boxes"></i> &nbsp Fornecedor <span class="fa fa-chevron-down"></span></a>
                         
                         
                     </li>
@@ -69,7 +69,8 @@
                         <span class=" fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><a href="javascript:;"> Conta</a></li>
+                        
+                        <a href="/comercianteConta"><i class=""></i> Conta</a></li>
                         <li>
                             <a href="javascript:;">
                            
