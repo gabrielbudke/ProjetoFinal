@@ -61,6 +61,7 @@
 <script src="/js/validacao-funcionario.js"></script>
 <script src="/js/validacao-fornecedor.js"></script>
 <script src="/js/validacao-produto.js"></script>
+<script src="/js/validacao-registrar-venda.js"></script>
 <script src="/libs/mask/jquery.mask.js"></script>
 <%-- Bootbox Modals --%>
 <script src="/js/bootbox.min.js"></script>

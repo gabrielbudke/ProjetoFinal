@@ -30,8 +30,7 @@ public class VendaStore extends HttpServlet{
         venda.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
         venda.setIdProduto(Integer.parseInt(req.getParameter("produto")));
         venda.setId(new VendasDAO().adicionar(venda));
-        
-        
+             
         resp.sendRedirect("/vendas");
         
     

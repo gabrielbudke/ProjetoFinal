@@ -22,8 +22,7 @@
             <th>Valor Total</th>
         </thead>
         <tbody>
-            
-            <% for(VendasBean venda : vendas) {%>
+            <% for(VendasBean venda: (List<VendasBean>)request.getAttribute("vendas")) {%>
 	    <tr>
 		<td> <%=venda.getProduto().getNome() %> </td>
 		<td> <%=venda.getQuantidade() %> </td>

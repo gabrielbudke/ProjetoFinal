@@ -21,7 +21,7 @@
     
     <div class = "form-group">
         <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
-        <select name="categoria">
+        <select class="form-control" name="categoria">
             <option selected="selected" disabled="disabled"></option>
             <% for (CategoriaBean categoria: categorias ){ %>
             <option value=<%=categoria.getId()%>><%=categoria.getNome()%></option>
@@ -45,7 +45,7 @@
 
     <div class = "form-group">
         <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
-        <input type='number' min='0' class="form-control" id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
+        <input type='number' min='0' class="form-control" id='campo-preco' name='preco' placeholder='Preço' required='required' onfocusout='validarCampoPreco()'>
     </div>
     
     <input class="btn btn-success" type="submit" value="Adicionar">

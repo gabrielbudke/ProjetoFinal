@@ -17,7 +17,8 @@ $("#validacao-fornecedor-form-func").validate({
             required: true
         },
         email: {
-            required: true
+            required: true,
+            email: true
         }
     },
     messages: {
@@ -33,7 +34,8 @@ $("#validacao-fornecedor-form-func").validate({
             required: "Campo Obrigatorio"
         },
         email: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatorio.",
+            email: "Insira um Email valido."
         }
     }
 });
