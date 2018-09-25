@@ -26,18 +26,19 @@
             <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                    <li><a href = "#batata"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li ><a href="/visaogeral">Visão Geral</a>
-                            
-                            <li ><a href="/produtos">Produtos</a></li>
-                            <li ><a href="/vendas">Vendas</a></li>
-                        </ul>
+                    <li><a href ="/home"><i class="fa fa-home"></i> Home </a>
+                        
                         
                     </li>
-                    <li><a href = "/estoque"><i class="fas fa-boxes"></i> &nbsp Estoque</a>
+                    <li><a><i class="fas fa-boxes"></i> &nbsp Estoque<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            
+                            
+                            
                         
-                        
+                        <li ><a href="/produtos">Produtos</a></li>
+                        <li ><a href="/vendas">Vendas</a></li>
+                        </ul>
                     </li>
                     
                     <li><a href = "/fornecedor"><i class="fas fa-shipping-fast"></i> &nbsp Fornecedores</a>
@@ -45,6 +46,11 @@
                         
                     </li>
                     <li><a href = "/funcionarios"><i class="fas fa-users"></i> &nbsp Funcionários</a>
+                        
+                        
+                    </li>
+                    </li>
+                    <li><a href = "/visaogeral"><i class="far fa-chart-bar"></i> &nbsp Estatística</a>
                         
                         
                     </li>
@@ -73,14 +79,9 @@
                         <span class=" fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><a href="javascript:;"> Conta</a></li>
-                        <li>
-                            <a href="javascript:;">
-                           
-                                <span>Configurações</span>
-                            </a>
-                        </li>
-                        <li><a href="javascript:;">Ajuda</a></li>
+                        <li><a href="bootbox.alert"> Conta</a></li>
+                        
+                        <li><a href="javascript:;">Suporte</a></li>
                         <li><a href="/usuario/logout"><i class="fa fa-sign-out pull-right"></i> Sair</a></li>
                     </ul>
                 </li>
