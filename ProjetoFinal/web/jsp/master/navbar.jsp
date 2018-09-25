@@ -2,7 +2,7 @@
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="/home" class="site_title"><i class="fa fa-paw"></i> <span>&nbsp;&nbsp;E-Stock</span></a>
+            <a href="/home" class="site_title"><i class="fas fa-box-open"></i> <span>&nbsp;&nbsp;E-Stock</span></a>
         </div>
 
         <div class="clearfix"></div>
@@ -29,13 +29,18 @@
                     <li><a href = "#batata"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li ><a href="/visaogeral">Visão Geral</a>
-                            <li ><a href="/estoque">Estoque</a></li>
                             <li ><a href="/fornecedor">Fornecedores</a></li>
                             <li ><a href="/funcionarios">Funcionarios</a></li>
                             <li ><a href="/produtos">Produtos</a></li>
                             <li ><a href="/vendas">Vendas</a></li>
                         </ul>
-                    </li>                  
+                        
+                    </li>
+                    <li><a href = "#batata"><i class="fas fa-boxes"></i> &nbsp Estoque <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                    <li ><a href="/estoque">Estoque</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
