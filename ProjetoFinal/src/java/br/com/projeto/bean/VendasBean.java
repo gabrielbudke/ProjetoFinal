@@ -14,10 +14,6 @@ public class VendasBean {
     private int id;
     private int idProduto;
 
-    public int getIdProduto() {
-        return idProduto;
-    }
-
     public void setIdProduto(int idProduto) {
         this.idProduto = idProduto;
     }
@@ -48,7 +44,9 @@ public class VendasBean {
         this.quantidade = quantidade;
     }
 
-    
+    public int getIdProduto() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public float valorTotal(){
         return quantidade*produto.getPreco();

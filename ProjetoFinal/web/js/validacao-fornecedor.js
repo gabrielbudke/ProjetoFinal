@@ -7,39 +7,33 @@ $("#validacao-fornecedor-form-func").validate({
     rules: {
         nome: {
             required: true,
-            minlength: 3,
+            minlength: 5,
             maxlength: 20
         },
         cnpj: {
-            required: true,
-            minlength: 17
+            required: true
         },
         telefone: {
-            required: true,
-            minlength: 13
+            required: true
         },
         email: {
-            required: true,
-            email: true
+            required: true
         }
     },
     messages: {
         nome: {
-            required: "Campo Obrigatorio.",
-            minlength: "Nome deve conter no minimo {0} caracteres.",
-            maxlength: "Nome deve conter no maximo {0} caracteres."
+            required: "Campo Obrigatorio",
+            minlength: "Nome deve conter no minimo {0} caracteres",
+            maxlength: "Nome deve conter no maximo {0} caracteres"
         },
         cnpj: {
-            required: "Campo Obrigatorio.",
-            minlength: "CNPJ deve conter todos os caracteres."
+            required: "Campo Obrigatorio"
         },
         telefone: {
-            required: "Campo Obrigatorio.",
-            minlength: "Telefone deve conter todos os caracteres."
+            required: "Campo Obrigatorio"
         },
         email: {
-            required: "Campo Obrigatorio.",
-            email: "Insira um Email valido."
+            required: "Campo Obrigatorio"
         }
     }
 });

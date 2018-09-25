@@ -127,10 +127,3 @@ INSERT INTO produtos (id_categoria, nome, preco) VALUES
 
 (3, 'Pulseira', 4.50),
 (4, 'Pulseira', 4.50);
-
-CREATE TABLE produtos_saida (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-        id_produto INTEGER NOT NULL,
-        quantidade INT UNSIGNED,
-        FOREIGN KEY (id_produto) REFERENCES produtos(id)
-);

@@ -21,12 +21,10 @@ $("#validacao-form-func").validate({
             maxlength: 100
         },
         cpf: {
-            required: true,
-            minlength: 14
+            required: true
         },
         email: {
-            required: true,
-            email: true
+            required: true
         },
         telefone: {
             required: true
@@ -74,12 +72,10 @@ $("#validacao-form-func").validate({
             maxlength: "Nome deve conter no maximo {0} caracteres"
         },
         cpf: {
-            required: "Campo Obrigatorio",
-            minlength: "CPF deve conter todos os caracteres."
+            required: "Campo Obrigatorio"
         },
         email: {
-            required: "Campo Obrigatorio",
-            email: "Email deve ser valido"
+            required: "Campo Obrigatorio"
         },
         telefone: {
             required: "Campo Obrigatorio"
