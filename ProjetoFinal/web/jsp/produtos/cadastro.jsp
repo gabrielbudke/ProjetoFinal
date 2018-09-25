@@ -29,6 +29,7 @@
         </select>
     </div>
 	<div>
+            <button type="button" href="/categoria/cadastro" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Categoria</button>
             <a class="btn btn-success"  href="/categoria/cadastro"><i class="fa fa-plus-square"></i> Nova Categoria</a>
         </div>
 
