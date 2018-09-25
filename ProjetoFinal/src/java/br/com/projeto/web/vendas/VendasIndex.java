@@ -1,6 +1,8 @@
 package br.com.projeto.web.vendas;
 
+import br.com.projeto.bean.EstoqueBean;
 import br.com.projeto.bean.VendasBean;
+import br.com.projeto.dao.EstoqueDAO;
 import br.com.projeto.dao.VendasDAO;
 import java.io.IOException;
 import java.util.List;
@@ -21,8 +23,8 @@ public class VendasIndex extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
         resp.setContentType("text/html;charset=UTF-8");
-        List<VendasBean> vendas = new VendasDAO().obterTodos();
-        req.setAttribute("vendas", vendas);
+        List<EstoqueBean> estoques = new EstoqueDAO().obterSaida();
+        req.setAttribute("estoques", estoques);
         req.getRequestDispatcher("/jsp/vendas/index.jsp").include(req, resp);
     }
     

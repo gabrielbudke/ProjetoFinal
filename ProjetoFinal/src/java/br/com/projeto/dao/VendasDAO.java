@@ -23,20 +23,22 @@ public class VendasDAO {
     
        public List<VendasBean> obterTodos() {
         List<VendasBean> vendas = new ArrayList<>();
-        String sql = "SELECT * FROM produtos_saida ps JOIN produtos p ON (p.id = ps.id_produto)";
+        String sql = "SELECT e.tipo, p.nome AS 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto)\n" +
+"WHERE e.tipo LIKE '%Saida%'";
         try {
             Statement st = Conexao.obterConexao().createStatement();
             st.execute(sql);
             ResultSet resultSet = st.getResultSet();
             while (resultSet.next()) {
                 VendasBean venda = new VendasBean();
-                venda.setId(resultSet.getInt("ps.id"));
-                venda.setIdProduto(resultSet.getInt("produto"));
-                venda.setQuantidade(resultSet.getInt("ps.quantidade"));
+                venda.setId(resultSet.getInt("s.id"));
+                venda.setIdProduto(resultSet.getInt("s.id_produto"));
+                venda.setQuantidade(resultSet.getInt("s.quantidade"));
 
                 ProdutoBean produto = new ProdutoBean();
                 produto.setId(resultSet.getInt("p.id"));
                 produto.setNome(resultSet.getString("p.nome"));
+                produto.setPreco(resultSet.getFloat("p.preco"));
                 
                 vendas.add(venda);
             }
@@ -50,7 +52,7 @@ public class VendasDAO {
     }
     
       public int adicionar(VendasBean venda) {
-        String sql = "INSERT INTO produtos_saida (id_produto, quantidade) VALUES(?,?)";
+        String sql = "INSERT INTO saida (id_produto, quantidade) VALUES(?,?)";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setInt(1, venda.getIdProduto());

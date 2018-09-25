@@ -87,7 +87,8 @@ INSERT INTO estoque (id_produto, tipo, quantidade) VALUES
 (1, 'Entrada', 4),
 (2, 'Entrada', 5),
 (1, 'Entrada', 100),
-(4, 'Entrada', 30);
+(4, 'Entrada', 30),
+(1, 'Saida', 5);
 
 CREATE TABLE fluxo_caixa(
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -128,9 +129,9 @@ INSERT INTO produtos (id_categoria, nome, preco) VALUES
 (3, 'Pulseira', 4.50),
 (4, 'Pulseira', 4.50);
 
-CREATE TABLE produtos_saida (
+CREATE TABLE saida (
     id INT AUTO_INCREMENT PRIMARY KEY,
-        id_produto INTEGER NOT NULL,
-        quantidade INT UNSIGNED,
-        FOREIGN KEY (id_produto) REFERENCES produtos(id)
+    id_produto INTEGER NOT NULL,
+    quantidade INT UNSIGNED,
+    FOREIGN KEY (id_produto) REFERENCES produtos(id)
 );

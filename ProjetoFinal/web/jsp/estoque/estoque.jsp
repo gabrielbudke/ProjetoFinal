@@ -22,20 +22,24 @@
 <div>
     <table class="table table-hover table-bordered" id="estoque-index">
         <thead class="thead-light">  
-            <th>Produto</th>    
-            <th>ValorUn.</th>    
-            <th>Quantidade</th>
-            <th>Valor Total</th>
+            <tr>
+                <th>Tipo<th>
+                <th>Produto</th>    
+                <th>ValorUn.</th>    
+                <th>Quantidade</th>
+                <th>Valor Total</th>
+            </tr>
         </thead>
         <tbody>
-            
-            <% for(EstoqueBean estoque : estoques) {%>
-	    <tr>
-		<td> <%=estoque.getProduto().getNome() %> </td>
-		<td> <%=estoque.getProduto().getPreco() %> </td>
-		<td> <%=estoque.getQuantidade() %> </td>
-		<td> <%=estoque.valorTotal()%> </td>
-	    </tr>
+
+            <% for (EstoqueBean estoque : estoques) {%>
+            <tr>
+                <td><%=estoque.getTipo() %><td>
+                <td> <%=estoque.getProduto().getNome()%> </td>
+                <td> <%=estoque.getProduto().getPreco()%> </td>
+                <td> <%=estoque.getQuantidade()%> </td>
+                <td> <%=estoque.valorTotal()%> </td>
+            </tr>
             <%}%>
         </tbody>
     </table>

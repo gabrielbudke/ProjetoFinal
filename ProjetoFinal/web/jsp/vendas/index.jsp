@@ -17,17 +17,21 @@
 <div>
     <table class="table table-hover table-bordered" id="estoque-index">
         <thead class="thead-light">  
-            <th>Produto</th>    
-            <th>Quantidade</th>
-            <th>Valor Total</th>
+            <tr>
+                <th>Tipo</th>  
+                <th>Produto</th>    
+                <th>Quantidade</th>
+                <th>Valor Total</th>
+            <tr>
         </thead>
         <tbody>
-            <% for(VendasBean venda: (List<VendasBean>)request.getAttribute("vendas")) {%>
-	    <tr>
-		<td> <%=venda.getProduto().getNome() %> </td>
-		<td> <%=venda.getQuantidade() %> </td>
-		<td> <%=venda.valorTotal() %> </td>
-	    </tr>
+            <% for (EstoqueBean estoque : (List<EstoqueBean>) request.getAttribute("estoques")) {%>
+            <tr>  
+                <td> <%=estoque.getTipo()%> </td>
+                <td> <%=estoque.getProduto().getNome()%> </td>
+                <td> <%=estoque.getQuantidade()%> </td>
+                <td> <%=estoque.valorTotal()%> </td>
+            </tr>
             <%}%>
         </tbody>
     </table>
