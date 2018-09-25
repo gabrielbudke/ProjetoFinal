@@ -14,7 +14,7 @@
 <form action="/vendas/store" method="POST">
     <div class="form-group">
         <label>Selecione produto:</label>
-        <select class="form-control">
+        <select class="form-control" name='produto'>
             <option selected="selected" disabled="disabled"></option>
             <% for (ProdutoBean produto : produtos) {%>
             <option value=<%=produto.getId()%>><%=produto.getNome()%></option>
