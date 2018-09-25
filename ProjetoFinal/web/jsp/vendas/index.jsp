@@ -25,6 +25,7 @@
             <tr>
         </thead>
         <tbody>
+<<<<<<< HEAD
             <% for (EstoqueBean estoque : (List<EstoqueBean>) request.getAttribute("estoques")) {%>
             <tr>  
                 <td> <%=estoque.getTipo()%> </td>
@@ -32,6 +33,15 @@
                 <td> <%=estoque.getQuantidade()%> </td>
                 <td> <%=estoque.valorTotal()%> </td>
             </tr>
+=======
+            
+            <% for(VendasBean venda : vendas) {%>
+	    <tr>
+		<td> <%=venda.getProduto().getNome() %> </td>
+		<td> <%=venda.getQuantidade() %> </td>
+		<td> <%=venda.valorTotal() %> </td>
+	    </tr>
+>>>>>>> 64256241ebcdd654c5dc4c85f303aa58f68801f6
             <%}%>
         </tbody>
     </table>

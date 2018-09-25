@@ -26,12 +26,14 @@
 
     <body>       
         <form action="/funcionarios/store" method="post">
-            <%--
+            
         <div class="cadastro">
             <h1>Cadastro</h1>
         </div>
 
-        <div class = "register Scroll">--%>
+        <div class = "register Scroll">
+            <%--
+            --%>
 
             <div class="form-group">
                 <label for='campo-login' ><i class=''></i> Login</label>
@@ -89,7 +91,9 @@
             </div>
 
             <button type="submit" class="btn btn-primary btn-block btn-large">Cadastrar</button>
-        <%--</div>--%>
+        <%--
+        --%>
+            </div>
 
         
     </form>

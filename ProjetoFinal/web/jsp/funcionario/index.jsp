@@ -25,6 +25,12 @@
     </thead>
     <tbody>
     <a href="/funcionario/cadastro" class="btn btn-success float-right">Novo Funcionario</a>
+    
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
     </tbody>
 </table>
 

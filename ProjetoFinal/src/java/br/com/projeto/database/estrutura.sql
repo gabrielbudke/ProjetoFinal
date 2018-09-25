@@ -127,6 +127,7 @@ INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
 INSERT INTO produtos (id_categoria, nome, preco) VALUES 
 
 (3, 'Pulseira', 4.50),
+<<<<<<< HEAD
 (4, 'Pulseira', 4.50);
 
 CREATE TABLE saida (
@@ -135,3 +136,6 @@ CREATE TABLE saida (
     quantidade INT UNSIGNED,
     FOREIGN KEY (id_produto) REFERENCES produtos(id)
 );
+=======
+(4, 'Pulseira', 4.50);
+>>>>>>> 64256241ebcdd654c5dc4c85f303aa58f68801f6

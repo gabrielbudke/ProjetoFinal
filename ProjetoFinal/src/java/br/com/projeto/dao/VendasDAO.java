@@ -5,7 +5,6 @@
  */
 package br.com.projeto.dao;
 
-import br.com.projeto.bean.ProdutoBean;
 import br.com.projeto.bean.VendasBean;
 import br.com.projeto.database.Conexao;
 import java.sql.PreparedStatement;
@@ -23,14 +22,19 @@ public class VendasDAO {
     
        public List<VendasBean> obterTodos() {
         List<VendasBean> vendas = new ArrayList<>();
+<<<<<<< HEAD
         String sql = "SELECT e.tipo, p.nome AS 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto)\n" +
 "WHERE e.tipo LIKE '%Saida%'";
+=======
+        String sql = "SELECT * FROM categorias";
+>>>>>>> 64256241ebcdd654c5dc4c85f303aa58f68801f6
         try {
             Statement st = Conexao.obterConexao().createStatement();
             st.execute(sql);
             ResultSet resultSet = st.getResultSet();
             while (resultSet.next()) {
                 VendasBean venda = new VendasBean();
+<<<<<<< HEAD
                 venda.setId(resultSet.getInt("s.id"));
                 venda.setIdProduto(resultSet.getInt("s.id_produto"));
                 venda.setQuantidade(resultSet.getInt("s.quantidade"));
@@ -40,7 +44,13 @@ public class VendasDAO {
                 produto.setNome(resultSet.getString("p.nome"));
                 produto.setPreco(resultSet.getFloat("p.preco"));
                 
+=======
+                venda.setId(resultSet.getInt("id"));
+                venda.setIdProduto(resultSet.getInt("idProduto"));
+                venda.setQuantidade(resultSet.getInt("quantidade"));
+>>>>>>> 64256241ebcdd654c5dc4c85f303aa58f68801f6
                 vendas.add(venda);
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
