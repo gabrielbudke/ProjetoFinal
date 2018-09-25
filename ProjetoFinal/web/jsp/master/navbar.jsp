@@ -29,21 +29,18 @@
                     <li><a href = "#batata"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li ><a href="/visaogeral">Visão Geral</a>
-                            <li ><a href="/fornecedor">Fornecedores</a></li>
                             <li ><a href="/funcionarios">Funcionarios</a></li>
                             <li ><a href="/produtos">Produtos</a></li>
                             <li ><a href="/vendas">Vendas</a></li>
                         </ul>
                         
                     </li>
-                    <li><a href = "#batata"><i class="fas fa-boxes"></i> &nbsp Estoque <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                    <li ><a href="/estoque">Estoque</a></li>
-                        </ul>
+                    <li><a href = "/estoque"><i class="fas fa-boxes"></i> &nbsp Estoque <span class="fa fa-chevron-down"></span></a>
+                        
                         
                     </li>
                     
-                    <li><a href = "#batata"><i class="fas fa-shipping-fast"></i> &nbsp Fornecedor <span class="fa fa-chevron-down"></span></a>
+                    <li><a href = "/fornecedor"><i class="fas fa-shipping-fast"></i> &nbsp Fornecedor <span class="fa fa-chevron-down"></span></a>
                         
                         
                     </li>
