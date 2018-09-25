@@ -40,25 +40,20 @@
                         <ul class="nav child_menu">
                     <li ><a href="/estoque">Estoque</a></li>
                         </ul>
+                        
+                    </li>
+                    
+                    <li><a href = "#batata"><i class="fas fa-shipping-fast"></i> &nbsp Fornecedor <span class="fa fa-chevron-down"></span></a>
+                        
+                        
                     </li>
                 </ul>
             </div>
         </div>
         <!-- /sidebar menu -->
 
-        <!-- /menu footer buttons -->
-        <div class="sidebar-footer hidden-small">
-            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-            </a>
-        </div>
-        <!-- /menu footer buttons -->
+   
+   
     </div>
 </div>
 
@@ -80,8 +75,8 @@
                         <li><a href="javascript:;"> Conta</a></li>
                         <li>
                             <a href="javascript:;">
-                                <span class="badge bg-red pull-right">50%</span>
-                                <span>Definições</span>
+                           
+                                <span>Configurações</span>
                             </a>
                         </li>
                         <li><a href="javascript:;">Ajuda</a></li>

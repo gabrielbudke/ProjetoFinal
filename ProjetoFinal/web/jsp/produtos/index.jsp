@@ -17,7 +17,7 @@
 
 <div id="tabela">
     <table class="table table-hover table-bordered" id="produtos-index">
-        <thead class="thead-light">
+        <thead class="thead-dark">
             <tr>
                 <th>Categoria</th>
                 <th>Nome</th>
