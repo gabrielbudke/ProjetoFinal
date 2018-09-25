@@ -14,7 +14,11 @@
 <form id="validacao-registrar-venda-form-func" action="/vendas/store" method="POST">
     <div class="form-group">
         <label>Selecione produto:</label>
+<<<<<<< HEAD
         <select class="form-control" name="produto">
+=======
+        <select class="form-control" name='produto'>
+>>>>>>> 7210046e7f81291b363c7fd5def470b1cfaec1d3
             <option selected="selected" disabled="disabled"></option>
             <% for (ProdutoBean produto : produtos) {%>
             <option value=<%=produto.getId()%>><%=produto.getNome()%></option>
