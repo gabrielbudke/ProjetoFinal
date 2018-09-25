@@ -46,8 +46,9 @@ public class EstoqueDAO {
 
     public List<EstoqueBean> obterTodos() {
         List<EstoqueBean> estoques = new ArrayList<>();
-        String sql = "SELECT * FROM estoque e JOIN produtos p ON(p.id = e.id_produto)";
+        String sql = "SELECT e.id, e.tipo, e.id_produto, p.preco, p.nome as 'produto', COUNT(e.quantidade) AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto) GROUP BY e.id_produto";
         try {
+            
             Statement st = Conexao.obterConexao().createStatement();
             st.execute(sql);
             ResultSet resultSet = st.getResultSet();
@@ -55,12 +56,12 @@ public class EstoqueDAO {
                 EstoqueBean estoque = new EstoqueBean();
                 estoque.setId(resultSet.getInt("e.id"));
                 estoque.setIdProduto(resultSet.getInt("e.id_produto"));
-                estoque.setQuantidade(resultSet.getInt("e.quantidade"));
+                estoque.setQuantidade(resultSet.getInt("quantidade"));
                 estoque.setTipo(resultSet.getString("e.tipo"));
 
                 ProdutoBean produto = new ProdutoBean();
                 produto.setId(estoque.getIdProduto());
-                produto.setNome(resultSet.getString("p.nome"));
+                produto.setNome(resultSet.getString("produto"));
                 produto.setPreco(resultSet.getFloat("p.preco"));
 
                 estoque.setProduto(produto);
