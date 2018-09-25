@@ -5,7 +5,6 @@
  */
 package br.com.projeto.dao;
 
-import br.com.projeto.bean.ProdutoBean;
 import br.com.projeto.bean.VendasBean;
 import br.com.projeto.database.Conexao;
 import java.sql.PreparedStatement;
@@ -23,22 +22,18 @@ public class VendasDAO {
     
        public List<VendasBean> obterTodos() {
         List<VendasBean> vendas = new ArrayList<>();
-        String sql = "SELECT * FROM produtos_saida ps JOIN produtos p ON (p.id = ps.id_produto)";
+        String sql = "SELECT * FROM categorias";
         try {
             Statement st = Conexao.obterConexao().createStatement();
             st.execute(sql);
             ResultSet resultSet = st.getResultSet();
             while (resultSet.next()) {
                 VendasBean venda = new VendasBean();
-                venda.setId(resultSet.getInt("ps.id"));
-                venda.setIdProduto(resultSet.getInt("produto"));
-                venda.setQuantidade(resultSet.getInt("ps.quantidade"));
-
-                ProdutoBean produto = new ProdutoBean();
-                produto.setId(resultSet.getInt("p.id"));
-                produto.setNome(resultSet.getString("p.nome"));
-                
+                venda.setId(resultSet.getInt("id"));
+                venda.setIdProduto(resultSet.getInt("idProduto"));
+                venda.setQuantidade(resultSet.getInt("quantidade"));
                 vendas.add(venda);
+
             }
         } catch (SQLException e) {
             e.printStackTrace();

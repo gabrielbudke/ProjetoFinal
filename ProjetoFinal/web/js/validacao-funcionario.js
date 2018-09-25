@@ -24,8 +24,7 @@ $("#validacao-form-func").validate({
             required: true
         },
         email: {
-            required: true,
-            email: true
+            required: true
         },
         telefone: {
             required: true
@@ -76,8 +75,7 @@ $("#validacao-form-func").validate({
             required: "Campo Obrigatorio"
         },
         email: {
-            required: "Campo Obrigatorio",
-            email: "Email deve ser valido"
+            required: "Campo Obrigatorio"
         },
         telefone: {
             required: "Campo Obrigatorio"

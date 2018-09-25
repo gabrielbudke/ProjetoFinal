@@ -26,34 +26,35 @@
             <div class="menu_section">
                 <h3>Menu</h3>
                 <ul class="nav side-menu">
-                    <li><a href ="/home"><i class="fa fa-home"></i> Home </a>
-                        
+                    <li><a href = "#batata"><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li ><a href="/visaogeral">Visão Geral</a>
+                            <li ><a href="/funcionarios">Funcionarios</a></li>
+                            <li ><a href="/produtos">Produtos</a></li>
+                            <li ><a href="/vendas">Vendas</a></li>
+                        </ul>
                         
                     </li>
-                    <li><a><i class="fas fa-boxes"></i> &nbsp Estoque<span class="fa fa-chevron-down"></span></a>
+                    <li><a><i class="fas fa-boxes"></i> &nbsp Estoque <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             
-                            
-                            
-                        
-                        <li ><a href="/produtos">Produtos</a></li>
-                        <li ><a href="/vendas">Vendas</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li><a href = "/fornecedor"><i class="fas fa-shipping-fast"></i> &nbsp Fornecedores</a>
-                        
+                            <li ><a href="/produtos">Produtos</a></li>
+                            <li ><a href="/vendas">Vendas</a></li>
+                        </ul>                      
                         
                     </li>
-                    <li><a href = "/funcionarios"><i class="fas fa-users"></i> &nbsp Funcionários</a>
-                        
-                        
-                    </li>
+
                     </li>
                     <li><a><i class="fas fa-boxes"></i> &nbsp Estatística<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                         <li ><a href="/visaogeral">Mais vendidos</a></li>
                         </ul>
+=======
+                    
+                    <li><a href = "/fornecedor"><i class="fas fa-boxes"></i> &nbsp Fornecedor <span class="fa fa-chevron-down"></span></a>
+                        
+                        
+
                     </li>
                 </ul>
             </div>
@@ -80,10 +81,20 @@
                         <span class=" fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                        <li><a href="bootbox.alert"> Conta</a></li>
+                        
+<<<<<<< HEAD
                         
                         
-                        
+=======
+                        <a href="/comercianteConta"><i class=""></i> Conta</a></li>
+                        <li>
+                            <a href="javascript:;">
+                           
+                                <span>Configurações</span>
+                            </a>
+                        </li>
+                        <li><a href="javascript:;">Suporte</a></li>
+
                         <li><a href="/usuario/logout"><i class="fa fa-sign-out pull-right"></i> Sair</a></li>
                     </ul>
                 </li>
