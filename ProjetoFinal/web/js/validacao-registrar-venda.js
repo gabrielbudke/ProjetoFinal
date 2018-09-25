@@ -18,7 +18,8 @@ $("#validacao-registrar-venda-form-func").validate({
         },
         quantidade: {
             required: "Insira uma quantidade.",
-            number: "Quantidade deve conter somente números."
+            number: "Quantidade deve conter somente números.",
+             greaterThan: "asdasdasd"
         }
     }
 });

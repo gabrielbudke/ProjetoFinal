@@ -7,14 +7,16 @@ $("#validacao-fornecedor-form-func").validate({
     rules: {
         nome: {
             required: true,
-            minlength: 5,
+            minlength: 3,
             maxlength: 20
         },
         cnpj: {
-            required: true
+            required: true,
+            minlength: 17
         },
         telefone: {
-            required: true
+            required: true,
+            minlength: 13
         },
         email: {
             required: true,
@@ -23,15 +25,17 @@ $("#validacao-fornecedor-form-func").validate({
     },
     messages: {
         nome: {
-            required: "Campo Obrigatorio",
-            minlength: "Nome deve conter no minimo {0} caracteres",
-            maxlength: "Nome deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatorio.",
+            minlength: "Nome deve conter no minimo {0} caracteres.",
+            maxlength: "Nome deve conter no maximo {0} caracteres."
         },
         cnpj: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatorio.",
+            minlength: "CNPJ deve conter todos os caracteres."
         },
         telefone: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatorio.",
+            minlength: "Telefone deve conter todos os caracteres."
         },
         email: {
             required: "Campo Obrigatorio.",
