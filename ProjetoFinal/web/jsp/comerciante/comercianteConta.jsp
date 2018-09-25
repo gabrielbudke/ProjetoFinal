@@ -15,9 +15,9 @@
     <table class="table table-hover table-bordered" id="funcionario-index">
         <thead class="thead-dark">
             <tr>
-                <th> Nome</th>
-                <th> Função</th>
-                <th> Telefone</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Função</th>
+                <th scope="col">Telefone</th>
                  </thead>
         <tbody>
             
