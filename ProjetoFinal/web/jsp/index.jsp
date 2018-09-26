@@ -27,13 +27,13 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form method="post" action="/usuario/login">
+            <form action="/usuario/login" method="post" >
               <h1>Login</h1>
               <div>
-                <input type="text" class="form-control" name="u" placeholder="Usuário" required="required" />
+                <input type="text" class="form-control" name="login" placeholder="Usuário" required="required" />
               </div>
               <div>
-                <input type="password" class="form-control" name="p" placeholder="Senha" required="required" />
+                <input type="password" class="form-control" name="senha" placeholder="Senha" required="required" />
               </div>
               <div>
                 <button type="submit" class="btn btn-dark btn-lg">Entrar</button>
