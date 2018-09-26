@@ -14,7 +14,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     </head>
     <body>
-        <canvas class="graficoProduto" width="400" height="400"></canvas>
+        <canvas class="graficoProduto" style="width:400px; height:400px;"></canvas>
     </body>
     <script>
         $(function () {
