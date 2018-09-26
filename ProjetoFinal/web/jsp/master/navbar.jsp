@@ -34,7 +34,7 @@
                         <ul class="nav child_menu">
                             
                             <li ><a href="/produtos">Produtos</a></li>
-                            <li ><a href="/vendas">Vendas</a></li>
+                            <li ><a href="/estoque">Estoque</a></li>
                         </ul>                      
                         
                     </li>

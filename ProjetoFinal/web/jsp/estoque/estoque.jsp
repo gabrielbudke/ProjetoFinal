@@ -16,7 +16,8 @@
 <%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
 
 <div class="botao-registrar-venda">
-    <a class="btn btn-success float-right" href="/vendas/cadastro">Registrar Venda <i class="fa fa-plus-square"></i></a>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#entrada-modal">Entrada</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#saida-modal">Saída</button>
 </div>
 
 <div>
@@ -44,5 +45,5 @@
         </tbody>
     </table>
 </div>
-
+<%@include file="modal.jsp" %>
 <%@include file="../master/rodape.jsp" %>
