@@ -17,6 +17,8 @@
 <!-- Custom Theme Style -->
 <link href="/libs/gentelella/build/css/custom.min.css" rel="stylesheet">
 
-
 <link rel="stylesheet" href="/libs/select2/select2.min.css">
 <link rel="stylesheet" href="/libs/datatable/jquery.dataTables.min.css">
+
+    
+    

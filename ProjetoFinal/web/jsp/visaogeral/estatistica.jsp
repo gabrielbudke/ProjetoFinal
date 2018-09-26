@@ -26,7 +26,7 @@
        <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                      <h2>Produtos<small>mais vendidos</small></h2>
+                      <h2>Produtos<small>mais vendidos por categoria</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -66,11 +66,11 @@
                             data: {
                                 labels: data.categorias,
                                 datasets: [{
-                                        label: "Mais Vendidos",
+                                        label: "Vendidos",
                                         data: data.quantidades,
-                                        borderWidth: 6,
+                                        borderWidth: 3,
                                         borderColor: 'black',
-                                        backgroundColor: '#edf900'
+                                        backgroundColor: '#26B99A'
                                     }]
                             },
                             option: {
