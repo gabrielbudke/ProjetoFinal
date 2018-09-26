@@ -40,15 +40,15 @@ public class EstoqueDAO {
         } finally {
             Conexao.fecharConexao();
         }
-        
+
         return estoques;
     }
 
     public List<EstoqueBean> obterTodos() {
         List<EstoqueBean> estoques = new ArrayList<>();
-        String sql = "SELECT e.id, e.tipo, e.id_produto, p.preco, p.nome as 'produto', COUNT(e.quantidade) AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto) GROUP BY e.id_produto";
+        String sql = "SELECT e.id, e.tipo, e.id_produto, p.preco, p.nome as 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto) GROUP BY e.id_produto";
         try {
-            
+
             Statement st = Conexao.obterConexao().createStatement();
             st.execute(sql);
             ResultSet resultSet = st.getResultSet();
@@ -153,12 +153,12 @@ public class EstoqueDAO {
         }
         return null;
     }
-    
-     public List<EstoqueBean> obterSaida() {
+
+    public List<EstoqueBean> obterSaida() {
         List<EstoqueBean> estoques = new ArrayList<>();
         String sql = "SELECT e.tipo, p.nome AS 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto) WHERE e.tipo LIKE '%Saida%'";
         try {
-            
+
             Statement st = Conexao.obterConexao().createStatement();
             st.execute(sql);
             ResultSet resultSet = st.getResultSet();
@@ -188,8 +188,34 @@ public class EstoqueDAO {
         return estoques;
 
     }
-    
-    
-    
+
+    public HashMap<String, Object> obterProduto() {
+        List<Object> produtoNomes = new ArrayList<>();
+        List<Object> produtoQuantidades = new ArrayList<>();
+        String sql = "SELECT e.tipo, p.nome AS 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto)\n" +
+"WHERE e.tipo LIKE '%Saida%'";
+        
+        try{
+            Statement st = Conexao.obterConexao().createStatement();
+            st.execute(sql);
+            ResultSet resultSet = st.getResultSet();
+            while(resultSet.next()){
+                produtoNomes.add(resultSet.getString("produto"));
+                produtoQuantidades.add(resultSet.getInt("quantidade"));
+            }
+            
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        
+        HashMap<String, Object> produtos = new HashMap<>();
+        produtos.put("produtos", produtoNomes);
+        produtos.put("quantidades", produtoQuantidades);
+        return produtos;
+        
+        
+        
+        
+    }
 
 }

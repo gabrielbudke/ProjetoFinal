@@ -17,23 +17,25 @@ $("#validacao-fornecedor-form-func").validate({
             required: true
         },
         email: {
-            required: true
+            required: true,
+            email: true
         }
     },
     messages: {
         nome: {
-            required: "Campo Obrigatorio",
-            minlength: "Nome deve conter no minimo {0} caracteres",
-            maxlength: "Nome deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatório.",
+            minlength: "Nome deve conter no minimo {0} caracteres.",
+            maxlength: "Nome deve conter no maximo {0} caracteres."
         },
         cnpj: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório."
         },
         telefone: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório."
         },
         email: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório.",
+            email: "Insira um Email válido."
         }
     }
 });
