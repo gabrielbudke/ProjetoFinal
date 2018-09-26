@@ -9,6 +9,7 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%List<ProdutoBean> produtos = new ProdutoDAO().obterTodos(); %>
+
 <div class="modal fade" id="saida-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -19,7 +20,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="/vendas/store" method="post"> <!-- Caminho POST para CategoriaStore -->
+                <form action="/estoque/saida" method="post"> <!-- Caminho POST para CategoriaStore -->
                     <div class="form-group">
                         <input type="text" class="form-control" disabled="disabled" value="Saída" name="saida">
                     </div>
@@ -57,7 +58,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="/vendas/store" method="post"> <!-- Caminho POST para CategoriaStore -->
+                <form action="/estoque/entrada" method="post"> <!-- Caminho POST para CategoriaStore -->
                     <div class="form-group">
                         <input type="text" class="form-control" disabled="disabled" value="Entrada" name="entrada">
                     </div>
