@@ -61,7 +61,7 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form action="/funcionarios/store" method="post">
+              <form id="validacao-nao-possui-cadastro-form-func" action="/funcionarios/store" method="post">
               <h1>Criar conta</h1>
               <div>
                 <input type="text" class="form-control" id="campo-login" name='login' placeholder="Login" onfocusout="validadarCampoLogin">
@@ -134,5 +134,5 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+    </body>
+    </html>
