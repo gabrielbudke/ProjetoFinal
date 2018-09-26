@@ -35,7 +35,7 @@
                     </div>
                     <div>
                         <label for="campo-quantidade" class="col-form-label">Quantidade:</label>
-                        <input type="number" class="form-control" id="campo-quatidade">
+                        <input type="number" class="form-control" id="campo-quantidade" name="quantidade">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
@@ -60,7 +60,7 @@
             <div class="modal-body">
                 <form action="/estoque/entrada" method="post"> <!-- Caminho POST para CategoriaStore -->
                     <div class="form-group">
-                        <input type="text" class="form-control" disabled="disabled" value="Entrada" name="entrada">
+                        <input type="text" class="form-control" disabled="disabled" value="Entrada" name="tipo">
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Selecione o produto:</label>
@@ -73,7 +73,7 @@
                     </div>
                     <div>
                         <label for="campo-quantidade" class="col-form-label">Quantidade:</label>
-                        <input type="number" min='0' class="form-control" id="campo-quatidade">
+                        <input type="number" min='0' class="form-control" id="campo-quantidade" name="quantidade">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
