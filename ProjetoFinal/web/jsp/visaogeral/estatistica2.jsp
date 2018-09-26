@@ -15,6 +15,47 @@
     </head>
     <body>
         <canvas class="graficoProduto" width="400" height="400"></canvas>
-         <script src='/js/grafico-produtos.js'></script>
     </body>
+    <script>
+        $(function () {
+    var ctx = document.getElementByClassName("#graficoProduto");
+     $.ajax({
+                    url: "/visao/produtos",
+                    success: function (data, textStatus, jqXHR) {
+                        //type, Data e options
+                        var chartgraph = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: data.produtos,
+                                datasets: [{
+                                        label: "Produtos",
+                                        data: data.quantidades,
+                                        borderWidth: 3,
+                                        borderColor: 'black',
+                                        backgroundColor: '#26B99A'
+                                    }]
+                            },
+                            option: {
+                                responsive: true,
+                                layout: {
+                                    padding: {
+                                        left: 50,
+                                        righ: 0,
+                                        top: 0,
+                                        bottom: 0
+                                    }
+                                }
+                            }
+
+                        });
+                    }
+                });
+            });
+
+        
+        
+        
+    </script>
 </html>
+
+        
