@@ -37,11 +37,11 @@
                         <label for="campo-quantidade" class="col-form-label">Quantidade:</label>
                         <input type="number" class="form-control" id="campo-quatidade">
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        <input type="submit" name="" class="btn btn-success" value="Adicionar">
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                <input type="submit" name="" class="btn btn-success" value="Adicionar">
             </div>
         </div>
     </div>
@@ -75,11 +75,11 @@
                         <label for="campo-quantidade" class="col-form-label">Quantidade:</label>
                         <input type="number" min='0' class="form-control" id="campo-quatidade">
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        <input type="submit" name="" class="btn btn-success" value="Adicionar">
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                <input type="submit" name="" class="btn btn-success" value="Adicionar">
             </div>
         </div>
     </div>
