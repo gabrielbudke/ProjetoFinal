@@ -44,17 +44,14 @@
                 <div class="x_content">
                     <canvas class="myChart"><div class="myChart" style="width:100%; height:280px;"></div></canvas>
                 </div>
-                
+
             </div>
         </div>
-
         <div>
-            <canvas class="graficoProduto"></canvas>>
-        </div>
-        
-        
-        
+            <canvas class="graficoProduto" width="400" height="400"></canvas>
+        </div>    
         <script src='/js/grafico-categoria.js'></script>
+        <script src='/js/grafico-produtos.js'></script>
 
     </body>
 </html>
