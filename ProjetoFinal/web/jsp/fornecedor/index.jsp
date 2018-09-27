@@ -12,7 +12,7 @@
 <%List<FornecedorBean> fornecedores = new FornecedorDAO().obterTodos();%>
 
 <div class="botao-novo-fornecedor">
-    <a class="btn btn-success float-right" href="/fornecedor/cadastro">Novo Fornecedor <i class="fas fa-plus-square"></i></a>
+    <a class="btn btn-success float-right" href="/fornecedor/cadastro">Novo Fornecedor <i class="fa fa-plus-square"></i></a>
 </div>
 
     <table class="table table-hover table-bordered">
@@ -23,7 +23,7 @@
             <th>CNPJ</th>
             <th>Telefone</th>
             <th>E-mail</th>
-            <th> <i class="fas fa-cogs"></i></th>
+            <th> <i class="fa fa-cogs"></i></th>
         </tr>
     </thead>
     <tbody>
@@ -35,7 +35,7 @@
             <td> <%=fornecedor.getTelefone()%></td>
             <td> <%=fornecedor.getEmail()%></td>
             <td> 
-                <a class="btn btn-info" href="/fornecedor/editar?id=<%=fornecedor.getId()%>"><i class="fas fa-edit"></i>Editar</a>
+                <a class="btn btn-info" href="/fornecedor/editar?id=<%=fornecedor.getId()%>"><i class="fa fa-edit"></i>Editar</a>
                 <a class="btn btn-danger" href="/fornecedor/excluir?id=<%=fornecedor.getId()%>"><i class="fas fa-trash-alt"></i> Excluir</a>
             </td>
         </tr>

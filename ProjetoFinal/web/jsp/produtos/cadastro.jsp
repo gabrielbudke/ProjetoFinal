@@ -12,7 +12,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file = "../master/master.jsp"%>
 
-<form action="/produtos/store" method="POST">
+<form id="validacao-novo-produto-form-func" action="/produtos/store" method="POST">
 <%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos(); %>
  
     <div class='form-group'>
@@ -21,7 +21,7 @@
     
     <div class = "form-group">
         <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
-        <select >
+        <select name="categoria" class="form-control">
             <option selected="selected" disabled="disabled"></option>
             <% for (CategoriaBean categoria: categorias ){ %>
             <option value=<%=categoria.getId()%>><%=categoria.getNome()%></option>
@@ -29,7 +29,8 @@
         </select>
     </div>
 	<div>
-            <a class="btn btn-success"  href="/categoria/cadastro"><i class="fas fa-plus-square"></i> Nova Categoria</a>
+            <button type="button" href="/categoria/cadastro" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Categoria</button>
+            <a class="btn btn-success"  href="/categoria/cadastro"><i class="fa fa-plus-square"></i> Nova Categoria</a>
         </div>
 
     <div class = "form-group">
@@ -39,12 +40,12 @@
 
     <div class ="form-group">
         <label for='campo-quantidade'><i class='fa fa-address-card-o'></i> Quantidade</label>
-        <input type='text' class="form-control" id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required'> 
+        <input type='number' min="1" class="form-control" id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required'> 
     </div>
 
     <div class = "form-group">
         <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
-        <input type='text' min='0' class="form-control" id='campo-preco' name='preco' placeholder='Preco' required='required' onfocusout='validarCampoPreco()'>
+        <input type='number' min='0' class="form-control" id='campo-preco' name='preco' placeholder='Preço' required='required' onfocusout='validarCampoPreco()'>
     </div>
     
     <input class="btn btn-success" type="submit" value="Adicionar">

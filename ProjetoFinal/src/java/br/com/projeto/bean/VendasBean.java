@@ -48,5 +48,9 @@ public class VendasBean {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public float valorTotal(){
+        return quantidade*produto.getPreco();
+    }
+    
     
 }

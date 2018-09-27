@@ -26,15 +26,18 @@
 
     <body>       
         <form action="/funcionarios/store" method="post">
+            
         <div class="cadastro">
             <h1>Cadastro</h1>
         </div>
 
         <div class = "register Scroll">
+            <%--
+            --%>
 
             <div class="form-group">
                 <label for='campo-login' ><i class=''></i> Login</label>
-                <input type='text' id='campo-login' name='login' placeholder='Login'>
+                <input type='text' class="form-control" id='campo-login' name='login' placeholder='Login'>
             </div>
             <div id='div-campo-senha' class='form-group'>
                 <label for='campo-senha'>Senha <span class='text-danger font-weight-bold'></span></label>
@@ -88,7 +91,9 @@
             </div>
 
             <button type="submit" class="btn btn-primary btn-block btn-large">Cadastrar</button>
-        </div>
+        <%--
+        --%>
+            </div>
 
         
     </form>

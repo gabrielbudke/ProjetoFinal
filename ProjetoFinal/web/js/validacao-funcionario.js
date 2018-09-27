@@ -7,7 +7,7 @@ $("#validacao-form-func").validate({
     rules: {
         login: {
             required: true,
-            minlength: 5,
+            minlength: 3,
             maxlength: 20
         },
         senha: {
@@ -24,7 +24,8 @@ $("#validacao-form-func").validate({
             required: true
         },
         email: {
-            required: true
+            required: true,
+            email: true
         },
         telefone: {
             required: true
@@ -57,64 +58,56 @@ $("#validacao-form-func").validate({
     },
     messages: {
         login: {
-            required: "Campo Obrigatorio",
-            minlength: "login deve conter no minimo {0} caracteres",
-            maxlength: "login deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatório.",
+            minlength: "login deve conter no minimo {0} caracteres.",
+            maxlength: "login deve conter no maximo {0} caracteres."
         },
         senha: {
-            required: "Campo Obrigatorio",
-            minlength: "senha deve conter no minimo {0} caracteres",
-            maxlength: "senha deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatório.",
+            minlength: "senha deve conter no minimo {0} caracteres.",
+            maxlength: "senha deve conter no maximo {0} caracteres."
         },
         nome: {
-            required: "Campo Obrigatorio",
-            minlength: "Nome deve conter no minimo {0} caracteres",
-            maxlength: "Nome deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatório.",
+            minlength: "Nome deve conter no minimo {0} caracteres.",
+            maxlength: "Nome deve conter no maximo {0} caracteres."
         },
         cpf: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório."
         },
         email: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório.",
+            email: "Insira um Email Válido."
         },
         telefone: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório."
         },
         funcao: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório."
         },
         cep: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório."
         },
         estado: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório."
         },
         rua: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório."
         },
         bairro: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório."
         },
         cidade: {
-            required: "Campo Obrigatorio"
+            required: "Campo Obrigatório."
         },
         numero: {
-            required: "Campo Obrigatorio",
-            minlength: "Numero deve conter no minimo {0} caracteres",
-            maxlength: "Numero deve conter no maximo {0} caracteres"
+            required: "Campo Obrigatório.",
+            minlength: "Numero deve conter no minimo {0} caracteres.",
+            maxlength: "Numero deve conter no maximo {0} caracteres."
         }
 
     }
 });
-
-/*$("#validacao-form-func").on('submit', function (e) {
-    if ($("#validacao-form-func").valid() == false) {
-        e.preventDefault();
-    } else {
-        alert('Xama q e nois');
-    }
-});
-*/
 
 $(function () {
 

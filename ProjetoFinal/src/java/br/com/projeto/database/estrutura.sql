@@ -8,7 +8,7 @@ CREATE TABLE funcionarios(
 	id_funcionario INTEGER,
 
 	login VARCHAR (30),
-	senha VARCHAR (6),	
+	senha VARCHAR (10),	
 	nome VARCHAR(100),
 	cpf VARCHAR(20),
 	email VARCHAR(50),
@@ -87,7 +87,8 @@ INSERT INTO estoque (id_produto, tipo, quantidade) VALUES
 (1, 'Entrada', 4),
 (2, 'Entrada', 5),
 (1, 'Entrada', 100),
-(4, 'Entrada', 30);
+(4, 'Entrada', 30),
+(1, 'Saida', 5);
 
 CREATE TABLE fluxo_caixa(
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -120,3 +121,19 @@ INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
 ('João Paulo', 'joao_paulo', '123', '(84) 3507-3289', 'Batata'),
 ('Isadora das Costas Largas', 'isadora', '123', '(84) 98104-9974', 'Batata'),
 ('Jorge Tijolinho', 'jorge_tijolinho', '123', '(84) 98104-9974', 'Batata');
+
+
+
+INSERT INTO produtos (id_categoria, nome, preco) VALUES 
+
+(3, 'Pulseira', 4.50),
+
+(4, 'Pulseira', 4.50);
+
+CREATE TABLE saida (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_produto INTEGER NOT NULL,
+    quantidade INT UNSIGNED,
+    FOREIGN KEY (id_produto) REFERENCES produtos(id)
+);
+

@@ -22,7 +22,7 @@ public class CategoriaStore extends HttpServlet{
 	CategoriaBean categoria = new CategoriaBean();
 	categoria.setNome(req.getParameter("categoria"));
 	categoria.setId(new CategoriaDAO().adicionar(categoria));
-	
+	 resp.setContentType("text/html;charset=UTF-8");
 	resp.sendRedirect("/produtos/cadastro");
 	
     }

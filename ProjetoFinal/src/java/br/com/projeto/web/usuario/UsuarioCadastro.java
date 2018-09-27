@@ -24,7 +24,7 @@ public class UsuarioCadastro extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;metacharset=UTF-8");
-        req.getRequestDispatcher("/jsp/cadastro/UsuarioCadastro.jsp").include(req, resp);
+        req.getRequestDispatcher("/jsp/index.jsp").include(req, resp);
         
     }
     }

@@ -40,14 +40,15 @@ public class EstoqueDAO {
         } finally {
             Conexao.fecharConexao();
         }
-        
+
         return estoques;
     }
 
     public List<EstoqueBean> obterTodos() {
         List<EstoqueBean> estoques = new ArrayList<>();
-        String sql = "SELECT * FROM estoque e JOIN produtos p ON(p.id = e.id_produto)";
+        String sql = "SELECT e.id, e.tipo, e.id_produto, p.preco, p.nome as 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto) GROUP BY e.id_produto";
         try {
+
             Statement st = Conexao.obterConexao().createStatement();
             st.execute(sql);
             ResultSet resultSet = st.getResultSet();
@@ -55,12 +56,12 @@ public class EstoqueDAO {
                 EstoqueBean estoque = new EstoqueBean();
                 estoque.setId(resultSet.getInt("e.id"));
                 estoque.setIdProduto(resultSet.getInt("e.id_produto"));
-                estoque.setQuantidade(resultSet.getInt("e.quantidade"));
+                estoque.setQuantidade(resultSet.getInt("quantidade"));
                 estoque.setTipo(resultSet.getString("e.tipo"));
 
                 ProdutoBean produto = new ProdutoBean();
                 produto.setId(estoque.getIdProduto());
-                produto.setNome(resultSet.getString("p.nome"));
+                produto.setNome(resultSet.getString("produto"));
                 produto.setPreco(resultSet.getFloat("p.preco"));
 
                 estoque.setProduto(produto);
@@ -151,6 +152,70 @@ public class EstoqueDAO {
             Conexao.fecharConexao();
         }
         return null;
+    }
+
+    public List<EstoqueBean> obterSaida() {
+        List<EstoqueBean> estoques = new ArrayList<>();
+        String sql = "SELECT e.tipo, p.nome AS 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto) WHERE e.tipo LIKE '%Saida%'";
+        try {
+
+            Statement st = Conexao.obterConexao().createStatement();
+            st.execute(sql);
+            ResultSet resultSet = st.getResultSet();
+            while (resultSet.next()) {
+                EstoqueBean estoque = new EstoqueBean();
+                estoque.setId(resultSet.getInt("e.id"));
+                estoque.setIdProduto(resultSet.getInt("e.id_produto"));
+                estoque.setQuantidade(resultSet.getInt("quantidade"));
+                estoque.setTipo(resultSet.getString("e.tipo"));
+
+                ProdutoBean produto = new ProdutoBean();
+                produto.setId(estoque.getIdProduto());
+                produto.setNome(resultSet.getString("produto"));
+                produto.setPreco(resultSet.getFloat("p.preco"));
+
+                estoque.setProduto(produto);
+
+                estoques.add(estoque);
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return estoques;
+
+    }
+
+    public HashMap<String, Object> obterProduto() {
+        List<Object> produtoNomes = new ArrayList<>();
+        List<Object> produtoQuantidades = new ArrayList<>();
+        String sql = "SELECT e.tipo, p.nome AS 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto)\n" +
+"WHERE e.tipo LIKE '%Saida%'";
+        
+        try{
+            Statement st = Conexao.obterConexao().createStatement();
+            st.execute(sql);
+            ResultSet resultSet = st.getResultSet();
+            while(resultSet.next()){
+                produtoNomes.add(resultSet.getString("produto"));
+                produtoQuantidades.add(resultSet.getInt("quantidade"));
+            }
+            
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        
+        HashMap<String, Object> produtos = new HashMap<>();
+        produtos.put("produtos", produtoNomes);
+        produtos.put("quantidades", produtoQuantidades);
+        return produtos;
+        
+        
+        
+        
     }
 
 }

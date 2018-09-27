@@ -10,19 +10,19 @@
 <%@include file="../master/master.jsp"%>
 
 <%%>
-<div class="btn-group btn-group-toggle botao-novo-produto" style="float: right;" data-toggle="buttons">
-    <a class="btn btn-success float-right" href="/produtos/cadastro">Novo Produto <i class="fas fa-plus-square"></i></a>
-    <input class="btn btn-secondary float-right" type="button" id="exportar" value="Exportar">
+<div class="btn-group btn-group-toggle botao-novo-produto" style="float: right;">
+    <a class="btn btn-success float-right" href="/produtos/cadastro">Novo Produto <i class="fa fa-plus-square"></i></a>
+    <a class="btn btn-primary float-right" type="button" id="exportar" value="Exportar">Exportar &nbsp;<i class="fas fa-file-export"></i></a>
 </div>
 
 <div id="tabela">
     <table class="table table-hover table-bordered" id="produtos-index">
-        <thead class="thead-light">
+        <thead class="thead-dark">
             <tr>
                 <th>Categoria</th>
                 <th>Nome</th>
                 <th>Preço</th>
-                <th> <i class="fas fa-cogs"></i></th>
+                <th> <i class="fa fa-cogs"></i></th>
             </tr>
         </thead>
         <tbody>

@@ -16,29 +16,34 @@
 <%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
 
 <div class="botao-registrar-venda">
-    <a class="btn btn-success float-right" href="/estoque/concluirVendas">Registrar Venda <i class="fas fa-plus-square"></i></a>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#entrada-modal">Entrada</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#saida-modal">Saída</button>
 </div>
 
 <div>
     <table class="table table-hover table-bordered" id="estoque-index">
         <thead class="thead-light">  
-            <th>Produto</th>    
-            <th>ValorUn.</th>    
-            <th>Quantidade</th>
-            <th>Valor Total</th>
+            <tr>
+                <th>Tipo<th>
+                <th>Produto</th>    
+                <th>ValorUn.</th>    
+                <th>Quantidade</th>
+                <th>Valor Total</th>
+            </tr>
         </thead>
         <tbody>
-            
-            <% for(EstoqueBean estoque : estoques) {%>
-	    <tr>
-		<td> <%=estoque.getProduto().getNome() %> </td>
-		<td> <%=estoque.getProduto().getPreco() %> </td>
-		<td> <%=estoque.getQuantidade() %> </td>
-		<td> <%=estoque.valorTotal()%> </td>
-	    </tr>
+
+            <% for (EstoqueBean estoque : estoques) {%>
+            <tr>
+                <td><%=estoque.getTipo() %><td>
+                <td> <%=estoque.getProduto().getNome()%> </td>
+                <td> <%=estoque.getProduto().getPreco()%> </td>
+                <td> <%=estoque.getQuantidade()%> </td>
+                <td> <%=estoque.valorTotal()%> </td>
+            </tr>
             <%}%>
         </tbody>
     </table>
 </div>
-
+<%@include file="modal.jsp" %>
 <%@include file="../master/rodape.jsp" %>
