@@ -1,7 +1,9 @@
 package br.com.projeto.web.estoque;
 
 import br.com.projeto.bean.EstoqueBean;
+import br.com.projeto.bean.ProdutoBean;
 import br.com.projeto.dao.EstoqueDAO;
+import br.com.projeto.dao.ProdutoDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,10 +22,14 @@ public class EntradaStore extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
+        int id = Integer.parseInt(req.getParameter("produtoEntrada"));
+        ProdutoBean produto = new ProdutoDAO().obterPeloId(id);
+        
         EstoqueBean estoque = new EstoqueBean();
+        estoque.setProduto(produto);
         estoque.setTipo(req.getParameter("tipo"));
         estoque.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
-        //estoque.setIdProduto(Integer.parseInt(req.getParameter("produtoEntrada")));
+        estoque.setIdProduto(produto.getId());
         estoque.setId(new EstoqueDAO().adicionar(estoque));
         
         resp.sendRedirect("/estoque");
