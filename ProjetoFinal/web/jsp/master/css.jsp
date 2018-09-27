@@ -23,6 +23,7 @@
 
 <link rel="stylesheet" href="/libs/select2/select2.min.css">
 <link rel="stylesheet" href="/libs/datatable/jquery.dataTables.min.css">
+<link rel="stylesheet" href="/jsp/inicio/inicialCSS.css">
 
     
     
