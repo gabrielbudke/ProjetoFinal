@@ -15,24 +15,35 @@
 
 <%List<EstoqueBean> estoques = new EstoqueDAO().obterTodos(); %>
 
-<div class="botao-registrar-venda">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#entrada-modal">Entrada</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#saida-modal">Saída</button>
-</div>
+ <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Estoque </h2>
+                    
+                    <div class="clearfix"></div>
+                  </div>
 
-<div>
-    <table class="table table-hover table-bordered" id="estoque-index">
-        <thead class="thead-light">  
-            <tr>
+                  <div class="x_content">
+
+                    
+
+                    <div class="table-responsive">
+                      <table id ="estoque-index" class="table table-striped jambo_table bulk_action">
+                        <thead>
+                          <tr class="headings">
+                      <tr>      
                 <th>Tipo<th>
                 <th>Produto</th>    
                 <th>ValorUn.</th>    
                 <th>Quantidade</th>
                 <th>Valor Total</th>
-            </tr>
-        </thead>
-        <tbody>
+                    </tr>
+                            
+                          </tr>
+                        </thead>
 
+                        <tbody>
+                          
             <% for (EstoqueBean estoque : estoques) {%>
             <tr>
                 <td><%=estoque.getTipo() %><td>
@@ -42,8 +53,18 @@
                 <td> <%=estoque.valorTotal()%> </td>
             </tr>
             <%}%>
-        </tbody>
-    </table>
+            <div class="botao-registrar-venda">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#entrada-modal">Entrada</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#saida-modal">Saída</button>
 </div>
+                        </tbody>
+                      </table>
+                    </div>
+              
+            
+                  </div>
+                </div>
+              </div>
+            
 <%@include file="modal.jsp" %>
 <%@include file="../master/rodape.jsp" %>

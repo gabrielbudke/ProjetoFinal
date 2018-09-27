@@ -13,19 +13,21 @@
 <%@include file="../master/master.jsp" %>
 
 
- <div class="col-md-12 col-sm-12 col-xs-12">
+<div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Funcionários</h2>
+                   
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <p class="text-muted font-13 m-b-30">
-                    Clique em "Novo Funcionário" para cadastrar um funcionário.
+                     Clique em "Novo Funcionário" para cadastrar um funcionário.
                     </p>
-                    <table id="funcionario-index" class="table table-striped table-bordered">
+          
+                    <table id="funcionario-index" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                       <thead>
-                              <tr>
+                       <tr>
             <th scope="col">Id</th>
             <th scope="col">Funcionario</th>
             <th scope="col">Função</th>
@@ -33,21 +35,15 @@
             <th scope="col"><i class="fa fa-cogs"></i></th>
                               </tr>
                       </thead>
-
-
                       <tbody>
-                        
-                        <a href="/funcionario/cadastro" class="btn btn-success float-right">Novo Funcionario</a>
-    
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
+                       <a href="/funcionario/cadastro" class="btn btn-success float-right">Novo Funcionario</a>
                       </tbody>
                     </table>
+          
+          
                   </div>
                 </div>
               </div>
+           
     
 <%@include file="../master/rodape.jsp" %>
