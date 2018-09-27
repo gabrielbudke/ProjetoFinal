@@ -23,7 +23,7 @@ public class EntradaStore extends HttpServlet{
         EstoqueBean estoque = new EstoqueBean();
         estoque.setTipo(req.getParameter("tipo"));
         estoque.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
-        estoque.setIdProduto(Integer.parseInt(req.getParameter("produtoEntrada")));
+        //estoque.setIdProduto(Integer.parseInt(req.getParameter("produtoEntrada")));
         estoque.setId(new EstoqueDAO().adicionar(estoque));
         
         resp.sendRedirect("/estoque");

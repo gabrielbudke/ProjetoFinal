@@ -22,7 +22,7 @@
             <div class="modal-body">
                 <form action="/estoque/saida" method="post"> <!-- Caminho POST para CategoriaStore -->
                     <div class="form-group">
-                        <input type="text" class="form-control" disabled="disabled" value="Saída" name="saida">
+                        <input type="text" class="form-control" disabled="disabled" value="Saída" name="tipo">
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Selecione o produto:</label>
