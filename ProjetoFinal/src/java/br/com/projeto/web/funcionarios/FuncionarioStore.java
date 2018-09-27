@@ -37,9 +37,9 @@ public class FuncionarioStore extends HttpServlet{
         funcionario.setId(new FuncionarioDAO().adicionar(funcionario));
         
       
-        resp.sendRedirect("/funcionarios");
-
         resp.setContentType("text/html;metacharset=UTF-8");
+        resp.sendRedirect("/home");
+
     }
 }
     
