@@ -107,20 +107,18 @@ CREATE TABLE recuperar_senha(
 */
 
 INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
-('Patrick', 'patrick', '123', '(83) 3542-2574', 'pedreiro'),
-('Patrick Lejinho', 'patrick_lejinho', '123', '(43) 2847-4595', 'padeiro'),
-('Lucas Tomando', 'lucas_tomando', '123', '(43) 98680-5360', 'eletricista'),
+('Patrick', 'patrick', '123', '(83) 3542-2574', 'gerente de estoque'),
 ('João Paulo', 'joao_paulo', '123', '(84) 3507-3289', 'motorista'),
-('Isadora das Costas Largas', 'isadora', '123', '(84) 98104-9974', 'advogada'),
-('Jorge Tijolinho', 'jorge_tijolinho', '123', '(84) 98104-9974', 'refém');
+('Isadora da Costa ', 'isadora', '123', '(84) 98104-9974', 'advogada');
 
-INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
+
+/*INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
 ('Patrick', 'patrick', '123', '(83) 3542-2574', 'Batata'),
 ('Patrick Lejinho', 'patrick_lejinho', '123', '(43) 2847-4595', 'Batata'),
 ('Lucas Tomando', 'lucas_tomando', '123', '(43) 98680-5360', 'Batata'),
 ('João Paulo', 'joao_paulo', '123', '(84) 3507-3289', 'Batata'),
 ('Isadora das Costas Largas', 'isadora', '123', '(84) 98104-9974', 'Batata'),
-('Jorge Tijolinho', 'jorge_tijolinho', '123', '(84) 98104-9974', 'Batata');
+('Jorge Tijolinho', 'jorge_tijolinho', '123', '(84) 98104-9974', 'Batata');*/
 
 
 
