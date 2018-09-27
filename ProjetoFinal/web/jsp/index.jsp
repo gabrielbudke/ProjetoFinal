@@ -11,12 +11,7 @@
     <title>E-Stock</title>
 
    <%@include file="/jsp/master/css.jsp" %>
-   <script src="/js/jquery.validate.min.js"></script>
-<%--JS Valida??o dos Campos--%>
-<script src="/js/validacao-funcionario.js"></script>
-<script src="/js/validacao-fornecedor.js"></script>
-<script src="/js/validacao-produto.js"></script>
-<script src="/libs/mask/jquery.mask.js"></script>
+
   </head>
 
 <body class="login">
@@ -61,7 +56,7 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form action="/funcionarios/store" method="post">
+              <form id="validacao-form-func" action="/funcionarios/store" method="post">
               <h1>Criar conta</h1>
               <div>
                 <input type="text" class="form-control" id="campo-login" name='login' placeholder="Login" onfocusout="validadarCampoLogin">
@@ -134,5 +129,11 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+    <%--JS Valida??o dos Campos--%>
+    <script src="/libs/gentelella/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/validacao-funcionario.js"></script>
+    <script src="/libs/mask/jquery.mask.js"></script>
+
+    </body>
+    </html>

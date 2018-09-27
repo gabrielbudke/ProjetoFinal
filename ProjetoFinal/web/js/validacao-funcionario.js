@@ -7,7 +7,7 @@ $("#validacao-form-func").validate({
     rules: {
         login: {
             required: true,
-            minlength: 5,
+            minlength: 3,
             maxlength: 20
         },
         senha: {
