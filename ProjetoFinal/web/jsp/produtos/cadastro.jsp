@@ -13,25 +13,27 @@
 <%@include file = "../master/master.jsp"%>
 
 <form id="validacao-novo-produto-form-func" action="/produtos/store" method="POST">
-<%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos(); %>
- 
-    <div class='form-group'>
-        <input class='form-control' type="text" name="tipo" value="Entrada" readonly>
+    <%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos(); %>
+
+    <div class="form-group">
+        <label> Campos Obrigatórios *</label>
     </div>
-    
+
+
+
     <div class = "form-group">
         <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
         <select name="categoria" class="form-control">
             <option selected="selected" disabled="disabled"></option>
-            <% for (CategoriaBean categoria: categorias ){ %>
+            <% for (CategoriaBean categoria : categorias) {%>
             <option value=<%=categoria.getId()%>><%=categoria.getNome()%></option>
-            <% } %>
+            <% }%>
         </select>
     </div>
-	<div>
-            <button type="button" href="/categoria/cadastro" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Categoria</button>
-            <a class="btn btn-success"  href="/categoria/cadastro"><i class="fa fa-plus-square"></i> Nova Categoria</a>
-        </div>
+    <div>
+        <button type="button" href="/categoria/cadastro" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Categoria</button>
+        <a class="btn btn-success"  href="/categoria/cadastro"><i class="fa fa-plus-square"></i> Nova Categoria</a>
+    </div>
 
     <div class = "form-group">
         <label for='campo-nome'><i class='fa fa-address-card-o'></i> Nome</label>
@@ -47,7 +49,7 @@
         <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
         <input type='number' min='0' class="form-control" id='campo-preco' name='preco' placeholder='Preço' required='required' onfocusout='validarCampoPreco()'>
     </div>
-    
+
     <input class="btn btn-success" type="submit" value="Adicionar">
 
 </form>
