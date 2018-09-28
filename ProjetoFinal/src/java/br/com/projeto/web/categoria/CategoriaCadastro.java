@@ -18,7 +18,7 @@ public class CategoriaCadastro extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	
         resp.setContentType("text/html;charset=UTF-8");
-        req.getRequestDispatcher("/jsp/categoria/cadastro.jsp").include(req, resp);
+        req.getRequestDispatcher("/jsp/produtos/cadastro.jsp").include(req, resp);
     }
     
     

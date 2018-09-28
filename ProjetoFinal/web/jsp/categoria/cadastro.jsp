@@ -9,8 +9,8 @@
 <form action="/categoria/store" method="post">
     
     <div class="form-group">
-	<label for='campo-categoria'><i class=''></i> Categoria</label>
-	<input class='form-control' type='text' id='campo-categoria' name="categoria" required='required' onfocusout='validarCapoCategoria()'>
+	<label for=''><i class=''></i> Categoria</label>
+	<input class='form-control' type='text' id='' name="categoria" required='required' onfocusout='validarCapoCategoria()'>
     </div>
 	
     <input class='btn btn-success' type="submit" value="Adicionar">
