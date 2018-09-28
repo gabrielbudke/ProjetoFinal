@@ -17,3 +17,17 @@ $(function () {
     });
 
 });
+
+
+/*function confirmacao("excluir?id"){
+    var resposta = confirm("Deseja excluir esse registro?");
+        href="/produtos/excluir?id=" + data.id
+    if(resposta == true){
+
+    }
+}
+
+para confirmar exclusao
+http://rafaelcouto.com.br/confirmacao-antes-de-deletar-registro-com-javascript/ 
+*/
+

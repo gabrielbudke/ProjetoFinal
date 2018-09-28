@@ -33,7 +33,7 @@
                       <tbody>
                        
                 <div class="btn-group btn-group-toggle botao-novo-produto" style="float: left;">
-    <a class="btn btn-success float-left" href="/produtos/cadastro">Novo Produto <i class="fa fa-plus-square"></i></a>
+    <a class="btn btn-success float-left" href="/produtos/cadastro">Novo Produto &nbsp<i class="fa fa-plus-square"></i></a>
     <a class="btn btn-primary float-left" type="button" id="exportar" value="Exportar">Exportar &nbsp;<i class="fas fa-file-export"></i></a>
 </div>
 

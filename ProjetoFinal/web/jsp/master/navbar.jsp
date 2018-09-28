@@ -82,7 +82,7 @@
                         </li>
                         <li><a href="javascript:;">Suporte</a></li>
 
-                        <li><a href="/usuario/logout"><i class="fa fa-sign-out pull-right"></i> Sair</a></li>
+                        <li><a href="/usuario/logout">Sair &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fas fa-sign-out-alt"></i></a></li>
                     </ul>
                 </li>
 

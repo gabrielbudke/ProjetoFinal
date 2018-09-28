@@ -4,7 +4,7 @@
 <!-- footer content -->
 <footer>
     <div class="pull-right">
-        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+      ©2018 E-Stock. Todos os direitos reservados.</a>
     </div>
     <div class="clearfix"></div>
 </footer>

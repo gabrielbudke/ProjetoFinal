@@ -50,7 +50,7 @@
         </tr>
         <%}%>
         <div class="botao-novo-fornecedor">
-    <a class="btn btn-success float-right" href="/fornecedor/cadastro">Novo Fornecedor<i class="fa fa-plus-square"></i></a>
+    <a class="btn btn-success float-right" href="/fornecedor/cadastro">Novo Fornecedor&nbsp&nbsp<i class="fa fa-plus-square"></i></a>
 </div>
 
                       </tbody>
