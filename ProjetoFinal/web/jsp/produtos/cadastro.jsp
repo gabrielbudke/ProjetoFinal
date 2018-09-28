@@ -15,14 +15,9 @@
 <form id="validacao-novo-produto-form-func" action="/produtos/store" method="POST">
     <%List<CategoriaBean> categorias = new CategoriaDAO().obterTodos(); %>
 
-    <div class="form-group">
-        <label> Campos Obrigatórios *</label>
-    </div>
-
-
 
     <div class = "form-group">
-        <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria</label>
+        <label for='campo-categoria'><i class='fa fa-address-card-o'></i> Categoria*</label>
         <select name="categoria" class="form-control">
             <option selected="selected" disabled="disabled"></option>
             <% for (CategoriaBean categoria : categorias) {%>
@@ -35,17 +30,12 @@
     </div>
 
     <div class = "form-group">
-        <label for='campo-nome'><i class='fa fa-address-card-o'></i> Nome</label>
+        <label for='campo-nome'><i class='fa fa-address-card-o'></i> Nome do produto*</label>
         <input type='text' class="form-control" id='campo-nome' name='nome' placeholder='Nome' required='required' onfocusout='validarCampoNome()'>
     </div>
 
-    <div class ="form-group">
-        <label for='campo-quantidade'><i class='fa fa-address-card-o'></i> Quantidade</label>
-        <input type='number' min="1" class="form-control" id='campo-quantidade' name='quantidade' placeholder='Quantidade' required='required'> 
-    </div>
-
     <div class = "form-group">
-        <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço</label>
+        <label for='campo-preco'><i class='fa fa-address-card-o'></i>Preço*</label>
         <input type='number' min='0' class="form-control" id='campo-preco' name='preco' placeholder='Preço' required='required' onfocusout='validarCampoPreco()'>
     </div>
 
