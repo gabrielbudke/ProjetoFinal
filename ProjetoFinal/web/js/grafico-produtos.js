@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 $(function () {
-    var ctx = document.getElementByClassName("graficoProduto");
+    var ctx = document.getElementByClassName("#graficoProduto");
      $.ajax({
                     url: "/visao/produtos",
                     success: function (data, textStatus, jqXHR) {

@@ -20,13 +20,13 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="/estoque/saida" method="post"> <!-- Caminho POST para CategoriaStore -->
+                <form id="validacao-saida-form-func" action="/estoque/saida" method="post"> <!-- Caminho POST para CategoriaStore -->
                     <div class="form-group">
-                        <input type="text" class="form-control" disabled="disabled" value="Saída" name="saida">
+                        <input type="text" class="form-control" readonly value="Saída" name="tipo">
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Selecione o produto:</label>
-                        <select name="produtoSAida" id="" class="form-control">
+                        <select name="produtoSaida" id="" class="form-control">
                             <option selected="selected" disabled="disabled"></option>
                             <% for (ProdutoBean produto : produtos) {%>
                             <option value=<%=produto.getId()%>><%=produto.getNome()%></option>
@@ -58,9 +58,9 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="/estoque/entrada" method="post"> <!-- Caminho POST para CategoriaStore -->
+                <form id="validacao-entrada-form-func" action="/estoque/entrada" method="post"> <!-- Caminho POST para CategoriaStore -->
                     <div class="form-group">
-                        <input type="text" class="form-control" disabled="disabled" value="Entrada" name="tipo">
+                        <input type="text" class="form-control" readonly value="Entrada" name="tipo">
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Selecione o produto:</label>

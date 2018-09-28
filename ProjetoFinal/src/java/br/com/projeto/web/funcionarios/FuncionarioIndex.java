@@ -22,7 +22,7 @@ public class FuncionarioIndex extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;metacharset=UTF-8");
-        req.getRequestDispatcher("jsp/funcionario/index.jsp").include(req, resp);
+        req.getRequestDispatcher("/jsp/funcionario/index.jsp").include(req, resp);
     }
 
 }

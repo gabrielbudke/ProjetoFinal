@@ -47,11 +47,13 @@
 
             </div>
         </div>
-        <div>
-            <canvas class="graficoProduto" width="400" height="400"></canvas>
-        </div>    
+        
+
+ 
+        
+           
         <script src='/js/grafico-categoria.js'></script>
-        <script src='/js/grafico-produtos.js'></script>
+        
 
     </body>
 </html>

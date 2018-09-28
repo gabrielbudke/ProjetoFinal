@@ -11,13 +11,22 @@
 <%@include file="../master/master.jsp"%>
 <%List<FornecedorBean> fornecedores = new FornecedorDAO().obterTodos();%>
 
-<div class="botao-novo-fornecedor">
-    <a class="btn btn-success float-right" href="/fornecedor/cadastro">Novo Fornecedor <i class="fa fa-plus-square"></i></a>
-</div>
 
-    <table class="table table-hover table-bordered">
-    <thead class="thead-light">
-        <tr>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Fornecedores</h2>
+                   
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <p class="text-muted font-13 m-b-30">
+                     Clique em "Novo Fornecedor" para cadastrar um fornecedor.
+                    </p>
+          
+                    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap funcionario-index" cellspacing="0" width="100%">
+                      <thead>
+                        <tr>
             <th>#</th>
             <th>Nome</th>
             <th>CNPJ</th>
@@ -25,9 +34,9 @@
             <th>E-mail</th>
             <th> <i class="fa fa-cogs"></i></th>
         </tr>
-    </thead>
-    <tbody>
-        <%for (FornecedorBean fornecedor : fornecedores) {%>
+                      </thead>
+                      <tbody>
+                       <%for (FornecedorBean fornecedor : fornecedores) {%>
         <tr>
             <td> <%=fornecedor.getId()%></td>
             <td> <%=fornecedor.getNome()%> </td>
@@ -40,7 +49,17 @@
             </td>
         </tr>
         <%}%>
-    </tbody>
-</table>
+        <div class="botao-novo-fornecedor">
+    <a class="btn btn-success float-right" href="/fornecedor/cadastro">Novo Fornecedor<i class="fa fa-plus-square"></i></a>
+</div>
+
+                      </tbody>
+                    </table>
+          
+          
+                  </div>
+                </div>
+              </div>
+            
 
 <%@include file="../master/rodape.jsp" %>
