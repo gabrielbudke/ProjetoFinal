@@ -22,14 +22,13 @@ $(function () {
                         }]
                 },
                 option: {
-                    responsive: true,
-                    layout: {
-                        padding: {
-                            left: 50,
-                            righ: 0,
-                            top: 0,
-                            bottom: 0
-                        }
+                    //responsive: true,
+                    scales: {
+                        yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
                     }
                 }
 
