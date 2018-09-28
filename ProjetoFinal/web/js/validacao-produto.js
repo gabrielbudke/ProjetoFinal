@@ -24,10 +24,10 @@ $("#validacao-novo-produto-form-func").validate({
     },
     messages: {
         categoria: {
-            required: "Selecione uma Categoria."
+            required: "Selecione uma categoria*"
         },
         nome: {
-            required: "Campo Obrigatório.",
+            required: "Campo obrigatório.",
             minlength: "Nome do produto deve ser maior que {0}.",
             maxlength: "Nome do produto deve ser menor que {0}."
         },
