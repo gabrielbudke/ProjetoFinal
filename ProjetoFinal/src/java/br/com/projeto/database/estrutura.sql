@@ -8,7 +8,7 @@ CREATE TABLE funcionarios(
 	id_funcionario INTEGER,
 
 	login VARCHAR (30),
-	senha VARCHAR (10),	
+	senha VARCHAR (6),	
 	nome VARCHAR(100),
 	cpf VARCHAR(20),
 	email VARCHAR(50),
@@ -127,13 +127,5 @@ INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
 INSERT INTO produtos (id_categoria, nome, preco) VALUES 
 
 (3, 'Pulseira', 4.50),
-
 (4, 'Pulseira', 4.50);
-
-CREATE TABLE saida (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_produto INTEGER NOT NULL,
-    quantidade INT UNSIGNED,
-    FOREIGN KEY (id_produto) REFERENCES produtos(id)
-);
 
