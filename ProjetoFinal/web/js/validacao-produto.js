@@ -24,20 +24,20 @@ $("#validacao-novo-produto-form-func").validate({
     },
     messages: {
         categoria: {
-            required: "Selecione uma Categoria."
+            required: "Selecione uma categoria*"
         },
         nome: {
-            required: "Campo Obrigatório.",
-            minlength: "Nome do produto deve ser maior que {0}.",
-            maxlength: "Nome do produto deve ser menor que {0}."
+            required: "Campo obrigatório*",
+            minlength: "Nome do produto deve ser maior que {0}*",
+            maxlength: "Nome do produto deve ser menor que {0}*"
         },
         quantidade: {
-            required: "Adicione a quantidade de produto.",
-            number: "Quantidade deve conter somente números."
+            required: "Adicione a quantidade de produto*",
+            number: "Quantidade deve conter somente números*"
         },
         preco: {
-            required: "Adicione o preço do produto.",
-            number: "Preço deve conter um número válido."
+            required: "Adicione o preço do produto*",
+            number: "Preço deve conter um número válido*"
         }
     }
 }); 
