@@ -129,7 +129,7 @@
                 </div>
             </div>
         </div>
-        <%--JS Valida??o dos Campos--%>
+        <%--JS Validacao dos Campos--%>
         <script src="/libs/gentelella/vendors/jquery/dist/jquery.min.js"></script>
         <script src="/js/jquery.validate.min.js"></script>
         <script src="/js/validacao-funcionario.js"></script>

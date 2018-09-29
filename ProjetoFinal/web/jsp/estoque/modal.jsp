@@ -25,7 +25,7 @@
                         <input type="text" class="form-control" readonly value="Saída" name="tipo">
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Selecione o produto:</label>
+                        <label for="recipient-name" class="col-form-label">Selecione o produto*</label>
                         <select name="produtoSaida" id="" class="form-control">
                             <option selected="selected" disabled="disabled"></option>
                             <% for (ProdutoBean produto : produtos) {%>
@@ -34,7 +34,7 @@
                         </select>
                     </div>
                     <div>
-                        <label for="campo-quantidade" class="col-form-label">Quantidade:</label>
+                        <label for="campo-quantidade" class="col-form-label">Quantidade*</label>
                         <input type="number" class="form-control" id="campo-quantidade" name="quantidade">
                     </div>
                     <div class="modal-footer">
@@ -63,7 +63,7 @@
                         <input type="text" class="form-control" readonly value="Entrada" name="tipo">
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Selecione o produto:</label>
+                        <label for="recipient-name" class="col-form-label">Selecione o produto*</label>
                         <select name="produtoEntrada" id="" class="form-control">
                             <option selected="selected" disabled="disabled"></option>
                             <% for (ProdutoBean produto : produtos) {%>
@@ -72,7 +72,7 @@
                         </select>
                     </div>
                     <div>
-                        <label for="campo-quantidade" class="col-form-label">Quantidade:</label>
+                        <label for="campo-quantidade" class="col-form-label">Quantidade*</label>
                         <input type="number" min='0' class="form-control" id="campo-quantidade" name="quantidade">
                     </div>
                     <div class="modal-footer">

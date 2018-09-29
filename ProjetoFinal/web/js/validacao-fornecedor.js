@@ -23,18 +23,18 @@ $("#validacao-fornecedor-form-func").validate({
     },
     messages: {
         nome: {
-            required: "Campo Obrigatório.",
-            minlength: "Nome deve conter no minimo {0} caracteres.",
-            maxlength: "Nome deve conter no maximo {0} caracteres."
+            required: "Campo obrigatório*",
+            minlength: "Nome deve conter no minimo {0} caracteres*",
+            maxlength: "Nome deve conter no maximo {0} caracteres*"
         },
         cnpj: {
-            required: "Campo Obrigatório."
+            required: "Campo obrigatório*"
         },
         telefone: {
-            required: "Campo Obrigatório."
+            required: "Campo obrigatório*"
         },
         email: {
-            required: "Campo Obrigatório.",
+            required: "Campo obrigatório*",
             email: "Insira um Email válido."
         }
     }

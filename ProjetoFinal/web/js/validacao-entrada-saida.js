@@ -15,11 +15,11 @@ $("#validacao-entrada-form-func").validate({
     },
     messages: {
         produtoEntrada: {
-            required: "Selecione um item."
+            required: "Selecione um item*"
         },
         quantidade: {
-            required: "Selecione a Quantidade.",
-            number: "Quantidade deve conter somente números."
+            required: "Selecione a quantidade*",
+            number: "Quantidade deve conter somente números*"
         }
     }
 });
@@ -41,11 +41,11 @@ $("#validacao-saida-form-func").validate({
     },
     messages: {
         produtoSaida: {
-            required: "Selecione um item."
+            required: "Selecione um item*"
         },
         quantidade: {
-            required: "Selecione a Quantidade.",
-            number: "Quantidade deve conter somente números."
+            required: "Selecione a quantidade*",
+            number: "Quantidade deve conter somente números*"
         }
     }
 });
