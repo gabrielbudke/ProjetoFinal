@@ -4,38 +4,35 @@
  * and open the template in the editor.
  */
 $(function () {
-    var ctx = document.getElementByClassName("#graficoProduto");
-     $.ajax({
-                    url: "/visao/produtos",
-                    success: function (data, textStatus, jqXHR) {
-                        //type, Data e options
-                        var chartgraph = new Chart(ctx, {
-                            type: 'bar',
-                            data: {
-                                labels: data.produtos,
-                                datasets: [{
-                                        label: "Produtos",
-                                        data: data.quantidades,
-                                        borderWidth: 3,
-                                        borderColor: 'black',
-                                        backgroundColor: '#26B99A'
-                                    }]
-                            },
-                            option: {
-                                responsive: true,
-                                layout: {
-                                    padding: {
-                                        left: 50,
-                                        righ: 0,
-                                        top: 0,
-                                        bottom: 0
-                                    }
+    var ctx = document.getElementsByClassName("meuGrafico");
+    $.ajax({
+        url: "/visao/produtos",
+        success: function (data, textStatus, jqXHR) {
+            //type, Data e options
+            var chartgraph = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: data.produtos,
+                    datasets: [{
+                            label: "Vendidos",
+                            data: data.quantidades,
+                            borderWidth: 3,
+                            borderColor: 'black',
+                            backgroundColor: '#26B99A'
+                        }]
+                },
+                option: {
+                    //responsive: true,
+                    scales: {
+                        yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
                                 }
-                            }
-
-                        });
+                            }]
                     }
-                });
+                }
+
             });
-
-
+        }
+    });
+});
