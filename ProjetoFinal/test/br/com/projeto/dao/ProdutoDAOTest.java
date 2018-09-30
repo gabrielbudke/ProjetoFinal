@@ -5,6 +5,7 @@
  */
 package br.com.projeto.dao;
 
+import br.com.projeto.bean.CategoriaBean;
 import br.com.projeto.bean.ProdutoBean;
 import br.com.projeto.database.Conexao;
 import java.util.ArrayList;
@@ -35,6 +36,9 @@ public class ProdutoDAOTest {
         produto.setNome("Cama");
         produto.setPreco(2.33);
         
+        CategoriaBean categoria = new CategoriaBean();
+        categoria.setNome("Elêtronicos");
+        
         int cod = new ProdutoDAO().adicionar(produto);
         produto.setId(cod);
         
@@ -47,6 +51,19 @@ public class ProdutoDAOTest {
     @Test
     public void testAdicionar() {
         Conexao.truncate();
+        
+        List<ProdutoBean> produtos = new ArrayList<>();
+        ProdutoBean produto = new ProdutoBean();
+        produto.setNome("Cama");
+        produto.setPreco(2.33);
+        
+        CategoriaBean categoria = new CategoriaBean();
+        categoria.setNome("Elêtronicos");
+        
+        int cod = new ProdutoDAO().adicionar(produto);
+        produto.setId(cod);
+        
+        assertEquals(cod, 1);
     }
 
     /**
@@ -55,6 +72,21 @@ public class ProdutoDAOTest {
     @Test
     public void testExcluir() {
         Conexao.truncate();
+        
+        List<ProdutoBean> produtos = new ArrayList<>();
+        ProdutoBean produto = new ProdutoBean();
+        produto.setNome("Cama");
+        produto.setPreco(2.33);
+        
+        CategoriaBean categoria = new CategoriaBean();
+        categoria.setNome("Elêtronicos");
+        
+        int cod = new ProdutoDAO().adicionar(produto);
+        produto.setId(cod);
+        
+        produto.setNome("Cama");
+        
+        new ProdutoDAO().excluir(cod);
     }
 
     /**
@@ -63,6 +95,24 @@ public class ProdutoDAOTest {
     @Test
     public void testEditar() {
         Conexao.truncate();
+        
+        List<ProdutoBean> produtos = new ArrayList<>();
+        ProdutoBean produto = new ProdutoBean();
+        produto.setNome("Cama");
+        produto.setPreco(2.33);
+        
+        CategoriaBean categoria = new CategoriaBean();
+        categoria.setNome("Elêtronicos");
+        
+        int cod = new ProdutoDAO().adicionar(produto);
+        produto.setId(cod);
+        
+        produto.setNome("Mesa");
+        produto.setPreco(3.33);
+        
+        categoria.setNome("Acessórios");
+        
+        new ProdutoDAO().editar(produto);
     }
 
     /**
@@ -71,6 +121,19 @@ public class ProdutoDAOTest {
     @Test
     public void testObterPeloId() {
         Conexao.truncate();
+        
+        List<ProdutoBean> produtos = new ArrayList<>();
+        ProdutoBean produto = new ProdutoBean();
+        produto.setNome("Cama");
+        produto.setPreco(2.33);
+        
+        CategoriaBean categoria = new CategoriaBean();
+        categoria.setNome("Elêtronicos");
+        
+        int cod = new ProdutoDAO().adicionar(produto);
+        produto.setId(cod);
+        
+        assertEquals(cod, 1);
     }
 
     /**
@@ -79,6 +142,21 @@ public class ProdutoDAOTest {
     @Test
     public void testObterTodosParaDataTable() {
         Conexao.truncate();
+        
+        Conexao.truncate();
+        
+        List<ProdutoBean> produtos = new ArrayList<>();
+        ProdutoBean produto = new ProdutoBean();
+        produto.setNome("Cama");
+        produto.setPreco(2.33);
+        
+        CategoriaBean categoria = new CategoriaBean();
+        categoria.setNome("Elêtronicos");
+        
+        int cod = new ProdutoDAO().adicionar(produto);
+        produto.setId(cod);
+        
+        assertEquals(cod, 1);
     }
     
 }
