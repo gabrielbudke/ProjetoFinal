@@ -19,7 +19,7 @@
                 <form action="/categoria/store" method="post"> <!-- Caminho POST para CategoriaStore -->
                     <div class="form-group">
                         <label for="campo-categoria" class="col-form-label">Nova Categoria:</label>
-                        <input type="text" class="form-control" id="campo-categoria" name="categoria">
+                        <input type="text" class="form-control" id="campo-categoria" name="categoria" required="required">
                     </div>
                     <%-- 
                    
