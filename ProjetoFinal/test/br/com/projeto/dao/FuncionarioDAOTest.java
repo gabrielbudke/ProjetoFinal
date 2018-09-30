@@ -102,6 +102,8 @@ public class FuncionarioDAOTest {
         int cod = new FuncionarioDAO().adicionar(funcionario);
         funcionario.setId(cod);
         
+        funcionario.setNome("Sarah");
+        
         new FuncionarioDAO().excluir(cod);
 
     }
