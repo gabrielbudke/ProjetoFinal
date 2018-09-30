@@ -106,7 +106,6 @@ public class FornecedorDAOTest {
         
         assertEquals(cod, 1);
         
-        
     }
 
     /**
@@ -129,6 +128,25 @@ public class FornecedorDAOTest {
         fornecedor.setNome("Arroz");
         
         new FornecedorDAO().editar(fornecedor);
+    }
+    /**
+     * Test of obterTodosParaDataTable method, of class FornecedorDAO.
+     */
+    @Test
+    public void testObterTodosParaDataTable() {
+        Conexao.truncate();
+        
+        List<FornecedorBean> fornecedores = new ArrayList<>();
+        FornecedorBean fornecedor = new FornecedorBean();
+        fornecedor.setNome("Arrox");
+        fornecedor.setCnpj("99999999999999");
+        fornecedor.setEmail("arrox@a.com");
+        fornecedor.setTelefone("4733334444");
+        
+        int cod = new FornecedorDAO().adicionar(fornecedor);
+        fornecedor.setId(cod);
+        
+        assertEquals(cod, 1);
     }
     
 }

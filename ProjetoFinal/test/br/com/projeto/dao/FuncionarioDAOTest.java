@@ -174,7 +174,35 @@ public class FuncionarioDAOTest {
         
         assertEquals(cod, 1);
         
+    }
+    /**
+     * Test of obterTodosParaDataTable method, of class FuncionarioDAO.
+     */
+    @Test
+    public void testObterTodosParaDataTable() {
+        Conexao.truncate();
         
-    } 
+         List<FuncionarioBean> funcionarios = new ArrayList<>();
+        FuncionarioBean funcionario = new FuncionarioBean();
+        funcionario.setLogin("Patrick");
+        funcionario.setSenha("123456");
+        funcionario.setNome("Sarah");
+        funcionario.setCpf("12345678910");
+        funcionario.setEmail("oi@oi.com");
+        funcionario.setTelefone("(84)3507-3289");
+        funcionario.setFuncao("faxineira");
+        funcionario.setCep("89068172");
+        funcionario.setCidade("Blumenau");
+        funcionario.setBairro("Itoupavazinha");
+        funcionario.setEstado("Santa Catarina");
+        funcionario.setRua("2 de setembro");
+        funcionario.setNumero("777");
+
+        int cod = new FuncionarioDAO().adicionar(funcionario);
+        funcionario.setId(cod);
+        
+        assertEquals(cod, 1);
+        
+    }
 
 }
