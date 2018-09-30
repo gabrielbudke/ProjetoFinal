@@ -143,8 +143,6 @@ public class ProdutoDAOTest {
     public void testObterTodosParaDataTable() {
         Conexao.truncate();
         
-        Conexao.truncate();
-        
         List<ProdutoBean> produtos = new ArrayList<>();
         ProdutoBean produto = new ProdutoBean();
         produto.setNome("Cama");
