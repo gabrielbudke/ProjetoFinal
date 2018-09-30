@@ -138,28 +138,5 @@ public class FuncionarioDAOTest {
         new FuncionarioDAO().editar(funcionario);
     }
 
-    /**
-     * Test of obterPeloId method, of class FuncionarioDAO.
-     */
-    @Test
-    public void testObterPeloId() {
-        Conexao.truncate();
-    }
 
-    /**
-     * Test of validarLogin method, of class FuncionarioDAO.
-     */
-    @Test
-    public void testValidarLogin() {
-       Conexao.truncate();
-    }
-
-    /**
-     * Test of obterTodosParaDataTable method, of class FuncionarioDAO.
-     */
-    @Test
-    public void testObterTodosParaDataTable() {
-        Conexao.truncate();
-    }
-    
 }
