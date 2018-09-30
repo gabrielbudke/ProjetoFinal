@@ -33,6 +33,8 @@ public class FuncionarioDAOTest {
         
         List<FuncionarioBean> funcionarios = new ArrayList<>();
         FuncionarioBean funcionario = new FuncionarioBean();
+        funcionario.setLogin("Patrick");
+        funcionario.setSenha("123456");
         funcionario.setNome("Sarah");
         funcionario.setCpf("12345678910");
         funcionario.setEmail("oi@oi.com");
@@ -60,6 +62,8 @@ public class FuncionarioDAOTest {
         Conexao.truncate();
         
         FuncionarioBean funcionario = new FuncionarioBean();
+        funcionario.setLogin("Patrick");
+        funcionario.setSenha("123456");
         funcionario.setNome("Sarah");
         funcionario.setCpf("12345678910");
         funcionario.setEmail("oi@oi.com");
@@ -87,6 +91,8 @@ public class FuncionarioDAOTest {
         
         List<FuncionarioBean> funcionarios = new ArrayList<>();
         FuncionarioBean funcionario = new FuncionarioBean();
+        funcionario.setLogin("Patrick");
+        funcionario.setSenha("123456");
         funcionario.setNome("Sarah");
         funcionario.setCpf("12345678910");
         funcionario.setEmail("oi@oi.com");
@@ -117,6 +123,8 @@ public class FuncionarioDAOTest {
         
         List<FuncionarioBean> funcionarios = new ArrayList<>();
         FuncionarioBean funcionario = new FuncionarioBean();
+        funcionario.setLogin("Patrick");
+        funcionario.setSenha("123456");
         funcionario.setNome("Sarah");
         funcionario.setCpf("12345678910");
         funcionario.setEmail("oi@oi.com");
@@ -138,5 +146,36 @@ public class FuncionarioDAOTest {
         new FuncionarioDAO().editar(funcionario);
     }
 
+    /**
+     * Test of obterPeloId method, of class FuncionarioDAO.
+     */
+    /**@Test
+    public void testObterPeloId() {
+        Conexao.truncate();
+        
+        List<FuncionarioBean> funcionarios = new ArrayList<>();
+        FuncionarioBean funcionario = new FuncionarioBean();
+        funcionario.setLogin("Patrick");
+        funcionario.setSenha("123456");
+        funcionario.setNome("Sarah");
+        funcionario.setCpf("12345678910");
+        funcionario.setEmail("oi@oi.com");
+        funcionario.setTelefone("(84)3507-3289");
+        funcionario.setFuncao("faxineira");
+        funcionario.setCep("89068172");
+        funcionario.setCidade("Blumenau");
+        funcionario.setBairro("Itoupavazinha");
+        funcionario.setEstado("Santa Catarina");
+        funcionario.setRua("2 de setembro");
+        funcionario.setNumero("777");
+        
+        int cod = new FuncionarioDAO().adicionar(funcionario);
+        funcionario.setId(cod);
+        
+        assertEquals(cod, 1);
+        assertEquals(funcionario, new FuncionarioDAO().obterPeloId(i));
+        
+        
+    } */
 
 }
