@@ -29,7 +29,7 @@ public class ProdutoDAO {
                 ProdutoBean produto = new ProdutoBean();
                 produto.setId(resultSet.getInt("p.id"));
                 produto.setNome(resultSet.getString("p.nome"));
-                produto.setPreco(resultSet.getFloat("p.preco"));
+                produto.setPreco(resultSet.getDouble("p.preco"));
                 produto.setIdCategoria(resultSet.getInt("p.id_categoria"));
 
                 CategoriaBean categoria = new CategoriaBean();
@@ -54,7 +54,7 @@ public class ProdutoDAO {
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, produto.getNome());
-            ps.setFloat(2, produto.getPreco());
+            ps.setDouble(2, produto.getPreco());
             ps.setInt(3, produto.getIdCategoria());
             ps.execute();
             ResultSet resultSet = ps.getGeneratedKeys();
@@ -88,7 +88,7 @@ public class ProdutoDAO {
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setString(1, produto.getNome());
-            ps.setFloat(2, produto.getPreco());
+            ps.setDouble(2, produto.getPreco());
             ps.setInt(3, produto.getIdCategoria());
             ps.setInt(4, produto.getId());
             return ps.executeUpdate() == 1;
@@ -111,7 +111,7 @@ public class ProdutoDAO {
                 ProdutoBean produto = new ProdutoBean();
                 produto.setId(id);
                 produto.setNome(resultSet.getString("nome"));
-                produto.setPreco(resultSet.getFloat("preco"));
+                produto.setPreco(resultSet.getDouble("preco"));
                 produto.setIdCategoria(resultSet.getInt("id_categoria"));
                 return produto;
             }
@@ -136,7 +136,7 @@ public class ProdutoDAO {
                 produto.put("id", resultSet.getInt("id"));
                 produto.put("id_categoria", resultSet.getString("ct.nome"));
                 produto.put("nome", resultSet.getString("p.nome"));
-                produto.put("preco", resultSet.getFloat("p.preco"));
+                produto.put("preco", resultSet.getDouble("p.preco"));
                 produtos.add(produto);
             }
         } catch (SQLException e) {
