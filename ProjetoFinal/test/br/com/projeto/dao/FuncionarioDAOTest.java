@@ -19,7 +19,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Alunos
+ * @author Patrick Nacimento
  */
 public class FuncionarioDAOTest {
     

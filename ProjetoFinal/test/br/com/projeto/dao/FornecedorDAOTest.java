@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author patri
+ * @author Patrick Nacimento
  */
 public class FornecedorDAOTest {
     
