@@ -16,8 +16,8 @@ $(function () {
                     datasets: [{
                             label: "Vendidos",
                             data: data.quantidades,
-                            borderWidth: 3,
-                            borderColor: 'black',
+                            borderWidth: 2,
+                            borderColor: 'white',
                             backgroundColor: '#26B99A'
                         }]
                 },
