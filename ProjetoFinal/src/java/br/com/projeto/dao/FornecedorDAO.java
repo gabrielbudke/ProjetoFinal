@@ -7,7 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author Gabriel Budke
@@ -123,6 +126,32 @@ public class FornecedorDAO {
 
         return false;
 
+    }
+    
+    public List<HashMap<String, Object>> obterTodosParaDataTable(){
+        List<HashMap<String, Object>> fornecedores = new ArrayList<>();
+        String sql = "SELECT * FROM fornecedores";
+        
+        try{
+            Statement st = Conexao.obterConexao().createStatement();
+            st.execute(sql);
+            ResultSet resultSet = st.getResultSet();
+            while(resultSet.next()){
+                HashMap<String, Object> fornecedor = new HashMap<>();
+                fornecedor.put("id", resultSet.getInt("id"));
+                fornecedor.put("nome", resultSet.getString("nome"));
+                fornecedor.put("cnpj", resultSet.getString("cnpj"));
+                fornecedor.put("telefone", resultSet.getString("telefone"));
+                fornecedor.put("email", resultSet.getString("email"));
+                fornecedores.add(fornecedor);
+            }
+        }catch(SQLException e){
+            Logger.getLogger(FornecedorDAO.class.getName()).log(Level.SEVERE, null, e);
+        }finally{
+            Conexao.fecharConexao();
+        }
+        
+        return fornecedores;
     }
 
 }

@@ -142,13 +142,12 @@ public class ProdutoDAO {
         } catch (SQLException e) {
             Logger.getLogger(ProdutoDAO.class.getName()).log(Level.SEVERE, null, e);
 
-        } finally{
+        } finally {
             Conexao.fecharConexao();
-        
-            }
-        
+
+        }
+
         return produtos;
     }
-    
-    
+
 }

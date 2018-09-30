@@ -48,6 +48,7 @@
 <%--JS DataTable --%>
 <script src="/js/produtos-index.js"></script>
 <script charset="UTF-8" src="/js/funcionarios-index.js"></script>
+<script src="/js/fornecedor-index.js"></script>
 
 <%-- Lib e JS de Exportar Tabela --%>
 <script src="/js/jquery.table2excel.min.js"></script>

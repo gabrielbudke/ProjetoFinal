@@ -5,7 +5,7 @@
  */
 $("#exportar").click(function (e) {
     e.preventDefault();
-    $("#tabela ").table2excel({
+    $("#tabela").table2excel({
         exclude: ".excludeThisClass",
         name: "Worksheet Name",
         fileext: ".xls",

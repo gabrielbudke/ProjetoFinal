@@ -17,7 +17,7 @@ $(function () {
                             label: "Vendidos",
                             data: data.quantidades,
                             borderWidth: 3,
-                            borderColor: 'black',
+                            borderColor: 'white',
                             backgroundColor: '#26B99A'
                         }]
                 },
