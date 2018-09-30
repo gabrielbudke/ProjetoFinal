@@ -53,7 +53,7 @@ public class EstoqueBean {
         this.tipo = tipo;
     }
 
-    public float valorTotal(){
+    public double valorTotal(){
         return quantidade*produto.getPreco();
     }
 }
