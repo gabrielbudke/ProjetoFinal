@@ -149,11 +149,11 @@ public class FuncionarioDAOTest {
     /**
      * Test of obterPeloId method, of class FuncionarioDAO.
      */
-    /**@Test
+    @Test
     public void testObterPeloId() {
         Conexao.truncate();
         
-        List<FuncionarioBean> funcionarios = new ArrayList<>();
+         List<FuncionarioBean> funcionarios = new ArrayList<>();
         FuncionarioBean funcionario = new FuncionarioBean();
         funcionario.setLogin("Patrick");
         funcionario.setSenha("123456");
@@ -168,14 +168,13 @@ public class FuncionarioDAOTest {
         funcionario.setEstado("Santa Catarina");
         funcionario.setRua("2 de setembro");
         funcionario.setNumero("777");
-        
+
         int cod = new FuncionarioDAO().adicionar(funcionario);
         funcionario.setId(cod);
         
         assertEquals(cod, 1);
-        assertEquals(funcionario, new FuncionarioDAO().obterPeloId(i));
         
         
-    } */
+    } 
 
 }
