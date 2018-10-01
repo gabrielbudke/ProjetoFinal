@@ -12,7 +12,7 @@
 <%List<FornecedorBean> fornecedores = new FornecedorDAO().obterTodos();%>
 
 
-    <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="col-md-12 col-lg-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Fornecedores</h2>
@@ -50,7 +50,7 @@
         </tr>
         <%}%>
         <div class="botao-novo-fornecedor">
-    <a class="btn btn-success float-right" href="/fornecedor/cadastro">Novo Fornecedor<i class="fa fa-plus-square"></i></a>
+            <a class="btn btn-success float-right" href="/fornecedor/cadastro">Novo Fornecedor &nbsp;<i class="fa fa-plus-square"></i></a>
 </div>
 
                       </tbody>

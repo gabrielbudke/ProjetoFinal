@@ -25,7 +25,7 @@
                      Clique em "Novo Funcionário" para cadastrar um funcionário.
                     </p>
           
-                    <table id="funcionario-index" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                    <table id="funcionario-index" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="auto">
                       <thead>
                        <tr>
             <th scope="col">Id</th>
@@ -36,7 +36,7 @@
                               </tr>
                       </thead>
                       <tbody>
-                       <a href="/funcionario/cadastro" class="btn btn-success float-right">Novo Funcionario</a>
+                      <a href="/funcionario/cadastro" class="btn btn-success float-left">Novo Funcionario &nbsp;<i class="fa fa-plus-square"></i></a>
                       </tbody>
                     </table>
           
