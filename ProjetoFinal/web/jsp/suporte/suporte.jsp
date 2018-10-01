@@ -35,7 +35,7 @@
                       
                       
 
-                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details col">
+                      <div class="col-md-5 col-sm-4 col-xs-12 profile_details col">
                         <div class="well profile_view">
                           <div class="col-sm-12">
                             <h4 class="brief"><i>Front-End</i></h4>
@@ -57,7 +57,7 @@
                           </div>
                           </div>
                         
-                      <div class="col-md-4 col-sm-4 col-xs-12 profile_details col">
+                      <div class="col-md-5 col-sm-4 col-xs-12 profile_details col">
                         <div class="well profile_view">
                           <div class="col-sm-12">
                             <h4 class="brief"><i>Back-End</i></h4>
@@ -78,7 +78,7 @@
                           </div>
                           </div>
                           </div>
-                      <div class="col-md-4 col-md-4 col-xs-12 profile_details ">
+                      <div class="col-md-5 col-md-5 col-xs-12 profile_details ">
                         <div class="well profile_view">
                           <div class="col-sm-12">
                             <h4 class="brief"><i>Front-End</i></h4>
@@ -100,7 +100,7 @@
                           </div>
                           </div>
                         
-                      <div class="col-md-4 col-md-4 col-xs-12 profile_details ">
+                      <div class="col-md-5 col-md-5 col-xs-12 profile_details ">
                         <div class="well profile_view">
                           <div class="col-sm-12">
                             <h4 class="brief"><i>Back-End</i></h4>
@@ -121,7 +121,7 @@
                           </div>
                           </div>
                           </div>
-                      <div class="col-md-4 col-md-4 col-xs-12 profile_details ">
+                      <div class="col-md-5 col-md-5 col-xs-12 profile_details ">
                         <div class="well profile_view">
                           <div class="col-sm-12">
                             <h4 class="brief"><i>Back-End</i></h4>
