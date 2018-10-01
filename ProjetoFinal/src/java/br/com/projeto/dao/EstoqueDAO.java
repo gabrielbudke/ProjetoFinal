@@ -48,7 +48,7 @@ public class EstoqueDAO {
     //Método para obter todos do banco de dados
     public List<EstoqueBean> obterTodos() {
         List<EstoqueBean> estoques = new ArrayList<>();
-        String sql = "SELECT e.id, e.tipo, e.id_produto, p.preco, p.nome as 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto) GROUP BY e.id_produto";
+        String sql = "SELECT e.id, e.tipo, e.id_produto, p.preco, p.nome as 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto)";
         try {
 
             Statement st = Conexao.obterConexao().createStatement();

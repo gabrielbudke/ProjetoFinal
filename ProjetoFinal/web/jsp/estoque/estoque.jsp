@@ -48,9 +48,9 @@
                         <tr>
                             <td><%=estoque.getTipo()%><td>
                             <td> <%=estoque.getProduto().getNome()%> </td>
-                            <td> <%=estoque.getProduto().getPreco()%> </td>
+                            <td> R$ <%=estoque.getProduto().getPreco()%> </td>
                             <td> <%=estoque.getQuantidade()%> </td>
-                            <td> <%=estoque.valorTotal()%> </td>
+                            <td> R$ <%=estoque.valorTotal()%> </td>
                         </tr>
                         <%}%>
                     <div class="botao-registrar-venda">
