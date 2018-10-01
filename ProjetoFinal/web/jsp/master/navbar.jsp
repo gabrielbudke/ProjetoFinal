@@ -26,7 +26,8 @@
                         <ul class="nav child_menu">
                             
                             <li ><a href="/produtos">Produtos</a></li>
-                            <li ><a href="/estoque">Estoque</a></li>
+                            <li ><a href="/estoque">Movimentação</a></li>
+                            <li ><a href="/estoque/atual">Estoque</a></li>
                         </ul>                      
                         
                     </li>
