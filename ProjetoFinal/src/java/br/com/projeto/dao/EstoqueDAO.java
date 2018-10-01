@@ -82,7 +82,7 @@ public class EstoqueDAO {
     }
     public List<EstoqueBean> obterTodosAtualizado() {
         List<EstoqueBean> estoques = new ArrayList<>();
-        String sql = "SELECT p.nome as 'produto', SUM(e.quantidade) - \n" +
+        String sql = "SELECT p.preco, p.nome as 'produto', SUM(e.quantidade) - \n" +
 "IF(\n" +
 "(SELECT SUM(e1.quantidade) as 'quantidade_saida' FROM estoque e1 WHERE e1.id_produto = e.id_produto AND e1.tipo LIKE '%Saída%')  IS NULL,\n" +
 "0, (SELECT SUM(e1.quantidade) as 'quantidade' FROM estoque e1 WHERE e1.id_produto = e.id_produto AND e1.tipo LIKE '%Saída%'))\n" +
@@ -98,10 +98,12 @@ public class EstoqueDAO {
             while (resultSet.next()) {
                 EstoqueBean estoque = new EstoqueBean();
                 estoque.setQuantidade(resultSet.getInt("quantidade"));
+                
 
                 ProdutoBean produto = new ProdutoBean();
-                produto.setId(estoque.getIdProduto());               produto.setNome(resultSet.getString("produto"));
-
+                produto.setId(estoque.getIdProduto()); 
+                produto.setNome(resultSet.getString("produto"));
+                produto.setPreco(resultSet.getDouble("p.preco"));
                 estoque.setProduto(produto);
 
                 estoques.add(estoque);
