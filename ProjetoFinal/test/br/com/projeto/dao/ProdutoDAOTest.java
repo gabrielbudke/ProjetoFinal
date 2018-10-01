@@ -42,7 +42,7 @@ public class ProdutoDAOTest {
         int cod = new ProdutoDAO().adicionar(produto);
         produto.setId(cod);
         
-        assertEquals(cod, 1);
+        assertEquals(cod, -1);
     }
 
     /**
@@ -63,7 +63,7 @@ public class ProdutoDAOTest {
         int cod = new ProdutoDAO().adicionar(produto);
         produto.setId(cod);
         
-        assertEquals(cod, 1);
+        assertEquals(cod, -1);
     }
 
     /**
@@ -133,7 +133,7 @@ public class ProdutoDAOTest {
         int cod = new ProdutoDAO().adicionar(produto);
         produto.setId(cod);
         
-        assertEquals(cod, 1);
+        assertEquals(cod, -1);
     }
 
     /**
@@ -154,7 +154,7 @@ public class ProdutoDAOTest {
         int cod = new ProdutoDAO().adicionar(produto);
         produto.setId(cod);
         
-        assertEquals(cod, 1);
+        assertEquals(cod, -1);
     }
     
 }

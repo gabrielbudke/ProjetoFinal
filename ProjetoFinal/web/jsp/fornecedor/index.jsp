@@ -7,6 +7,7 @@
 <%@page import="br.com.projeto.dao.FornecedorDAO"%>
 <%@page import="br.com.projeto.bean.FornecedorBean"%>
 <%@page import="java.util.List"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp"%>
 
 
