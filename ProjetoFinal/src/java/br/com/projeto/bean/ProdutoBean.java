@@ -6,6 +6,7 @@ package br.com.projeto.bean;
  */
 public class ProdutoBean {
     
+    //Atributos da classe Produtos
     private int id;
     private int idCategoria;
     private CategoriaBean categoria;
@@ -13,6 +14,7 @@ public class ProdutoBean {
     private double preco;
     private int quantidade;
 
+    //Métodos Getters e Setters da classe ProdutoBean
     public int getQuantidade() {
         return quantidade;
     }

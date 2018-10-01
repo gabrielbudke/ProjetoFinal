@@ -6,9 +6,11 @@ package br.com.projeto.bean;
  */
 public class FornecedorBean {
     
+    //Atributos da classe Fornecedor
     private int Id;
     private String nome, cnpj, telefone, email;
 
+    //Métodos Getters e Setters da classe Fornecedor
     public int getId() {
         return Id;
     }

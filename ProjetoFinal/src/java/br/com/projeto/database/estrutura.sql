@@ -25,6 +25,15 @@ CREATE TABLE funcionarios(
 	FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
 );
 
+INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
+('Patrick', 'patrick', '12345678', '(83) 3542-2574', 'Suporte'),
+('Gabriel', 'gabriel', '12345678', '(83) 3232-4545', 'Suporte'),
+('Logan', 'logan', '12345678', '(83) 3434-4646', 'Suporte'),
+('Joseph', 'joseph', '12345678', '(83) 3535-4747', 'Suporte'),
+('Kaio', 'kaio', '12345678', '(83) 3636-4848', 'Suporte'),
+('João Paulo', 'joao_paulo', '123', '(84) 3507-3289', 'motorista'),
+('Isadora da Costa ', 'isadora', '123', '(84) 98104-9974', 'advogada');
+
 CREATE TABLE fornecedores(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	nome VARCHAR (100) ,
@@ -76,10 +85,6 @@ INSERT INTO produtos (id_categoria, nome, preco) VALUES
 (5, 'Calça Jeans', 87),
 (5, 'Camisa Polo', 58.75);
 
-
-;
-
-
 CREATE TABLE estoque(
     id INT AUTO_INCREMENT PRIMARY KEY,
 	id_produto INTEGER NOT NULL,	
@@ -97,27 +102,4 @@ INSERT INTO estoque (id_produto, tipo, quantidade) VALUES
 (4, 'Saida', 10),
 (2, 'Saida', 2);
 
-CREATE TABLE fluxo_caixa(
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        total_recebido DECIMAL(4,2),
-        total_saida DECIMAL (4,2),
-        saldo_inicial DECIMAL(4,2),
-        saldo_final DECIMAL(4,2)
-);
-/*
-CREATE TABLE recuperar_senha(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_comerciante INTEGER NOT NULL,
-    pergunta VARCHAR(200),
-    FOREIGN KEY (id_comerciante) REFERENCES comerciantes(id)
-);
-*/
 
-INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
-('Patrick', 'patrick', '12345678', '(83) 3542-2574', 'Suporte'),
-('Gabriel', 'gabriel', '12345678', '(83) 3232-4545', 'Suporte'),
-('Logan', 'logan', '12345678', '(83) 3434-4646', 'Suporte'),
-('Joseph', 'joseph', '12345678', '(83) 3535-4747', 'Suporte'),
-('Kaio', 'kaio', '12345678', '(83) 3636-4848', 'Suporte'),
-('João Paulo', 'joao_paulo', '123', '(84) 3507-3289', 'motorista'),
-('Isadora da Costa ', 'isadora', '123', '(84) 98104-9974', 'advogada');

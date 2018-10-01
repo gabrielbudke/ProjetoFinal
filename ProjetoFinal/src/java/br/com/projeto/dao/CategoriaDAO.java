@@ -41,6 +41,7 @@ public class CategoriaDAO {
 
     }
 
+    //Métodos para obter todos do banco de dados
     public List<CategoriaBean> obterTodos() {
         List<CategoriaBean> categorias = new ArrayList<>();
         String sql = "SELECT * FROM categorias";
@@ -64,6 +65,7 @@ public class CategoriaDAO {
 
     }
 
+    //Método de adicionr ao banco de dados
     public int adicionar(CategoriaBean categoria) {
         String sql = "INSERT INTO categorias(nome) VALUES (?)";
 
@@ -85,6 +87,7 @@ public class CategoriaDAO {
         return -1;
     }
 
+    //Método de excluir no banco de dados
     public boolean excluir(int id) {
         String sql = "DELETE FROM categorias WHERE id = ?";
 
@@ -102,6 +105,7 @@ public class CategoriaDAO {
 
     }
 
+    //Método de editar informação no banco de dados
     public boolean editar(CategoriaBean categoria) {
         String sql = "UPDATE categorias SET nome = ? WHERE id = ?";
 
@@ -121,6 +125,7 @@ public class CategoriaDAO {
 
     }
 
+    //Método de obter para criação de gráfico
     public HashMap<String, Object> obterVisao() {
         List<Object> categoriaNomes = new ArrayList<>();
         List<Object> categoriaQuantidades = new ArrayList<>();

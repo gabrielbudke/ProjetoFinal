@@ -10,11 +10,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%List<ProdutoBean> produtos = new ProdutoDAO().obterTodos(); %>
 
-<div class="modal fade" id="saida-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="saida-modal" tabindex="-1" role="dialog" aria-labelledby="modalSaida" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Nova Saída</h5>
+                <h5 class="modal-title" id="modalSaida">Nova Saída</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -48,11 +48,11 @@
 </div>
 
 <%-- ------------------------------------------------------------------------------------------------%>
-<div class="modal fade" id="entrada-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="entrada-modal" tabindex="-1" role="dialog" aria-labelledby="modalEntrada" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Nova Entrada</h5>
+                <h5 class="modal-title" id="modalEntrada">Nova Entrada</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -84,4 +84,5 @@
         </div>
     </div>
 </div>
-<%@include file="../master/rodape.jsp" %>
+
+<%-- <%@include file="../master/rodape.jsp" --%>

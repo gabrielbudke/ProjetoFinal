@@ -41,7 +41,7 @@ $("#validacao-fornecedor-form-func").validate({
 });
 $(function () {
 
-    $("#campo-telefone").mask("(99)9999-9999");
+    $("#campo-telefone").mask("(99) 9999-9999");
 
     $("#campo-cnpj").mask("99.999.999/9999-99");
 });

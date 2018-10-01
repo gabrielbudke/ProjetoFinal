@@ -18,6 +18,7 @@ import java.util.logging.Logger;
  */
 public class ProdutoDAO {
 
+    //Método de obter todos do banco de dados
     public List<ProdutoBean> obterTodos() {
         List<ProdutoBean> produtos = new ArrayList<>();
         String sql = "SELECT * FROM produtos p JOIN categorias ct ON (ct.id = p.id_categoria)";
@@ -48,6 +49,7 @@ public class ProdutoDAO {
         return produtos;
     }
 
+    //Método de adicionr ao banco de dados
     public int adicionar(ProdutoBean produto) {
         String sql = "INSERT INTO produtos (nome, preco, id_categoria) VALUES (?,?,?)";
 
@@ -69,6 +71,7 @@ public class ProdutoDAO {
         return -1;
     }
 
+    //Método de excluir no banco de dados
     public boolean excluir(int id) {
         String sql = "DELETE FROM produtos WHERE id =?";
         try {
@@ -83,6 +86,7 @@ public class ProdutoDAO {
         return false;
     }
 
+    //Método de editar informação no banco de dados
     public boolean editar(ProdutoBean produto) {
         String sql = "UPDATE produtos SET nome = ?, preco = ?, categoria = ?, id_categoria = ? WHERE id = ?";
         try {
@@ -100,6 +104,7 @@ public class ProdutoDAO {
         return false;
     }
 
+    //Método de obter produto pelo seu ID
     public ProdutoBean obterPeloId(int id) {
         String sql = "SELECT * FROM produtos WHERE id = ?";
         try {
@@ -123,6 +128,7 @@ public class ProdutoDAO {
         return null;
     }
 
+    //Método de obter todos para DataTable 
     public List<HashMap<String, Object>> obterTodosParaDataTable() {
         List<HashMap<String, Object>> produtos = new ArrayList<>();
         String sql = "SELECT * FROM produtos p JOIN categorias ct ON (ct.id = p.id_categoria)";

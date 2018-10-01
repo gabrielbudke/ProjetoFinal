@@ -13,6 +13,7 @@ public class Conexao {
     private static final String CLASS = "com.mysql.jdbc.Driver";
     private static Connection conexao;
 
+    //Método para obter conexão
     public static Connection obterConexao() {
         try {
             Class.forName(CLASS);
@@ -30,6 +31,7 @@ public class Conexao {
         return null;
     }
 
+    //Método para fechar conexao
     public static void fecharConexao() {
         try {
             conexao.close();

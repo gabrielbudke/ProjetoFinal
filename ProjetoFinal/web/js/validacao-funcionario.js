@@ -134,7 +134,7 @@ $(function () {
 $(function () {
     $("#campo-cpf").mask("999.999.999-99");
 
-    $("#campo-telefone").mask("(99)9999-99999");
+    $("#campo-telefone").mask("(99) 9999-99999");
     
     $("#campo-cep").mask("99999-999");
 });

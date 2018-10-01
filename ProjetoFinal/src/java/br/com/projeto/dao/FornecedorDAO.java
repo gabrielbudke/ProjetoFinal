@@ -17,6 +17,7 @@ import java.util.logging.Logger;
  */
 public class FornecedorDAO {
 
+    //Método para obter todos do banco de dados
     public List<FornecedorBean> obterTodos() {
         List<FornecedorBean> fornecedores = new ArrayList<>();
         String sql = "SELECT * FROM fornecedores";
@@ -42,6 +43,7 @@ public class FornecedorDAO {
         return fornecedores;
     }
 
+    //Método adicionar ao banco de dados
     public int adicionar(FornecedorBean fornecedor) {
         String sql = "INSERT INTO fornecedores(nome, cnpj, telefone, email) VALUES (?,?,?,?)";
 
@@ -66,6 +68,7 @@ public class FornecedorDAO {
         return -1;
     }
 
+    //Método de excluir no banco de dados
     public boolean excluir(int id) {
 
         String sql = "DELETE FROM fornecedores WHERE id = ?";
@@ -81,6 +84,7 @@ public class FornecedorDAO {
         return false;
     }
 
+    //Método de obter fornecedor pelo seu ID
     public FornecedorBean obterPeloId(int id) {
 
         String sql = "SELECT * FROM fornecedores WHERE id = ?";
@@ -107,6 +111,7 @@ public class FornecedorDAO {
         return null;
     }
 
+    //Método de editar no banco de dados
     public boolean editar(FornecedorBean fornecedor) {
         String sql = "UPDATE fornecedores SET nome = ?, cnpj = ?, telefone = ?, email = ? WHERE id = ?";
         try {
@@ -128,6 +133,7 @@ public class FornecedorDAO {
 
     }
     
+    //Método de obter todos para DataTable
     public List<HashMap<String, Object>> obterTodosParaDataTable(){
         List<HashMap<String, Object>> fornecedores = new ArrayList<>();
         String sql = "SELECT * FROM fornecedores";

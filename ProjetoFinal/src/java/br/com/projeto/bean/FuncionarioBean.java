@@ -7,11 +7,13 @@ package br.com.projeto.bean;
 
 public class FuncionarioBean {
 
+    //Atributos da classe Funcionario
     private int id;
     private String login, senha;
     private String nome, cpf, email, telefone, funcao;
     private String cep, estado, rua, numero, bairro, cidade;
 
+    //Métodos Getters e Setters da classe Funcionario
     public String getCep() {
         return cep;
     }

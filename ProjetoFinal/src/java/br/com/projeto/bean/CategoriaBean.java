@@ -5,9 +5,11 @@ package br.com.projeto.bean;
  */
 public class CategoriaBean {
     
+    //Atributos da classe Categoria
     private int id;
     private String nome;
 
+    //Métodos Getters e Setters da classe Categoria
     public int getId() {
         return id;
     }

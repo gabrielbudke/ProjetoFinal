@@ -8,11 +8,13 @@ import java.util.List;
  */
 public class EstoqueBean {
     
+    //Atributos da classe Estoque
     private int idProduto;
     private ProdutoBean produto;
     private int id, quantidade;
     private String tipo;
 
+    //Métodos Getters e Setters da classe Estoque
     public int getIdProduto() {
         return idProduto;
     }
