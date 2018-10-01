@@ -17,19 +17,18 @@ $(function () {
                             label: "Vendidos",
                             data: data.quantidades,
                             borderWidth: 3,
-                            borderColor: 'black',
+                            borderColor: 'white',
                             backgroundColor: '#26B99A'
                         }]
                 },
                 option: {
-                    responsive: true,
-                    layout: {
-                        padding: {
-                            left: 50,
-                            righ: 0,
-                            top: 0,
-                            bottom: 0
-                        }
+                    //responsive: true,
+                    scales: {
+                        yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
                     }
                 }
 

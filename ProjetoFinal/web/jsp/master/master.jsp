@@ -16,7 +16,9 @@
         <link rel="icon" href="images/favicon.ico" type="image/ico" />
         
         
-        
+        <link rel="stylesheet" href="/jsp/suporte/suporteCSS.css">
+
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
         <title>E-Stock | </title>

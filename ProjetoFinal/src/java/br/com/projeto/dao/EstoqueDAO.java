@@ -18,6 +18,7 @@ import java.util.logging.Logger;
  */
 public class EstoqueDAO {
 
+    //Método para obter todos para DataTable
     public List<HashMap<String, Object>> obterTodosParaDataTable() {
         List<HashMap<String, Object>> estoques = new ArrayList<>();
         String sql = "SELECT * FROM estoque e JOIN produtos p ON (p.id = e.id_produto)";
@@ -44,9 +45,10 @@ public class EstoqueDAO {
         return estoques;
     }
 
+    //Método para obter todos do banco de dados
     public List<EstoqueBean> obterTodos() {
         List<EstoqueBean> estoques = new ArrayList<>();
-        String sql = "SELECT e.id, e.tipo, e.id_produto, p.preco, p.nome as 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto) GROUP BY e.id_produto";
+        String sql = "SELECT e.id, e.tipo, e.id_produto, p.preco, p.nome as 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto)";
         try {
 
             Statement st = Conexao.obterConexao().createStatement();
@@ -78,7 +80,47 @@ public class EstoqueDAO {
         return estoques;
 
     }
+    public List<EstoqueBean> obterTodosAtualizado() {
+        List<EstoqueBean> estoques = new ArrayList<>();
+        String sql = "SELECT p.preco, p.nome as 'produto', SUM(e.quantidade) - \n" +
+"IF(\n" +
+"(SELECT SUM(e1.quantidade) as 'quantidade_saida' FROM estoque e1 WHERE e1.id_produto = e.id_produto AND e1.tipo LIKE '%Saída%')  IS NULL,\n" +
+"0, (SELECT SUM(e1.quantidade) as 'quantidade' FROM estoque e1 WHERE e1.id_produto = e.id_produto AND e1.tipo LIKE '%Saída%'))\n" +
+"as 'quantidade'\n" +
+"FROM estoque e\n" +
+"JOIN produtos p ON(p.id = e.id_produto) WHERE e.tipo LIKE '%Entrada%'\n" +
+"GROUP BY e.id_produto;";
+        try {
 
+            Statement st = Conexao.obterConexao().createStatement();
+            st.execute(sql);
+            ResultSet resultSet = st.getResultSet();
+            while (resultSet.next()) {
+                EstoqueBean estoque = new EstoqueBean();
+                estoque.setQuantidade(resultSet.getInt("quantidade"));
+                
+
+                ProdutoBean produto = new ProdutoBean();
+                produto.setId(estoque.getIdProduto()); 
+                produto.setNome(resultSet.getString("produto"));
+                produto.setPreco(resultSet.getDouble("p.preco"));
+                estoque.setProduto(produto);
+
+                estoques.add(estoque);
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return estoques;
+
+    }
+
+
+    //Método adicionar ao banco de dados
     public int adicionar(EstoqueBean estoque) {
         String sql = "INSERT INTO estoque (id_produto, tipo, quantidade) VALUES(?,?,?)";
 
@@ -101,6 +143,7 @@ public class EstoqueDAO {
         return -1;
     }
 
+    //Método de excluir no banco de dados
     public boolean excluir(int id) {
         String sql = "DELETE FROM estoque WHERE id = ?";
         try {
@@ -115,6 +158,7 @@ public class EstoqueDAO {
         return false;
     }
 
+    //Método de editar no banco de dados
     public boolean editar(EstoqueBean estoque) {
         String sql = "UPDATE estoque SET id_produto = ?, tipo = ?, quantidade = ? WHERE id = ?";
         try {
@@ -131,6 +175,7 @@ public class EstoqueDAO {
         return false;
     }
 
+    //Método de obter no estoque pelo seu ID
     public EstoqueBean obterPeloId(int id) {
         String sql = "SELECT * FROM estoque WHERE id = ?";
         try {
@@ -154,6 +199,7 @@ public class EstoqueDAO {
         return null;
     }
 
+    //Método de obter produto  quando coluna 'tipo' tiver valor 'Saida'
     public List<EstoqueBean> obterSaida() {
         List<EstoqueBean> estoques = new ArrayList<>();
         String sql = "SELECT e.tipo, p.nome AS 'produto', e.quantidade AS 'quantidade' FROM estoque e JOIN produtos p ON(p.id = e.id_produto) WHERE e.tipo LIKE '%Saida%'";
@@ -189,6 +235,7 @@ public class EstoqueDAO {
 
     }
 
+    //Método de obter produto com saida para grafico
     public HashMap<String, Object> obterProduto() {
         List<Object> produtoNomes = new ArrayList<>();
         List<Object> produtoQuantidades = new ArrayList<>();

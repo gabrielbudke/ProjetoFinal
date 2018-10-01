@@ -32,9 +32,9 @@ public class EntradaStore extends HttpServlet{
         estoque.setIdProduto(produto.getId());
         estoque.setId(new EstoqueDAO().adicionar(estoque));
         
+        resp.setContentType("text/html;metacharset=UTF-8");
         resp.sendRedirect("/estoque");
 
-        resp.setContentType("text/html;metacharset=UTF-8");
     }
     
     

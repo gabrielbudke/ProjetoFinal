@@ -26,7 +26,8 @@
                         <ul class="nav child_menu">
                             
                             <li ><a href="/produtos">Produtos</a></li>
-                            <li ><a href="/estoque">Estoque</a></li>
+                            <li ><a href="/estoque">Movimentação</a></li>
+                            <li ><a href="/estoque/atual">Estoque</a></li>
                         </ul>                      
                         
                     </li>
@@ -72,17 +73,10 @@
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
                         
-                        <li>
-                        <a href="/comercianteConta"><i class=""></i> Conta</a></li>
-                        <li>
-                            <a href="javascript:;">
-                           
-                                <span>Configurações</span>
-                            </a>
-                        </li>
-                        <li><a href="javascript:;">Suporte</a></li>
+                        
+                        <li><a href="/suporte">Suporte</a></li>
 
-                        <li><a href="/usuario/logout"><i class="fa fa-sign-out pull-right"></i> Sair</a></li>
+                        <li><a href="/usuario/logout">Sair &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fas fa-sign-out-alt"></i></a></li>
                     </ul>
                 </li>
 

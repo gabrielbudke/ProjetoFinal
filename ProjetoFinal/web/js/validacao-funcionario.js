@@ -58,52 +58,52 @@ $("#validacao-form-func").validate({
     },
     messages: {
         login: {
-            required: "Campo Obrigatório.",
-            minlength: "login deve conter no minimo {0} caracteres.",
-            maxlength: "login deve conter no maximo {0} caracteres."
+            required: "Campo obrigatório*",
+            minlength: "login deve conter no minimo {0} caracteres*",
+            maxlength: "login deve conter no maximo {0} caracteres*"
         },
         senha: {
-            required: "Campo Obrigatório.",
-            minlength: "senha deve conter no minimo {0} caracteres.",
-            maxlength: "senha deve conter no maximo {0} caracteres."
+            required: "Campo obrigatório*",
+            minlength: "senha deve conter no minimo {0} caracteres*",
+            maxlength: "senha deve conter no maximo {0} caracteres*"
         },
         nome: {
-            required: "Campo Obrigatório.",
-            minlength: "Nome deve conter no minimo {0} caracteres.",
-            maxlength: "Nome deve conter no maximo {0} caracteres."
+            required: "Campo obrigatório*",
+            minlength: "Nome deve conter no minimo {0} caracteres*",
+            maxlength: "Nome deve conter no maximo {0} caracteres*"
         },
         cpf: {
-            required: "Campo Obrigatório."
+            required: "Campo obrigatório*"
         },
         email: {
-            required: "Campo Obrigatório.",
+            required: "Campo obrigatório*",
             email: "Insira um Email Válido."
         },
         telefone: {
-            required: "Campo Obrigatório."
+            required: "Campo obrigatório*"
         },
         funcao: {
-            required: "Campo Obrigatório."
+            required: "Campo obrigatório*"
         },
         cep: {
-            required: "Campo Obrigatório."
+            required: "Campo obrigatório*"
         },
         estado: {
-            required: "Campo Obrigatório."
+            required: "Campo obrigatório*"
         },
         rua: {
-            required: "Campo Obrigatório."
+            required: "Campo obrigatório*"
         },
         bairro: {
-            required: "Campo Obrigatório."
+            required: "Campo obrigatório*"
         },
         cidade: {
-            required: "Campo Obrigatório."
+            required: "Campo obrigatório*"
         },
         numero: {
-            required: "Campo Obrigatório.",
-            minlength: "Numero deve conter no minimo {0} caracteres.",
-            maxlength: "Numero deve conter no maximo {0} caracteres."
+            required: "Campo obrigatório*",
+            minlength: "Numero deve conter no minimo {0} caracteres*",
+            maxlength: "Numero deve conter no maximo {0} caracteres*"
         }
 
     }
@@ -134,7 +134,7 @@ $(function () {
 $(function () {
     $("#campo-cpf").mask("999.999.999-99");
 
-    $("#campo-telefone").mask("(99)9999-99999");
+    $("#campo-telefone").mask("(99) 9999-99999");
     
     $("#campo-cep").mask("99999-999");
 });

@@ -6,13 +6,15 @@ package br.com.projeto.bean;
  */
 public class ProdutoBean {
     
+    //Atributos da classe Produtos
     private int id;
     private int idCategoria;
     private CategoriaBean categoria;
     private String nome;
-    private float preco;
+    private double preco;
     private int quantidade;
 
+    //Métodos Getters e Setters da classe ProdutoBean
     public int getQuantidade() {
         return quantidade;
     }
@@ -53,11 +55,11 @@ public class ProdutoBean {
         this.nome = nome;
     }
 
-    public float getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
  

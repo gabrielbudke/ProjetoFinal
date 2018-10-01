@@ -1,7 +1,9 @@
 package br.com.projeto.database;
 
+import com.mysql.jdbc.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class Conexao {
 
@@ -11,6 +13,7 @@ public class Conexao {
     private static final String CLASS = "com.mysql.jdbc.Driver";
     private static Connection conexao;
 
+    //Método para obter conexão
     public static Connection obterConexao() {
         try {
             Class.forName(CLASS);
@@ -28,6 +31,7 @@ public class Conexao {
         return null;
     }
 
+    //Método para fechar conexao
     public static void fecharConexao() {
         try {
             conexao.close();
@@ -40,4 +44,30 @@ public class Conexao {
          Conexao.obterConexao();
     }
      */
+    
+    public static void truncate() {
+        obterConexao();
+        if (conexao != null) {
+            try {
+                Statement st = (Statement) conexao.createStatement();
+                st.addBatch("SET FOREIGN_KEY_CHECKS = 0;");
+                st.addBatch("TRUNCATE TABLE funcionarios;");
+                st.addBatch("TRUNCATE TABLE fornecedores;");
+                st.addBatch("TRUNCATE TABLE categorias;");
+                st.addBatch("TRUNCATE TABLE produtos;");
+                st.addBatch("TRUNCATE TABLE estoque;");
+                st.addBatch("SET FOREIGN_KEY_CHECKS = 1;");
+                st.executeBatch();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                fecharConexao();
+            }
+        }
+    }
+    
 }
+
+
+
+

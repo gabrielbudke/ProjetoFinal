@@ -28,6 +28,7 @@ public class FornecedorStore extends HttpServlet{
         int codigo = new FornecedorDAO().adicionar(fornecedor);
         
         if(codigo > 0){
+           resp.setContentType("text/html;charset=UTF-8");
             resp.sendRedirect("/fornecedor");
             
         }

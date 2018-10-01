@@ -8,7 +8,7 @@ CREATE TABLE funcionarios(
 	id_funcionario INTEGER,
 
 	login VARCHAR (30),
-	senha VARCHAR (10),	
+	senha VARCHAR (8),	
 	nome VARCHAR(100),
 	cpf VARCHAR(20),
 	email VARCHAR(50),
@@ -24,6 +24,15 @@ CREATE TABLE funcionarios(
 	tipo VARCHAR(100) DEFAULT 'Colaborador',
 	FOREIGN KEY (id_funcionario) REFERENCES funcionarios(id)
 );
+
+INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
+('Patrick', 'patrick', '12345678', '(83) 3542-2574', 'Suporte'),
+('Gabriel', 'gabriel', '12345678', '(83) 3232-4545', 'Suporte'),
+('Logan', 'logan', '12345678', '(83) 3434-4646', 'Suporte'),
+('Joseph', 'joseph', '12345678', '(83) 3535-4747', 'Suporte'),
+('Kaio', 'kaio', '12345678', '(83) 3636-4848', 'Suporte'),
+('João Paulo', 'joao_paulo', '123', '(84) 3507-3289', 'motorista'),
+('Isadora da Costa ', 'isadora', '123', '(84) 98104-9974', 'advogada');
 
 CREATE TABLE fornecedores(
 	id INT AUTO_INCREMENT PRIMARY KEY,
@@ -61,19 +70,20 @@ INSERT INTO produtos (id_categoria, nome, preco) VALUES
 (2, 'Pulseira', 4.50),
 (1, 'PS4', 4000),
 (1, 'TV', 5000),
-(1, 'Geladeira', 1800),
-(1, 'Pia', 800),
+(3, 'Geladeira', 1800),
+(3, 'Pia', 800),
 (1, 'Sorvete', 12),
 (1, 'Apple Watch', 12000),
 (1, 'Monitor', 800),
 (1, 'Rádio', 1000),
-(1, 'Necessidade Básica', 5000),
+(4, 'Salgadinho', 5.50),
+(4, 'Refrigerante', 7),
+(4, 'Suco', 1.86),
 (1, 'Mouse', 300),
-(1, 'Teclado', 750);
-
-
-;
-
+(1, 'Teclado', 750),
+(5, 'Camiseta', 25),
+(5, 'Calça Jeans', 87),
+(5, 'Camisa Polo', 58.75);
 
 CREATE TABLE estoque(
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -88,50 +98,8 @@ INSERT INTO estoque (id_produto, tipo, quantidade) VALUES
 (2, 'Entrada', 5),
 (1, 'Entrada', 100),
 (4, 'Entrada', 30),
-(1, 'Saida', 5);
+(1, 'Saida', 5),
+(4, 'Saida', 10),
+(2, 'Saida', 2);
 
-CREATE TABLE fluxo_caixa(
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        total_recebido DECIMAL(4,2),
-        total_saida DECIMAL (4,2),
-        saldo_inicial DECIMAL(4,2),
-        saldo_final DECIMAL(4,2)
-);
-/*
-CREATE TABLE recuperar_senha(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_comerciante INTEGER NOT NULL,
-    pergunta VARCHAR(200),
-    FOREIGN KEY (id_comerciante) REFERENCES comerciantes(id)
-);
-*/
-
-INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
-('Patrick', 'patrick', '123', '(83) 3542-2574', 'gerente de estoque'),
-('João Paulo', 'joao_paulo', '123', '(84) 3507-3289', 'motorista'),
-('Isadora da Costa ', 'isadora', '123', '(84) 98104-9974', 'advogada');
-
-
-/*INSERT INTO funcionarios (nome,login, senha, telefone, funcao) VALUES
-('Patrick', 'patrick', '123', '(83) 3542-2574', 'Batata'),
-('Patrick Lejinho', 'patrick_lejinho', '123', '(43) 2847-4595', 'Batata'),
-('Lucas Tomando', 'lucas_tomando', '123', '(43) 98680-5360', 'Batata'),
-('João Paulo', 'joao_paulo', '123', '(84) 3507-3289', 'Batata'),
-('Isadora das Costas Largas', 'isadora', '123', '(84) 98104-9974', 'Batata'),
-('Jorge Tijolinho', 'jorge_tijolinho', '123', '(84) 98104-9974', 'Batata');*/
-
-
-
-INSERT INTO produtos (id_categoria, nome, preco) VALUES 
-
-(3, 'Pulseira', 4.50),
-
-(4, 'Pulseira', 4.50);
-
-CREATE TABLE saida (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_produto INTEGER NOT NULL,
-    quantidade INT UNSIGNED,
-    FOREIGN KEY (id_produto) REFERENCES produtos(id)
-);
 

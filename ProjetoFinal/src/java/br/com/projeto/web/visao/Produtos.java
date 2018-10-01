@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Alunos
+ * @author Gabriel Budke (gabrielbudke@gmail.com)
  */
 @WebServlet(name = "Produtos", urlPatterns = {"/visao/produtos"})
 public class Produtos extends HttpServlet {

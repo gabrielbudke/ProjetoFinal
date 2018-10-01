@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Alunos
+ * @author Gabriel Budke (gabrielbudke@gmail.com)
  */
 @WebServlet(name = "Categorias", urlPatterns = {"/visao/categorias"})
 public class Categorias extends HttpServlet {

@@ -18,6 +18,7 @@ import java.util.logging.Logger;
  */
 public class FuncionarioDAO {
 
+    //Método para obter todos do banco de dados
     public List<FuncionarioBean> obterTodos() {
         List<FuncionarioBean> funcionarios = new ArrayList<>();
         String sql = "SELECT * FROM funcionarios";
@@ -52,6 +53,7 @@ public class FuncionarioDAO {
 
     }
 
+    //Método adicionar ao banco de dados
     public int adicionar(FuncionarioBean funcionario) {
         String sql = "INSERT INTO funcionarios (login, senha, nome, cpf, email, telefone, funcao, cep, estado, rua, numero, bairro, cidade) VALUES (?, ?, ?,?,?,?,?,?,?,?,?,?,?)";
         try {
@@ -83,6 +85,7 @@ public class FuncionarioDAO {
         return -1;
     }
 
+     //Método de excluir no banco de dados
     public boolean excluir(int id) {
         String sql = "DELETE FROM funcionarios WHERE id = ?";
         try {
@@ -97,6 +100,7 @@ public class FuncionarioDAO {
         return false;
     }
 
+    //Método de editar no banco de dados
     public boolean editar(FuncionarioBean funcionario) {
         String sql = "UPDATE funcionarios SET nome = ?, cpf = ?, email = ?, telefone = ?, funcao = ?, cep = ?, estado = ?, rua = ?, numero = ?, bairro = ?, cidade = ? WHERE id = ?";
         try {
@@ -123,6 +127,7 @@ public class FuncionarioDAO {
         return false;
     }
 
+    //Método de obter fornecedor pelo seu ID
     public FuncionarioBean obterPeloId(int id) {
         String sql = "SELECT id, nome, cpf, email, telefone, funcao, cep, estado, rua, numero, bairro, cidade FROM funcionarios WHERE id = ?";
         try {
@@ -174,6 +179,7 @@ public class FuncionarioDAO {
         return null;
     }
 
+    //Método obter todos para DataTable
     public List<HashMap<String, Object>> obterTodosParaDataTable() {
         List<HashMap<String, Object>> funcionarios = new ArrayList<>();
         String sql = "SELECT * FROM funcionarios";
