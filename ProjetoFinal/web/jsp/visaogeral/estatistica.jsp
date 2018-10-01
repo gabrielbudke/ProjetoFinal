@@ -23,7 +23,7 @@
         <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Produtos<small>mais vendidos por categoria</small></h2>
+                    <h2>Produtos<small>quantidade em estoque</small></h2>
 
                     <div class="clearfix"></div>
                 </div>
@@ -35,7 +35,7 @@
         <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Produtos<small>mais vendidos por nome</small></h2>
+                    <h2>Produtos<small>mais vendidos </small></h2>
 
                     <div class="clearfix"></div>
                 </div>

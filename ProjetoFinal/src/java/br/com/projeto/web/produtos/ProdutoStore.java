@@ -36,7 +36,7 @@ public class ProdutoStore extends HttpServlet {
         estoque.setTipo(req.getParameter("tipo"));
         estoque.setIdProduto(produto.getId());
         estoque.setId(new EstoqueDAO().adicionar(estoque));*/
-        
+        resp.setContentType("text/hmtl;charset=UTF-8");
         resp.sendRedirect("/produtos");
          
     }

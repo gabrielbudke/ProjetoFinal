@@ -72,15 +72,8 @@
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
                         
-                        <li>
-                        <a href="/comercianteConta"><i class=""></i> Conta</a></li>
-                        <li>
-                            <a href="javascript:;">
-                           
-                                <span>Configurações</span>
-                            </a>
-                        </li>
-                        <li><a href="javascript:;">Suporte</a></li>
+                        
+                        <li><a href="/suporte">Suporte</a></li>
 
                         <li><a href="/usuario/logout">Sair &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fas fa-sign-out-alt"></i></a></li>
                     </ul>

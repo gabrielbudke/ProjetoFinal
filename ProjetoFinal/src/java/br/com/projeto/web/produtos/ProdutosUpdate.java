@@ -26,7 +26,7 @@ public class ProdutosUpdate extends HttpServlet{
         
         boolean alterou = new ProdutoDAO().editar(produto);
     
-        
+        resp.setContentType("text/hmtl;charset=UTF-8");
     resp.sendRedirect("/produtos");
     
     }
