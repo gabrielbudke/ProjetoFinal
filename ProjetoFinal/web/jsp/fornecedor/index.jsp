@@ -7,12 +7,15 @@
 <%@page import="br.com.projeto.dao.FornecedorDAO"%>
 <%@page import="br.com.projeto.bean.FornecedorBean"%>
 <%@page import="java.util.List"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="../master/master.jsp"%>
+
 
 <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel">
         <div class="x_title">
             <h2>Fornecedores</h2>
+
 
             <div class="clearfix"></div>
         </div>

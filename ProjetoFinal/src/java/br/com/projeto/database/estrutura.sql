@@ -43,7 +43,7 @@ CREATE TABLE fornecedores(
 );
 
 INSERT INTO fornecedores (nome, cnpj, telefone, email) VALUES
-('Padaria Pão de Açucar', '523652365236', '47-33252471', 'padaria@padaria.com');
+('Padaria Pão de Açucar', '12345678000165', '47-33252471', 'padaria@padaria.com');
 
 CREATE TABLE categorias(
     id INT AUTO_INCREMENT PRIMARY KEY,

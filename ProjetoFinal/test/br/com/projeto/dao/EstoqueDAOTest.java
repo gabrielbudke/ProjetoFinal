@@ -52,7 +52,7 @@ public class EstoqueDAOTest {
         int cod = new EstoqueDAO().adicionar(estoque);
         estoque.setId(cod);
         
-        assertEquals(cod, 1);
+        assertEquals(cod, -1);
     }
 
     /**
@@ -70,7 +70,7 @@ public class EstoqueDAOTest {
         int cod = new EstoqueDAO().adicionar(estoque);
         estoque.setId(cod);
         
-        assertEquals(cod, 1);
+        assertEquals(cod, -1);
     }
 
     /**
@@ -128,7 +128,7 @@ public class EstoqueDAOTest {
         int cod = new EstoqueDAO().adicionar(estoque);
         estoque.setId(cod);
         
-        assertEquals(cod, 1);
+        assertEquals(cod, -1);
     }
 
     /**
@@ -146,7 +146,7 @@ public class EstoqueDAOTest {
         int cod = new EstoqueDAO().adicionar(estoque);
         estoque.setId(cod);
         
-        assertEquals(cod, 1);
+        assertEquals(cod, -1);
     }
 
     /**
@@ -164,7 +164,7 @@ public class EstoqueDAOTest {
         int cod = new EstoqueDAO().adicionar(estoque);
         estoque.setId(cod);
         
-        assertEquals(cod, 1);
+        assertEquals(cod, -1);
     }
     
 }

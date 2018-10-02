@@ -83,6 +83,7 @@ public class EstoqueDAO {
 
     public List<EstoqueBean> obterTodosAtualizado() {
         List<EstoqueBean> estoques = new ArrayList<>();
+<<<<<<< HEAD
         String sql = "SELECT p.nome as 'produto', SUM(e.quantidade) - \n"
                 + "IF(\n"
                 + "(SELECT SUM(e1.quantidade) as 'quantidade_saida' FROM estoque e1 WHERE e1.id_produto = e.id_produto AND e1.tipo LIKE '%Saída%')  IS NULL,\n"
@@ -91,6 +92,16 @@ public class EstoqueDAO {
                 + "FROM estoque e\n"
                 + "JOIN produtos p ON(p.id = e.id_produto) WHERE e.tipo LIKE '%Entrada%'\n"
                 + "GROUP BY e.id_produto;";
+=======
+        String sql = "SELECT p.preco, p.nome as 'produto', SUM(e.quantidade) - \n" +
+"IF(\n" +
+"(SELECT SUM(e1.quantidade) as 'quantidade_saida' FROM estoque e1 WHERE e1.id_produto = e.id_produto AND e1.tipo LIKE '%Saída%')  IS NULL,\n" +
+"0, (SELECT SUM(e1.quantidade) as 'quantidade' FROM estoque e1 WHERE e1.id_produto = e.id_produto AND e1.tipo LIKE '%Saída%'))\n" +
+"as 'quantidade'\n" +
+"FROM estoque e\n" +
+"JOIN produtos p ON(p.id = e.id_produto) WHERE e.tipo LIKE '%Entrada%'\n" +
+"GROUP BY e.id_produto;";
+>>>>>>> 92b20ca93a6251015d53fbb01bc1bf003e64de5f
         try {
 
             Statement st = Conexao.obterConexao().createStatement();
@@ -99,11 +110,18 @@ public class EstoqueDAO {
             while (resultSet.next()) {
                 EstoqueBean estoque = new EstoqueBean();
                 estoque.setQuantidade(resultSet.getInt("quantidade"));
+                
 
                 ProdutoBean produto = new ProdutoBean();
+<<<<<<< HEAD
                 produto.setId(estoque.getIdProduto());
                 produto.setNome(resultSet.getString("produto"));
 
+=======
+                produto.setId(estoque.getIdProduto()); 
+                produto.setNome(resultSet.getString("produto"));
+                produto.setPreco(resultSet.getDouble("p.preco"));
+>>>>>>> 92b20ca93a6251015d53fbb01bc1bf003e64de5f
                 estoque.setProduto(produto);
 
                 estoques.add(estoque);
