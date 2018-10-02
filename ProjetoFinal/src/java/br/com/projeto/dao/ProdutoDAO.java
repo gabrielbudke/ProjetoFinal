@@ -88,7 +88,7 @@ public class ProdutoDAO {
 
     //Método de editar informação no banco de dados
     public boolean editar(ProdutoBean produto) {
-        String sql = "UPDATE produtos SET nome = ?, preco = ?, categoria = ?, id_categoria = ? WHERE id = ?";
+        String sql = "UPDATE produtos SET nome = ?, preco = ?, id_categoria = ? WHERE id = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setString(1, produto.getNome());
