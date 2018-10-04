@@ -28,7 +28,7 @@ public class ProdutoObterTodosParaDataTable extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HashMap<String, Object> resultado = new HashMap<>();
         List<HashMap<String,Object>> registros = new ProdutoDAO().obterTodosParaDataTable();
-        resultado.put("data", "R$" + registros);
+        resultado.put("data", registros);
         resp.setContentType("text/hmtl;charset=UTF-8");
         resp.getWriter().print(new Gson().toJson(resultado));
 
