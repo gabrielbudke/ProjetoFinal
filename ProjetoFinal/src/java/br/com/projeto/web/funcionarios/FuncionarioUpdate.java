@@ -35,7 +35,7 @@ public class FuncionarioUpdate extends HttpServlet{
         
         boolean alterou = new FuncionarioDAO().editar(funcionario);
         
-        resp.sendRedirect("/funcionario");
+        resp.sendRedirect("/funcionarios");
     }
     
     

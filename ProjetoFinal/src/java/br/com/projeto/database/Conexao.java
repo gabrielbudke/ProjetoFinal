@@ -18,11 +18,11 @@ public class Conexao {
         try {
             Class.forName(CLASS);
 
-            /*String dbName = System.getProperty("RDS_DB_NAME");
+            String dbName = System.getProperty("RDS_DB_NAME");
             USER = System.getProperty("RDS_USERNAME");
             PASSWORD = System.getProperty("RDS_PASSWORD");
             String hostname = System.getProperty("RDS_HOSTNAME");
-            String port = System.getProperty("RDS_PORT");*/
+            String port = System.getProperty("RDS_PORT");
             conexao = DriverManager.getConnection(HOST, USER, PASSWORD);
             return conexao;
         } catch (Exception e) {
